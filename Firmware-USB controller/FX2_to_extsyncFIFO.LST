@@ -1,0 +1,632 @@
+C51 COMPILER V8.12   FX2_TO_EXTSYNCFIFO                                                    12/04/2017 15:36:10 PAGE 1   
+
+
+C51 COMPILER V8.12, COMPILATION OF MODULE FX2_TO_EXTSYNCFIFO
+OBJECT MODULE PLACED IN FX2_to_extsyncFIFO.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE FX2_to_extsyncFIFO.c OPTIMIZE(6,SPEED) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #pragma NOIV               // Do not generate interrupt vectors
+   2          //-----------------------------------------------------------------------------
+   3          //   File:       FX2_to_extsyncFIFO.c
+   4          //   Contents:   Hooks required to implement FX2 GPIF to external sync. FIFO
+   5          //               interface using CY4265-15AC
+   6          //
+   7          //   Copyright (c) 2003 Cypress Semiconductor, Inc. All rights reserved
+   8          //-----------------------------------------------------------------------------
+   9          #include "fx2.h"
+  10          #include "fx2regs.h"
+  11          #include "fx2sdly.h"            // SYNCDELAY macro, see Section 15.14 of FX2 Tech.
+  12                                          // Ref. Manual for usage details.
+  13          
+  14          #define EXTFIFONOTFULL  GPIFREADYSTAT & bmBIT1
+  15          #define EXTFIFONOTEMPTY GPIFREADYSTAT & bmBIT0
+  16          #define bmEP0BSY 0x01
+  17          #define LED_ALL         (bmBIT0 | bmBIT1 | bmBIT2 | bmBIT3)
+  18          #define BIT0   0x01      
+  19          #define BIT1   0x02
+  20          #define BIT2   0x04
+  21          #define BIT3   0x08
+  22          #define BIT4   0x10
+  23          #define BIT5   0x20
+  24          #define BIT6   0x40
+  25          #define BIT7   0x80
+  26          
+  27          
+  28          extern BOOL GotSUD;             // Received setup data flag
+  29          extern BOOL Sleep;
+  30          extern BOOL Rwuen;
+  31          extern BOOL Selfpwr;
+  32          
+  33          BYTE Configuration;             // Current configuration
+  34          BYTE AlternateSetting;          // Alternate settings
+  35          BYTE j,k,n;
+  36          BYTE BITMASK[8] = {BIT0,BIT1,BIT2,BIT3,BIT4,BIT5,BIT6,BIT7};
+  37          static WORD xdata LED_Count = 0;
+  38          static BYTE xdata LED_Status = 0;
+  39          BOOL energry_transfer_complete=FALSE;
+  40          //-----------------------------------------------------------------------------
+  41          // Task Dispatcher hooks
+  42          // The following hooks are called by the task dispatcher.
+  43          //-----------------------------------------------------------------------------
+  44          void LED_Off (BYTE LED_Mask);
+  45          void LED_On (BYTE LED_Mask);
+  46          //void GpifInit ();
+  47          
+  48          void TD_Init( void )
+  49          { // Called once at startup
+  50   1      
+  51   1        CPUCS = ((CPUCS & ~bmCLKSPD) | bmCLKSPD1);
+  52   1        SYNCDELAY;
+  53   1      //  FIFOPINPOLAR = 0x3F;        // ACTIVE HIGH
+  54   1      
+  55   1        PINFLAGSAB = 0x8E;                    // FLAGA= EP6FF, FLAGB= EP2EF
+C51 COMPILER V8.12   FX2_TO_EXTSYNCFIFO                                                    12/04/2017 15:36:10 PAGE 2   
+
+  56   1        SYNCDELAY;
+  57   1        IFCONFIG = 0xE3; // 
+  58   1      
+  59   1        // IFCLKSRC=1   , FIFOs executes on internal clk source 
+  60   1        // xMHz=1       , 48MHz operation
+  61   1        // IFCLKOE=1    , Drive IFCLK pin signal at 48MHz
+  62   1        // IFCLKPOL=1   , Invert IFCLK pin signal from internal clk
+  63   1        // ASYNC=0      , Master samples synchronous
+  64   1        // GSTATE=0     , Don't drive GPIF states out on PORTE[2:0], debug WF
+  65   1        // IFCFG[1:0]=11, FX2 in slave FIFO mode
+  66   1      
+  67   1      
+  68   1        // Registers which require a synchronization delay, see section 15.14
+  69   1        // FIFORESET        FIFOPINPOLAR
+  70   1        // INPKTEND         OUTPKTEND
+  71   1        // EPxBCH:L         REVCTL
+  72   1        // GPIFTCB3         GPIFTCB2
+  73   1        // GPIFTCB1         GPIFTCB0
+  74   1        // EPxFIFOPFH:L     EPxAUTOINLENH:L
+  75   1        // EPxFIFOCFG       EPxGPIFFLGSEL
+  76   1        // PINFLAGSxx       EPxFIFOIRQ
+  77   1        // EPxFIFOIE        GPIFIRQ
+  78   1        // GPIFIE           GPIFADRH:L
+  79   1        // UDMACRCH:L       EPxGPIFTRIG
+  80   1        // GPIFTRIG
+  81   1        
+  82   1        // Note: The pre-REVE EPxGPIFTCH/L register are affected, as well...
+  83   1        //      ...these have been replaced by GPIFTC[B3:B0] registers
+  84   1      
+  85   1      
+  86   1      
+  87   1        EP2CFG = 0xA0;                //out 512 bytes, 4x, bulk
+  88   1        SYNCDELAY;                    
+  89   1        EP6CFG = 0xE0;                // in 512 bytes, 4x, bulk
+  90   1        SYNCDELAY;              
+  91   1        EP4CFG = 0x02;                //clear valid bit
+  92   1        SYNCDELAY;                     
+  93   1        EP8CFG = 0x02;                //clear valid bit
+  94   1        SYNCDELAY;   
+  95   1      
+  96   1        SYNCDELAY;
+  97   1        FIFORESET = 0x80;             // activate NAK-ALL to avoid race conditions
+  98   1        SYNCDELAY;                    // see TRM section 15.14
+  99   1        FIFORESET = 0x02;             // reset, FIFO 2
+ 100   1        SYNCDELAY;                    // 
+ 101   1        FIFORESET = 0x04;             // reset, FIFO 4
+ 102   1        SYNCDELAY;                    // 
+ 103   1        FIFORESET = 0x06;             // reset, FIFO 6
+ 104   1        SYNCDELAY;                    // 
+ 105   1        FIFORESET = 0x08;             // reset, FIFO 8
+ 106   1        SYNCDELAY;                    // 
+ 107   1        FIFORESET = 0x00;             // deactivate NAK-ALL
+ 108   1      
+ 109   1      
+ 110   1        // handle the case where we were already in AUTO mode...
+ 111   1        // ...for example: back to back firmware downloads...
+ 112   1        SYNCDELAY;                    // 
+ 113   1        EP2FIFOCFG = 0x00;            // AUTOOUT=0, WORDWIDE=1
+ 114   1        
+ 115   1        // core needs to see AUTOOUT=0 to AUTOOUT=1 switch to arm endp's
+ 116   1        
+ 117   1        SYNCDELAY;                    // 
+C51 COMPILER V8.12   FX2_TO_EXTSYNCFIFO                                                    12/04/2017 15:36:10 PAGE 3   
+
+ 118   1        EP2FIFOCFG = 0x3C;            // AUTOOUT=1, WORDWIDE=0        
+ 119   1        
+ 120   1        SYNCDELAY;                    // 
+ 121   1        EP6FIFOCFG = 0x5C;            // AUTOIN=1, ZEROLENIN=1, WORDWIDE=0, INFM1=1   
+ 122   1      
+ 123   1        SYNCDELAY;                    // 
+ 124   1        EP4FIFOCFG = 0x00;            //  WORDWIDE=0
+ 125   1      
+ 126   1        SYNCDELAY;                    // 
+ 127   1        EP8FIFOCFG = 0x00;            //  WORDWIDE=0
+ 128   1      
+ 129   1      
+ 130   1        SYNCDELAY;
+ 131   1        EP6AUTOINLENH = 0x01;            //0x01
+ 132   1        SYNCDELAY;  
+ 133   1        EP6AUTOINLENL = 0x2C;         //      0x2C  Auto-in length = 300 Bytes (100 frames * 3 bytes each)
+ 134   1        SYNCDELAY;                                            
+ 135   1      
+ 136   1      //  EP2AUTOOUTLENH = 0x00;
+ 137   1      //  SYNCDELAY;  
+ 138   1      //  EP2AUTOOUTLENL = 0x01;
+ 139   1      //  SYNCDELAY;
+ 140   1      
+ 141   1      }
+ 142          
+ 143          void TD_Poll( void )
+ 144          { // Called repeatedly while the device is idle
+ 145   1      
+ 146   1        // ...nothing to do... slave fifo's are in AUTO mode...
+ 147   1        
+ 148   1        
+ 149   1      }
+ 150           
+ 151            
+ 152          
+ 153          BOOL TD_Suspend(void)          // Called before the device goes into suspend mode
+ 154          {
+ 155   1         return(TRUE);
+ 156   1      }
+ 157          
+ 158          BOOL TD_Resume(void)          // Called after the device resumes
+ 159          {
+ 160   1         return(TRUE);
+ 161   1      }
+ 162          
+ 163          //-----------------------------------------------------------------------------
+ 164          // Device Request hooks
+ 165          //   The following hooks are called by the end point 0 device request parser.
+ 166          //-----------------------------------------------------------------------------
+ 167          
+ 168          BOOL DR_GetDescriptor(void)
+ 169          {
+ 170   1         return(TRUE);
+ 171   1      }
+ 172          
+ 173          BOOL DR_SetConfiguration(void)   // Called when a Set Configuration command is received
+ 174          {
+ 175   1         Configuration = SETUPDAT[2];
+ 176   1         return(TRUE);            // Handled by user code
+ 177   1      }
+ 178          
+ 179          BOOL DR_GetConfiguration(void)   // Called when a Get Configuration command is received
+C51 COMPILER V8.12   FX2_TO_EXTSYNCFIFO                                                    12/04/2017 15:36:10 PAGE 4   
+
+ 180          {
+ 181   1         EP0BUF[0] = Configuration;
+ 182   1         EP0BCH = 0;
+ 183   1         EP0BCL = 1;
+ 184   1         return(TRUE);            // Handled by user code
+ 185   1      }
+ 186          
+ 187          BOOL DR_SetInterface(void)       // Called when a Set Interface command is received
+ 188          {
+ 189   1         AlternateSetting = SETUPDAT[2];
+ 190   1         return(TRUE);            // Handled by user code
+ 191   1      }
+ 192          
+ 193          BOOL DR_GetInterface(void)       // Called when a Set Interface command is received
+ 194          {
+ 195   1         EP0BUF[0] = AlternateSetting;
+ 196   1         EP0BCH = 0;
+ 197   1         EP0BCL = 1;
+ 198   1         return(TRUE);            // Handled by user code
+ 199   1      }
+ 200          
+ 201          BOOL DR_GetStatus(void)
+ 202          {
+ 203   1         return(TRUE);
+ 204   1      }
+ 205          
+ 206          BOOL DR_ClearFeature(void)
+ 207          {
+ 208   1         return(TRUE);
+ 209   1      }
+ 210          
+ 211          BOOL DR_SetFeature(void)
+ 212          {
+ 213   1         return(TRUE);
+ 214   1      }
+ 215          
+ 216          #define VX_B0 0xB0 // Return to Idle State
+ 217          #define VX_B1 0xB1 // Download Configuration
+ 218          #define VX_B2 0xB2 // Set DAC
+ 219          #define VX_B3 0xB3 // Start Recording
+ 220          #define VX_B4 0xB4 // Global Reset
+ 221          #define VX_B5 0xB5 // Read Current Consumption
+ 222          
+ 223          BOOL DR_VendorCmnd(void)
+ 224          {
+ 225   1        
+ 226   1        switch (SETUPDAT[1])
+ 227   1        {
+ 228   2      
+ 229   2              case VX_B0: // Idle state
+ 230   2              {               
+ 231   3                          OEC=0xFF; //Set Port_C as output
+ 232   3                              OED=0xFF; //Set Port_D as output
+ 233   3                              OEE=0x03; //Set pin #0,#1 of Port_E as outputs
+ 234   3                              IOC=0x00; //Port_C = "00000000" 
+ 235   3                              IOD=0x00; //Port_D = "00000000"
+ 236   3                              IOE=0x00; //Port_E = "xxxxxx00"
+ 237   3                              EP0BCL = 0;              //EP0BUF LSB BYTE COUNT 
+ 238   3                              SYNCDELAY;                                
+ 239   3                              EP0BCH = 0;
+ 240   3                              EP0BCL = 4;                   // Arm endpoint with 64# unsigned chars to transfer
+ 241   3                              EP0CS |= bmHSNAK;              // Acknowledge handshake phase of device request 
+C51 COMPILER V8.12   FX2_TO_EXTSYNCFIFO                                                    12/04/2017 15:36:10 PAGE 5   
+
+ 242   3                break;
+ 243   3                              }
+ 244   2      
+ 245   2      
+ 246   2              case VX_B1: // Download Configuration   
+ 247   2              {               
+ 248   3                          OED=0xFF;   //Define all pins of port_D as outputs 
+ 249   3                              IOD=0x00;       //Port_D = "00000000" ---> CS = '0' (SPI_data line contains configuration data)
+ 250   3                              EP0BCL = 0;              //EP0BUF LSB BYTE COUNT 
+ 251   3                              while(EP01STAT & bmEP0BSY);     // wait until EP0 is available to be accessed by CPU
+ 252   3                          n=0;
+ 253   3                              for (n=0;n<4;n=n+1)        //sends 4 bytes          
+ 254   3                              {       
+ 255   4                                      for(k=0;k<8;k++) //SENDS ONE BYTE SERIALLY 
+ 256   4                                      {
+ 257   5                                              if(EP0BUF[n] & BITMASK[7-k])            
+ 258   5                                              {
+ 259   6                                                      IOD = IOD | (0x02);       //SDIHI
+ 260   6                                                      IOD = IOD | (0x01);       //SCKHI
+ 261   6                                                      IOD = IOD &~ (0x01);  //SCKLOW
+ 262   6                                              }
+ 263   5                                              else
+ 264   5                                              {
+ 265   6                                                      IOD = IOD &~ (0x02);  //SDILOW
+ 266   6                                                      IOD = IOD |  (0x01);  //SCKHI
+ 267   6                                                      IOD = IOD & ~ (0x01); //SCKLOW
+ 268   6                                              }
+ 269   5                                      }
+ 270   4                              }
+ 271   3                              IOD=0x00;// Port_D = "00000000" (Return to Idle)
+ 272   3                              SYNCDELAY;                                
+ 273   3                              EP0BCH = 0;
+ 274   3                              EP0BCL = 4;                   // Arm endpoint with 64# unsigned chars to transfer
+ 275   3                              EP0CS |= bmHSNAK;              // Acknowledge handshake phase of device request 
+ 276   3                break;
+ 277   3                              }
+ 278   2      
+ 279   2              case VX_B2: // Set DAC   
+ 280   2              {               
+ 281   3                          OED=0xFF; //Define all pins of port_D as outputs
+ 282   3                              IOD=0x04; //Port_D = "00000000" ---> CS = '1' (SPI_data line contains DAC data)
+ 283   3                              EP0BCL = 0;              //EP0BUF LSB BYTE COUNT 
+ 284   3                              while(EP01STAT & bmEP0BSY);     // wait until EP0 is available to be accessed by CPU
+ 285   3                          n=0;
+ 286   3                              for (n=0;n<2;n=n+1)        //sends 2 bytes          
+ 287   3                              {       
+ 288   4                                      for(k=0;k<8;k++) //SENDS ONE BYTE SERIALY 
+ 289   4                                      {
+ 290   5                                              if(EP0BUF[n] & BITMASK[7-k])            
+ 291   5                                              {
+ 292   6                                                      IOD = IOD | (0x02);   //SDIHI
+ 293   6                                                      IOD = IOD | (0x01);       //SCKHI
+ 294   6                                                      IOD = IOD &~ (0x01);  //SCKLOW
+ 295   6                                              }
+ 296   5                                              else
+ 297   5                                              {
+ 298   6                                                      IOD = IOD &~ (0x02);  //SDILOW
+ 299   6                                                      IOD = IOD  | (0x01);  //SCKHI
+ 300   6                                                      IOD = IOD & ~ (0x01); //SCKLOW
+ 301   6                                              }
+ 302   5                                      }
+ 303   4                              }
+C51 COMPILER V8.12   FX2_TO_EXTSYNCFIFO                                                    12/04/2017 15:36:10 PAGE 6   
+
+ 304   3                              IOD=0x00; //Port_D = "00000000" (Return to Idle)
+ 305   3                              SYNCDELAY;                                
+ 306   3                              EP0BCH = 0;
+ 307   3                              EP0BCL = 4;                   // Arm endpoint with 64# unsigned chars to transfer
+ 308   3                              EP0CS |= bmHSNAK;              // Acknowledge handshake phase of device request 
+ 309   3                break;
+ 310   3                              }
+ 311   2      
+ 312   2      
+ 313   2              case VX_B3: // Start Recording
+ 314   2              {               
+ 315   3                          OEC=0xFF;
+ 316   3                              IOC=0x01;   //Port_C = "00000001" (Start_Rec bit = '1')
+ 317   3                              EP0BCL = 0;     //EP0BUF LSB BYTE COUNT 
+ 318   3                              SYNCDELAY;                                
+ 319   3                              EP0BCH = 0;
+ 320   3                              EP0BCL = 4;                   // Arm endpoint with 64# unsigned chars to transfer
+ 321   3                              EP0CS |= bmHSNAK;              // Acknowledge handshake phase of device request 
+ 322   3      
+ 323   3                break;
+ 324   3                              }
+ 325   2      
+ 326   2              case VX_B4: // Reset 
+ 327   2              {               
+ 328   3                          OED=0xFF;
+ 329   3                              IOD=0x60;//01100000 --------> SEL="110" 
+ 330   3      //                      n = 0;
+ 331   3      //                      for (n=0;n<500;n=n+1)
+ 332   3      //                      {
+ 333   3      //                      }
+ 334   3      //                      IOD=0x00;
+ 335   3                              EP0BCL = 0;              //EP0BUF LSB BYTE COUNT 
+ 336   3                              SYNCDELAY;                                
+ 337   3                              EP0BCH = 0;
+ 338   3                              EP0BCL = 4;                   // Arm endpoint with 64# unsigned chars to transfer
+ 339   3                              EP0CS |= bmHSNAK;              // Acknowledge handshake phase of device request 
+ 340   3      
+ 341   3                break;
+ 342   3                              }
+ 343   2      
+ 344   2          case VX_B5: // Read Current Consumption
+ 345   2          { 
+ 346   3                      OEE=0x03; //Set pins #0,#1 of Port_E as outputs and the rest as inputs 
+ 347   3                      IOE=0x00; 
+ 348   3                      SYNCDELAY;                                
+ 349   3                      EP0BCH = 0;
+ 350   3                      EP0BCL = 2;                   // Arm endpoint with 64# unsigned chars to transfer
+ 351   3                      EP0CS |= bmHSNAK;              // Acknowledge handshake phase of device request 
+ 352   3            break;
+ 353   3                }
+ 354   2      
+ 355   2      
+ 356   2          default:
+ 357   2              return(TRUE);
+ 358   2        }
+ 359   1      
+ 360   1        return(FALSE);
+ 361   1        }
+ 362           //{
+ 363          
+ 364          //-----------------------------------------------------------------------------
+ 365          // USB Interrupt Handlers
+C51 COMPILER V8.12   FX2_TO_EXTSYNCFIFO                                                    12/04/2017 15:36:10 PAGE 7   
+
+ 366          //   The following functions are called by the USB interrupt jump table.
+ 367          //-----------------------------------------------------------------------------
+ 368          
+ 369          // Setup Data Available Interrupt Handler
+ 370          void ISR_Sudav(void) interrupt 0
+ 371          {
+ 372   1         GotSUD = TRUE;            // Set flag
+ 373   1         EZUSB_IRQ_CLEAR();
+ 374   1         USBIRQ = bmSUDAV;         // Clear SUDAV IRQ
+ 375   1      }
+ 376          
+ 377          // Setup Token Interrupt Handler
+ 378          void ISR_Sutok(void) interrupt 0
+ 379          {
+ 380   1         EZUSB_IRQ_CLEAR();
+ 381   1         USBIRQ = bmSUTOK;         // Clear SUTOK IRQ
+ 382   1      }
+ 383          
+ 384          void ISR_Sof(void) interrupt 0
+ 385          {
+ 386   1         EZUSB_IRQ_CLEAR();
+ 387   1         USBIRQ = bmSOF;            // Clear SOF IRQ
+ 388   1      }
+ 389          
+ 390          void ISR_Ures(void) interrupt 0
+ 391          {
+ 392   1         // whenever we get a USB reset, we should revert to full speed mode
+ 393   1         pConfigDscr = pFullSpeedConfigDscr;
+ 394   1         ((CONFIGDSCR xdata *) pConfigDscr)->type = CONFIG_DSCR;
+ 395   1         pOtherConfigDscr = pHighSpeedConfigDscr;
+ 396   1         ((CONFIGDSCR xdata *) pOtherConfigDscr)->type = OTHERSPEED_DSCR;
+ 397   1      
+ 398   1         EZUSB_IRQ_CLEAR();
+ 399   1         USBIRQ = bmURES;         // Clear URES IRQ
+ 400   1      }
+ 401          
+ 402          void ISR_Susp(void) interrupt 0
+ 403          {
+ 404   1         Sleep = TRUE;
+ 405   1         EZUSB_IRQ_CLEAR();
+ 406   1         USBIRQ = bmSUSP;
+ 407   1      }
+ 408          
+ 409          void ISR_Highspeed(void) interrupt 0
+ 410          {
+ 411   1         if (EZUSB_HIGHSPEED())
+ 412   1         {
+ 413   2            pConfigDscr = pHighSpeedConfigDscr;
+ 414   2            ((CONFIGDSCR xdata *) pConfigDscr)->type = CONFIG_DSCR;
+ 415   2            pOtherConfigDscr = pFullSpeedConfigDscr;
+ 416   2            ((CONFIGDSCR xdata *) pOtherConfigDscr)->type = OTHERSPEED_DSCR;
+ 417   2         }
+ 418   1      
+ 419   1         EZUSB_IRQ_CLEAR();
+ 420   1         USBIRQ = bmHSGRANT;
+ 421   1      }
+ 422          void ISR_Ep0ack(void) interrupt 0
+ 423          {
+ 424   1      }
+ 425          void ISR_Stub(void) interrupt 0
+ 426          {
+ 427   1      }
+C51 COMPILER V8.12   FX2_TO_EXTSYNCFIFO                                                    12/04/2017 15:36:10 PAGE 8   
+
+ 428          void ISR_Ep0in(void) interrupt 0
+ 429          {
+ 430   1      }
+ 431          void ISR_Ep0out(void) interrupt 0
+ 432          {
+ 433   1      }
+ 434          void ISR_Ep1in(void) interrupt 0
+ 435          {
+ 436   1      }
+ 437          void ISR_Ep1out(void) interrupt 0
+ 438          {
+ 439   1      }
+ 440          void ISR_Ep2inout(void) interrupt 0
+ 441          {
+ 442   1      }
+ 443          void ISR_Ep4inout(void) interrupt 0
+ 444          {
+ 445   1      }
+ 446          void ISR_Ep6inout(void) interrupt 0
+ 447          {
+ 448   1      }
+ 449          void ISR_Ep8inout(void) interrupt 0
+ 450          {
+ 451   1      }
+ 452          void ISR_Ibn(void) interrupt 0
+ 453          {
+ 454   1      }
+ 455          void ISR_Ep0pingnak(void) interrupt 0
+ 456          {
+ 457   1      }
+ 458          void ISR_Ep1pingnak(void) interrupt 0
+ 459          {
+ 460   1      }
+ 461          void ISR_Ep2pingnak(void) interrupt 0
+ 462          {
+ 463   1      }
+ 464          void ISR_Ep4pingnak(void) interrupt 0
+ 465          {
+ 466   1      }
+ 467          void ISR_Ep6pingnak(void) interrupt 0
+ 468          {
+ 469   1      }
+ 470          void ISR_Ep8pingnak(void) interrupt 0
+ 471          {
+ 472   1      }
+ 473          void ISR_Errorlimit(void) interrupt 0
+ 474          {
+ 475   1      }
+ 476          void ISR_Ep2piderror(void) interrupt 0
+ 477          {
+ 478   1      }
+ 479          void ISR_Ep4piderror(void) interrupt 0
+ 480          {
+ 481   1      }
+ 482          void ISR_Ep6piderror(void) interrupt 0
+ 483          {
+ 484   1      }
+ 485          void ISR_Ep8piderror(void) interrupt 0
+ 486          {
+ 487   1      }
+ 488          void ISR_Ep2pflag(void) interrupt 0
+ 489          {
+C51 COMPILER V8.12   FX2_TO_EXTSYNCFIFO                                                    12/04/2017 15:36:10 PAGE 9   
+
+ 490   1      }
+ 491          void ISR_Ep4pflag(void) interrupt 0
+ 492          {
+ 493   1      }
+ 494          void ISR_Ep6pflag(void) interrupt 0
+ 495          {
+ 496   1      }
+ 497          void ISR_Ep8pflag(void) interrupt 0
+ 498          {
+ 499   1      }
+ 500          void ISR_Ep2eflag(void) interrupt 0
+ 501          {
+ 502   1      }
+ 503          void ISR_Ep4eflag(void) interrupt 0
+ 504          {
+ 505   1      }
+ 506          void ISR_Ep6eflag(void) interrupt 0
+ 507          {
+ 508   1      }
+ 509          void ISR_Ep8eflag(void) interrupt 0
+ 510          {
+ 511   1      }
+ 512          void ISR_Ep2fflag(void) interrupt 0
+ 513          {
+ 514   1      }
+ 515          void ISR_Ep4fflag(void) interrupt 0
+ 516          {
+ 517   1      }
+ 518          void ISR_Ep6fflag(void) interrupt 0
+ 519          {
+ 520   1      }
+ 521          void ISR_Ep8fflag(void) interrupt 0
+ 522          {
+ 523   1      }
+ 524          void ISR_GpifComplete(void) interrupt 0
+ 525          {
+ 526   1      }
+ 527          void ISR_GpifWaveform(void) interrupt 0
+ 528          {
+ 529   1      }
+ 530          
+ 531          // ...debug LEDs: accessed via movx reads only ( through CPLD )
+ 532          // it may be worth noting here that the default monitor loads at 0xC000
+ 533          xdata volatile const BYTE LED0_ON  _at_ 0x8000;
+ 534          xdata volatile const BYTE LED0_OFF _at_ 0x8100;
+ 535          xdata volatile const BYTE LED1_ON  _at_ 0x9000;
+ 536          xdata volatile const BYTE LED1_OFF _at_ 0x9100;
+ 537          xdata volatile const BYTE LED2_ON  _at_ 0xA000;
+ 538          xdata volatile const BYTE LED2_OFF _at_ 0xA100;
+ 539          xdata volatile const BYTE LED3_ON  _at_ 0xB000;
+ 540          xdata volatile const BYTE LED3_OFF _at_ 0xB100;
+ 541          // use this global variable when (de)asserting debug LEDs...
+ 542          BYTE xdata ledX_rdvar = 0x00;
+ 543          BYTE xdata LED_State = 0;
+ 544          void LED_Off (BYTE LED_Mask)
+ 545          {
+ 546   1              if (LED_Mask & bmBIT0)
+ 547   1              {
+ 548   2                      ledX_rdvar = LED0_OFF;
+ 549   2                      LED_State &= ~bmBIT0;
+ 550   2              }
+ 551   1              if (LED_Mask & bmBIT1)
+C51 COMPILER V8.12   FX2_TO_EXTSYNCFIFO                                                    12/04/2017 15:36:10 PAGE 10  
+
+ 552   1              {
+ 553   2                      ledX_rdvar = LED1_OFF;
+ 554   2                      LED_State &= ~bmBIT1;
+ 555   2              }
+ 556   1              if (LED_Mask & bmBIT2)
+ 557   1              {
+ 558   2                      ledX_rdvar = LED2_OFF;
+ 559   2                      LED_State &= ~bmBIT2;
+ 560   2              }
+ 561   1              if (LED_Mask & bmBIT3)
+ 562   1              {
+ 563   2                      ledX_rdvar = LED3_OFF;
+ 564   2                      LED_State &= ~bmBIT3;
+ 565   2              }
+ 566   1      }
+ 567          
+ 568          void LED_On (BYTE LED_Mask)
+ 569          {
+ 570   1              if (LED_Mask & bmBIT0)
+ 571   1              {
+ 572   2                      ledX_rdvar = LED0_ON;
+ 573   2                      LED_State |= bmBIT0;
+ 574   2              }
+ 575   1              if (LED_Mask & bmBIT1)
+ 576   1              {
+ 577   2                      ledX_rdvar = LED1_ON;
+ 578   2                      LED_State |= bmBIT1;
+ 579   2              }
+ 580   1              if (LED_Mask & bmBIT2)
+ 581   1              {
+ 582   2                      ledX_rdvar = LED2_ON;
+ 583   2                      LED_State |= bmBIT2;
+ 584   2              }
+ 585   1              if (LED_Mask & bmBIT3)
+ 586   1              {
+ 587   2                      ledX_rdvar = LED3_ON;
+ 588   2                      LED_State |= bmBIT3;
+ 589   2              }
+ 590   1      }
+ 591          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1003    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =      5    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     13    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

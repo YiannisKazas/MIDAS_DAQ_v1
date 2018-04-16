@@ -1,0 +1,372 @@
+KEY LIBERO "11.8"
+KEY CAPTURE "11.8.2.4"
+KEY DEFAULT_IMPORT_LOC ""
+KEY DEFAULT_OPEN_LOC ""
+KEY ProjectID "0"
+KEY HDLTechnology "VHDL"
+KEY VERILOGMODE "VERILOG2001"
+KEY VHDLMODE "VHDL2008"
+KEY UseConstraintFlowTechnology "FALSE"
+KEY VendorTechnology_Family "IGLOO"
+KEY VendorTechnology_Die "UN2X2DIV3M0LP"
+KEY VendorTechnology_Package "qn68"
+KEY VendorTechnology_Speed "STD"
+KEY VendorTechnology_DieVoltage "1.5"
+KEY VendorTechnology_PART_RANGE "COM"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
+KEY VendorTechnology_IO_DEFT_STD "LVCMOS33"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY ""
+KEY VendorTechnology_RAD_EXPOSURE ""
+KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESTRICTPROBEPINS "1"
+KEY VendorTechnology_RESTRICTSPIPINS "0"
+KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE ""
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "UN2X2DIV3M0LP"
+KEY VendorTechnology_TEMPR "COM"
+KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
+KEY VendorTechnology_VCCI_1.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
+KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
+KEY VendorTechnology_VOLTR "COM"
+KEY ProjectLocation "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA"
+KEY ProjectDescription ""
+KEY Pa4PeripheralNewSeq "GOOD"
+KEY SimulationType "VHDL"
+KEY Vendor "Actel"
+KEY ActiveRoot "MARS_MB_rev1_top::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST FileManager
+VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
+STATE="utd"
+TIME="1510065606"
+SIZE="437"
+ENDFILE
+VALUE "<project>\component\work\DESIGN_IO\DESIGN_IO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1510065606"
+SIZE="413"
+ENDFILE
+VALUE "<project>\component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.cxf,actgen_cxf"
+STATE="utd"
+TIME="1512552538"
+SIZE="5370"
+ENDFILE
+VALUE "<project>\component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.vhd,hdl"
+STATE="utd"
+TIME="1512552538"
+SIZE="10560"
+PARENT="<project>\component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\constraint\MARS_MB_rev1_top.pdc,pdc"
+STATE="utd"
+TIME="1510227693"
+SIZE="362"
+ENDFILE
+VALUE "<project>\designer\impl1\Clock_Divider.ide_des,ide_des"
+STATE="utd"
+TIME="1510065424"
+SIZE="230"
+ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top.adb,adb"
+STATE="utd"
+TIME="1512484492"
+SIZE="496128"
+ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top.ide_des,ide_des"
+STATE="utd"
+TIME="1512484492"
+SIZE="1195"
+ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top.pdb,pdb"
+STATE="utd"
+TIME="1512552598"
+SIZE="18810"
+ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top.stp,stp"
+STATE="ood"
+TIME="1511958716"
+SIZE="64297"
+ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top_compile_log.rpt,log"
+STATE="utd"
+TIME="1512484453"
+SIZE="8362"
+ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top_placeroute_log.rpt,log"
+STATE="utd"
+TIME="1512552588"
+SIZE="2756"
+ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top_prgdata_log.rpt,log"
+STATE="utd"
+TIME="1512552598"
+SIZE="936"
+ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top_verifytiming_log.rpt,log"
+STATE="utd"
+TIME="1512552591"
+SIZE="1306"
+ENDFILE
+VALUE "<project>\hdl\ADC_Interface.vhd,hdl"
+STATE="utd"
+TIME="1512551516"
+SIZE="7364"
+ENDFILE
+VALUE "<project>\hdl\Clk_Div.vhd,hdl"
+STATE="utd"
+TIME="1510328679"
+SIZE="2474"
+ENDFILE
+VALUE "<project>\hdl\Clock_Divider.vhd,hdl"
+STATE="utd"
+TIME="1512386712"
+SIZE="1975"
+ENDFILE
+VALUE "<project>\hdl\DAQ_FSM.vhd,hdl"
+STATE="utd"
+TIME="1512550163"
+SIZE="5127"
+ENDFILE
+VALUE "<project>\hdl\SPI_Interface.vhd,hdl"
+STATE="utd"
+TIME="1512330912"
+SIZE="3266"
+ENDFILE
+VALUE "<project>\hdl\TX_Interface.vhd,hdl"
+STATE="utd"
+TIME="1512552195"
+SIZE="5492"
+ENDFILE
+VALUE "<project>\synthesis\MARS_MB_rev1_top.edn,syn_edn"
+STATE="utd"
+TIME="1512484445"
+SIZE="236148"
+ENDFILE
+VALUE "<project>\synthesis\MARS_MB_rev1_top.so,so"
+STATE="utd"
+TIME="1512484445"
+SIZE="276"
+ENDFILE
+VALUE "<project>\synthesis\MARS_MB_rev1_top_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1512484445"
+SIZE="413"
+ENDFILE
+VALUE "<project>\synthesis\MARS_MB_rev1_top_syn.prj,prj"
+STATE="utd"
+TIME="1512484445"
+SIZE="2452"
+ENDFILE
+VALUE "<project>\synthesis\synwork\layer0.so,so"
+STATE="utd"
+TIME="1512400370"
+SIZE="159"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "MARS_MB_rev1_top::work"
+FILE "<project>\component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.vhd,hdl"
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\MARS_MB_rev1_top.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\MARS_MB_rev1_top.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST PinReports
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top_report_pin_byname.txt,log"
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top_report_pin_bynumber.txt,log"
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+ENDLIST
+LIST Other_Association
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DisablePulseFiltering=false
+DumpVCD=false
+VCDFileName=power.vcd
+VHDL2008=false
+Verilog2001=false
+SystemVerilog=false
+TimeUnit=1
+TimeUnitBase=ns
+Precision=100
+PrecisionBase=ps
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=FALSE
+AutoCheckConstraints=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+PeriInitStandalone=FALSE
+EnableViewDraw=FALSE
+UpdateViewDrawIni=TRUE
+GenerateHDLFromSchematic=TRUE
+VmNetlistFlowOn=FALSE
+EnableDesignSeparationOn=FALSE
+EnableSETMitigationOn=FALSE
+DisplayFanoutLimit=10
+AbortFlowOnPDCErrorsOn=TRUE
+AbortFlowOnSDCErrorsOn=TRUE
+InstantiateInSmartDesign=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="SoftConsole"
+FUNCTION="SoftwareIDE"
+TOOL="SoftConsole"
+LOCATION="eclipse.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Synplify Pro ME"
+FUNCTION="Synthesis"
+TOOL="Synplify Pro ME"
+LOCATION="C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin\synplify_pro.exe"
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="ModelSim ME"
+FUNCTION="Simulation"
+TOOL="ModelSim"
+LOCATION="C:\Microsemi\Libero_SoC_v11.8\Modelsim\win32acoem\modelsim.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Custom"
+FUNCTION="Program"
+TOOL="FlashPro"
+LOCATION="C:\Microsemi\Libero_SoC_v11.8\Designer\bin\flashpro.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Identify Debugger"
+FUNCTION="IdentifyDebugger"
+TOOL="Identify Debugger"
+LOCATION="C:\Microsemi\Libero_SoC_v11.8\Identify\bin\identify_debugger.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "MARS_MB_rev1_top::work"
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\MARS_MB_rev1_top.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\MARS_MB_rev1_top.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+Reports;Reports;0
+ReportsCurrentItem;Generate Programming Data:MARS_MB_rev1_top_prgdata_log.rpt
+HDL;hdl\SPI_Interface.vhd;0
+HDL;hdl\DAQ_FSM.vhd;0
+HDL;hdl\ADC_Interface.vhd;0
+HDL;hdl\TX_Interface.vhd;0
+HDL;hdl\Clock_Divider.vhd;0
+SmartDesign;MARS_MB_rev1_top;0
+ACTIVEVIEW;hdl\ADC_Interface.vhd
+ENDLIST
+LIST ModuleSubBlockList
+LIST "ADC_Interface::work","hdl\ADC_Interface.vhd","FALSE","FALSE"
+ENDLIST
+LIST "Clk_Div::work","hdl\Clk_Div.vhd","FALSE","FALSE"
+ENDLIST
+LIST "Clock_Divider::work","hdl\Clock_Divider.vhd","FALSE","FALSE"
+ENDLIST
+LIST "DAQ_FSM::work","hdl\DAQ_FSM.vhd","FALSE","FALSE"
+ENDLIST
+LIST "DESIGN_FIRMWARE::work","component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf","TRUE","FALSE"
+ENDLIST
+LIST "DESIGN_IO::work","component\work\DESIGN_IO\DESIGN_IO.cxf","TRUE","FALSE"
+ENDLIST
+LIST "MARS_MB_rev1_top::work","component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.vhd","TRUE","FALSE"
+SUBBLOCK "ADC_Interface::work","hdl\ADC_Interface.vhd","FALSE","FALSE"
+SUBBLOCK "Clock_Divider::work","hdl\Clock_Divider.vhd","FALSE","FALSE"
+SUBBLOCK "DAQ_FSM::work","hdl\DAQ_FSM.vhd","FALSE","FALSE"
+SUBBLOCK "SPI_Interface::work","hdl\SPI_Interface.vhd","FALSE","FALSE"
+SUBBLOCK "TX_Interface::work","hdl\TX_Interface.vhd","FALSE","FALSE"
+ENDLIST
+LIST "SPI_Interface::work","hdl\SPI_Interface.vhd","FALSE","FALSE"
+ENDLIST
+LIST "TX_Interface::work","hdl\TX_Interface.vhd","FALSE","FALSE"
+ENDLIST
+ENDLIST
+LIST ActiveTestBenchList
+ENDLIST
+LIST IOTabList
+ENDLIST
+LIST FPTabList
+ENDLIST
+LIST TimingTabList
+ENDLIST
+LIST FDCTabList
+ENDLIST

@@ -1,0 +1,12 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: MO231 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\test\mars_daq\firmware_mb_fpga\hdl\adc_interface.vhd":60:2:60:3|Found counter in view:work.ADC_Interface(architecture_adc_interface) instance ADC_cntr[6:0] 
+@N: MF238 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\test\mars_daq\firmware_mb_fpga\hdl\clock_divider.vhd":56:23:56:37|Found 8-bit incrementor, 'un4_cntr_100khz[25:32]'
+@N: MO231 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\test\mars_daq\firmware_mb_fpga\hdl\daq_fsm.vhd":71:2:71:3|Found counter in view:work.DAQ_FSM(architecture_daq_fsm) instance DAQ_cntr[8:0] 
+@N: MF176 |Default generator successful 
+@N: MF176 |Default generator successful 
+@N: MO231 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\test\mars_daq\firmware_mb_fpga\hdl\tx_interface.vhd":82:2:82:3|Found counter in view:work.TX_Interface(architecture_tx_interface) instance TX_cntr[3:0] 
+@N: FP130 |Promoting Net Clk_USB_c on CLKBUF  Clk_USB_pad 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack

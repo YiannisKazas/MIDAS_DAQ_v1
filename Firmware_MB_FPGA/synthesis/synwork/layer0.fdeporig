@@ -1,0 +1,55 @@
+#defaultlanguage:vhdl
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\synthesis\\synwork\\MARS_MB_rev1_top_comp.srs|-top|work.MARS_MB_rev1_top|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\bin64\\c_vhdl.exe":1479971492
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd2008\\location.map":1478797188
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd2008\\std.vhd":1487934586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd\\snps_haps_pkg.vhd":1487934454
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd2008\\std1164.vhd":1487934586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd2008\\std_textio.vhd":1487934586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd2008\\numeric.vhd":1487934586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd\\umr_capim.vhd":1487934454
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd2008\\arith.vhd":1487934586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd2008\\unsigned.vhd":1487934586
+#CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd\\hyperents.vhd":1487934454
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\ADC_Interface.vhd":1512551516
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\Clock_Divider.vhd":1512386712
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\DAQ_FSM.vhd":1512550163
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\SPI_Interface.vhd":1512330912
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\TX_Interface.vhd":1512552195
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\component\\work\\MARS_MB_rev1_top\\MARS_MB_rev1_top.vhd":1512552538
+0 "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\ADC_Interface.vhd" vhdl
+1 "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\Clock_Divider.vhd" vhdl
+2 "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\DAQ_FSM.vhd" vhdl
+3 "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\SPI_Interface.vhd" vhdl
+4 "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\TX_Interface.vhd" vhdl
+5 "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.vhd" vhdl
+
+# Dependency Lists (Uses list)
+0 -1
+1 -1
+2 -1
+3 -1
+4 -1
+5 0 1 2 3 4 
+
+# Dependency Lists (Users Of)
+0 5 
+1 5 
+2 5 
+3 5 
+4 5 
+5 -1
+
+# Design Unit to File Association
+arch work adc_interface architecture_adc_interface 0
+module work adc_interface 0
+arch work clock_divider architecture_clock_divider 1
+module work clock_divider 1
+arch work daq_fsm architecture_daq_fsm 2
+module work daq_fsm 2
+arch work spi_interface architecture_spi_interface 3
+module work spi_interface 3
+arch work tx_interface architecture_tx_interface 4
+module work tx_interface 4
+arch work mars_mb_rev1_top rtl 5
+module work mars_mb_rev1_top 5

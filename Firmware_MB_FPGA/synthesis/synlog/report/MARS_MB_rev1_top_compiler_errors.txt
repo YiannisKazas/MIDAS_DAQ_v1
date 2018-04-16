@@ -1,0 +1,4 @@
+@E: CD242 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\TX_Interface.vhd":61:6:61:7|Expecting ;
+@E: CD430 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\TX_Interface.vhd":61:6:61:7|Expecting library unit
+@E: Parse errors encountered - exiting
+

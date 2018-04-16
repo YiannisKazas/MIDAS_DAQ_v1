@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>MARS_MB_rev1_top</header>
+  <drc>
+    <status>C:\Microsemi\Libero_SoC_v11.8\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin DAQ_FSM_0:TP</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/MARS_MB_rev1_top/pins/DAQ_FSM_0:TP</crossprobe>
+  </drc>
+</drcreport>

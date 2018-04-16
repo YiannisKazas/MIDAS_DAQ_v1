@@ -1,0 +1,11 @@
+Microsemi Corporation - Microsemi Libero Software Release Libero SoC v11.8 SP2 (Version 11.8.2.4)
+
+Date      :  Wed Dec 06 11:28:58 2017
+Project   :  C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA
+Component :  MARS_MB_rev1_top
+Family    :  IGLOO
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/johnk/OneDrive/NCSR_Demokritos/ESA/Test/MARS_DAQ/Firmware_MB_FPGA/component/work/MARS_MB_rev1_top/MARS_MB_rev1_top.vhd
+

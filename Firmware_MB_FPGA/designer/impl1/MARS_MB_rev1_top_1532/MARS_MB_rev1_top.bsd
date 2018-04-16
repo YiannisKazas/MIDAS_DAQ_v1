@@ -1,0 +1,789 @@
+entity AGLN020V5QN68 is
+generic ( PHYSICAL_PIN_MAP : string := 
+"QN68");
+
+port (
+ADC_CS: OUT bit;
+ADC_CONV: OUT bit;
+ADC_SCLK: OUT bit;
+CLK_USB: IN bit;
+DAC_CS: OUT bit;
+DAC_DIN: OUT bit;
+DAC_SCLK: OUT bit;
+DAQ_EN: IN bit;
+DATA_OUT0: OUT bit;
+DATA_OUT1: OUT bit;
+DATA_OUT2: OUT bit;
+DATA_OUT3: OUT bit;
+DATA_OUT4: OUT bit;
+DATA_OUT5: OUT bit;
+DATA_OUT6: OUT bit;
+DATA_OUT7: OUT bit;
+GND: LINKAGE bit_vector(0 TO 3);
+INTEGRATOR_RST: OUT bit;
+LLA0R2AB013: OUT bit;
+LRC0R0AB061: OUT bit;
+NC: LINKAGE bit_vector(0 TO 1);
+R0AB059: OUT bit;
+R1AB022: OUT bit;
+R1AB025: OUT bit;
+R1AB028: OUT bit;
+R1AB030: OUT bit;
+R1AB032: OUT bit;
+R1AB033: OUT bit;
+R1AB034: OUT bit;
+R1AB035: OUT bit;
+R1AB037: OUT bit;
+R1AB048: OUT bit;
+R1AB050: OUT bit;
+R1AB051: OUT bit;
+R1AB052: OUT bit;
+R1AB054: OUT bit;
+R1AB056: OUT bit;
+R2AB005: OUT bit;
+R2AB009: OUT bit;
+R2AB011: OUT bit;
+R2AB014: OUT bit;
+R2AB015: OUT bit;
+R2AB016: OUT bit;
+R2AB017: OUT bit;
+R2AB018: OUT bit;
+R2AB020: OUT bit;
+R2AB021: OUT bit;
+SPI_CS: IN bit;
+SPI_MOSI: IN bit;
+SPI_SCLK: IN bit;
+SL_FIFO_WR_EN: OUT bit;
+TCK: IN bit;
+TDI: IN bit;
+TDO: OUT bit;
+TMS: IN bit;
+TRST: IN bit;
+VCC: LINKAGE bit_vector(0 TO 2);
+VCCIB0: LINKAGE bit;
+VCCIB1: LINKAGE bit;
+VCCIB2: LINKAGE bit;
+VJTAG: LINKAGE bit;
+VPUMP: LINKAGE bit
+);
+use STD_1149_1_1994.all;
+use STD_1532_2002.all;
+attribute COMPONENT_CONFORMANCE of AGLN020V5QN68 : entity is
+"STD_1149_1_1993";
+
+attribute PIN_MAP of  AGLN020V5QN68 : entity is PHYSICAL_PIN_MAP;
+CONSTANT QN68 : PIN_MAP_STRING:= 
+"ADC_CS    :2,     " &
+"ADC_CONV  :4,     " &
+"ADC_SCLK  :64,    " &
+"CLK_USB   :41,    " &
+"DAC_CS    :67,    " &
+"DAC_DIN   :65,    " &
+"DAC_SCLK  :66,    " &
+"DAQ_EN    :47,    " &
+"DATA_OUT0 :55,    " &
+"DATA_OUT1 :54,    " &
+"DATA_OUT2 :53,    " &
+"DATA_OUT3 :52,    " &
+"DATA_OUT4 :51,    " &
+"DATA_OUT5 :50,    " &
+"DATA_OUT6 :49,    " &
+"DATA_OUT7 :48,    " &
+"GND       :(25,   45,    60,    9),    " &
+"INTEGRATOR_RST:68,    " &
+"LLA0R2AB013:7,     " &
+"LRC0R0AB061:42,    " &
+"NC        :(59,   61),   " &
+"R0AB059   :40,    " &
+"R1AB022   :18,    " &
+"R1AB025   :19,    " &
+"R1AB028   :20,    " &
+"R1AB030   :63,    " &
+"R1AB032   :21,    " &
+"R1AB033   :62,    " &
+"R1AB034   :22,    " &
+"R1AB035   :23,    " &
+"R1AB037   :58,    " &
+"R1AB048   :27,    " &
+"R1AB050   :28,    " &
+"R1AB051   :57,    " &
+"R1AB052   :29,    " &
+"R1AB054   :30,    " &
+"R1AB056   :31,    " &
+"R2AB005   :1,     " &
+"R2AB009   :3,     " &
+"R2AB011   :5,     " &
+"R2AB014   :11,    " &
+"R2AB015   :12,    " &
+"R2AB016   :13,    " &
+"R2AB017   :14,    " &
+"R2AB018   :15,    " &
+"R2AB020   :16,    " &
+"R2AB021   :17,    " &
+"SPI_CS    :6,     " &
+"SPI_MOSI  :56,    " &
+"SPI_SCLK  :39,    " &
+"SL_FIFO_WR_EN:43,    " &
+"TCK       :32,    " &
+"TDI       :33,    " &
+"TDO       :36,    " &
+"TMS       :34,    " &
+"TRST      :37,    " &
+"VCC       :(24,   46,    8),    " &
+"VCCIB0    :44,    " &
+"VCCIB1    :26,    " &
+"VCCIB2    :10,    " &
+"VJTAG     :38,    " &
+"VPUMP     :35     ";
+
+attribute TAP_SCAN_IN of TDI : signal is true;
+attribute TAP_SCAN_MODE of TMS : signal is true;
+attribute TAP_SCAN_OUT of TDO : signal is true;
+attribute TAP_SCAN_RESET of TRST : signal is true;
+attribute TAP_SCAN_CLOCK of TCK : signal is (2.00E+007, BOTH);
+attribute INSTRUCTION_LENGTH of AGLN020V5QN68 : entity is 8;
+attribute INSTRUCTION_OPCODE of AGLN020V5QN68 : entity is
+"BYPASS (11111111)," &
+"IDCODE (00001111)," &
+"EXTEST (00000000), " &
+"SAMPLE (00000001)," &
+"HIGHZ (00000111)," &
+"CLAMP (00000101), " &
+"INTEST (00000110), " &
+"USERCODE (00001110)," &
+"FACTORY_ADDR_SHIFT (11111001)," &
+"READ_FACTORY (10111111)," &
+"ISC_NOOP (10000100)," &
+"ISC_UFROM_ADDR_SHIFT (10011111)," &
+"ISC_PROGRAM_UFROM (10011011)," &
+"ISC_DISABLE (10000001)," &
+"ISC_ENABLE (10000000)," &
+"ISC_READ_UROW (10101000)," &
+"ISC_ADDRESS_SHIFT (10101001)," &
+"ISC_READ_UFROM (10010011)," &
+"ISC_QUERY_SECURITY (10100100)," &
+"AES_INIT (11011101)," &
+"AES_MODE (10101100)," &
+"VERIFY_DMK (00001010)," &
+"ISC_ERASE (10000101)," &
+"ISC_PROGRAM_UROW (10100111)," &
+"ISC_INCREMENT (10000111)," &
+"ISC_DATA_SHIFT (10001001)," &
+"ISC_PROGRAM (10000011)," &
+"ISC_VERIFY0 (10001101)," &
+"ISC_VERIFY1 (10001110)," &
+"ISC_PROGRAM_RDLCK (10001100)," &
+"ISC_VERIFY_UFROM (10011100)," &
+"ISC_PROGRAM_UKEY (10001011)," &
+"ISC_MATCH_UKEY (10010010)," &
+"ISC_PROGRAM_SECURITY (10100011)," &
+"ISC_PROGRAM_DMK (10010001)," &
+"ISC_DESCRAMBLE_UFROM (10100101)," &
+"ISC_PROGRAM_ENC_UFROM (10100110)," &
+"ISC_VERIFY_ENC_UFROM (10011101)," &
+"DESCRAMBLE (11011111)," &
+"RTS (11000000)";
+
+attribute INSTRUCTION_CAPTURE of AGLN020V5QN68 : entity is
+"XXXXXX01";
+
+attribute IDCODE_REGISTER of AGLN020V5QN68 : entity is
+"XXXXX110100100001000000111001111";
+
+attribute USERCODE_REGISTER of AGLN020V5QN68 : entity is
+"00000000000000000000000000000000";
+
+attribute REGISTER_ACCESS of AGLN020V5QN68 : entity is
+"BOUNDARY(EXTEST, SAMPLE, INTEST), " &
+"BYPASS (HIGHZ)," &
+"DEVICE_ID(IDCODE)," &
+"AESMODE[3] (AES_MODE)," &
+"AES_IV[128] (AES_INIT)," &
+"DESCRAMBLE_RESULT[128] (DESCRAMBLE)," &
+"EOL[2] (ISC_VERIFY0, ISC_VERIFY1)," &
+"FACTORY_ADDR[3] (FACTORY_ADDR_SHIFT)," &
+"FRDATA[128] (READ_FACTORY)," &
+"ISC_ADDRESS[1] (ISC_ADDRESS_SHIFT)," &
+"ISC_CONFIG[18] (ISC_DISABLE, ISC_ENABLE)," &
+"ISC_DEFAULT[5] (ISC_NOOP, ISC_PROGRAM, ISC_PROGRAM_RDLCK)," &
+"ISC_INC[2] (ISC_INCREMENT)," &
+"ISC_SECTOR[23] (ISC_ERASE)," &
+"KDATA[128] (ISC_PROGRAM_UROW, ISC_MATCH_UKEY, ISC_PROGRAM_DMK)," &
+"PDATA128[128] (ISC_DESCRAMBLE_UFROM)," &
+"PDATA26[26] (ISC_DATA_SHIFT)," &
+"SECURITY_ENABLE[44] (ISC_QUERY_SECURITY, ISC_PROGRAM_SECURITY)," &
+"SFDIO[128] (ISC_VERIFY_UFROM, ISC_PROGRAM_UKEY)," &
+"TREG[1] (RTS)," &
+"UFADDR[3] (ISC_UFROM_ADDR_SHIFT)," &
+"UFAUTH[128] (ISC_PROGRAM_ENC_UFROM, ISC_VERIFY_ENC_UFROM)," &
+"UFPDATA[128] (ISC_PROGRAM_UFROM)," &
+"UFROM_DATA[128] (ISC_READ_UFROM)," &
+"UROW[128] (ISC_READ_UROW)," &
+"VERIFY_DMK_RESULT[128] (VERIFY_DMK)";
+
+attribute BOUNDARY_LENGTH of AGLN020V5QN68 : entity is 351;
+
+attribute BOUNDARY_REGISTER of AGLN020V5QN68 : entity is
+"     0	(BC_1, *,INTERNAL,   X), " &
+"     1	(BC_1, *,INTERNAL,   X), " &
+"     2	(BC_1, *,INTERNAL,   X), " &
+"     3	(BC_1, *,INTERNAL,   X), " &
+"     4	(BC_1, *,INTERNAL,   X), " &
+"     5	(BC_1, *,INTERNAL,   X), " &
+"     6	(BC_1, *,INTERNAL,   X), " &
+"     7	(BC_1, *,INTERNAL,   X), " &
+"     8	(BC_1, *,INTERNAL,   X), " &
+"     9	(BC_1, *,INTERNAL,   X), " &
+"    10	(BC_1, *,INTERNAL,   X), " &
+"    11	(BC_1, *,INTERNAL,   X), " &
+"    12	(BC_1, LRC0R0AB061,	OUTPUT3,   X,    13, 0, Z), " &
+"    13	(BC_1, *,	CONTROL, 0), " &
+"    14	(BC_1, *,INTERNAL,   X), " &
+"    15	(BC_1, *,INTERNAL,   X), " &
+"    16	(BC_1, *,INTERNAL,   0), " &
+"    17	(BC_1, CLK_USB,	INPUT,   X), " &
+"    18	(BC_1, R0AB059,	OUTPUT3,   X,    19, 0, Z), " &
+"    19	(BC_1, *,	CONTROL, 0), " &
+"    20	(BC_1, *,INTERNAL,   X), " &
+"    21	(BC_1, *,INTERNAL,   X), " &
+"    22	(BC_1, *,INTERNAL,   0), " &
+"    23	(BC_1, SPI_SCLK,	INPUT,   X), " &
+"    24	(BC_1, DATA_OUT1,	OUTPUT3,   X,    25, 0, Z), " &
+"    25	(BC_1, *,	CONTROL, 0), " &
+"    26	(BC_1, *,INTERNAL,   X), " &
+"    27	(BC_1, R1AB056,	OUTPUT3,   X,    28, 0, Z), " &
+"    28	(BC_1, *,	CONTROL, 0), " &
+"    29	(BC_1, *,INTERNAL,   X), " &
+"    30	(BC_1, DATA_OUT0,	OUTPUT3,   X,    31, 0, Z), " &
+"    31	(BC_1, *,	CONTROL, 0), " &
+"    32	(BC_1, *,INTERNAL,   X), " &
+"    33	(BC_1, R1AB054,	OUTPUT3,   X,    34, 0, Z), " &
+"    34	(BC_1, *,	CONTROL, 0), " &
+"    35	(BC_1, *,INTERNAL,   X), " &
+"    36	(BC_1, *,INTERNAL,   X), " &
+"    37	(BC_1, *,INTERNAL,   0), " &
+"    38	(BC_1, SPI_MOSI,	INPUT,   X), " &
+"    39	(BC_1, R1AB052,	OUTPUT3,   X,    40, 0, Z), " &
+"    40	(BC_1, *,	CONTROL, 0), " &
+"    41	(BC_1, *,INTERNAL,   X), " &
+"    42	(BC_1, R1AB051,	OUTPUT3,   X,    43, 0, Z), " &
+"    43	(BC_1, *,	CONTROL, 0), " &
+"    44	(BC_1, *,INTERNAL,   X), " &
+"    45	(BC_1, R1AB050,	OUTPUT3,   X,    46, 0, Z), " &
+"    46	(BC_1, *,	CONTROL, 0), " &
+"    47	(BC_1, *,INTERNAL,   X), " &
+"    48	(BC_1, *,INTERNAL,   X), " &
+"    49	(BC_1, *,INTERNAL,   X), " &
+"    50	(BC_1, *,INTERNAL,   X), " &
+"    51	(BC_1, R1AB048,	OUTPUT3,   X,    52, 0, Z), " &
+"    52	(BC_1, *,	CONTROL, 0), " &
+"    53	(BC_1, *,INTERNAL,   X), " &
+"    54	(BC_1, *,INTERNAL,   X), " &
+"    55	(BC_1, *,INTERNAL,   X), " &
+"    56	(BC_1, *,INTERNAL,   X), " &
+"    57	(BC_1, *,INTERNAL,   X), " &
+"    58	(BC_1, *,INTERNAL,   X), " &
+"    59	(BC_1, *,INTERNAL,   X), " &
+"    60	(BC_1, *,INTERNAL,   X), " &
+"    61	(BC_1, *,INTERNAL,   X), " &
+"    62	(BC_1, *,INTERNAL,   X), " &
+"    63	(BC_1, *,INTERNAL,   X), " &
+"    64	(BC_1, *,INTERNAL,   X), " &
+"    65	(BC_1, *,INTERNAL,   X), " &
+"    66	(BC_1, *,INTERNAL,   X), " &
+"    67	(BC_1, *,INTERNAL,   X), " &
+"    68	(BC_1, *,INTERNAL,   X), " &
+"    69	(BC_1, *,INTERNAL,   X), " &
+"    70	(BC_1, *,INTERNAL,   X), " &
+"    71	(BC_1, *,INTERNAL,   X), " &
+"    72	(BC_1, *,INTERNAL,   X), " &
+"    73	(BC_1, *,INTERNAL,   X), " &
+"    74	(BC_1, *,INTERNAL,   X), " &
+"    75	(BC_1, *,INTERNAL,   X), " &
+"    76	(BC_1, *,INTERNAL,   X), " &
+"    77	(BC_1, *,INTERNAL,   X), " &
+"    78	(BC_1, *,INTERNAL,   X), " &
+"    79	(BC_1, *,INTERNAL,   X), " &
+"    80	(BC_1, *,INTERNAL,   X), " &
+"    81	(BC_1, *,INTERNAL,   X), " &
+"    82	(BC_1, *,INTERNAL,   X), " &
+"    83	(BC_1, *,INTERNAL,   X), " &
+"    84	(BC_1, R1AB037,	OUTPUT3,   X,    85, 0, Z), " &
+"    85	(BC_1, *,	CONTROL, 0), " &
+"    86	(BC_1, *,INTERNAL,   X), " &
+"    87	(BC_1, *,INTERNAL,   X), " &
+"    88	(BC_1, *,INTERNAL,   X), " &
+"    89	(BC_1, *,INTERNAL,   X), " &
+"    90	(BC_1, R1AB035,	OUTPUT3,   X,    91, 0, Z), " &
+"    91	(BC_1, *,	CONTROL, 0), " &
+"    92	(BC_1, *,INTERNAL,   X), " &
+"    93	(BC_1, R1AB034,	OUTPUT3,   X,    94, 0, Z), " &
+"    94	(BC_1, *,	CONTROL, 0), " &
+"    95	(BC_1, *,INTERNAL,   X), " &
+"    96	(BC_1, R1AB033,	OUTPUT3,   X,    97, 0, Z), " &
+"    97	(BC_1, *,	CONTROL, 0), " &
+"    98	(BC_1, *,INTERNAL,   X), " &
+"    99	(BC_1, R1AB032,	OUTPUT3,   X,   100, 0, Z), " &
+"   100	(BC_1, *,	CONTROL, 0), " &
+"   101	(BC_1, *,INTERNAL,   X), " &
+"   102	(BC_1, *,INTERNAL,   X), " &
+"   103	(BC_1, *,INTERNAL,   X), " &
+"   104	(BC_1, *,INTERNAL,   X), " &
+"   105	(BC_1, R1AB030,	OUTPUT3,   X,   106, 0, Z), " &
+"   106	(BC_1, *,	CONTROL, 0), " &
+"   107	(BC_1, *,INTERNAL,   X), " &
+"   108	(BC_1, *,INTERNAL,   X), " &
+"   109	(BC_1, *,INTERNAL,   X), " &
+"   110	(BC_1, *,INTERNAL,   X), " &
+"   111	(BC_1, R1AB028,	OUTPUT3,   X,   112, 0, Z), " &
+"   112	(BC_1, *,	CONTROL, 0), " &
+"   113	(BC_1, *,INTERNAL,   X), " &
+"   114	(BC_1, *,INTERNAL,   X), " &
+"   115	(BC_1, *,INTERNAL,   X), " &
+"   116	(BC_1, *,INTERNAL,   X), " &
+"   117	(BC_1, ADC_SCLK,	OUTPUT3,   X,   118, 0, Z), " &
+"   118	(BC_1, *,	CONTROL, 0), " &
+"   119	(BC_1, *,INTERNAL,   X), " &
+"   120	(BC_1, R1AB025,	OUTPUT3,   X,   121, 0, Z), " &
+"   121	(BC_1, *,	CONTROL, 0), " &
+"   122	(BC_1, *,INTERNAL,   X), " &
+"   123	(BC_1, *,INTERNAL,   X), " &
+"   124	(BC_1, *,INTERNAL,   X), " &
+"   125	(BC_1, *,INTERNAL,   X), " &
+"   126	(BC_1, *,INTERNAL,   X), " &
+"   127	(BC_1, *,INTERNAL,   X), " &
+"   128	(BC_1, *,INTERNAL,   X), " &
+"   129	(BC_1, R1AB022,	OUTPUT3,   X,   130, 0, Z), " &
+"   130	(BC_1, *,	CONTROL, 0), " &
+"   131	(BC_1, *,INTERNAL,   X), " &
+"   132	(BC_1, R2AB021,	OUTPUT3,   X,   133, 0, Z), " &
+"   133	(BC_1, *,	CONTROL, 0), " &
+"   134	(BC_1, *,INTERNAL,   X), " &
+"   135	(BC_1, R2AB020,	OUTPUT3,   X,   136, 0, Z), " &
+"   136	(BC_1, *,	CONTROL, 0), " &
+"   137	(BC_1, *,INTERNAL,   X), " &
+"   138	(BC_1, *,INTERNAL,   X), " &
+"   139	(BC_1, *,INTERNAL,   X), " &
+"   140	(BC_1, *,INTERNAL,   X), " &
+"   141	(BC_1, R2AB018,	OUTPUT3,   X,   142, 0, Z), " &
+"   142	(BC_1, *,	CONTROL, 0), " &
+"   143	(BC_1, *,INTERNAL,   X), " &
+"   144	(BC_1, R2AB017,	OUTPUT3,   X,   145, 0, Z), " &
+"   145	(BC_1, *,	CONTROL, 0), " &
+"   146	(BC_1, *,INTERNAL,   X), " &
+"   147	(BC_1, R2AB016,	OUTPUT3,   X,   148, 0, Z), " &
+"   148	(BC_1, *,	CONTROL, 0), " &
+"   149	(BC_1, *,INTERNAL,   X), " &
+"   150	(BC_1, R2AB015,	OUTPUT3,   X,   151, 0, Z), " &
+"   151	(BC_1, *,	CONTROL, 0), " &
+"   152	(BC_1, *,INTERNAL,   X), " &
+"   153	(BC_1, R2AB014,	OUTPUT3,   X,   154, 0, Z), " &
+"   154	(BC_1, *,	CONTROL, 0), " &
+"   155	(BC_1, *,INTERNAL,   X), " &
+"   156	(BC_1, LLA0R2AB013,	OUTPUT3,   X,   157, 0, Z), " &
+"   157	(BC_1, *,	CONTROL, 0), " &
+"   158	(BC_1, *,INTERNAL,   X), " &
+"   159	(BC_1, *,INTERNAL,   X), " &
+"   160	(BC_1, *,INTERNAL,   0), " &
+"   161	(BC_1, SPI_CS,	INPUT,   X), " &
+"   162	(BC_1, R2AB011,	OUTPUT3,   X,   163, 0, Z), " &
+"   163	(BC_1, *,	CONTROL, 0), " &
+"   164	(BC_1, *,INTERNAL,   X), " &
+"   165	(BC_1, ADC_CONV,	OUTPUT3,   X,   166, 0, Z), " &
+"   166	(BC_1, *,	CONTROL, 0), " &
+"   167	(BC_1, *,INTERNAL,   X), " &
+"   168	(BC_1, R2AB009,	OUTPUT3,   X,   169, 0, Z), " &
+"   169	(BC_1, *,	CONTROL, 0), " &
+"   170	(BC_1, *,INTERNAL,   X), " &
+"   171	(BC_1, DAC_CS,	OUTPUT3,   X,   172, 0, Z), " &
+"   172	(BC_1, *,	CONTROL, 0), " &
+"   173	(BC_1, *,INTERNAL,   X), " &
+"   174	(BC_1, ADC_CS,	OUTPUT3,   X,   175, 0, Z), " &
+"   175	(BC_1, *,	CONTROL, 0), " &
+"   176	(BC_1, *,INTERNAL,   X), " &
+"   177	(BC_1, DAC_SCLK,	OUTPUT3,   X,   178, 0, Z), " &
+"   178	(BC_1, *,	CONTROL, 0), " &
+"   179	(BC_1, *,INTERNAL,   X), " &
+"   180	(BC_1, R2AB005,	OUTPUT3,   X,   181, 0, Z), " &
+"   181	(BC_1, *,	CONTROL, 0), " &
+"   182	(BC_1, *,INTERNAL,   X), " &
+"   183	(BC_1, DAC_DIN,	OUTPUT3,   X,   184, 0, Z), " &
+"   184	(BC_1, *,	CONTROL, 0), " &
+"   185	(BC_1, *,INTERNAL,   X), " &
+"   186	(BC_1, INTEGRATOR_RST,	OUTPUT3,   X,   187, 0, Z), " &
+"   187	(BC_1, *,	CONTROL, 0), " &
+"   188	(BC_1, *,INTERNAL,   X), " &
+"   189	(BC_1, *,INTERNAL,   X), " &
+"   190	(BC_1, *,INTERNAL,   X), " &
+"   191	(BC_1, *,INTERNAL,   X), " &
+"   192	(BC_1, *,INTERNAL,   X), " &
+"   193	(BC_1, *,INTERNAL,   X), " &
+"   194	(BC_1, *,INTERNAL,   X), " &
+"   195	(BC_1, *,INTERNAL,   X), " &
+"   196	(BC_1, *,INTERNAL,   X), " &
+"   197	(BC_1, *,INTERNAL,   X), " &
+"   198	(BC_1, *,INTERNAL,   X), " &
+"   199	(BC_1, *,INTERNAL,   X), " &
+"   200	(BC_1, *,INTERNAL,   X), " &
+"   201	(BC_1, *,INTERNAL,   X), " &
+"   202	(BC_1, *,INTERNAL,   X), " &
+"   203	(BC_1, *,INTERNAL,   X), " &
+"   204	(BC_1, *,INTERNAL,   X), " &
+"   205	(BC_1, *,INTERNAL,   X), " &
+"   206	(BC_1, *,INTERNAL,   X), " &
+"   207	(BC_1, *,INTERNAL,   X), " &
+"   208	(BC_1, *,INTERNAL,   X), " &
+"   209	(BC_1, *,INTERNAL,   X), " &
+"   210	(BC_1, *,INTERNAL,   X), " &
+"   211	(BC_1, *,INTERNAL,   X), " &
+"   212	(BC_1, *,INTERNAL,   X), " &
+"   213	(BC_1, *,INTERNAL,   X), " &
+"   214	(BC_1, *,INTERNAL,   X), " &
+"   215	(BC_1, *,INTERNAL,   X), " &
+"   216	(BC_1, *,INTERNAL,   X), " &
+"   217	(BC_1, *,INTERNAL,   X), " &
+"   218	(BC_1, *,INTERNAL,   X), " &
+"   219	(BC_1, *,INTERNAL,   X), " &
+"   220	(BC_1, *,INTERNAL,   X), " &
+"   221	(BC_1, *,INTERNAL,   X), " &
+"   222	(BC_1, *,INTERNAL,   X), " &
+"   223	(BC_1, *,INTERNAL,   X), " &
+"   224	(BC_1, *,INTERNAL,   X), " &
+"   225	(BC_1, *,INTERNAL,   X), " &
+"   226	(BC_1, *,INTERNAL,   X), " &
+"   227	(BC_1, *,INTERNAL,   X), " &
+"   228	(BC_1, *,INTERNAL,   X), " &
+"   229	(BC_1, *,INTERNAL,   X), " &
+"   230	(BC_1, *,INTERNAL,   X), " &
+"   231	(BC_1, *,INTERNAL,   X), " &
+"   232	(BC_1, *,INTERNAL,   X), " &
+"   233	(BC_1, *,INTERNAL,   X), " &
+"   234	(BC_1, *,INTERNAL,   X), " &
+"   235	(BC_1, *,INTERNAL,   X), " &
+"   236	(BC_1, *,INTERNAL,   X), " &
+"   237	(BC_1, *,INTERNAL,   X), " &
+"   238	(BC_1, *,INTERNAL,   X), " &
+"   239	(BC_1, *,INTERNAL,   X), " &
+"   240	(BC_1, *,INTERNAL,   X), " &
+"   241	(BC_1, *,INTERNAL,   X), " &
+"   242	(BC_1, *,INTERNAL,   X), " &
+"   243	(BC_1, *,INTERNAL,   X), " &
+"   244	(BC_1, *,INTERNAL,   X), " &
+"   245	(BC_1, *,INTERNAL,   X), " &
+"   246	(BC_1, *,INTERNAL,   X), " &
+"   247	(BC_1, *,INTERNAL,   X), " &
+"   248	(BC_1, *,INTERNAL,   X), " &
+"   249	(BC_1, *,INTERNAL,   X), " &
+"   250	(BC_1, *,INTERNAL,   X), " &
+"   251	(BC_1, *,INTERNAL,   X), " &
+"   252	(BC_1, *,INTERNAL,   X), " &
+"   253	(BC_1, *,INTERNAL,   X), " &
+"   254	(BC_1, *,INTERNAL,   X), " &
+"   255	(BC_1, *,INTERNAL,   X), " &
+"   256	(BC_1, *,INTERNAL,   X), " &
+"   257	(BC_1, *,INTERNAL,   X), " &
+"   258	(BC_1, *,INTERNAL,   X), " &
+"   259	(BC_1, *,INTERNAL,   X), " &
+"   260	(BC_1, *,INTERNAL,   X), " &
+"   261	(BC_1, *,INTERNAL,   X), " &
+"   262	(BC_1, *,INTERNAL,   X), " &
+"   263	(BC_1, *,INTERNAL,   X), " &
+"   264	(BC_1, *,INTERNAL,   X), " &
+"   265	(BC_1, *,INTERNAL,   X), " &
+"   266	(BC_1, *,INTERNAL,   X), " &
+"   267	(BC_1, *,INTERNAL,   X), " &
+"   268	(BC_1, *,INTERNAL,   X), " &
+"   269	(BC_1, *,INTERNAL,   X), " &
+"   270	(BC_1, *,INTERNAL,   X), " &
+"   271	(BC_1, *,INTERNAL,   X), " &
+"   272	(BC_1, *,INTERNAL,   X), " &
+"   273	(BC_1, *,INTERNAL,   X), " &
+"   274	(BC_1, *,INTERNAL,   X), " &
+"   275	(BC_1, *,INTERNAL,   X), " &
+"   276	(BC_1, *,INTERNAL,   X), " &
+"   277	(BC_1, *,INTERNAL,   X), " &
+"   278	(BC_1, *,INTERNAL,   X), " &
+"   279	(BC_1, *,INTERNAL,   X), " &
+"   280	(BC_1, *,INTERNAL,   X), " &
+"   281	(BC_1, *,INTERNAL,   X), " &
+"   282	(BC_1, *,INTERNAL,   X), " &
+"   283	(BC_1, *,INTERNAL,   X), " &
+"   284	(BC_1, *,INTERNAL,   X), " &
+"   285	(BC_1, *,INTERNAL,   X), " &
+"   286	(BC_1, *,INTERNAL,   X), " &
+"   287	(BC_1, *,INTERNAL,   X), " &
+"   288	(BC_1, *,INTERNAL,   X), " &
+"   289	(BC_1, *,INTERNAL,   X), " &
+"   290	(BC_1, *,INTERNAL,   X), " &
+"   291	(BC_1, *,INTERNAL,   X), " &
+"   292	(BC_1, *,INTERNAL,   X), " &
+"   293	(BC_1, *,INTERNAL,   X), " &
+"   294	(BC_1, *,INTERNAL,   X), " &
+"   295	(BC_1, *,INTERNAL,   X), " &
+"   296	(BC_1, *,INTERNAL,   X), " &
+"   297	(BC_1, *,INTERNAL,   X), " &
+"   298	(BC_1, *,INTERNAL,   X), " &
+"   299	(BC_1, *,INTERNAL,   X), " &
+"   300	(BC_1, *,INTERNAL,   X), " &
+"   301	(BC_1, *,INTERNAL,   X), " &
+"   302	(BC_1, *,INTERNAL,   X), " &
+"   303	(BC_1, *,INTERNAL,   X), " &
+"   304	(BC_1, *,INTERNAL,   X), " &
+"   305	(BC_1, *,INTERNAL,   X), " &
+"   306	(BC_1, *,INTERNAL,   X), " &
+"   307	(BC_1, *,INTERNAL,   X), " &
+"   308	(BC_1, *,INTERNAL,   X), " &
+"   309	(BC_1, *,INTERNAL,   X), " &
+"   310	(BC_1, *,INTERNAL,   X), " &
+"   311	(BC_1, *,INTERNAL,   X), " &
+"   312	(BC_1, *,INTERNAL,   X), " &
+"   313	(BC_1, *,INTERNAL,   X), " &
+"   314	(BC_1, *,INTERNAL,   X), " &
+"   315	(BC_1, *,INTERNAL,   X), " &
+"   316	(BC_1, *,INTERNAL,   X), " &
+"   317	(BC_1, *,INTERNAL,   X), " &
+"   318	(BC_1, *,INTERNAL,   X), " &
+"   319	(BC_1, *,INTERNAL,   X), " &
+"   320	(BC_1, *,INTERNAL,   X), " &
+"   321	(BC_1, *,INTERNAL,   X), " &
+"   322	(BC_1, *,INTERNAL,   X), " &
+"   323	(BC_1, *,INTERNAL,   X), " &
+"   324	(BC_1, DATA_OUT4,	OUTPUT3,   X,   325, 0, Z), " &
+"   325	(BC_1, *,	CONTROL, 0), " &
+"   326	(BC_1, *,INTERNAL,   X), " &
+"   327	(BC_1, DATA_OUT2,	OUTPUT3,   X,   328, 0, Z), " &
+"   328	(BC_1, *,	CONTROL, 0), " &
+"   329	(BC_1, *,INTERNAL,   X), " &
+"   330	(BC_1, DATA_OUT5,	OUTPUT3,   X,   331, 0, Z), " &
+"   331	(BC_1, *,	CONTROL, 0), " &
+"   332	(BC_1, *,INTERNAL,   X), " &
+"   333	(BC_1, DATA_OUT3,	OUTPUT3,   X,   334, 0, Z), " &
+"   334	(BC_1, *,	CONTROL, 0), " &
+"   335	(BC_1, *,INTERNAL,   X), " &
+"   336	(BC_1, DATA_OUT6,	OUTPUT3,   X,   337, 0, Z), " &
+"   337	(BC_1, *,	CONTROL, 0), " &
+"   338	(BC_1, *,INTERNAL,   X), " &
+"   339	(BC_1, DATA_OUT7,	OUTPUT3,   X,   340, 0, Z), " &
+"   340	(BC_1, *,	CONTROL, 0), " &
+"   341	(BC_1, *,INTERNAL,   X), " &
+"   342	(BC_1, *,INTERNAL,   X), " &
+"   343	(BC_1, *,INTERNAL,   0), " &
+"   344	(BC_1, DAQ_EN,	INPUT,   X), " &
+"   345	(BC_1, SL_FIFO_WR_EN,	OUTPUT3,   X,   346, 0, Z), " &
+"   346	(BC_1, *,	CONTROL, 0), " &
+"   347	(BC_1, *,INTERNAL,   X), " &
+"   348	(BC_1, *,INTERNAL,   X), " &
+"   349	(BC_1, *,INTERNAL,   X), " &
+"   350	(BC_1, *,INTERNAL,   X) ";
+
+attribute ISC_Pin_Behavior of AGLN020V5QN68 : entity is "HIGHZ";
+
+attribute ISC_Status of AGLN020V5QN68 : entity is "Implemented";
+
+attribute ISC_Blank_Usercode of AGLN020V5QN68 : entity is "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
+attribute ISC_Conformance of AGLN020V5QN68 : entity is "STD_1532_2002";
+
+attribute ISC_Flow of AGLN020V5QN68 : entity is 
+"flow_proc_verify(idcode)" &
+"initialize" &
+"(IDCODE 32:00000000 wait TCK 1 32:! 069081CF*07FFFFFF)," &
+"flow_proc_preload(preload)" &
+"initialize" &
+"(SAMPLE 351:? wait TCK 1 )," &
+"flow_proc_enable(enable)" &
+"initialize" &
+"(RTS wait TCK 1 )" &
+"(ISC_ENABLE 18:00000 wait TCK 3, 1875.0e-6 18:! 30000*30000)" &
+"(ISC_ENABLE 18:00000 wait TCK 3, 1875.0e-6 )" &
+"(ISC_QUERY_SECURITY wait TCK 3 44:! 00000000000*00000000100)," &
+"flow_proc_erase(erase)" &
+"initialize" &
+"(ISC_ERASE 23:004001 wait TCK 3 )" &
+"(ISC_NOOP wait TCK 1, 56000000.0e-6 5:! 00*0B)" &
+"(ISC_PROGRAM_UROW 128:AF52002CC14B97ED943F53D308800001 wait TCK 15 )" &
+"(ISC_NOOP wait TCK 1, 8000.0e-6 5:! 00*0B)" &
+"(RTS wait TCK 1 )" &
+"(ISC_READ_UROW wait TCK 3, 165.0e-6 128:! AF52002CC14B97ED943F53D308800001*FFFFFFFFFFFFFFFFFFFFFFFFFE01FFC0)," &
+"flow_proc_program(array)" &
+"initialize" &
+"(ISC_INCREMENT 2:2 wait TCK 3 )" &
+"Repeat 401" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_PROGRAM wait TCK 3 )" &
+"(ISC_NOOP wait TCK 1, 8000.0e-6 5:! 00*0B)" &
+"(ISC_INCREMENT 2:3 wait TCK 3 )," &
+"flow_proc_verify(array)" &
+"initialize" &
+"(ISC_INCREMENT 2:2 wait TCK 3 )" &
+"Repeat 401" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_VERIFY0 2:0 wait TCK 3, 1250.0e-6 2:! 0*3)" &
+"(ISC_VERIFY1 2:0 wait TCK 3, 1250.0e-6 2:! 0*3)" &
+"(ISC_INCREMENT 2:3 wait TCK 3 )," &
+"flow_proc_program_done(rlock)" &
+"initialize" &
+"(ISC_NOOP wait 1.0e-6 )" &
+"Repeat 2" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"(ISC_DATA_SHIFT 26:? wait TCK 3 )" &
+"terminate" &
+"(ISC_PROGRAM_RDLCK wait TCK 3 )" &
+"(ISC_NOOP wait TCK 1, 8000.0e-6 5:! 00*0B)," &
+"flow_proc_error_exit(exitdata)" &
+"initialize" &
+"(ISC_DISABLE wait 250.0e-6 )" &
+"(BYPASS wait TCK 1, 250.0e-6 )," &
+"flow_proc_erase(array_only)" &
+"initialize" &
+"(ISC_ERASE 23:004001 wait TCK 3 )" &
+"(ISC_NOOP wait TCK 1, 56000000.0e-6 5:! 00*0B)" &
+"(ISC_PROGRAM_UROW 128:AF52002CC14B97ED943F53D308800001 wait TCK 15 )" &
+"(ISC_NOOP wait TCK 1, 8000.0e-6 5:! 00*0B)" &
+"(RTS wait TCK 1 )" &
+"(ISC_READ_UROW wait TCK 3, 165.0e-6 128:! AF52002CC14B97ED943F53D308800001*FFFFFFFFFFFFFFFFFFFFFFFFFE01FFC0)," &
+"flow_proc_erase(erase_only)" &
+"initialize" &
+"(ISC_ERASE 23:004001 wait TCK 3 )" &
+"(ISC_NOOP wait TCK 1, 56000000.0e-6 5:! 00*0B)" &
+"(ISC_PROGRAM_UROW 128:FFFF003FFFFFFFFFFFFFFFFF08FE000F wait TCK 15 )" &
+"(ISC_NOOP wait TCK 1, 8000.0e-6 5:! 00*0B)" &
+"(RTS wait TCK 1 )" &
+"(ISC_READ_UROW wait TCK 3, 165.0e-6 128:! FFFF003FFFFFFFFFFFFFFFFF08FE000F*FFFFFFFFFFFFFFFFFFFFFFFFFE01FFC0)," &
+"flow_proc_erase(alldata)" &
+"initialize" &
+"(ISC_ERASE 23:7FC00F wait TCK 3 )" &
+"(ISC_NOOP wait TCK 1, 56000000.0e-6 5:! 00*0B)" &
+"(ISC_PROGRAM_UROW 128:FFFF003FFFFFFFFFFFFFFFFF08FE000F wait TCK 15 )" &
+"(ISC_NOOP wait TCK 1, 8000.0e-6 5:! 00*0B)" &
+"(RTS wait TCK 1 )" &
+"(ISC_READ_UROW wait TCK 3, 165.0e-6 128:! FFFF003FFFFFFFFFFFFFFFFF08FE000F*FFFFFFFFFFFFFFFFFFFFFFFFFE01FFC0)" &
+"(ISC_UFROM_ADDR_SHIFT 3:7 wait TCK 1 )" &
+"(ISC_PROGRAM_UFROM 128:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF wait TCK 5, 10000.0e-6 )" &
+"(ISC_UFROM_ADDR_SHIFT 3:6 wait TCK 1 )" &
+"(ISC_PROGRAM_UFROM 128:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF wait TCK 5, 10000.0e-6 )" &
+"(ISC_UFROM_ADDR_SHIFT 3:5 wait TCK 1 )" &
+"(ISC_PROGRAM_UFROM 128:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF wait TCK 5, 10000.0e-6 )" &
+"(ISC_UFROM_ADDR_SHIFT 3:4 wait TCK 1 )" &
+"(ISC_PROGRAM_UFROM 128:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF wait TCK 5, 10000.0e-6 )" &
+"(ISC_UFROM_ADDR_SHIFT 3:3 wait TCK 1 )" &
+"(ISC_PROGRAM_UFROM 128:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF wait TCK 5, 10000.0e-6 )" &
+"(ISC_UFROM_ADDR_SHIFT 3:2 wait TCK 1 )" &
+"(ISC_PROGRAM_UFROM 128:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF wait TCK 5, 10000.0e-6 )" &
+"(ISC_UFROM_ADDR_SHIFT 3:1 wait TCK 1 )" &
+"(ISC_PROGRAM_UFROM 128:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF wait TCK 5, 10000.0e-6 )" &
+"(ISC_UFROM_ADDR_SHIFT 3:0 wait TCK 1 )" &
+"(ISC_PROGRAM_UFROM 128:FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF wait TCK 5, 10000.0e-6 )," &
+"flow_proc_read(iddata)" &
+"initialize" &
+"(IDCODE wait TCK 1 32:00000000 )," &
+"flow_proc_read(info)" &
+"initialize" &
+"(USERCODE wait TCK 1 32:00000000 )" &
+"(RTS wait TCK 1 )" &
+"(ISC_READ_UROW wait TCK 3, 165.0e-6 128:00000000000000000000000000000000 )" &
+"(RTS wait TCK 1 )" &
+"(FACTORY_ADDR_SHIFT 3:0 wait TCK 1 )" &
+"(READ_FACTORY wait TCK 3, 165.0e-6 128:00000000000000000000000000000000 )";
+
+attribute ISC_Procedure of AGLN020V5QN68 : entity is 
+"proc_verify(idcode) = (flow_proc_verify(idcode))," &
+"proc_preload(preload) = (flow_proc_preload(preload))," &
+"proc_enable(enable) = (flow_proc_enable(enable))," &
+"proc_erase(erase) = (flow_proc_erase(erase))," &
+"proc_program(array) = (flow_proc_program(array))," &
+"proc_verify(array) = (flow_proc_verify(array))," &
+"proc_program_done(rlock) = (flow_proc_program_done(rlock))," &
+"proc_error_exit(exitdata) = (flow_proc_error_exit(exitdata))," &
+"proc_erase(array_only) = (flow_proc_erase(array_only))," &
+"proc_erase(erase_only) = (flow_proc_erase(erase_only))," &
+"proc_erase(alldata) = (flow_proc_erase(alldata))," &
+"proc_read(iddata) = (flow_proc_read(iddata))," &
+"proc_read(info) = (flow_proc_read(info))";
+
+attribute ISC_Action of AGLN020V5QN68 : entity is 
+"erase = (proc_verify(idcode)," &
+"proc_preload(preload)," &
+"proc_enable(enable)," &
+"proc_erase(erase_only)," &
+"proc_error_exit(exitdata))," &
+"erase(alldata) = (proc_verify(idcode)," &
+"proc_preload(preload)," &
+"proc_enable(enable)," &
+"proc_erase(alldata)," &
+"proc_error_exit(exitdata))," &
+"erase(array) = (proc_verify(idcode)," &
+"proc_preload(preload)," &
+"proc_enable(enable)," &
+"proc_erase(array_only)," &
+"proc_error_exit(exitdata))," &
+"program = (proc_verify(idcode)," &
+"proc_preload(preload)," &
+"proc_enable(enable)," &
+"proc_erase(erase)," &
+"proc_program(array)," &
+"proc_verify(array)," &
+"proc_program_done(rlock)," &
+"proc_error_exit(exitdata))," &
+"program(array) = (proc_verify(idcode)," &
+"proc_preload(preload)," &
+"proc_enable(enable)," &
+"proc_erase(array_only)," &
+"proc_program(array)," &
+"proc_verify(array)," &
+"proc_program_done(rlock)," &
+"proc_error_exit(exitdata))," &
+"read = (proc_verify(idcode)," &
+"proc_preload(preload)," &
+"proc_enable(enable)," &
+"proc_read(iddata)," &
+"proc_read(info)," &
+"proc_error_exit(exitdata))," &
+"verify = (proc_verify(idcode)," &
+"proc_preload(preload)," &
+"proc_enable(enable)," &
+"proc_verify(array)," &
+"proc_error_exit(exitdata))," &
+"verify(array) = (proc_verify(idcode)," &
+"proc_preload(preload)," &
+"proc_enable(enable)," &
+"proc_verify(array)," &
+"proc_error_exit(exitdata))";
+
+end AGLN020V5QN68;

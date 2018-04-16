@@ -1,0 +1,16 @@
+Project Name: MARS_MB_rev1
+Location: C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1
+Description: 
+Preferred HDL Type: VHDL
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : AGLN020V5-QN68
+Family         : IGLOO
+Die            : AGLN020V5
+Package        : 68 QFN
+Speed          : STD
+Core Voltage   : 1.5
+Range          : COM

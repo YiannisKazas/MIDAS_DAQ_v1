@@ -1,0 +1,87 @@
+*****************************************************************
+Pin Report - Date: Wed Dec 06 11:29:47 2017 Pinchecksum: NOT-AVAILABLE
+Product: Designer
+Release: Libero SoC v11.8 SP2
+Version: 11.8.2.4
+Design Name: MARS_MB_rev1_top
+Family: IGLOO
+Die: AGLN020V5
+Package: 68 QFN
+*****************************************************************
+
+-----------------------------------------------------------------
+Flash*Freeze information
+        Pin name  : 18
+        Pin usage : Available as a regular pin
+-----------------------------------------------------------------
+
+Number |Port           |Function      |State       |I/O Std  |Output Drive (mA) |Slew |Resistor Pull |Output Load (pF) |Schmitt Trigger |Hold previous I/O state in Flash*Freeze mode |Use I/O Reg |Hot Swappable |
+-------|---------------|--------------|------------|---------|------------------|-----|--------------|-----------------|----------------|---------------------------------------------|------------|--------------|
+1       Comparator_out  IO60RSB2       Fixed        LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+2       ADC_CS          IO54RSB2       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+3                       IO52RSB2       Unassigned
+4       ADC_Conv        IO50RSB2       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+5                       IO49RSB2       Unassigned
+6                       GEC0/IO48RSB2  Special
+7                       GEA0/IO47RSB2  Special
+8                       VCC            Reserved
+9                       GND            Reserved
+10                      VCCIB2         Reserved
+11                      IO46RSB2       Unassigned
+12                      IO45RSB2       Unassigned
+13                      IO44RSB2       Unassigned
+14                      IO43RSB2       Unassigned
+15                      IO42RSB2       Unassigned
+16      TP1             IO41RSB2       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+17      TP2             IO40RSB2       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+18                      FF/IO39RSB1    Unassigned
+19      TP4             IO37RSB1       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+20      TP5             IO35RSB1       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+21      TP6             IO33RSB1       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+22      TP7             IO31RSB1       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+23                      IO30RSB1       Unassigned
+24                      VCC            Reserved
+25                      GND            Reserved
+26                      VCCIB1         Reserved
+27                      IO27RSB1       Unassigned
+28                      IO25RSB1       Unassigned
+29                      IO23RSB1       Unassigned
+30                      IO21RSB1       Unassigned
+31                      IO19RSB1       Unassigned
+32                      TCK            Reserved
+33                      TDI            Reserved
+34                      TMS            Reserved
+35                      VPUMP          Reserved
+36                      TDO            Reserved
+37                      TRST           Reserved
+38                      VJTAG          Reserved
+39      SPI_MOSI        IO17RSB0       Fixed        LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+40      SPI_SCLK        IO16RSB0       Fixed        LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+41      Clk_USB         GDA0/IO15RSB0  Special      LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+42                      GDC0/IO14RSB0  Special
+43      Sl_fifo_wr_en   IO13RSB0       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+44                      VCCIB0         Reserved
+45                      GND            Reserved
+46                      VCC            Reserved
+47      DAQ_En          IO12RSB0       Fixed        LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+48      DATA_OUT[7]     IO11RSB0       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+49      DATA_OUT[6]     IO09RSB0       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+50      DATA_OUT[5]     IO05RSB0       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+51      DATA_OUT[4]     IO00RSB0       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+52      DATA_OUT[3]     IO07RSB0       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+53      DATA_OUT[2]     IO03RSB0       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+54      DATA_OUT[1]     IO18RSB1       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+55      DATA_OUT[0]     IO20RSB1       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+56      SPI_CS          IO22RSB1       Fixed        LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+57                      IO24RSB1       Unassigned
+58                      IO28RSB1       Unassigned
+59                      Not Bonded     Unconnected
+60                      GND            Reserved
+61                      Not Bonded     Unconnected
+62                      IO32RSB1       Unassigned
+63      ADC_SDO         IO34RSB1       Fixed        LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+64      ADC_SCLK        IO36RSB1       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+65      DAC_DIN         IO61RSB2       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+66      DAC_SCLK        IO58RSB2       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+67      DAC_CS          IO56RSB2       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+68      Integrator_rst  IO63RSB2       Fixed        LVCMOS33  8                  High  None           5                 ---              No                                            No           No

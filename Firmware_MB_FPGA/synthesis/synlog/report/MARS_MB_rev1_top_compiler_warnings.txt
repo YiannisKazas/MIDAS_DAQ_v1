@@ -1,0 +1,3 @@
+@W: CD434 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\TX_Interface.vhd":103:25:103:32|Signal hit_flag in the sensitivity list is not used in the process. Make sure all variables in the sensitivity list are referenced in the process.
+@W: CL279 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\SPI_Interface.vhd":78:2:78:3|Pruning register bits 31 to 25 of SPI_REG(31 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+

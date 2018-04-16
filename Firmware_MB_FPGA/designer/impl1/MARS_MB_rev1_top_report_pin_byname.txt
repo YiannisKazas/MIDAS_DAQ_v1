@@ -1,0 +1,48 @@
+*****************************************************************
+Pin Report - Date: Wed Dec 06 11:29:46 2017 Pinchecksum: NOT-AVAILABLE
+Product: Designer
+Release: Libero SoC v11.8 SP2
+Version: 11.8.2.4
+Design Name: MARS_MB_rev1_top
+Family: IGLOO
+Die: AGLN020V5
+Package: 68 QFN
+*****************************************************************
+
+-----------------------------------------------------------------
+Flash*Freeze information
+        Pin name  : 18
+        Pin usage : Available as a regular pin
+-----------------------------------------------------------------
+
+Port           |Pin |Fixed |Function      |I/O Std  |Output Drive (mA) |Slew |Resistor Pull |Output Load (pF) |Schmitt Trigger |Hold previous I/O state in Flash*Freeze mode |Use I/O Reg |Hot Swappable |
+---------------|----|------|--------------|---------|------------------|-----|--------------|-----------------|----------------|---------------------------------------------|------------|--------------|
+ADC_Conv        4    Yes    IO50RSB2       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+ADC_CS          2    Yes    IO54RSB2       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+ADC_SCLK        64   Yes    IO36RSB1       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+ADC_SDO         63   Yes    IO34RSB1       LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+Clk_USB         41   Yes    GDA0/IO15RSB0  LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+Comparator_out  1    Yes    IO60RSB2       LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+DAC_CS          67   Yes    IO56RSB2       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+DAC_DIN         65   Yes    IO61RSB2       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+DAC_SCLK        66   Yes    IO58RSB2       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+DAQ_En          47   Yes    IO12RSB0       LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+DATA_OUT[0]     55   Yes    IO20RSB1       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+DATA_OUT[1]     54   Yes    IO18RSB1       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+DATA_OUT[2]     53   Yes    IO03RSB0       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+DATA_OUT[3]     52   Yes    IO07RSB0       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+DATA_OUT[4]     51   Yes    IO00RSB0       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+DATA_OUT[5]     50   Yes    IO05RSB0       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+DATA_OUT[6]     49   Yes    IO09RSB0       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+DATA_OUT[7]     48   Yes    IO11RSB0       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+Integrator_rst  68   Yes    IO63RSB2       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+Sl_fifo_wr_en   43   Yes    IO13RSB0       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+SPI_CS          56   Yes    IO22RSB1       LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+SPI_MOSI        39   Yes    IO17RSB0       LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+SPI_SCLK        40   Yes    IO16RSB0       LVCMOS33  ---                ---   None           ---               No               No                                            No           No
+TP1             16   Yes    IO41RSB2       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+TP2             17   Yes    IO40RSB2       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+TP4             19   Yes    IO37RSB1       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+TP5             20   Yes    IO35RSB1       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+TP6             21   Yes    IO33RSB1       LVCMOS33  8                  High  None           5                 ---              No                                            No           No
+TP7             22   Yes    IO31RSB1       LVCMOS33  8                  High  None           5                 ---              No                                            No           No

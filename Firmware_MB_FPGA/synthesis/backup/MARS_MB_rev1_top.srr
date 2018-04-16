@@ -1,0 +1,649 @@
+#Build: Synplify Pro L-2016.09M-2, Build 065R, Nov 16 2016
+#install: C:\Microsemi\Libero_SoC_v11.8\SynplifyPro
+#OS: Windows 8 6.2
+#Hostname: JOHN-HOME-PC
+
+# Tue Nov 07 16:40:11 2017
+
+#Implementation: synthesis
+
+Synopsys HDL Compiler, version comp2016q3p1, Build 117R, built Nov 17 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+Synopsys VHDL Compiler, version comp2016q3p1, Build 127R, built Nov 24 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+@N: CD720 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\vhd2008\std.vhd":146:18:146:21|Setting time resolution to ps
+@N:"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.vhd":17:7:17:22|Top entity is set to MARS_MB_rev1_top.
+VHDL syntax check successful!
+@N: CD231 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\vhd2008\std1164.vhd":890:16:890:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.vhd":17:7:17:22|Synthesizing work.mars_mb_rev1_top.rtl.
+@N: CD630 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\TX_Interface.vhd":23:7:23:18|Synthesizing work.tx_interface.architecture_tx_interface.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\TX_Interface.vhd":54:8:54:14|Removing redundant assignment.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\TX_Interface.vhd":78:6:78:13|Removing redundant assignment.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\TX_Interface.vhd":84:6:84:13|Removing redundant assignment.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\TX_Interface.vhd":90:6:90:13|Removing redundant assignment.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\TX_Interface.vhd":93:6:93:13|Removing redundant assignment.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\TX_Interface.vhd":95:6:95:18|Removing redundant assignment.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\TX_Interface.vhd":96:6:96:13|Removing redundant assignment.
+Post processing for work.tx_interface.architecture_tx_interface
+@W: CL117 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\TX_Interface.vhd":72:2:72:5|Latch generated from process for signal Sl_fifo_wr_en; possible missing assignment in an if or case statement.
+@W: CL117 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\TX_Interface.vhd":72:2:72:5|Latch generated from process for signal DATA_OUT(7 downto 0); possible missing assignment in an if or case statement.
+@N: CD630 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\SPI_Interface.vhd":23:7:23:19|Synthesizing work.spi_interface.architecture_spi_interface.
+Post processing for work.spi_interface.architecture_spi_interface
+@W: CL271 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\SPI_Interface.vhd":53:4:53:5|Pruning unused bits 31 to 27 of SPI_REG_2(31 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@A: CL282 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\SPI_Interface.vhd":47:2:47:3|Feedback mux created for signal SPI_REG[26:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@W: CL117 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\SPI_Interface.vhd":47:2:47:3|Latch generated from process for signal DAC_SCLK; possible missing assignment in an if or case statement.
+@W: CL117 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\SPI_Interface.vhd":47:2:47:3|Latch generated from process for signal DAC_DIN; possible missing assignment in an if or case statement.
+@N: CD630 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":23:7:23:13|Synthesizing work.daq_fsm.architecture_daq_fsm.
+@W: CD638 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":43:8:43:14|Signal daq_rst is undriven. Either assign the signal a value or remove the signal declaration.
+Post processing for work.daq_fsm.architecture_daq_fsm
+@W: CL240 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":43:8:43:14|Signal DAQ_rst is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":35:4:35:14|Signal Data_buffer is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":34:4:34:11|Signal ADC_SCLK is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":33:4:33:9|Signal ADC_CS is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":32:4:32:11|Signal ADC_Conv is floating; a simulation mismatch is possible.
+@N: CD630 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\Clock_Divider.vhd":23:7:23:19|Synthesizing work.clock_divider.architecture_clock_divider.
+Post processing for work.clock_divider.architecture_clock_divider
+Post processing for work.mars_mb_rev1_top.rtl
+@N: CL159 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":25:1:25:10|Input clk_100MHz is unused.
+@N: CL159 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":26:4:26:9|Input DAQ_EN is unused.
+@N: CL159 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":27:4:27:17|Input Comparator_out is unused.
+@N: CL159 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":28:4:28:10|Input ADC_SDO is unused.
+@N: CL159 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":29:4:29:12|Input Int_Per_1 is unused.
+@N: CL159 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\hdl\DAQ_FSM.vhd":30:4:30:12|Input Int_Per_2 is unused.
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 73MB peak: 74MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Nov 07 16:40:11 2017
+
+###########################################################]
+Synopsys Netlist Linker, version comp2016q3p1, Build 117R, built Nov 17 2016
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Nov 07 16:40:11 2017
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Nov 07 16:40:11 2017
+
+###########################################################]
+Synopsys Netlist Linker, version comp2016q3p1, Build 117R, built Nov 17 2016
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Nov 07 16:40:12 2017
+
+###########################################################]
+Pre-mapping Report
+
+# Tue Nov 07 16:40:13 2017
+
+Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 1920R, Built Nov 17 2016 09:40:34
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-2
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@A: MF827 |No constraint file specified.
+@L: C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\synthesis\MARS_MB_rev1_top_scck.rpt 
+Printing clock  summary report in "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\synthesis\MARS_MB_rev1_top_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+@N: BN115 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\component\work\mars_mb_rev1_top\mars_mb_rev1_top.vhd":177:0:177:8|Removing instance DAQ_FSM_0 (in view: work.MARS_MB_rev1_top(rtl)) of type view:work.DAQ_FSM(architecture_daq_fsm) because it does not drive other instances.
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 109MB)
+
+
+
+Clock Summary
+*****************
+
+Start                         Requested     Requested     Clock        Clock                   Clock
+Clock                         Frequency     Period        Type         Group                   Load 
+----------------------------------------------------------------------------------------------------
+MARS_MB_rev1_top|Clk_USB      100.0 MHz     10.000        inferred     Inferred_clkgroup_0     13   
+MARS_MB_rev1_top|SPI_CS       100.0 MHz     10.000        inferred     Inferred_clkgroup_1     29   
+MARS_MB_rev1_top|SPI_SCLK     100.0 MHz     10.000        inferred     Inferred_clkgroup_2     28   
+====================================================================================================
+
+@W: MT532 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\tx_interface.vhd":72:2:72:5|Found signal identified as System clock which controls 8 sequential elements including TX_Interface_0.DATA_OUT[7:0].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT530 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\clock_divider.vhd":42:2:42:3|Found inferred clock MARS_MB_rev1_top|Clk_USB which controls 13 sequential elements including Clock_Divider_0.cntr[8:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Found inferred clock MARS_MB_rev1_top|SPI_CS which controls 29 sequential elements including SPI_Interface_0.SPI_REG[26:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Found inferred clock MARS_MB_rev1_top|SPI_SCLK which controls 28 sequential elements including SPI_Interface_0.SPI_REG[26:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\synthesis\MARS_MB_rev1_top.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 109MB)
+
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[26] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[25] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[24] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[23] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[22] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[21] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[20] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[19] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[18] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[17] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[16] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[15] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[14] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[13] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[12] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[11] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[10] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[9] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[8] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[7] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[6] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[5] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[4] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[3] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[2] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[1] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_REG[0] (in view: work.SPI_Interface(architecture_spi_interface)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 109MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 23MB peak: 109MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Nov 07 16:40:13 2017
+
+###########################################################]
+Map & Optimize Report
+
+# Tue Nov 07 16:40:13 2017
+
+Synopsys Microsemi Technology Mapper, Version mapact, Build 1920R, Built Nov 17 2016 09:40:34
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-2
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\spi_interface.vhd":47:2:47:3|Removing sequential instance SPI_Interface_0.SPI_REG[26:0] (in view: work.MARS_MB_rev1_top(rtl)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+@N: MF238 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\clock_divider.vhd":51:22:51:29|Found 9-bit incrementor, 'un4_cntr[24:32]'
+@N: MO231 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\tx_interface.vhd":49:2:49:3|Found counter in view:work.TX_Interface(architecture_tx_interface) instance TX_cntr[2:0] 
+@W: MO129 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\tx_interface.vhd":72:2:72:5|Sequential instance TX_Interface_0.DATA_OUT[0] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\tx_interface.vhd":72:2:72:5|Sequential instance TX_Interface_0.DATA_OUT[1] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\tx_interface.vhd":72:2:72:5|Sequential instance TX_Interface_0.DATA_OUT[2] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\tx_interface.vhd":72:2:72:5|Sequential instance TX_Interface_0.DATA_OUT[3] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\tx_interface.vhd":72:2:72:5|Sequential instance TX_Interface_0.DATA_OUT[4] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\tx_interface.vhd":72:2:72:5|Sequential instance TX_Interface_0.DATA_OUT[5] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\tx_interface.vhd":72:2:72:5|Sequential instance TX_Interface_0.DATA_OUT[6] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\mars_daq\mars_mb_rev1\hdl\tx_interface.vhd":72:2:72:5|Sequential instance TX_Interface_0.DATA_OUT[7] is reduced to a combinational gate by constant propagation.
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+@N: FP130 |Promoting Net Clk_USB_c on CLKBUF  Clk_USB_pad 
+@N: FP130 |Promoting Net SPI_CS_c on CLKBUF  SPI_CS_pad 
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+2 non-gated/non-generated clock tree(s) driving 15 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+================================ Non-Gated/Non-Generated Clocks =================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance          
+-------------------------------------------------------------------------------------------------
+@K:CKID0001       Clk_USB             port                   13         TX_Interface_0.TX_cntr[2]
+@K:CKID0002       SPI_CS              port                   2          SPI_Interface_0.DAC_SCLK 
+=================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+Writing Analyst data base C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\MARS_MB_rev1\synthesis\synwork\MARS_MB_rev1_top_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+Writing EDIF Netlist and constraint files
+L-2016.09M-2
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+@W: MT420 |Found inferred clock MARS_MB_rev1_top|Clk_USB with period 10.00ns. Please declare a user-defined clock on object "p:Clk_USB"
+@W: MT420 |Found inferred clock MARS_MB_rev1_top|SPI_CS with period 10.00ns. Please declare a user-defined clock on object "p:SPI_CS"
+@W: MT420 |Found inferred clock MARS_MB_rev1_top|SPI_SCLK with period 10.00ns. Please declare a user-defined clock on object "p:SPI_SCLK"
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Tue Nov 07 16:40:14 2017
+#
+
+
+Top view:               MARS_MB_rev1_top
+Library name:           IGLOO
+Operating conditions:   COMWCSTD ( T = 70.0, V = 1.42, P = 1.85, tree_type = balanced_tree )
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Wire load model:        IGLOO
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -0.479
+
+                              Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock                Frequency     Frequency     Period        Period        Slack      Type         Group              
+---------------------------------------------------------------------------------------------------------------------------------
+MARS_MB_rev1_top|Clk_USB      100.0 MHz     91.3 MHz      10.000        10.958        -0.479     inferred     Inferred_clkgroup_0
+MARS_MB_rev1_top|SPI_CS       100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_1
+MARS_MB_rev1_top|SPI_SCLK     100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_2
+=================================================================================================================================
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                              |    rise  to  rise   |    fall  to  fall   |    rise  to  fall    |    fall  to  rise 
+-------------------------------------------------------------------------------------------------------------------------------------------
+Starting                  Ending                    |  constraint  slack  |  constraint  slack  |  constraint  slack   |  constraint  slack
+-------------------------------------------------------------------------------------------------------------------------------------------
+MARS_MB_rev1_top|Clk_USB  MARS_MB_rev1_top|Clk_USB  |  10.000      1.882  |  10.000      3.801  |  5.000       -0.479  |  No paths    -    
+===========================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: MARS_MB_rev1_top|Clk_USB
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                               Starting                                                                   Arrival           
+Instance                       Reference                    Type       Pin     Net                        Time        Slack 
+                               Clock                                                                                        
+----------------------------------------------------------------------------------------------------------------------------
+Clock_Divider_0.clk_100Khz     MARS_MB_rev1_top|Clk_USB     DFN1C1     Q       Clock_Divider_0_TX_RDY     0.885       -0.479
+Clock_Divider_0.cntr[0]        MARS_MB_rev1_top|Clk_USB     DFN1P1     Q       cntr[0]                    0.885       1.882 
+Clock_Divider_0.cntr[1]        MARS_MB_rev1_top|Clk_USB     DFN1C1     Q       cntr[1]                    0.885       1.884 
+Clock_Divider_0.cntr[2]        MARS_MB_rev1_top|Clk_USB     DFN1C1     Q       cntr[2]                    0.885       1.957 
+Clock_Divider_0.cntr[6]        MARS_MB_rev1_top|Clk_USB     DFN1C1     Q       cntr[6]                    0.885       2.120 
+Clock_Divider_0.cntr[7]        MARS_MB_rev1_top|Clk_USB     DFN1C1     Q       cntr[7]                    0.885       2.483 
+Clock_Divider_0.cntr[3]        MARS_MB_rev1_top|Clk_USB     DFN1C1     Q       cntr[3]                    0.885       2.784 
+Clock_Divider_0.cntr[4]        MARS_MB_rev1_top|Clk_USB     DFN1C1     Q       cntr[4]                    0.885       2.786 
+Clock_Divider_0.cntr[5]        MARS_MB_rev1_top|Clk_USB     DFN1C1     Q       cntr[5]                    0.885       2.859 
+Clock_Divider_0.cntr[8]        MARS_MB_rev1_top|Clk_USB     DFN1C1     Q       cntr[8]                    0.885       3.030 
+============================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                               Starting                                                           Required           
+Instance                       Reference                    Type       Pin     Net                Time         Slack 
+                               Clock                                                                                 
+---------------------------------------------------------------------------------------------------------------------
+TX_Interface_0.TX_cntr[0]      MARS_MB_rev1_top|Clk_USB     DFN0       D       TX_cntr_RNO[0]     4.144        -0.479
+TX_Interface_0.TX_cntr[1]      MARS_MB_rev1_top|Clk_USB     DFN0       D       TX_cntr_RNO[1]     4.144        -0.277
+TX_Interface_0.TX_cntr[2]      MARS_MB_rev1_top|Clk_USB     DFN0       D       TX_cntr_RNO[2]     4.144        -0.277
+Clock_Divider_0.cntr[5]        MARS_MB_rev1_top|Clk_USB     DFN1C1     D       cntr_3[5]          9.353        1.882 
+Clock_Divider_0.cntr[6]        MARS_MB_rev1_top|Clk_USB     DFN1C1     D       cntr_3[6]          9.353        1.882 
+Clock_Divider_0.cntr[7]        MARS_MB_rev1_top|Clk_USB     DFN1C1     D       cntr_3[7]          9.353        1.882 
+Clock_Divider_0.cntr[8]        MARS_MB_rev1_top|Clk_USB     DFN1C1     D       cntr_3[8]          9.353        1.882 
+Clock_Divider_0.clk_100Khz     MARS_MB_rev1_top|Clk_USB     DFN1C1     D       clk_100Khz_RNO     9.353        1.898 
+Clock_Divider_0.cntr[4]        MARS_MB_rev1_top|Clk_USB     DFN1C1     D       I_12               9.353        2.550 
+Clock_Divider_0.cntr[2]        MARS_MB_rev1_top|Clk_USB     DFN1C1     D       I_7                9.353        4.644 
+=====================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.856
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.144
+
+    - Propagation time:                      4.623
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.479
+
+    Number of logic level(s):                2
+    Starting point:                          Clock_Divider_0.clk_100Khz / Q
+    Ending point:                            TX_Interface_0.TX_cntr[0] / D
+    The start point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
+    The end   point is clocked by            MARS_MB_rev1_top|Clk_USB [falling] on pin CLK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                                Type       Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+Clock_Divider_0.clk_100Khz          DFN1C1     Q        Out     0.885     0.885       -         
+Clock_Divider_0_TX_RDY              Net        -        -       1.422     -           4         
+TX_Interface_0.TX_cntr_RNO_0[0]     NOR3A      C        In      -         2.307       -         
+TX_Interface_0.TX_cntr_RNO_0[0]     NOR3A      Y        Out     0.860     3.168       -         
+TX_N_3_mux_0                        Net        -        -       0.386     -           1         
+TX_Interface_0.TX_cntr_RNO[0]       MX2B       A        In      -         3.554       -         
+TX_Interface_0.TX_cntr_RNO[0]       MX2B       Y        Out     0.683     4.237       -         
+TX_cntr_RNO[0]                      Net        -        -       0.386     -           1         
+TX_Interface_0.TX_cntr[0]           DFN0       D        In      -         4.623       -         
+================================================================================================
+Total path delay (propagation time + setup) of 5.479 is 3.284(59.9%) logic and 2.195(40.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.856
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.144
+
+    - Propagation time:                      4.516
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.373
+
+    Number of logic level(s):                2
+    Starting point:                          Clock_Divider_0.clk_100Khz / Q
+    Ending point:                            TX_Interface_0.TX_cntr[0] / D
+    The start point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
+    The end   point is clocked by            MARS_MB_rev1_top|Clk_USB [falling] on pin CLK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                                Type       Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+Clock_Divider_0.clk_100Khz          DFN1C1     Q        Out     0.885     0.885       -         
+Clock_Divider_0_TX_RDY              Net        -        -       1.422     -           4         
+TX_Interface_0.TX_cntr_RNO_1[0]     NOR3A      C        In      -         2.307       -         
+TX_Interface_0.TX_cntr_RNO_1[0]     NOR3A      Y        Out     0.860     3.168       -         
+TX_N_3_mux_0_0                      Net        -        -       0.386     -           1         
+TX_Interface_0.TX_cntr_RNO[0]       MX2B       S        In      -         3.554       -         
+TX_Interface_0.TX_cntr_RNO[0]       MX2B       Y        Out     0.576     4.130       -         
+TX_cntr_RNO[0]                      Net        -        -       0.386     -           1         
+TX_Interface_0.TX_cntr[0]           DFN0       D        In      -         4.516       -         
+================================================================================================
+Total path delay (propagation time + setup) of 5.373 is 3.178(59.2%) logic and 2.195(40.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.856
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.144
+
+    - Propagation time:                      4.420
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.277
+
+    Number of logic level(s):                2
+    Starting point:                          Clock_Divider_0.clk_100Khz / Q
+    Ending point:                            TX_Interface_0.TX_cntr[1] / D
+    The start point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
+    The end   point is clocked by            MARS_MB_rev1_top|Clk_USB [falling] on pin CLK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                              Type       Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+Clock_Divider_0.clk_100Khz        DFN1C1     Q        Out     0.885     0.885       -         
+Clock_Divider_0_TX_RDY            Net        -        -       1.422     -           4         
+TX_Interface_0.un1_daq_en         NOR2A      B        In      -         2.307       -         
+TX_Interface_0.un1_daq_en         NOR2A      Y        Out     0.489     2.796       -         
+N_37                              Net        -        -       0.464     -           2         
+TX_Interface_0.TX_cntr_RNO[1]     XA1        C        In      -         3.260       -         
+TX_Interface_0.TX_cntr_RNO[1]     XA1        Y        Out     0.775     4.034       -         
+TX_cntr_RNO[1]                    Net        -        -       0.386     -           1         
+TX_Interface_0.TX_cntr[1]         DFN0       D        In      -         4.420       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 5.277 is 3.005(56.9%) logic and 2.272(43.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.856
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.144
+
+    - Propagation time:                      4.420
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.277
+
+    Number of logic level(s):                2
+    Starting point:                          Clock_Divider_0.clk_100Khz / Q
+    Ending point:                            TX_Interface_0.TX_cntr[2] / D
+    The start point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
+    The end   point is clocked by            MARS_MB_rev1_top|Clk_USB [falling] on pin CLK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                              Type       Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+Clock_Divider_0.clk_100Khz        DFN1C1     Q        Out     0.885     0.885       -         
+Clock_Divider_0_TX_RDY            Net        -        -       1.422     -           4         
+TX_Interface_0.un1_daq_en         NOR2A      B        In      -         2.307       -         
+TX_Interface_0.un1_daq_en         NOR2A      Y        Out     0.489     2.796       -         
+N_37                              Net        -        -       0.464     -           2         
+TX_Interface_0.TX_cntr_RNO[2]     XA1        C        In      -         3.260       -         
+TX_Interface_0.TX_cntr_RNO[2]     XA1        Y        Out     0.775     4.034       -         
+TX_cntr_RNO[2]                    Net        -        -       0.386     -           1         
+TX_Interface_0.TX_cntr[2]         DFN0       D        In      -         4.420       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 5.277 is 3.005(56.9%) logic and 2.272(43.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      10.000
+    - Setup time:                            0.647
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.353
+
+    - Propagation time:                      7.471
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 1.882
+
+    Number of logic level(s):                4
+    Starting point:                          Clock_Divider_0.cntr[0] / Q
+    Ending point:                            Clock_Divider_0.cntr[5] / D
+    The start point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
+    The end   point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                              Type       Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+Clock_Divider_0.cntr[0]           DFN1P1     Q        Out     0.885     0.885       -         
+cntr[0]                           Net        -        -       1.710     -           6         
+Clock_Divider_0.un4_cntr.I_10     AND3       A        In      -         2.595       -         
+Clock_Divider_0.un4_cntr.I_10     AND3       Y        Out     0.558     3.153       -         
+DWACT_FINC_E[0]                   Net        -        -       1.537     -           5         
+Clock_Divider_0.un4_cntr.I_13     AND3       A        In      -         4.690       -         
+Clock_Divider_0.un4_cntr.I_13     AND3       Y        Out     0.558     5.247       -         
+N_5                               Net        -        -       0.386     -           1         
+Clock_Divider_0.un4_cntr.I_14     XOR2       A        In      -         5.634       -         
+Clock_Divider_0.un4_cntr.I_14     XOR2       Y        Out     0.587     6.220       -         
+I_14                              Net        -        -       0.386     -           1         
+Clock_Divider_0.cntr_RNO[5]       AOI1B      C        In      -         6.607       -         
+Clock_Divider_0.cntr_RNO[5]       AOI1B      Y        Out     0.478     7.085       -         
+cntr_3[5]                         Net        -        -       0.386     -           1         
+Clock_Divider_0.cntr[5]           DFN1C1     D        In      -         7.471       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 8.118 is 3.712(45.7%) logic and 4.406(54.3%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+--------------------------------------------------------------------------------
+Target Part: AGLN020V5_QFN68_STD
+Report for cell MARS_MB_rev1_top.rtl
+  Core Cell usage:
+              cell count     area count*area
+              AND2     2      1.0        2.0
+              AND3     7      1.0        7.0
+             AOI1B     4      1.0        4.0
+              AX1C     1      1.0        1.0
+               GND     4      0.0        0.0
+               INV     4      1.0        4.0
+              MX2B     1      1.0        1.0
+             NOR2A     3      1.0        3.0
+             NOR2B     3      1.0        3.0
+             NOR3A     3      1.0        3.0
+             NOR3B     2      1.0        2.0
+              OR2B     1      1.0        1.0
+               VCC     4      0.0        0.0
+               XA1     2      1.0        2.0
+              XOR2     8      1.0        8.0
+
+
+              DFN0     3      1.0        3.0
+            DFN1C1     9      1.0        9.0
+            DFN1P1     1      1.0        1.0
+              DLN0     2      1.0        2.0
+          DLN1P1C1     1      2.0        2.0
+                   -----          ----------
+             TOTAL    65                58.0
+
+
+  IO Cell usage:
+              cell count
+            CLKBUF     2
+             INBUF     3
+            OUTBUF    16
+                   -----
+             TOTAL    21
+
+
+Core Cells         : 58 of 520 (11%)
+IO Cells           : 21
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 25MB peak: 110MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Nov 07 16:40:14 2017
+
+###########################################################]

@@ -1,0 +1,24 @@
+@N: CD231 :"C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\lib\vhd2008\std1164.vhd":890:16:890:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.vhd":17:7:17:22|Synthesizing work.mars_mb_rev1_top.rtl.
+@N: CD630 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\TX_Interface.vhd":23:7:23:18|Synthesizing work.tx_interface.architecture_tx_interface.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\TX_Interface.vhd":89:8:89:14|Removing redundant assignment.
+@W: CD434 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\TX_Interface.vhd":103:25:103:32|Signal hit_flag in the sensitivity list is not used in the process. Make sure all variables in the sensitivity list are referenced in the process.
+Post processing for work.tx_interface.architecture_tx_interface
+@N: CD630 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\SPI_Interface.vhd":23:7:23:19|Synthesizing work.spi_interface.architecture_spi_interface.
+Post processing for work.spi_interface.architecture_spi_interface
+@W: CL279 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\SPI_Interface.vhd":78:2:78:3|Pruning register bits 31 to 25 of SPI_REG(31 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CD630 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\DAQ_FSM.vhd":24:7:24:13|Synthesizing work.daq_fsm.architecture_daq_fsm.
+@N: CD233 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\DAQ_FSM.vhd":42:18:42:19|Using sequential encoding for type state_type_1.
+Post processing for work.daq_fsm.architecture_daq_fsm
+@N: CD630 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\Clock_Divider.vhd":23:7:23:19|Synthesizing work.clock_divider.architecture_clock_divider.
+Post processing for work.clock_divider.architecture_clock_divider
+@N: CD630 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\ADC_Interface.vhd":24:7:24:19|Synthesizing work.adc_interface.architecture_adc_interface.
+@N: CD233 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\ADC_Interface.vhd":44:16:44:17|Using sequential encoding for type state_type.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\ADC_Interface.vhd":70:10:70:17|Removing redundant assignment.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\ADC_Interface.vhd":157:14:157:21|Removing redundant assignment.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\ADC_Interface.vhd":158:14:158:20|Removing redundant assignment.
+@N: CD364 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\ADC_Interface.vhd":159:14:159:21|Removing redundant assignment.
+Post processing for work.adc_interface.architecture_adc_interface
+Post processing for work.mars_mb_rev1_top.rtl
+@N: CL201 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\ADC_Interface.vhd":60:2:60:3|Trying to extract state machine for register ADC_state.
+@N: CL159 :"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\SPI_Interface.vhd":28:4:28:9|Input DAQ_EN is unused.

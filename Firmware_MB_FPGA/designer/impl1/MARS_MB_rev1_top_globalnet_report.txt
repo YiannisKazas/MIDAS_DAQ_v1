@@ -1,0 +1,32 @@
+********************************************************************
+                            Global Net Report
+********************************************************************
+  
+Product: Designer
+Release: Libero SoC v11.8 SP2
+Version: 11.8.2.4
+Date: Wed Dec 06 11:29:45 2017
+Design Name: MARS_MB_rev1_top  Family: IGLOO  Die: AGLN020V5  Package: 68 QFN
+
+
+Automatic Global Net Placement Result:
+Status: Global net placement completed successfully
+
+
+Global Nets Information:
+
+        |-----------------------------------------------------|
+        |Global Nets         |Loads                           |
+        |-----------------------------------------------------|
+        |Name                |Core      |IO        |RAM       |
+        |-----------------------------------------------------|
+        |Clk_USB_c           |       92 |        0 |        0 |
+        |-----------------------------------------------------|
+
+Summary of Global Net Placement:
+
+        |------------------------------------------------------------------------|
+        |Global Net          |Assignment          |Violation                     |
+        |------------------------------------------------------------------------|
+        |Clk_USB_c           |LOWER_RIGHT         |                              |
+        |------------------------------------------------------------------------|

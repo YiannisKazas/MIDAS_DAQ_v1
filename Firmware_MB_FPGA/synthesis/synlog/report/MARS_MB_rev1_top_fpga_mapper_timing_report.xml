@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\MARS_MB_rev1_top_fpga_mapper.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>Clock_Divider|clk_100Khz_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>MARS_MB_rev1_top|Clk_USB</data>
+<data>100.0 MHz</data>
+<data>54.2 MHz</data>
+<data>-5.047</data>
+</row>
+<row>
+<data>SPI_Interface|SPI_SCLK_buf_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>304.5 MHz</data>
+<data>6.715</data>
+</row>
+</report_table>

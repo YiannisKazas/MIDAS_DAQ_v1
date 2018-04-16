@@ -1,0 +1,19 @@
+# Microsemi Physical design constraints file
+# Version: 7.2 7.2.0.103
+# Input Netlist Format: edif
+
+
+#
+# I/O Constraints
+#
+
+#unassign_net_macros region_name [SPI_CS]+
+#set_io SPI_CS [-pinname 6][-fixed true]
+#set_io SPI_CS \
+#-iostd LVCMOS33 \
+#-register no \
+#-pinname 40 \
+#-fixed yes 
+
+set_io SPI_CS -register yes
+set_preserve SPI_CS\[40\]

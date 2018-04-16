@@ -1,0 +1,2187 @@
+; HEADER
+; FILEID ADL C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\MARS_MB_rev1_top.dtf\netlist.adl 1dcfa696
+; CHECKSUM 1dcfa696
+; ASC 03bd101b
+; PROGRAM Microsemi Libero Software
+; VERSION v11.8 SP2 11.8.2.4
+; ALSMAJORREV 11
+; ALSMINORREV 8
+; ALSPATCHREV 2
+; VAR DESIGN MARS_MB_rev1_top
+; VAR FAM IGLOO
+; VAR FAMILY PA3LCLP
+; VAR DIE UN2X2DIV3M0LP
+; VAR PACKAGE qn68
+; VAR IFIKEEPER <NOT-SET>
+; VAR RESTRICTTRSTPIN YES
+; VAR UNCLAMP_UNUSED_IOS 0
+; VAR RESERVE_PROGRAMMING_PINS 1
+; VAR RESTRICTPROBEPINS 1
+; VAR RESTRICTJTAGPINS YES
+; VAR SPEED STD
+; VAR TEMPR COM
+; VAR VOLTR COM
+; VAR SI_SECURITY_KEY 
+; VAR SIG 
+; VAR FUSCHECKSUM <NOT-SET>
+; VAR PROGSECFUSE <NOT-SET>
+; VAR PINCHECKSUM <NOT-SET>
+; VAR ACT1_special_IO_pins_used NO
+; VAR AXPROGRAMMING_USE_UMA <NOT-SET>
+; ENDHEADER
+DEF 'ADLIB:OUTBUF_H'; D, PAD; EQN0:PAD=D, LEVEL:SOFT, CLS_TYPE:HARD, 
+  CLS_CATEGORY:IO.
+PIN PAD; PAD, PADDIR:OUT.
+USE ADLIB:IOTRI_OB_EB; U1; PRESERVE.
+USE ADLIB:IOPAD_TRI; U0; CLS_XY:0%0, PRESERVE.
+NET PAD;  PAD, U0:PAD; HARDWIRED:PAD.
+NET NET1;  U0:D, U1:DOUT; HARDWIRED:PADIN.
+NET NET2;  U0:E, U1:EOUT; HARDWIRED:PADEN.
+NET D;  D, U1:D.
+NET VCC;  U1:E; GLOBAL, POWER:VCC.
+END.
+DEF 'ADLIB:INBUF_H'; PAD, Y; EQN0:PAD=Y, LEVEL:SOFT, CLS_TYPE:HARD, 
+  CLS_CATEGORY:IO.
+PIN PAD; PAD, PADDIR:IN.
+PIN Y; OUT.
+USE ADLIB:IOIN_IB; U1; PRESERVE.
+USE ADLIB:IOPAD_IN; U0; CLS_XY:0%0, PRESERVE.
+NET PAD;  PAD, U0:PAD; HARDWIRED:PAD.
+NET NET1;  U0:Y, U1:YIN; HARDWIRED:PADOUT.
+NET Y;  Y, U1:Y.
+END.
+DEF 'ADLIB:CLKBUF_H'; PAD, Y; LEVEL:SOFT, CLS_TYPE:HARD, 
+  CLS_CATEGORY:IOGLB.
+PIN PAD; PAD, PADDIR:IN.
+PIN Y; OUT.
+USE ADLIB:IO_UNUSED; U2; PRESERVE.
+USE ADLIB:CLKIO; U1; PRESERVE.
+USE ADLIB:IOPAD_IN; U0; CLS_XY:0%0, PRESERVE.
+NET PAD;  PAD, U0:PAD; HARDWIRED:PAD.
+NET NET1;  U1:A, U0:Y, U2:YIN; HARDWIRED:PADOUT.
+NET NET2;  Y, U1:Y.
+END.
+DEF 'ADLIB:VCC'; Y; LEVEL:SOFT.
+NET Y;  Y; POWER:VCC.
+END.
+DEF 'ADLIB:GND'; Y; LEVEL:SOFT.
+NET Y;  Y; POWER:GND.
+END.
+DEF SPI_Interface; SPI_Interface_0_INT_PER_1_1<8>, 
+  SPI_Interface_0_INT_PER_1_1<7>, SPI_Interface_0_INT_PER_1_1<6>, 
+  SPI_Interface_0_INT_PER_1_1<5>, SPI_Interface_0_INT_PER_1_1<4>, 
+  SPI_Interface_0_INT_PER_1_1<3>, SPI_Interface_0_INT_PER_1_1<2>, 
+  SPI_Interface_0_INT_PER_1_1<1>, SPI_Interface_0_INT_PER_1_1<0>, 
+  SPI_Interface_0_INT_PER_2_1<8>, SPI_Interface_0_INT_PER_2_1<7>, 
+  SPI_Interface_0_INT_PER_2_1<6>, SPI_Interface_0_INT_PER_2_1<5>, 
+  SPI_Interface_0_INT_PER_2_1<4>, SPI_Interface_0_INT_PER_2_1<3>, 
+  SPI_Interface_0_INT_PER_2_1<2>, SPI_Interface_0_INT_PER_2_1<1>, 
+  SPI_Interface_0_INT_PER_2_1<0>, DAC_DIN_c_c, SPI_CS_c, 
+  DAC_SCLK_c_c; BUSFORMAT:%s<%d>.
+PIN SPI_Interface_0_INT_PER_1_1<8>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:0/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<7>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:1/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<6>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:2/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<5>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:3/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<4>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:4/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<3>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:5/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<2>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:6/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<1>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:7/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<0>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:8/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<8>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:0/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<7>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:1/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<6>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:2/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<5>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:3/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<4>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:4/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<3>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:5/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<2>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:6/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<1>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:7/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<0>; DIRECTION:OUTPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:8/8/0/1.
+PIN DAC_DIN_c_c; DIRECTION:INPUT.
+PIN SPI_CS_c; DIRECTION:INPUT.
+PIN DAC_SCLK_c_c; DIRECTION:INPUT.
+USE ADLIB:DFN1; SPI_REG[17].
+USE ADLIB:DFN1; SPI_REG[10].
+USE ADLIB:DFN1; SPI_REG[16].
+USE ADLIB:DFN1; SPI_REG[2].
+USE ADLIB:DFN1; SPI_REG[23].
+USE ADLIB:DFN1; SPI_REG[1].
+USE ADLIB:DFN1; SPI_REG[18].
+USE ADLIB:DFN1; SPI_REG[14].
+USE ADLIB:DFN1; SPI_REG[22].
+USE ADLIB:DFN1; SPI_REG[21].
+USE ADLIB:VCC; VCC_i.
+USE ADLIB:DFN1; SPI_REG[7].
+USE ADLIB:DFN1; SPI_REG[9].
+USE ADLIB:DFN1; SPI_REG[4].
+USE ADLIB:DFN1; SPI_REG[8].
+USE ADLIB:DFN1; SPI_REG[5].
+USE ADLIB:GND; GND_i.
+USE ADLIB:DFN1; SPI_REG[20].
+USE ADLIB:DFN1; SPI_REG[13].
+USE ADLIB:DFN1; SPI_REG[0].
+USE ADLIB:NOR2A; SPI_SCLK_buf_inferred_clock_RNO.
+USE ADLIB:DFN1; SPI_REG[12].
+USE ADLIB:DFN1; SPI_REG[24].
+USE ADLIB:DFN1; SPI_REG[19].
+USE ADLIB:DFN1; SPI_REG[11].
+USE ADLIB:DFN1; SPI_REG[3].
+USE ADLIB:DFN1; SPI_REG[6].
+USE ADLIB:DFN1; SPI_REG[15].
+NET DAC_SCLK_c_c;  DAC_SCLK_c_c, SPI_SCLK_buf_inferred_clock_RNO:
+  A.
+NET SPI_CS_c;  SPI_CS_c, SPI_SCLK_buf_inferred_clock_RNO:B.
+NET SPI_Interface_0_INT_PER_2_1[0];  
+  SPI_Interface_0_INT_PER_2_1<0>, SPI_REG[0]:Q, SPI_REG[1]:D.
+NET SPI_SCLK_buf;  SPI_REG[17]:CLK, SPI_REG[15]:CLK, SPI_REG[6]:
+  CLK, SPI_REG[3]:CLK, SPI_REG[11]:CLK, SPI_REG[19]:CLK, 
+  SPI_REG[24]:CLK, SPI_REG[12]:CLK, 
+  SPI_SCLK_buf_inferred_clock_RNO:Y, SPI_REG[0]:CLK, SPI_REG[13]:
+  CLK, SPI_REG[20]:CLK, SPI_REG[5]:CLK, SPI_REG[8]:CLK, 
+  SPI_REG[4]:CLK, SPI_REG[9]:CLK, SPI_REG[7]:CLK, SPI_REG[21]:CLK, 
+  SPI_REG[22]:CLK, SPI_REG[14]:CLK, SPI_REG[18]:CLK, SPI_REG[1]:
+  CLK, SPI_REG[23]:CLK, SPI_REG[2]:CLK, SPI_REG[16]:CLK, 
+  SPI_REG[10]:CLK.
+NET DAC_DIN_c_c;  DAC_DIN_c_c, SPI_REG[0]:D.
+NET SPI_Interface_0_INT_PER_2_1[1];  
+  SPI_Interface_0_INT_PER_2_1<1>, SPI_REG[1]:Q, SPI_REG[2]:D.
+NET SPI_Interface_0_INT_PER_2_1[2];  
+  SPI_Interface_0_INT_PER_2_1<2>, SPI_REG[3]:D, SPI_REG[2]:Q.
+NET SPI_Interface_0_INT_PER_2_1[3];  
+  SPI_Interface_0_INT_PER_2_1<3>, SPI_REG[3]:Q, SPI_REG[4]:D.
+NET SPI_Interface_0_INT_PER_2_1[4];  
+  SPI_Interface_0_INT_PER_2_1<4>, SPI_REG[5]:D, SPI_REG[4]:Q.
+NET SPI_Interface_0_INT_PER_2_1[5];  
+  SPI_Interface_0_INT_PER_2_1<5>, SPI_REG[6]:D, SPI_REG[5]:Q.
+NET SPI_Interface_0_INT_PER_2_1[6];  
+  SPI_Interface_0_INT_PER_2_1<6>, SPI_REG[6]:Q, SPI_REG[7]:D.
+NET SPI_Interface_0_INT_PER_2_1[7];  
+  SPI_Interface_0_INT_PER_2_1<7>, SPI_REG[8]:D, SPI_REG[7]:Q.
+NET SPI_Interface_0_INT_PER_2_1[8];  
+  SPI_Interface_0_INT_PER_2_1<8>, SPI_REG[8]:Q, SPI_REG[9]:D.
+NET SPI_REG[9];  SPI_REG[10]:D, SPI_REG[9]:Q.
+NET SPI_REG[10];  SPI_REG[11]:D, SPI_REG[10]:Q.
+NET SPI_REG[11];  SPI_REG[12]:D, SPI_REG[11]:Q.
+NET SPI_REG[12];  SPI_REG[13]:D, SPI_REG[12]:Q.
+NET SPI_REG[13];  SPI_REG[14]:D, SPI_REG[13]:Q.
+NET SPI_REG[14];  SPI_REG[15]:D, SPI_REG[14]:Q.
+NET SPI_REG[15];  SPI_REG[16]:D, SPI_REG[15]:Q.
+NET SPI_Interface_0_INT_PER_1_1[0];  
+  SPI_Interface_0_INT_PER_1_1<0>, SPI_REG[16]:Q, SPI_REG[17]:D.
+NET SPI_Interface_0_INT_PER_1_1[1];  
+  SPI_Interface_0_INT_PER_1_1<1>, SPI_REG[18]:D, SPI_REG[17]:Q.
+NET SPI_Interface_0_INT_PER_1_1[2];  
+  SPI_Interface_0_INT_PER_1_1<2>, SPI_REG[19]:D, SPI_REG[18]:Q.
+NET SPI_Interface_0_INT_PER_1_1[3];  
+  SPI_Interface_0_INT_PER_1_1<3>, SPI_REG[19]:Q, SPI_REG[20]:D.
+NET SPI_Interface_0_INT_PER_1_1[4];  
+  SPI_Interface_0_INT_PER_1_1<4>, SPI_REG[20]:Q, SPI_REG[21]:D.
+NET SPI_Interface_0_INT_PER_1_1[5];  
+  SPI_Interface_0_INT_PER_1_1<5>, SPI_REG[21]:Q, SPI_REG[22]:D.
+NET SPI_Interface_0_INT_PER_1_1[6];  
+  SPI_Interface_0_INT_PER_1_1<6>, SPI_REG[22]:Q, SPI_REG[23]:D.
+NET SPI_Interface_0_INT_PER_1_1[7];  
+  SPI_Interface_0_INT_PER_1_1<7>, SPI_REG[24]:D, SPI_REG[23]:Q.
+NET SPI_Interface_0_INT_PER_1_1[8];  
+  SPI_Interface_0_INT_PER_1_1<8>, SPI_REG[24]:Q.
+NET GND;  GND_i:Y.
+NET VCC;  VCC_i:Y.
+END.
+DEF Clock_Divider; clk_100Khz, DAQ_En_c, TP5_c_c.
+PIN clk_100Khz; DIRECTION:OUTPUT.
+PIN DAQ_En_c; DIRECTION:INPUT.
+PIN TP5_c_c; DIRECTION:INPUT.
+USE ADLIB:AND3; un4_cntr_100khz_I_16.
+USE ADLIB:AND3; un4_cntr_100khz_I_13.
+USE ADLIB:NOR2; cntr_100KHz_RNIP5BP[0].
+USE ADLIB:AND2; un4_cntr_100khz_I_15.
+USE ADLIB:AOI1B; cntr_100KHz_RNO[5].
+USE ADLIB:NOR2A; cntr_100KHz_RNIT9BP[2].
+USE ADLIB:NOR3C; cntr_100KHz_RNI0QMI1[7].
+USE ADLIB:VCC; VCC_i.
+USE ADLIB:AND3; un4_cntr_100khz_I_18.
+USE ADLIB:DFN1P0; cntr_100KHz[0].
+USE ADLIB:XOR2; un4_cntr_100khz_I_9.
+USE ADLIB:XOR2; un4_cntr_100khz_I_5.
+USE ADLIB:NOR3B; cntr_100KHz_RNIKDMI1[1].
+USE ADLIB:AND3; un4_cntr_100khz_I_8.
+USE ADLIB:XOR2; un4_cntr_100khz_I_20.
+USE ADLIB:XOR2; un4_cntr_100khz_I_17.
+USE ADLIB:AX1C; clk_100Khz_RNO.
+USE ADLIB:AOI1B; cntr_100KHz_RNO[7].
+USE ADLIB:AND3; un4_cntr_100khz_I_19.
+USE ADLIB:GND; GND_i.
+USE ADLIB:INV; un4_cntr_100khz_I_4.
+USE ADLIB:DFN1C0; cntr_100KHz[2].
+USE ADLIB:NOR2B; un4_cntr_100khz_I_11.
+USE ADLIB:DFN1C0; cntr_100KHz[7].
+USE ADLIB:XOR2; un4_cntr_100khz_I_12.
+USE ADLIB:AOI1B; cntr_100KHz_RNO[6].
+USE ADLIB:DFN1C0; cntr_100KHz[3].
+USE ADLIB:DFN1C0; cntr_100KHz[5].
+USE ADLIB:AOI1B; cntr_100KHz_RNO[4].
+USE ADLIB:DFN1C0; cntr_100KHz[4].
+USE ADLIB:DFN1C0; cntr_100KHz[6].
+USE ADLIB:NOR2B; un4_cntr_100khz_I_6.
+USE ADLIB:AND3; un4_cntr_100khz_I_10.
+USE ADLIB:DFN1C0; cntr_100KHz[1].
+USE ADLIB:XOR2; un4_cntr_100khz_I_7.
+USE ADLIB:DFN1C0; clk_100Khz.
+USE ADLIB:XOR2; un4_cntr_100khz_I_14.
+NET N_7;  un4_cntr_100khz_I_7:A, un4_cntr_100khz_I_6:Y.
+NET cntr_100KHz[1];  un4_cntr_100khz_I_6:A, cntr_100KHz[1]:Q, 
+  un4_cntr_100khz_I_10:B, un4_cntr_100khz_I_5:B, 
+  un4_cntr_100khz_I_8:B, cntr_100KHz_RNIKDMI1[1]:C.
+NET cntr_100KHz[0];  un4_cntr_100khz_I_5:A, un4_cntr_100khz_I_10:
+  A, un4_cntr_100khz_I_6:B, un4_cntr_100khz_I_4:A, 
+  un4_cntr_100khz_I_8:A, cntr_100KHz_RNIP5BP[0]:B, cntr_100KHz[0]:
+  Q.
+NET N_5;  un4_cntr_100khz_I_12:A, un4_cntr_100khz_I_11:Y.
+NET cntr_100KHz[3];  cntr_100KHz_RNIP5BP[0]:A, cntr_100KHz[3]:Q, 
+  un4_cntr_100khz_I_11:A, un4_cntr_100khz_I_9:B, 
+  un4_cntr_100khz_I_18:A, un4_cntr_100khz_I_15:A, 
+  un4_cntr_100khz_I_13:B.
+NET DWACT_FINC_E[0];  un4_cntr_100khz_I_16:A, 
+  un4_cntr_100khz_I_10:Y, un4_cntr_100khz_I_11:B, 
+  un4_cntr_100khz_I_19:A, un4_cntr_100khz_I_13:A.
+NET un2_cntr_100khz_5;  cntr_100KHz_RNO[5]:A, cntr_100KHz_RNO[4]:
+  A, cntr_100KHz_RNO[6]:A, cntr_100KHz_RNO[7]:A, clk_100Khz_RNO:B, 
+  cntr_100KHz_RNIKDMI1[1]:Y.
+NET cntr_100KHz[4];  cntr_100KHz_RNIKDMI1[1]:A, cntr_100KHz[4]:Q, 
+  un4_cntr_100khz_I_12:B, un4_cntr_100khz_I_15:B, 
+  un4_cntr_100khz_I_18:B, un4_cntr_100khz_I_13:C.
+NET un2_cntr_100khz_3;  cntr_100KHz_RNIKDMI1[1]:B, 
+  cntr_100KHz_RNIP5BP[0]:Y.
+NET un2_cntr_100khz_4;  clk_100Khz_RNO:A, cntr_100KHz_RNO[4]:B, 
+  cntr_100KHz_RNO[6]:B, cntr_100KHz_RNO[7]:B, cntr_100KHz_RNO[5]:
+  B, cntr_100KHz_RNI0QMI1[7]:Y.
+NET cntr_100KHz[6];  cntr_100KHz_RNI0QMI1[7]:A, cntr_100KHz[6]:Q, 
+  un4_cntr_100khz_I_19:C, un4_cntr_100khz_I_17:B.
+NET cntr_100KHz[7];  cntr_100KHz_RNI0QMI1[7]:B, cntr_100KHz[7]:Q, 
+  un4_cntr_100khz_I_20:B.
+NET un2_cntr_100khz_1;  cntr_100KHz_RNI0QMI1[7]:C, 
+  cntr_100KHz_RNIT9BP[2]:Y.
+NET cntr_100KHz[5];  cntr_100KHz_RNIT9BP[2]:A, 
+  un4_cntr_100khz_I_14:B, cntr_100KHz[5]:Q, un4_cntr_100khz_I_18:
+  C, un4_cntr_100khz_I_16:C.
+NET cntr_100KHz[2];  cntr_100KHz_RNIT9BP[2]:B, 
+  un4_cntr_100khz_I_7:B, un4_cntr_100khz_I_10:C, cntr_100KHz[2]:Q, 
+  un4_cntr_100khz_I_8:C.
+NET clk_100Khz_RNO;  clk_100Khz:D, clk_100Khz_RNO:Y.
+NET cntr_100KHz_3[7];  cntr_100KHz[7]:D, cntr_100KHz_RNO[7]:Y.
+NET I_20;  cntr_100KHz_RNO[7]:C, un4_cntr_100khz_I_20:Y.
+NET cntr_100KHz_3[6];  cntr_100KHz[6]:D, cntr_100KHz_RNO[6]:Y.
+NET I_17;  cntr_100KHz_RNO[6]:C, un4_cntr_100khz_I_17:Y.
+NET cntr_100KHz_3[5];  cntr_100KHz[5]:D, cntr_100KHz_RNO[5]:Y.
+NET I_14;  cntr_100KHz_RNO[5]:C, un4_cntr_100khz_I_14:Y.
+NET cntr_100KHz_3[4];  cntr_100KHz[4]:D, cntr_100KHz_RNO[4]:Y.
+NET I_12;  cntr_100KHz_RNO[4]:C, un4_cntr_100khz_I_12:Y.
+NET TP5_c_c;  TP5_c_c, clk_100Khz:CLK, cntr_100KHz[1]:CLK, 
+  cntr_100KHz[6]:CLK, cntr_100KHz[4]:CLK, cntr_100KHz[5]:CLK, 
+  cntr_100KHz[3]:CLK, cntr_100KHz[7]:CLK, cntr_100KHz[2]:CLK, 
+  cntr_100KHz[0]:CLK.
+NET DAQ_En_c;  DAQ_En_c, clk_100Khz:CLR, cntr_100KHz[1]:CLR, 
+  cntr_100KHz[6]:CLR, cntr_100KHz[4]:CLR, cntr_100KHz[5]:CLR, 
+  cntr_100KHz[3]:CLR, cntr_100KHz[7]:CLR, cntr_100KHz[2]:CLR, 
+  cntr_100KHz[0]:PRE.
+NET I_4;  cntr_100KHz[0]:D, un4_cntr_100khz_I_4:Y.
+NET I_5;  cntr_100KHz[1]:D, un4_cntr_100khz_I_5:Y.
+NET I_7;  cntr_100KHz[2]:D, un4_cntr_100khz_I_7:Y.
+NET I_9;  cntr_100KHz[3]:D, un4_cntr_100khz_I_9:Y.
+NET N_2;  un4_cntr_100khz_I_20:A, un4_cntr_100khz_I_19:Y.
+NET DWACT_FINC_E[2];  un4_cntr_100khz_I_19:B, 
+  un4_cntr_100khz_I_18:Y.
+NET N_3;  un4_cntr_100khz_I_17:A, un4_cntr_100khz_I_16:Y.
+NET DWACT_FINC_E[1];  un4_cntr_100khz_I_16:B, 
+  un4_cntr_100khz_I_15:Y.
+NET N_4;  un4_cntr_100khz_I_14:A, un4_cntr_100khz_I_13:Y.
+NET N_6;  un4_cntr_100khz_I_9:A, un4_cntr_100khz_I_8:Y.
+NET clk_100Khz;  clk_100Khz, clk_100Khz:Q, clk_100Khz_RNO:C.
+NET GND;  GND_i:Y.
+NET VCC;  VCC_i:Y.
+END.
+DEF TX_Interface; DATA_OUT_c<7>, DATA_OUT_c<6>, DATA_OUT_c<5>, 
+  DATA_OUT_c<4>, DATA_OUT_c<3>, DATA_OUT_c<2>, DATA_OUT_c<1>, 
+  DATA_OUT_c<0>, ADC_Interface_0_ADC_sreg<23>, 
+  ADC_Interface_0_ADC_sreg<22>, ADC_Interface_0_ADC_sreg<21>, 
+  ADC_Interface_0_ADC_sreg<20>, ADC_Interface_0_ADC_sreg<19>, 
+  ADC_Interface_0_ADC_sreg<18>, ADC_Interface_0_ADC_sreg<17>, 
+  ADC_Interface_0_ADC_sreg<16>, ADC_Interface_0_ADC_sreg<15>, 
+  ADC_Interface_0_ADC_sreg<14>, ADC_Interface_0_ADC_sreg<13>, 
+  ADC_Interface_0_ADC_sreg<12>, ADC_Interface_0_ADC_sreg<11>, 
+  ADC_Interface_0_ADC_sreg<10>, ADC_Interface_0_ADC_sreg<9>, 
+  ADC_Interface_0_ADC_sreg<8>, ADC_Interface_0_ADC_sreg<7>, 
+  ADC_Interface_0_ADC_sreg<6>, ADC_Interface_0_ADC_sreg<5>, 
+  ADC_Interface_0_ADC_sreg<4>, ADC_Interface_0_ADC_sreg<3>, 
+  ADC_Interface_0_ADC_sreg<2>, ADC_Interface_0_ADC_sreg<1>, 
+  ADC_Interface_0_ADC_sreg<0>, TP5_c_c, clk_100Khz, 
+  Sl_fifo_wr_en_c, TP7_c, TP7_c_0, TP1_c, DAQ_En_c; BUSFORMAT:
+  %s<%d>.
+PIN DATA_OUT_c<7>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT_c, BUSINFO:
+  0/7/0/1.
+PIN DATA_OUT_c<6>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT_c, BUSINFO:
+  1/7/0/1.
+PIN DATA_OUT_c<5>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT_c, BUSINFO:
+  2/7/0/1.
+PIN DATA_OUT_c<4>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT_c, BUSINFO:
+  3/7/0/1.
+PIN DATA_OUT_c<3>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT_c, BUSINFO:
+  4/7/0/1.
+PIN DATA_OUT_c<2>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT_c, BUSINFO:
+  5/7/0/1.
+PIN DATA_OUT_c<1>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT_c, BUSINFO:
+  6/7/0/1.
+PIN DATA_OUT_c<0>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT_c, BUSINFO:
+  7/7/0/1.
+PIN ADC_Interface_0_ADC_sreg<23>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:0/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<22>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:1/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<21>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:2/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<20>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:3/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<19>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:4/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<18>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:5/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<17>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:6/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<16>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:7/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<15>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:8/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<14>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:9/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<13>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:10/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<12>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:11/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<11>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:12/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<10>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:13/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<9>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:14/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<8>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:15/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<7>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:16/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<6>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:17/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<5>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:18/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<4>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:19/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<3>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:20/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<2>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:21/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<1>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:22/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<0>; DIRECTION:INPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:23/23/0/1.
+PIN TP5_c_c; DIRECTION:INPUT.
+PIN clk_100Khz; DIRECTION:INPUT.
+PIN Sl_fifo_wr_en_c; DIRECTION:OUTPUT.
+PIN TP7_c; DIRECTION:INPUT.
+PIN TP7_c_0; DIRECTION:INPUT.
+PIN TP1_c; DIRECTION:OUTPUT.
+PIN DAQ_En_c; DIRECTION:INPUT.
+USE ADLIB:MX2; DATA_OUT_RNO_0[6].
+USE ADLIB:NOR2B; TX_data_RNO[1].
+USE ADLIB:DFN0; TX_data[12].
+USE ADLIB:MX2; DATA_OUT_RNO_0[0].
+USE ADLIB:NOR2B; TX_data_RNO[17].
+USE ADLIB:MX2; DATA_OUT_RNO_0[1].
+USE ADLIB:DFN0; TX_data[18].
+USE ADLIB:NOR3A; TX_cntr_RNICPED_0[1].
+USE ADLIB:NOR2B; TX_data_RNO[15].
+USE ADLIB:NOR3A; TX_cntr_RNO[2].
+USE ADLIB:XOR2; un1_TX_cntr_I_14.
+USE ADLIB:DFN0; TX_data[22].
+USE ADLIB:OR2; TX_cntr_RNICPED[0].
+USE ADLIB:NOR2B; TX_data_RNO[18].
+USE ADLIB:NOR2B; TX_data_RNO[7].
+USE ADLIB:DLN0C1; DATA_OUT[3].
+USE ADLIB:DFN0; TX_data[5].
+USE ADLIB:VCC; VCC_i.
+USE ADLIB:DFN0; TX_data[0].
+USE ADLIB:NOR2B; TX_data_RNO[14].
+USE ADLIB:NOR2B; TX_data_RNO[13].
+USE ADLIB:NOR2B; TX_data_RNO[23].
+USE ADLIB:NOR2A; TX_cntr_RNICPED_0[0].
+USE ADLIB:DFN0; TX_data[2].
+USE ADLIB:MX2; DATA_OUT_RNO_0[4].
+USE ADLIB:NOR2B; TX_data_RNO[4].
+USE ADLIB:DLN0C1; DATA_OUT[7].
+USE ADLIB:DLN0C1; DATA_OUT[4].
+USE ADLIB:NOR2B; TX_data_RNO[12].
+USE ADLIB:AND2; un1_TX_cntr_I_1.
+USE ADLIB:NOR2B; TX_data_RNO[22].
+USE ADLIB:MX2; DATA_OUT_RNO[2].
+USE ADLIB:NOR2B; un1_TX_cntr_I_15.
+USE ADLIB:NOR2B; TX_data_RNO[11].
+USE ADLIB:INV; TX_cntr_rst_RNO.
+USE ADLIB:NOR2B; TX_data_RNO[21].
+USE ADLIB:DLN0C1; DATA_OUT[5].
+USE ADLIB:DFN0; TX_data[8].
+USE ADLIB:DFN0; TX_data[16].
+USE ADLIB:DFN0; TX_cntr[0].
+USE ADLIB:NOR2B; TX_data_RNO[6].
+USE ADLIB:OR3C; TX_cntr_RNICPED[1].
+USE ADLIB:GND; GND_i.
+USE ADLIB:DFN0; TX_data[11].
+USE ADLIB:NOR2B; TX_data_RNO[16].
+USE ADLIB:DLN0C1; DATA_OUT[0].
+USE ADLIB:DFN0; TX_data[14].
+USE ADLIB:DFN0; TX_data[9].
+USE ADLIB:DFN0; TX_data[13].
+USE ADLIB:MX2; DATA_OUT_RNO_0[5].
+USE ADLIB:MX2; DATA_OUT_RNO_0[2].
+USE ADLIB:DFN0; TX_cntr_rst.
+USE ADLIB:MX2; DATA_OUT_RNO_0[3].
+USE ADLIB:MX2; DATA_OUT_RNO[0].
+USE ADLIB:DFN0; TX_data[19].
+USE ADLIB:MX2; DATA_OUT_RNO[3].
+USE ADLIB:DFN0; TX_data[4].
+USE ADLIB:MX2; DATA_OUT_RNO[6].
+USE ADLIB:DLN0C1; DATA_OUT[2].
+USE ADLIB:DFN0; TX_data[6].
+USE ADLIB:DLN0C1; DATA_OUT[6].
+USE ADLIB:XOR2; un1_TX_cntr_I_12.
+USE ADLIB:NOR2B; TX_data_RNO[3].
+USE ADLIB:NOR3A; TX_cntr_RNO[0].
+USE ADLIB:DFN0; TX_data[21].
+USE ADLIB:DFN0; TX_cntr[2].
+USE ADLIB:MX2; DATA_OUT_RNO[4].
+USE ADLIB:DFN0; TX_data[23].
+USE ADLIB:MX2; DATA_OUT_RNO[7].
+USE ADLIB:NOR2B; TX_data_RNO[0].
+USE ADLIB:DFN0; TX_data[3].
+USE ADLIB:DFN0; TX_data[10].
+USE ADLIB:NOR2B; TX_data_RNO[8].
+USE ADLIB:NOR2B; TX_data_RNO[19].
+USE ADLIB:NOR2B; TX_data_RNO[10].
+USE ADLIB:NOR2B; TX_data_RNO[5].
+USE ADLIB:DFN0; TX_data[15].
+USE ADLIB:NOR2B; TX_data_RNO[20].
+USE ADLIB:DFN0; TX_data[17].
+USE ADLIB:DFN0; TX_cntr[1].
+USE ADLIB:DFN0; TX_data[1].
+USE ADLIB:XOR2; un1_TX_cntr_I_9.
+USE ADLIB:NOR3A; TX_cntr_RNO[1].
+USE ADLIB:MX2; DATA_OUT_RNO_0[7].
+USE ADLIB:DLN0C1; DATA_OUT[1].
+USE ADLIB:DFN0; TX_data[20].
+USE ADLIB:MX2; DATA_OUT_RNO[5].
+USE ADLIB:NOR2; TX_cntr_RNI97V8[1].
+USE ADLIB:MX2; DATA_OUT_RNO[1].
+USE ADLIB:NOR2B; TX_data_RNO[9].
+USE ADLIB:DFN0; TX_data[7].
+USE ADLIB:NOR2B; TX_data_RNO[2].
+NET DWACT_ADD_CI_0_g_array_1[0];  un1_TX_cntr_I_14:B, 
+  un1_TX_cntr_I_15:Y.
+NET DWACT_ADD_CI_0_TMP[0];  un1_TX_cntr_I_15:A, un1_TX_cntr_I_12:
+  B, un1_TX_cntr_I_1:Y.
+NET TX_cntr[1];  un1_TX_cntr_I_12:A, TX_cntr_RNI97V8[1]:A, 
+  TX_cntr[1]:Q, TX_cntr_RNICPED_0[1]:B, TX_cntr_RNICPED[1]:B, 
+  un1_TX_cntr_I_15:B.
+NET DAQ_En_c_i;  TX_cntr_rst:D, TX_cntr_rst_RNO:Y.
+NET DAQ_En_c;  DAQ_En_c, TX_cntr_rst_RNO:A.
+NET TP1_c;  TP1_c, TX_cntr_RNICPED_0[1]:Y.
+NET TX_cntr[0];  TX_cntr_RNICPED_0[1]:A, un1_TX_cntr_I_9:A, 
+  TX_cntr_RNICPED[1]:A, TX_cntr[0]:Q, un1_TX_cntr_I_1:A, 
+  TX_cntr_RNICPED_0[0]:B, TX_cntr_RNICPED[0]:A.
+NET TX_cntr[2];  un1_TX_cntr_I_14:A, TX_cntr_RNI97V8[1]:B, 
+  DATA_OUT_RNO_0[7]:S, TX_cntr[2]:Q, DATA_OUT_RNO_0[3]:S, 
+  DATA_OUT_RNO_0[2]:S, DATA_OUT_RNO_0[5]:S, TX_cntr_RNICPED[1]:C, 
+  DATA_OUT_RNO_0[4]:S, TX_cntr_RNICPED_0[1]:C, DATA_OUT_RNO_0[6]:
+  S, DATA_OUT_RNO_0[1]:S, DATA_OUT_RNO_0[0]:S.
+NET TX_cntr_RNICPED[1];  un1_TX_cntr_I_1:B, un1_TX_cntr_I_9:B, 
+  TX_cntr_RNICPED[1]:Y.
+NET TX_data_RNO[0];  TX_data[0]:D, TX_data_RNO[0]:Y.
+NET ADC_Interface_0_ADC_sreg[0];  ADC_Interface_0_ADC_sreg<0>, 
+  TX_data_RNO[0]:A.
+NET TP7_c_0;  TP7_c_0, TX_data_RNO[2]:B, TX_data_RNO[9]:B, 
+  TX_data_RNO[5]:B, TX_data_RNO[10]:B, TX_data_RNO[8]:B, 
+  TX_data_RNO[0]:B, TX_data_RNO[3]:B, TX_data_RNO[6]:B, 
+  TX_data_RNO[11]:B, TX_data_RNO[4]:B, TX_data_RNO[7]:B, 
+  TX_data_RNO[1]:B.
+NET TX_data_RNO[2];  TX_data[2]:D, TX_data_RNO[2]:Y.
+NET ADC_Interface_0_ADC_sreg[2];  ADC_Interface_0_ADC_sreg<2>, 
+  TX_data_RNO[2]:A.
+NET TX_data_RNO[4];  TX_data[4]:D, TX_data_RNO[4]:Y.
+NET ADC_Interface_0_ADC_sreg[4];  ADC_Interface_0_ADC_sreg<4>, 
+  TX_data_RNO[4]:A.
+NET TX_data_RNO[5];  TX_data[5]:D, TX_data_RNO[5]:Y.
+NET ADC_Interface_0_ADC_sreg[5];  ADC_Interface_0_ADC_sreg<5>, 
+  TX_data_RNO[5]:A.
+NET TX_data_RNO[6];  TX_data[6]:D, TX_data_RNO[6]:Y.
+NET ADC_Interface_0_ADC_sreg[6];  ADC_Interface_0_ADC_sreg<6>, 
+  TX_data_RNO[6]:A.
+NET TX_data_RNO[8];  TX_data[8]:D, TX_data_RNO[8]:Y.
+NET ADC_Interface_0_ADC_sreg[8];  ADC_Interface_0_ADC_sreg<8>, 
+  TX_data_RNO[8]:A.
+NET TX_data_RNO[9];  TX_data[9]:D, TX_data_RNO[9]:Y.
+NET ADC_Interface_0_ADC_sreg[9];  ADC_Interface_0_ADC_sreg<9>, 
+  TX_data_RNO[9]:A.
+NET TX_data_RNO[10];  TX_data[10]:D, TX_data_RNO[10]:Y.
+NET ADC_Interface_0_ADC_sreg[10];  ADC_Interface_0_ADC_sreg<10>, 
+  TX_data_RNO[10]:A.
+NET TX_data_RNO[11];  TX_data[11]:D, TX_data_RNO[11]:Y.
+NET ADC_Interface_0_ADC_sreg[11];  ADC_Interface_0_ADC_sreg<11>, 
+  TX_data_RNO[11]:A.
+NET TX_data_RNO[12];  TX_data[12]:D, TX_data_RNO[12]:Y.
+NET ADC_Interface_0_ADC_sreg[12];  ADC_Interface_0_ADC_sreg<12>, 
+  TX_data_RNO[12]:A.
+NET TP7_c;  TP7_c, TX_data_RNO[20]:B, TX_data_RNO[19]:B, 
+  TX_data_RNO[16]:B, TX_data_RNO[21]:B, TX_data_RNO[22]:B, 
+  TX_data_RNO[12]:B, TX_data_RNO[23]:B, TX_data_RNO[13]:B, 
+  TX_data_RNO[14]:B, TX_data_RNO[18]:B, TX_data_RNO[15]:B, 
+  TX_data_RNO[17]:B.
+NET TX_data_RNO[15];  TX_data[15]:D, TX_data_RNO[15]:Y.
+NET ADC_Interface_0_ADC_sreg[15];  ADC_Interface_0_ADC_sreg<15>, 
+  TX_data_RNO[15]:A.
+NET TX_data_RNO[16];  TX_data[16]:D, TX_data_RNO[16]:Y.
+NET ADC_Interface_0_ADC_sreg[16];  ADC_Interface_0_ADC_sreg<16>, 
+  TX_data_RNO[16]:A.
+NET TX_data_RNO[17];  TX_data[17]:D, TX_data_RNO[17]:Y.
+NET ADC_Interface_0_ADC_sreg[17];  ADC_Interface_0_ADC_sreg<17>, 
+  TX_data_RNO[17]:A.
+NET TX_data_RNO[18];  TX_data[18]:D, TX_data_RNO[18]:Y.
+NET ADC_Interface_0_ADC_sreg[18];  ADC_Interface_0_ADC_sreg<18>, 
+  TX_data_RNO[18]:A.
+NET TX_data_RNO[19];  TX_data[19]:D, TX_data_RNO[19]:Y.
+NET ADC_Interface_0_ADC_sreg[19];  ADC_Interface_0_ADC_sreg<19>, 
+  TX_data_RNO[19]:A.
+NET TX_data_RNO[20];  TX_data[20]:D, TX_data_RNO[20]:Y.
+NET ADC_Interface_0_ADC_sreg[20];  ADC_Interface_0_ADC_sreg<20>, 
+  TX_data_RNO[20]:A.
+NET TX_data_RNO[21];  TX_data[21]:D, TX_data_RNO[21]:Y.
+NET ADC_Interface_0_ADC_sreg[21];  ADC_Interface_0_ADC_sreg<21>, 
+  TX_data_RNO[21]:A.
+NET TX_data_RNO[22];  TX_data[22]:D, TX_data_RNO[22]:Y.
+NET ADC_Interface_0_ADC_sreg[22];  ADC_Interface_0_ADC_sreg<22>, 
+  TX_data_RNO[22]:A.
+NET TX_data_RNO[23];  TX_data[23]:D, TX_data_RNO[23]:Y.
+NET ADC_Interface_0_ADC_sreg[23];  ADC_Interface_0_ADC_sreg<23>, 
+  TX_data_RNO[23]:A.
+NET sl_fifo_wr_en2;  DATA_OUT[3]:CLR, DATA_OUT[1]:CLR, 
+  DATA_OUT[6]:CLR, DATA_OUT[2]:CLR, DATA_OUT[0]:CLR, DATA_OUT[5]:
+  CLR, DATA_OUT[4]:CLR, DATA_OUT[7]:CLR, TX_cntr_RNICPED_0[0]:Y.
+NET DATA_OUT_1_sn_N_2;  TX_cntr_RNICPED_0[0]:A, DATA_OUT_RNO[1]:S, 
+  TX_cntr_RNI97V8[1]:Y, DATA_OUT_RNO[5]:S, DATA_OUT_RNO[7]:S, 
+  DATA_OUT_RNO[4]:S, DATA_OUT_RNO[6]:S, DATA_OUT_RNO[3]:S, 
+  DATA_OUT_RNO[0]:S, DATA_OUT_RNO[2]:S, TX_cntr_RNICPED[0]:B.
+NET N_77;  DATA_OUT_RNO[0]:A, DATA_OUT_RNO_0[0]:Y.
+NET TX_data[8];  DATA_OUT_RNO_0[0]:A, TX_data[8]:Q.
+NET TX_data[0];  DATA_OUT_RNO_0[0]:B, TX_data[0]:Q.
+NET N_78;  DATA_OUT_RNO[1]:A, DATA_OUT_RNO_0[1]:Y.
+NET TX_data[9];  DATA_OUT_RNO_0[1]:A, TX_data[9]:Q.
+NET TX_data[1];  DATA_OUT_RNO_0[1]:B, TX_data[1]:Q.
+NET N_79;  DATA_OUT_RNO[2]:A, DATA_OUT_RNO_0[2]:Y.
+NET TX_data[10];  DATA_OUT_RNO_0[2]:A, TX_data[10]:Q.
+NET TX_data[2];  DATA_OUT_RNO_0[2]:B, TX_data[2]:Q.
+NET N_80;  DATA_OUT_RNO[3]:A, DATA_OUT_RNO_0[3]:Y.
+NET TX_data[11];  DATA_OUT_RNO_0[3]:A, TX_data[11]:Q.
+NET TX_data[3];  DATA_OUT_RNO_0[3]:B, TX_data[3]:Q.
+NET N_81;  DATA_OUT_RNO[4]:A, DATA_OUT_RNO_0[4]:Y.
+NET TX_data[12];  DATA_OUT_RNO_0[4]:A, TX_data[12]:Q.
+NET TX_data[4];  DATA_OUT_RNO_0[4]:B, TX_data[4]:Q.
+NET N_82;  DATA_OUT_RNO[5]:A, DATA_OUT_RNO_0[5]:Y.
+NET TX_data[13];  DATA_OUT_RNO_0[5]:A, TX_data[13]:Q.
+NET TX_data[5];  DATA_OUT_RNO_0[5]:B, TX_data[5]:Q.
+NET N_83;  DATA_OUT_RNO[6]:A, DATA_OUT_RNO_0[6]:Y.
+NET TX_data[14];  DATA_OUT_RNO_0[6]:A, TX_data[14]:Q.
+NET TX_data[6];  DATA_OUT_RNO_0[6]:B, TX_data[6]:Q.
+NET N_84;  DATA_OUT_RNO[7]:A, DATA_OUT_RNO_0[7]:Y.
+NET TX_data[15];  DATA_OUT_RNO_0[7]:A, TX_data[15]:Q.
+NET TX_data[7];  DATA_OUT_RNO_0[7]:B, TX_data[7]:Q.
+NET DATA_OUT_1[0];  DATA_OUT[0]:D, DATA_OUT_RNO[0]:Y.
+NET TX_data[16];  DATA_OUT_RNO[0]:B, TX_data[16]:Q.
+NET DATA_OUT_1[1];  DATA_OUT[1]:D, DATA_OUT_RNO[1]:Y.
+NET TX_data[17];  DATA_OUT_RNO[1]:B, TX_data[17]:Q.
+NET DATA_OUT_1[2];  DATA_OUT[2]:D, DATA_OUT_RNO[2]:Y.
+NET TX_data[18];  DATA_OUT_RNO[2]:B, TX_data[18]:Q.
+NET DATA_OUT_1[3];  DATA_OUT[3]:D, DATA_OUT_RNO[3]:Y.
+NET TX_data[19];  DATA_OUT_RNO[3]:B, TX_data[19]:Q.
+NET DATA_OUT_1[4];  DATA_OUT[4]:D, DATA_OUT_RNO[4]:Y.
+NET TX_data[20];  DATA_OUT_RNO[4]:B, TX_data[20]:Q.
+NET DATA_OUT_1[5];  DATA_OUT[5]:D, DATA_OUT_RNO[5]:Y.
+NET TX_data[21];  DATA_OUT_RNO[5]:B, TX_data[21]:Q.
+NET DATA_OUT_1[6];  DATA_OUT[6]:D, DATA_OUT_RNO[6]:Y.
+NET TX_data[22];  DATA_OUT_RNO[6]:B, TX_data[22]:Q.
+NET DATA_OUT_1[7];  DATA_OUT[7]:D, DATA_OUT_RNO[7]:Y.
+NET TX_data[23];  DATA_OUT_RNO[7]:B, TX_data[23]:Q.
+NET Sl_fifo_wr_en_c;  Sl_fifo_wr_en_c, TX_cntr_RNICPED[0]:Y.
+NET TX_data_RNO[13];  TX_data[13]:D, TX_data_RNO[13]:Y.
+NET ADC_Interface_0_ADC_sreg[13];  ADC_Interface_0_ADC_sreg<13>, 
+  TX_data_RNO[13]:A.
+NET TX_data_RNO[7];  TX_data[7]:D, TX_data_RNO[7]:Y.
+NET ADC_Interface_0_ADC_sreg[7];  ADC_Interface_0_ADC_sreg<7>, 
+  TX_data_RNO[7]:A.
+NET TX_data_RNO[1];  TX_data[1]:D, TX_data_RNO[1]:Y.
+NET ADC_Interface_0_ADC_sreg[1];  ADC_Interface_0_ADC_sreg<1>, 
+  TX_data_RNO[1]:A.
+NET TX_data_RNO[3];  TX_data[3]:D, TX_data_RNO[3]:Y.
+NET ADC_Interface_0_ADC_sreg[3];  ADC_Interface_0_ADC_sreg<3>, 
+  TX_data_RNO[3]:A.
+NET TX_data_RNO[14];  TX_data[14]:D, TX_data_RNO[14]:Y.
+NET ADC_Interface_0_ADC_sreg[14];  ADC_Interface_0_ADC_sreg<14>, 
+  TX_data_RNO[14]:A.
+NET TX_cntr_4[2];  TX_cntr[2]:D, TX_cntr_RNO[2]:Y.
+NET I_14_0;  TX_cntr_RNO[2]:A, un1_TX_cntr_I_14:Y.
+NET TX_cntr_rst;  TX_cntr_RNO[2]:B, TX_cntr_RNO[1]:B, 
+  TX_cntr_RNO[0]:B, TX_cntr_rst:Q.
+NET clk_100Khz;  clk_100Khz, TX_data[7]:CLK, TX_data[20]:CLK, 
+  TX_cntr_RNO[1]:C, TX_data[1]:CLK, TX_data[17]:CLK, TX_data[15]:
+  CLK, TX_data[10]:CLK, TX_data[3]:CLK, TX_data[23]:CLK, 
+  TX_data[21]:CLK, TX_cntr_RNO[0]:C, TX_data[6]:CLK, TX_data[4]:
+  CLK, TX_data[19]:CLK, TX_cntr_rst:CLK, TX_data[13]:CLK, 
+  TX_data[9]:CLK, TX_data[14]:CLK, TX_data[11]:CLK, TX_data[16]:
+  CLK, TX_data[8]:CLK, TX_data[2]:CLK, TX_data[0]:CLK, TX_data[5]:
+  CLK, TX_data[22]:CLK, TX_cntr_RNO[2]:C, TX_data[18]:CLK, 
+  TX_data[12]:CLK.
+NET TX_cntr_4[1];  TX_cntr[1]:D, TX_cntr_RNO[1]:Y.
+NET I_12_0;  TX_cntr_RNO[1]:A, un1_TX_cntr_I_12:Y.
+NET TX_cntr_4[0];  TX_cntr[0]:D, TX_cntr_RNO[0]:Y.
+NET DWACT_ADD_CI_0_partial_sum[0];  TX_cntr_RNO[0]:A, DATA_OUT[1]:
+  G, un1_TX_cntr_I_9:Y, DATA_OUT[3]:G, DATA_OUT[6]:G, DATA_OUT[2]:
+  G, DATA_OUT[0]:G, DATA_OUT[5]:G, DATA_OUT[4]:G, DATA_OUT[7]:G.
+NET DATA_OUT_c[0];  DATA_OUT_c<0>, DATA_OUT[0]:Q.
+NET DATA_OUT_c[1];  DATA_OUT_c<1>, DATA_OUT[1]:Q.
+NET DATA_OUT_c[2];  DATA_OUT_c<2>, DATA_OUT[2]:Q.
+NET DATA_OUT_c[3];  DATA_OUT_c<3>, DATA_OUT[3]:Q.
+NET DATA_OUT_c[4];  DATA_OUT_c<4>, DATA_OUT[4]:Q.
+NET DATA_OUT_c[5];  DATA_OUT_c<5>, DATA_OUT[5]:Q.
+NET DATA_OUT_c[6];  DATA_OUT_c<6>, DATA_OUT[6]:Q.
+NET DATA_OUT_c[7];  DATA_OUT_c<7>, DATA_OUT[7]:Q.
+NET TP5_c_c;  TP5_c_c, TX_cntr[1]:CLK, TX_cntr[2]:CLK, TX_cntr[0]:
+  CLK.
+NET GND;  GND_i:Y.
+NET VCC;  VCC_i:Y.
+END.
+DEF ADC_Interface; ADC_Interface_0_ADC_sreg<23>, 
+  ADC_Interface_0_ADC_sreg<22>, ADC_Interface_0_ADC_sreg<21>, 
+  ADC_Interface_0_ADC_sreg<20>, ADC_Interface_0_ADC_sreg<19>, 
+  ADC_Interface_0_ADC_sreg<18>, ADC_Interface_0_ADC_sreg<17>, 
+  ADC_Interface_0_ADC_sreg<16>, ADC_Interface_0_ADC_sreg<15>, 
+  ADC_Interface_0_ADC_sreg<14>, ADC_Interface_0_ADC_sreg<13>, 
+  ADC_Interface_0_ADC_sreg<12>, ADC_Interface_0_ADC_sreg<11>, 
+  ADC_Interface_0_ADC_sreg<10>, ADC_Interface_0_ADC_sreg<9>, 
+  ADC_Interface_0_ADC_sreg<8>, ADC_Interface_0_ADC_sreg<7>, 
+  ADC_Interface_0_ADC_sreg<6>, ADC_Interface_0_ADC_sreg<5>, 
+  ADC_Interface_0_ADC_sreg<4>, ADC_Interface_0_ADC_sreg<3>, 
+  ADC_Interface_0_ADC_sreg<2>, ADC_Interface_0_ADC_sreg<1>, 
+  ADC_Interface_0_ADC_sreg<0>, TP7_c, TP1_c, ADC_SCLK_c, SPI_CS_c, 
+  ADC_SDO_c, TP2_c, TP4_c, ADC_Conv_c, ADC_CS_c, TP7_c_0, TP5_c_c; 
+  BUSFORMAT:%s<%d>.
+PIN ADC_Interface_0_ADC_sreg<23>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:0/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<22>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:1/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<21>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:2/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<20>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:3/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<19>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:4/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<18>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:5/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<17>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:6/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<16>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:7/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<15>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:8/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<14>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:9/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<13>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:10/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<12>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:11/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<11>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:12/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<10>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:13/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<9>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:14/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<8>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:15/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<7>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:16/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<6>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:17/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<5>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:18/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<4>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:19/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<3>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:20/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<2>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:21/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<1>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:22/23/0/1.
+PIN ADC_Interface_0_ADC_sreg<0>; DIRECTION:OUTPUT, ORIGNAME:
+  ADC_Interface_0_ADC_sreg, BUSINFO:23/23/0/1.
+PIN TP7_c; DIRECTION:OUTPUT.
+PIN TP1_c; DIRECTION:INPUT.
+PIN ADC_SCLK_c; DIRECTION:OUTPUT.
+PIN SPI_CS_c; DIRECTION:INPUT.
+PIN ADC_SDO_c; DIRECTION:INPUT.
+PIN TP2_c; DIRECTION:INPUT.
+PIN TP4_c; DIRECTION:INPUT.
+PIN ADC_Conv_c; DIRECTION:OUTPUT.
+PIN ADC_CS_c; DIRECTION:OUTPUT.
+PIN TP7_c_0; DIRECTION:OUTPUT.
+PIN TP5_c_c; DIRECTION:INPUT.
+USE ADLIB:NOR2; ADC_cntr_RNIT8H1[3].
+USE ADLIB:OAI1; ADC_cntr_RNIKL92[2].
+USE ADLIB:NOR2A; ADC_buf_RNO[4].
+USE ADLIB:NOR2A; ADC_sreg_RNO[0].
+USE ADLIB:OR2; ADC_Conv_RNO.
+USE ADLIB:DFN1E0; ADC_sreg[18].
+USE ADLIB:XA1B; ADC_cntr_RNO[3].
+USE ADLIB:DFN1; ADC_state_0[0].
+USE ADLIB:NOR2; ADC_cntr_RNIN2H1_0[0].
+USE ADLIB:NOR2; ADC_cntr_RNI1DH1[5].
+USE ADLIB:NOR3A; ADC_buf_RNO_2[11].
+USE ADLIB:DFN1; ADC_buf[2].
+USE ADLIB:NOR3B; ADC_buf_RNO_1[9].
+USE ADLIB:NOR3B; ADC_buf_RNO_1[2].
+USE ADLIB:NOR2A; ADC_sreg_RNO[8].
+USE ADLIB:NOR3B; ADC_buf_RNO_1[3].
+USE ADLIB:NOR3B; ADC_cntr_RNIOP92[0].
+USE ADLIB:NOR3B; ADC_state_RNO_1[1].
+USE ADLIB:MX2; ADC_sreg_RNO_0[13].
+USE ADLIB:MX2; ADC_buf_RNO_0[9].
+USE ADLIB:NOR3B; ADC_buf_RNO_1[11].
+USE ADLIB:DFN1E0; ADC_sreg[14].
+USE ADLIB:NOR3A; ADC_cntr_RNIK932[4].
+USE ADLIB:DFN1E0; ADC_sreg[5].
+USE ADLIB:MX2; ADC_sreg_RNO_0[23].
+USE ADLIB:MX2; ADC_sreg_RNO_0[7].
+USE ADLIB:NOR2B; ADC_cntr_RNIT8H1[2].
+USE ADLIB:NOR2A; ADC_buf_RNO[7].
+USE ADLIB:OA1B; ADC_cntr_RNO[0].
+USE ADLIB:DFN1E0; ADC_sreg[2].
+USE ADLIB:DFN1E0; ADC_sreg[11].
+USE ADLIB:NOR2A; ADC_sreg_RNO[1].
+USE ADLIB:NOR2A; ADC_sreg_RNO[16].
+USE ADLIB:DFN1E0; ADC_sreg[21].
+USE ADLIB:DFN1; ADC_buf[7].
+USE ADLIB:NOR2B; ADC_state_RNO_0[1].
+USE ADLIB:NOR2A; ADC_sreg_RNO[17].
+USE ADLIB:MX2; ADC_sreg_RNO_0[11].
+USE ADLIB:NOR2B; ADC_cntr_RNIP4H1[2].
+USE ADLIB:NOR2A; ADC_cntr_RNIVAH1[4].
+USE ADLIB:NOR3B; ADC_buf_RNO_1[8].
+USE ADLIB:MX2A; ADC_Cs_RNO_0.
+USE ADLIB:MX2; ADC_sreg_RNO_0[21].
+USE ADLIB:MX2; ADC_buf_RNO_0[5].
+USE ADLIB:AO1; ADC_Conv_RNO_1.
+USE ADLIB:NOR3B; ADC_buf_RNO_1[7].
+USE ADLIB:XA1B; ADC_cntr_RNO[2].
+USE ADLIB:OA1A; ADC_cntr_RNIOUHA[6].
+USE ADLIB:MX2; ADC_buf_RNO_0[3].
+USE ADLIB:AO1B; ADC_cntr_RNIHKJ4[5].
+USE ADLIB:DFN1; ADC_cntr[4].
+USE ADLIB:DFN1; ADC_cntr[5].
+USE ADLIB:NOR3; ADC_cntr_RNIMN92[0].
+USE ADLIB:DFN1E0; ADC_sreg[8].
+USE ADLIB:DFN1; ADC_MUX.
+USE ADLIB:DFN1; ADC_buf[8].
+USE ADLIB:DFN1E0; ADC_sreg[17].
+USE ADLIB:MX2; ADC_sreg_RNO_0[3].
+USE ADLIB:NOR3B; ADC_Cs_RNO_2.
+USE ADLIB:NOR2B; ADC_cntr_RNII923[3].
+USE ADLIB:MX2; ADC_buf_RNO_0[1].
+USE ADLIB:NOR2; ADC_cntr_RNIR6H1_0[2].
+USE ADLIB:MX2; ADC_buf_RNO_0[2].
+USE ADLIB:NOR2A; ADC_buf_RNO[10].
+USE ADLIB:DFN1E0; ADC_sreg[7].
+USE ADLIB:GND; GND_i.
+USE ADLIB:MX2; ADC_sreg_RNO_0[8].
+USE ADLIB:MX2; ADC_sreg_RNO_0[10].
+USE ADLIB:NOR2A; ADC_sreg_RNO[4].
+USE ADLIB:NOR2B; ADC_cntr_RNIN2H1[0].
+USE ADLIB:MX2; ADC_sreg_RNO_0[20].
+USE ADLIB:MX2; ADC_sreg_RNO_0[16].
+USE ADLIB:NOR2A; ADC_sreg_RNO[18].
+USE ADLIB:OR2; ADC_Cs_RNO.
+USE ADLIB:XA1B; ADC_cntr_RNO[5].
+USE ADLIB:MX2; ADC_MUX_RNO_0.
+USE ADLIB:DFN1E0; ADC_sreg[10].
+USE ADLIB:DFN1E0; ADC_sreg[20].
+USE ADLIB:MX2; ADC_buf_RNO_0[0].
+USE ADLIB:NOR2; ADC_cntr_RNIQ5H1[3].
+USE ADLIB:DFN1; ADC_buf[5].
+USE ADLIB:DFN1; ADC_buf[4].
+USE ADLIB:AO1A; ADC_state_RNIP5NU1[1].
+USE ADLIB:DFN1E0; ADC_sreg[12].
+USE ADLIB:DFN1E0; ADC_sreg[4].
+USE ADLIB:DFN1E0; ADC_sreg[22].
+USE ADLIB:OA1C; ADC_cntr_RNIUL23[5].
+USE ADLIB:DFN1; ADC_buf[0].
+USE ADLIB:MX2; ADC_sreg_RNO_0[12].
+USE ADLIB:NOR3B; ADC_buf_RNO_1[1].
+USE ADLIB:NOR2A; ADC_buf_RNO[0].
+USE ADLIB:DFN1E0; ADC_sreg[19].
+USE ADLIB:MX2; ADC_sreg_RNO_0[22].
+USE ADLIB:XA1B; ADC_cntr_RNO[6].
+USE ADLIB:MX2A; ADC_Conv_RNO_0.
+USE ADLIB:NOR2A; ADC_buf_RNO[9].
+USE ADLIB:AO1A; ADC_Conv_RNO_3.
+USE ADLIB:DFN1E0; ADC_sreg[13].
+USE ADLIB:DFN1E0; ADC_sreg[23].
+USE ADLIB:MX2A; ADC_Conv_RNO_2.
+USE ADLIB:VCC; VCC_i.
+USE ADLIB:NOR2B; ADC_cntr_RNO_0[6].
+USE ADLIB:XA1B; ADC_cntr_RNO[4].
+USE ADLIB:NOR3B; ADC_cntr_RNIILJ4_0[6].
+USE ADLIB:DFN1; ADC_buf[6].
+USE ADLIB:NOR2; ADC_cntr_RNIR6H1[1].
+USE ADLIB:MX2; ADC_buf_RNO_0[10].
+USE ADLIB:DFN1E0; ADC_sreg[16].
+USE ADLIB:NOR2A; ADC_sreg_RNO[22].
+USE ADLIB:DFN1E0; ADC_sreg[1].
+USE ADLIB:DFN1; Hit_flag.
+USE ADLIB:NOR2A; ADC_sreg_RNO[14].
+USE ADLIB:NOR2; ADC_state_RNIB7TU[1].
+USE ADLIB:NOR2B; ADC_cntr_RNIKL92_1[2].
+USE ADLIB:OR3; ADC_cntr_RNITK23[4].
+USE ADLIB:NOR2B; ADC_cntr_RNIU9H1[3].
+USE ADLIB:DFN1; ADC_buf[10].
+USE ADLIB:NOR2A; ADC_MUX_RNO.
+USE ADLIB:MX2; ADC_buf_RNO_0[11].
+USE ADLIB:OR2; ADC_Sclk_en_RNO.
+USE ADLIB:NOR3B; ADC_buf_RNO_1[0].
+USE ADLIB:MX2; ADC_sreg_RNO_0[19].
+USE ADLIB:AOI1B; Hit_flag_0_0_RNI7E6V3.
+USE ADLIB:AOI1B; ADC_state_RNIJITN[1].
+USE ADLIB:MX2; ADC_sreg_RNO_0[17].
+USE ADLIB:DFN1; ADC_cntr[3].
+USE ADLIB:NOR3C; ADC_cntr_RNIIBC5[1].
+USE ADLIB:DFN1; ADC_cntr[0].
+USE ADLIB:NOR3B; ADC_buf_RNO_1[6].
+USE ADLIB:DFN1E0; ADC_sreg[9].
+USE ADLIB:AOI1B; ADC_state_RNI17HI[1].
+USE ADLIB:DFN1E0; ADC_sreg[0].
+USE ADLIB:NOR2A; ADC_sreg_RNO[12].
+USE ADLIB:MX2; ADC_sreg_RNO_0[2].
+USE ADLIB:NOR2B; ADC_cntr_RNIHUQ3[4].
+USE ADLIB:DFN1; ADC_Conv.
+USE ADLIB:AOI1; ADC_state_RNO[1].
+USE ADLIB:NOR2A; ADC_buf_RNO[8].
+USE ADLIB:DFN1; ADC_buf[9].
+USE ADLIB:NOR2B; ADC_state_RNIMLTN[1].
+USE ADLIB:DFN1; ADC_cntr[2].
+USE ADLIB:DFN1; ADC_state[0].
+USE ADLIB:NOR3C; ADC_cntr_RNIIBC5[0].
+USE ADLIB:DFN1; ADC_cntr[6].
+USE ADLIB:NOR2A; ADC_sreg_RNO[9].
+USE ADLIB:NOR2A; ADC_sreg_RNO[5].
+USE ADLIB:NOR2B; ADC_Sclk_en_RNII0PN.
+USE ADLIB:NOR3B; ADC_MUX_RNO_1.
+USE ADLIB:NOR3C; ADC_cntr_RNIEHHS[6].
+USE ADLIB:MX2; ADC_sreg_RNO_0[9].
+USE ADLIB:NOR2A; ADC_buf_RNO[6].
+USE ADLIB:NOR3B; ADC_buf_RNO_1[5].
+USE ADLIB:OR2B; ADC_cntr_RNIR6H1[2].
+USE ADLIB:MX2; ADC_buf_RNO_0[8].
+USE ADLIB:NOR2A; ADC_sreg_RNO[20].
+USE ADLIB:NOR3A; ADC_Conv_RNO_4.
+USE ADLIB:NOR2A; ADC_buf_RNO[3].
+USE ADLIB:MX2; ADC_sreg_RNO_0[0].
+USE ADLIB:DFN1; ADC_state[1].
+USE ADLIB:NOR2A; ADC_sreg_RNO[23].
+USE ADLIB:NOR2A; ADC_sreg_RNO[6].
+USE ADLIB:MX2; ADC_sreg_RNO_0[6].
+USE ADLIB:AO1A; ADC_state_0_RNILJBM[0].
+USE ADLIB:NOR2A; ADC_sreg_RNO[21].
+USE ADLIB:MX2; ADC_buf_RNO_0[7].
+USE ADLIB:MX2; ADC_sreg_RNO_0[1].
+USE ADLIB:NOR2A; ADC_buf_RNO[5].
+USE ADLIB:OA1A; ADC_cntr_RNIK356[6].
+USE ADLIB:NOR3B; ADC_cntr_RNIILJ4[6].
+USE ADLIB:DFN1; ADC_buf[1].
+USE ADLIB:MX2; ADC_cntr_RNIG1F8[5].
+USE ADLIB:MX2; ADC_sreg_RNO_0[4].
+USE ADLIB:NOR2A; ADC_sreg_RNO[15].
+USE ADLIB:NOR3A; ADC_cntr_RNILVO51[5].
+USE ADLIB:DFN1E0; ADC_sreg[15].
+USE ADLIB:AO1A; ADC_state_RNI37OJ1[1].
+USE ADLIB:MX2; ADC_sreg_RNO_0[5].
+USE ADLIB:MX2; ADC_sreg_RNO_0[14].
+USE ADLIB:NOR2A; ADC_sreg_RNO[10].
+USE ADLIB:OR3; ADC_Cs_RNO_1.
+USE ADLIB:NOR3; ADC_state_RNO_4[1].
+USE ADLIB:NOR2A; ADC_sreg_RNO[7].
+USE ADLIB:NOR3; ADC_cntr_RNIKL92_0[2].
+USE ADLIB:NOR2A; ADC_state_RNO_3[1].
+USE ADLIB:OA1A; ADC_state_RNI4KOH[1].
+USE ADLIB:NOR2A; ADC_sreg_RNO[3].
+USE ADLIB:NOR2A; ADC_sreg_RNO[13].
+USE ADLIB:DFN1; ADC_buf[11].
+USE ADLIB:DFN1E0; ADC_sreg[3].
+USE ADLIB:NOR2A; ADC_sreg_RNO[11].
+USE ADLIB:MX2; ADC_buf_RNO_0[4].
+USE ADLIB:NOR3A; ADC_buf_RNO_2[2].
+USE ADLIB:NOR2A; ADC_sreg_RNO[2].
+USE ADLIB:MX2; ADC_sreg_RNO_0[18].
+USE ADLIB:OA1; ADC_cntr_RNIILJ4[0].
+USE ADLIB:OR3; ADC_state_0_RNI70N6[0].
+USE ADLIB:NOR3A; ADC_buf_RNO_2[9].
+USE ADLIB:NOR2A; ADC_buf_RNO[2].
+USE ADLIB:DFN1; ADC_cntr[1].
+USE ADLIB:NOR3A; ADC_state_RNIFADG[1].
+USE ADLIB:NOR3B; ADC_cntr_RNIPQ92[2].
+USE ADLIB:XA1B; ADC_cntr_RNO[1].
+USE ADLIB:OR3; ADC_state_RNO_2[1].
+USE ADLIB:NOR3C; ADC_MUX_RNILDNS.
+USE ADLIB:OR2B; ADC_Conv_RNO_5.
+USE ADLIB:MX2; ADC_sreg_RNO_0[15].
+USE ADLIB:NOR2A; ADC_sreg_RNO[19].
+USE ADLIB:DFN1; ADC_buf[3].
+USE ADLIB:MX2; Hit_flag_0_0_RNIGDQI2.
+USE ADLIB:AO1C; ADC_cntr_RNIHUQ3[3].
+USE ADLIB:DFN1E0; ADC_Sclk_en.
+USE ADLIB:OAI1; ADC_cntr_RNIMPJ4[3].
+USE ADLIB:OA1A; ADC_cntr_RNI6J55[3].
+USE ADLIB:NOR2; ADC_cntr_RNI0CH1[4].
+USE ADLIB:NOR3B; ADC_buf_RNO_1[4].
+USE ADLIB:DFN1E0; ADC_sreg[6].
+USE ADLIB:NOR2A; ADC_buf_RNO[1].
+USE ADLIB:NOR3C; ADC_MUX_RNIEUPV.
+USE ADLIB:NOR2A; ADC_buf_RNO[11].
+USE ADLIB:DFN1; Hit_flag_0_0.
+USE ADLIB:NOR2B; ADC_MUX_RNI8ABG.
+USE ADLIB:DFN1; ADC_Cs.
+USE ADLIB:NOR3B; ADC_buf_RNO_1[10].
+USE ADLIB:MX2; ADC_buf_RNO_0[6].
+NET ADC_state_0[0];  ADC_cntr_RNIK932[4]:A, ADC_state_RNO_2[1]:C, 
+  ADC_state_RNIFADG[1]:B, ADC_buf_RNO_2[9]:B, 
+  ADC_state_0_RNI70N6[0]:B, ADC_sreg_RNO[2]:B, ADC_buf_RNO_2[2]:B, 
+  ADC_sreg_RNO[3]:B, ADC_sreg_RNO[7]:B, ADC_state_0_RNILJBM[0]:B, 
+  ADC_sreg_RNO[6]:B, ADC_sreg_RNO[5]:B, ADC_sreg_RNO[4]:B, 
+  ADC_sreg_RNO[1]:B, ADC_cntr_RNO[0]:A, ADC_sreg_RNO[0]:B, 
+  ADC_buf_RNO_2[11]:B, ADC_state_0[0]:Q.
+NET TP5_c_c;  TP5_c_c, ADC_Cs:CLK, Hit_flag_0_0:CLK, ADC_sreg[6]:
+  CLK, ADC_Sclk_en:CLK, ADC_buf[3]:CLK, ADC_cntr[1]:CLK, 
+  ADC_sreg[3]:CLK, ADC_buf[11]:CLK, ADC_sreg[15]:CLK, ADC_buf[1]:
+  CLK, ADC_state[1]:CLK, ADC_Sclk_en_RNII0PN:A, ADC_cntr[6]:CLK, 
+  ADC_state[0]:CLK, ADC_cntr[2]:CLK, ADC_buf[9]:CLK, ADC_Conv:CLK, 
+  ADC_sreg[0]:CLK, ADC_sreg[9]:CLK, ADC_cntr[0]:CLK, ADC_cntr[3]:
+  CLK, ADC_buf[10]:CLK, Hit_flag:CLK, ADC_sreg[1]:CLK, 
+  ADC_sreg[16]:CLK, ADC_buf[6]:CLK, ADC_sreg[23]:CLK, 
+  ADC_sreg[13]:CLK, ADC_sreg[19]:CLK, ADC_buf[0]:CLK, 
+  ADC_sreg[22]:CLK, ADC_sreg[4]:CLK, ADC_sreg[12]:CLK, ADC_buf[4]:
+  CLK, ADC_buf[5]:CLK, ADC_sreg[20]:CLK, ADC_sreg[10]:CLK, 
+  ADC_sreg[7]:CLK, ADC_sreg[17]:CLK, ADC_buf[8]:CLK, ADC_MUX:CLK, 
+  ADC_sreg[8]:CLK, ADC_cntr[5]:CLK, ADC_cntr[4]:CLK, ADC_buf[7]:
+  CLK, ADC_sreg[21]:CLK, ADC_sreg[11]:CLK, ADC_sreg[2]:CLK, 
+  ADC_sreg[5]:CLK, ADC_sreg[14]:CLK, ADC_buf[2]:CLK, 
+  ADC_state_0[0]:CLK, ADC_sreg[18]:CLK.
+NET ADC_state_7[0];  ADC_state_0[0]:D, ADC_state_0_RNILJBM[0]:Y, 
+  ADC_state[0]:D.
+NET TP7_c_0;  TP7_c_0, Hit_flag_0_0:Q, Hit_flag_0_0_RNIGDQI2:B.
+NET Hit_flag_0_0_RNI7E6V3;  Hit_flag:D, Hit_flag_0_0:D, 
+  Hit_flag_0_0_RNI7E6V3:Y.
+NET adc_conv17_1_0;  ADC_state_RNO_0[1]:B, ADC_cntr_RNI0CH1[4]:Y, 
+  ADC_cntr_RNIILJ4[0]:C.
+NET ADC_cntr[4];  ADC_cntr_RNIVAH1[4]:A, ADC_cntr_RNI0CH1[4]:A, 
+  ADC_cntr_RNIHUQ3[3]:C, ADC_Conv_RNO_5:A, ADC_cntr_RNIHUQ3[4]:B, 
+  ADC_cntr_RNITK23[4]:B, ADC_cntr_RNIR6H1[1]:B, ADC_cntr_RNO[4]:B, 
+  ADC_cntr_RNIMN92[0]:C, ADC_cntr[4]:Q, ADC_cntr_RNIT8H1[3]:B, 
+  ADC_cntr_RNIK932[4]:C.
+NET ADC_cntr[6];  ADC_cntr_RNITK23[4]:A, ADC_cntr_RNI0CH1[4]:B, 
+  ADC_cntr_RNIPQ92[2]:C, ADC_state_RNI4KOH[1]:B, 
+  ADC_cntr_RNIILJ4[6]:C, ADC_cntr_RNIK356[6]:B, ADC_cntr[6]:Q, 
+  ADC_cntr_RNI1DH1[5]:B, ADC_cntr_RNIILJ4_0[6]:C, ADC_Conv_RNO_2:
+  S, ADC_cntr_RNO[6]:B, ADC_cntr_RNIUL23[5]:C, ADC_Cs_RNO_2:C, 
+  ADC_cntr_RNIOUHA[6]:B, ADC_cntr_RNIK932[4]:B, 
+  ADC_cntr_RNIOP92[0]:B.
+NET un1_ADC_cntr_7lto3_0;  ADC_cntr_RNIILJ4[0]:B, 
+  ADC_cntr_RNIR6H1[2]:Y.
+NET ADC_cntr[2];  ADC_cntr_RNIP4H1[2]:A, ADC_cntr_RNIPQ92[2]:A, 
+  ADC_cntr_RNIKL92_0[2]:B, ADC_cntr_RNIR6H1[2]:A, ADC_cntr[2]:Q, 
+  ADC_cntr_RNIKL92_1[2]:B, ADC_cntr_RNIR6H1_0[2]:A, 
+  ADC_cntr_RNO[2]:A, ADC_cntr_RNIT8H1[2]:B, ADC_cntr_RNIKL92[2]:C.
+NET ADC_cntr[3];  ADC_cntr_RNIT8H1[3]:A, ADC_cntr_RNI6J55[3]:A, 
+  ADC_cntr_RNIHUQ3[3]:A, ADC_cntr_RNIR6H1[2]:B, ADC_cntr[3]:Q, 
+  ADC_cntr_RNIU9H1[3]:B, ADC_cntr_RNIQ5H1[3]:B, 
+  ADC_cntr_RNIR6H1_0[2]:B, ADC_cntr_RNII923[3]:B, ADC_cntr_RNO[3]:
+  B.
+NET adc_conv3lt2;  ADC_cntr_RNIILJ4[0]:A, ADC_cntr_RNIN2H1_0[0]:Y.
+NET ADC_cntr[0];  ADC_cntr_RNIN2H1_0[0]:A, ADC_cntr_RNO[1]:B, 
+  ADC_cntr_RNIPQ92[2]:B, ADC_cntr_RNIKL92_0[2]:C, ADC_cntr[0]:Q, 
+  ADC_cntr_RNIN2H1[0]:A, ADC_cntr_RNIMN92[0]:B, ADC_cntr_RNO[0]:C, 
+  ADC_state_RNO_1[1]:C, ADC_cntr_RNIOP92[0]:C, 
+  ADC_cntr_RNIKL92[2]:B.
+NET ADC_cntr[1];  ADC_cntr_RNIKL92[2]:A, ADC_cntr_RNO[1]:A, 
+  ADC_cntr[1]:Q, ADC_cntr_RNIKL92_0[2]:A, ADC_cntr_RNIR6H1[1]:A, 
+  ADC_Conv_RNO_3:A, ADC_cntr_RNIQ5H1[3]:A, ADC_cntr_RNIN2H1[0]:B, 
+  ADC_cntr_RNIMN92[0]:A, ADC_cntr_RNIP4H1[2]:B, 
+  ADC_cntr_RNIOP92[0]:A, ADC_cntr_RNIN2H1_0[0]:B.
+NET un1_adc_conv5_1;  ADC_Cs_RNO_0:A, ADC_Cs_RNO_1:Y.
+NET ADC_Cs_1_sqmuxa;  ADC_Cs_RNO_1:A, ADC_Sclk_en_RNO:B, 
+  ADC_state_RNIMLTN[1]:Y.
+NET adc_conv5_4;  ADC_Cs_RNO_1:B, ADC_Cs_RNO_2:Y.
+NET ADC_Conv_3_sqmuxa;  ADC_Sclk_en_RNO:A, ADC_Cs_RNO_1:C, 
+  ADC_cntr_RNIOUHA[6]:Y.
+NET ADC_Cs_2_sqmuxa;  ADC_Sclk_en:E, ADC_Cs_RNO_0:S, 
+  ADC_cntr_RNILVO51[5]:Y, ADC_Conv_RNO_0:S.
+NET ADC_Cs_2_sqmuxa_1;  ADC_cntr_RNILVO51[5]:A, 
+  ADC_state_RNIJITN[1]:Y.
+NET adc_conv18;  ADC_state_RNI37OJ1[1]:A, ADC_MUX_RNI8ABG:B, 
+  ADC_cntr_RNILVO51[5]:B, ADC_cntr_RNIIBC5[1]:Y.
+NET un1_adc_conv3_2;  ADC_state_RNIMLTN[1]:A, 
+  ADC_cntr_RNILVO51[5]:C, ADC_cntr_RNIG1F8[5]:Y.
+NET adc_conv17_1;  ADC_buf_RNO_1[9]:A, ADC_buf_RNO_1[10]:A, 
+  ADC_buf_RNO_1[4]:A, ADC_cntr_RNIILJ4[0]:Y, ADC_cntr_RNIG1F8[5]:
+  A, ADC_buf_RNO_1[5]:A, ADC_buf_RNO_1[6]:A, ADC_buf_RNO_1[0]:A, 
+  ADC_buf_RNO_1[1]:A, ADC_buf_RNO_1[7]:A, ADC_buf_RNO_1[8]:A, 
+  ADC_buf_RNO_1[11]:A, ADC_buf_RNO_1[3]:A, ADC_buf_RNO_1[2]:A.
+NET ADC_cntr[5];  ADC_cntr_RNI1DH1[5]:A, ADC_Conv_RNO_5:B, 
+  ADC_cntr_RNIG1F8[5]:B, ADC_Conv_RNO_4:C, ADC_cntr_RNIU9H1[3]:A, 
+  ADC_cntr_RNO_0[6]:A, ADC_cntr_RNIUL23[5]:A, ADC_cntr_RNO[5]:B, 
+  ADC_Cs_RNO_2:A, ADC_cntr[5]:Q, ADC_cntr_RNIHKJ4[5]:C, 
+  ADC_cntr_RNIVAH1[4]:B, ADC_cntr_RNIT8H1[2]:A.
+NET un1_i1_mux;  ADC_cntr_RNIG1F8[5]:S, ADC_cntr_RNIUL23[5]:Y.
+NET N_211;  ADC_Cs_RNO:A, ADC_Cs_RNO_0:Y.
+NET ADC_CS_c;  ADC_CS_c, ADC_Cs:Q, ADC_Cs_RNO_0:B.
+NET N_212;  ADC_Conv_RNO:A, ADC_Conv_RNO_0:Y.
+NET un1_adc_conv8;  ADC_Conv_RNO_0:A, ADC_Conv_RNO_1:Y.
+NET ADC_Conv_c;  ADC_Conv_c, ADC_Conv:Q, ADC_Conv_RNO_0:B.
+NET ADC_Conv_RNO;  ADC_Conv:D, ADC_Conv_RNO:Y.
+NET adc_conv23;  ADC_buf_RNO[4]:B, ADC_buf_RNO[11]:B, 
+  ADC_buf_RNO[1]:B, ADC_cntr_RNO[1]:C, ADC_buf_RNO[2]:B, 
+  ADC_state_RNI37OJ1[1]:C, ADC_buf_RNO[5]:B, ADC_buf_RNO[3]:B, 
+  ADC_buf_RNO[6]:B, ADC_MUX_RNO_1:B, ADC_buf_RNO[8]:B, 
+  Hit_flag_0_0_RNI7E6V3:B, ADC_state_RNIB7TU[1]:Y, 
+  ADC_cntr_RNO[4]:C, ADC_buf_RNO[9]:B, ADC_cntr_RNO[6]:C, 
+  ADC_buf_RNO[0]:B, ADC_state_RNIP5NU1[1]:C, ADC_cntr_RNO[5]:C, 
+  ADC_Cs_RNO:B, ADC_buf_RNO[10]:B, ADC_cntr_RNO[2]:C, 
+  ADC_buf_RNO[7]:B, ADC_cntr_RNO[3]:C, ADC_Conv_RNO:B.
+NET ADC_Cs_RNO;  ADC_Cs:D, ADC_Cs_RNO:Y.
+NET ADC_state[1];  ADC_state_RNO_1[1]:A, Hit_flag_0_0_RNIGDQI2:A, 
+  ADC_MUX_RNILDNS:A, ADC_state_RNIFADG[1]:C, ADC_state_RNI4KOH[1]:
+  C, ADC_state_RNO_3[1]:B, ADC_state_RNO_4[1]:C, 
+  ADC_state_RNI37OJ1[1]:B, ADC_state[1]:Q, ADC_state_RNIMLTN[1]:B, 
+  ADC_state_RNI17HI[1]:C, ADC_state_RNIB7TU[1]:A, 
+  ADC_state_RNIP5NU1[1]:B, ADC_MUX_RNO_0:S, ADC_cntr_RNO[0]:B.
+NET un1_ADC_state_out;  ADC_buf_RNO_1[3]:C, ADC_buf_RNO_1[10]:C, 
+  ADC_buf_RNO_1[4]:C, ADC_state_0_RNI70N6[0]:Y, ADC_buf_RNO_1[5]:
+  C, ADC_buf_RNO_1[6]:C, ADC_buf_RNO_1[0]:C, ADC_buf_RNO_1[1]:C, 
+  ADC_buf_RNO_1[7]:C, ADC_buf_RNO_1[8]:C.
+NET adc_conv4_1;  ADC_state_RNI17HI[1]:A, ADC_cntr_RNIMPJ4[3]:C, 
+  ADC_buf_RNO_2[9]:C, ADC_state_0_RNI70N6[0]:A, ADC_buf_RNO_2[2]:
+  C, ADC_Conv_RNO_1:B, ADC_state_RNIJITN[1]:B, ADC_buf_RNO_2[11]:
+  C, ADC_cntr_RNI1DH1[5]:Y.
+NET ADC_cntr_RNIILJ4[6];  ADC_state_0_RNI70N6[0]:C, 
+  ADC_cntr_RNIILJ4[6]:Y.
+NET ADC_sreg_2_sqmuxa_out;  ADC_MUX_RNIEUPV:C, ADC_MUX_RNILDNS:Y.
+NET ADC_MUX;  ADC_MUX_RNI8ABG:A, ADC_MUX_RNO_0:B, ADC_MUX_RNILDNS:
+  B, ADC_MUX:Q.
+NET adc_conv18_2;  ADC_cntr_RNIIBC5[1]:C, ADC_MUX_RNILDNS:C, 
+  ADC_cntr_RNIPQ92[2]:Y.
+NET ADC_Conv_3_sqmuxa_2;  ADC_cntr_RNIOUHA[6]:C, 
+  ADC_cntr_RNI6J55[3]:Y.
+NET adc_conv5_5;  ADC_cntr_RNIHKJ4[5]:A, ADC_cntr_RNI6J55[3]:B, 
+  ADC_cntr_RNIKL92_0[2]:Y, ADC_cntr_RNIILJ4[6]:A, 
+  ADC_cntr_RNIILJ4_0[6]:B.
+NET ADC_Conv_3_sqmuxa_1;  ADC_cntr_RNI6J55[3]:C, 
+  ADC_cntr_RNIK932[4]:Y.
+NET adc_conv3lt6;  ADC_Conv_RNO_1:A, ADC_cntr_RNIHUQ3[3]:Y, 
+  ADC_state_RNIJITN[1]:A.
+NET ADC_Cs_2_sqmuxa_0;  ADC_state_RNIJITN[1]:C, 
+  ADC_state_RNI17HI[1]:Y.
+NET adc_conv4_0;  ADC_cntr_RNIMPJ4[3]:A, ADC_state_RNI17HI[1]:B, 
+  ADC_cntr_RNIQ5H1[3]:Y.
+NET ADC_buf_2_sqmuxa_0_2;  ADC_cntr_RNIEHHS[6]:C, 
+  ADC_cntr_RNIMPJ4[3]:Y.
+NET un10_adc_cntr_3;  ADC_Conv_RNO_3:B, ADC_cntr_RNIMPJ4[3]:B, 
+  ADC_cntr_RNIIBC5[0]:B, ADC_cntr_RNIR6H1_0[2]:Y.
+NET ADC_buf_2_sqmuxa_0_1;  ADC_cntr_RNIEHHS[6]:A, 
+  ADC_cntr_RNIK356[6]:Y.
+NET ADC_buf_2_sqmuxa_a2_1;  ADC_cntr_RNIK356[6]:A, 
+  ADC_cntr_RNIMN92[0]:Y.
+NET ADC_buf_2_sqmuxa_1;  ADC_cntr_RNIK356[6]:C, 
+  ADC_cntr_RNITK23[4]:Y.
+NET ADC_buf_2_sqmuxa_0_0;  ADC_cntr_RNIEHHS[6]:B, 
+  ADC_state_RNI4KOH[1]:Y.
+NET adc_conv5_2;  ADC_cntr_RNIILJ4_0[6]:A, ADC_state_RNI4KOH[1]:A, 
+  ADC_cntr_RNIILJ4[6]:B, ADC_Conv_RNO_4:A, ADC_cntr_RNIHKJ4[5]:B, 
+  ADC_cntr_RNIUL23[5]:B, ADC_Cs_RNO_2:B, ADC_cntr_RNIT8H1[3]:Y.
+NET ADC_buf_2_1[2];  ADC_buf_RNO_1[2]:B, ADC_buf_RNO_2[2]:Y.
+NET ADC_buf[1];  ADC_sreg_RNO_0[1]:A, ADC_buf_RNO_2[2]:A, 
+  ADC_buf[1]:Q, ADC_sreg_RNO_0[13]:B, ADC_buf_RNO_0[1]:B.
+NET ADC_buf_2_1[11];  ADC_buf_RNO_1[11]:B, ADC_buf_RNO_2[11]:Y.
+NET ADC_buf[10];  ADC_buf_RNO_2[11]:A, ADC_buf[10]:Q, 
+  ADC_buf_RNO_0[10]:B, ADC_sreg_RNO_0[22]:B, ADC_sreg_RNO_0[10]:A.
+NET ADC_buf_2_1[9];  ADC_buf_RNO_1[9]:B, ADC_buf_RNO_2[9]:Y.
+NET ADC_buf[8];  ADC_sreg_RNO_0[8]:A, ADC_buf_RNO_2[9]:A, 
+  ADC_buf_RNO_0[8]:B, ADC_sreg_RNO_0[20]:B, ADC_buf[8]:Q.
+NET adc_conv18_1;  ADC_cntr_RNIIBC5[1]:B, ADC_MUX_RNIEUPV:B, 
+  ADC_cntr_RNIR6H1[1]:Y.
+NET ADC_state_7_i_1[1];  ADC_state_RNO[1]:C, ADC_state_RNO_2[1]:Y.
+NET N_127;  ADC_state_RNO_2[1]:A, ADC_state_RNO_3[1]:Y.
+NET N_126;  ADC_state_RNO_2[1]:B, ADC_state_RNO_4[1]:Y.
+NET ADC_state_7_i_a5_3[1];  ADC_state_RNO[1]:A, 
+  ADC_state_RNO_0[1]:Y.
+NET N_125_2;  ADC_state_RNO_0[1]:A, ADC_MUX_RNIEUPV:A, 
+  ADC_cntr_RNIIBC5[1]:A, ADC_cntr_RNIU9H1[3]:Y.
+NET ADC_state_7_i_a5_2[1];  ADC_state_RNO[1]:B, 
+  ADC_state_RNO_1[1]:Y.
+NET N_125_1;  ADC_state_RNO_1[1]:B, ADC_Conv_RNO_4:B, 
+  ADC_cntr_RNIP4H1[2]:Y.
+NET un10_adc_cntr_2;  ADC_cntr_RNIIBC5[0]:C, ADC_cntr_RNIOP92[0]:
+  Y.
+NET un10_adc_cntr_1;  ADC_cntr_RNIIBC5[0]:A, ADC_cntr_RNIVAH1[4]:
+  Y.
+NET un1_ADC_cntr_6lto5_0;  ADC_Conv_RNO_3:C, ADC_Conv_RNO_5:Y.
+NET ADC_sreg_2_sqmuxa;  ADC_sreg_RNO_0[13]:S, ADC_MUX_RNIEUPV:Y, 
+  ADC_sreg_RNO_0[15]:S, ADC_sreg_RNO_0[18]:S, ADC_sreg_RNO_0[14]:
+  S, ADC_sreg_RNO_0[5]:S, ADC_sreg_RNO_0[4]:S, ADC_sreg_RNO_0[1]:
+  S, ADC_sreg_RNO_0[6]:S, ADC_sreg_RNO_0[0]:S, ADC_sreg_RNO_0[9]:
+  S, ADC_sreg_RNO_0[2]:S, ADC_sreg_RNO_0[17]:S, 
+  ADC_sreg_RNO_0[19]:S, ADC_sreg_RNO_0[22]:S, ADC_sreg_RNO_0[12]:
+  S, ADC_sreg_RNO_0[16]:S, ADC_sreg_RNO_0[20]:S, 
+  ADC_sreg_RNO_0[10]:S, ADC_sreg_RNO_0[8]:S, ADC_sreg_RNO_0[3]:S, 
+  ADC_sreg_RNO_0[21]:S, ADC_sreg_RNO_0[11]:S, ADC_sreg_RNO_0[7]:S, 
+  ADC_sreg_RNO_0[23]:S.
+NET ADC_buf_2_sqmuxa_1_tz_tz;  ADC_cntr_RNITK23[4]:C, 
+  ADC_cntr_RNIT8H1[2]:Y.
+NET ADC_buf_2_sqmuxa;  ADC_buf_RNO_0[9]:S, ADC_buf_RNO_0[6]:S, 
+  ADC_buf_RNO_0[4]:S, ADC_buf_RNO_0[7]:S, ADC_buf_RNO_0[8]:S, 
+  ADC_cntr_RNIEHHS[6]:Y, ADC_buf_RNO_0[11]:S, ADC_buf_RNO_0[10]:S, 
+  ADC_buf_RNO_0[0]:S, ADC_buf_RNO_0[2]:S, ADC_buf_RNO_0[1]:S, 
+  ADC_buf_RNO_0[3]:S, ADC_buf_RNO_0[5]:S.
+NET ADC_MUX_2_sqmuxa;  ADC_MUX_RNO_0:A, ADC_MUX_RNO_1:Y.
+NET TP4_c;  TP4_c, ADC_state_RNO_4[1]:A, ADC_MUX_RNO_1:A.
+NET TP2_c;  TP2_c, ADC_state_RNO_4[1]:B, ADC_MUX_RNO_1:C.
+NET un10_adc_cntr;  ADC_state_0_RNILJBM[0]:A, ADC_cntr_RNIIBC5[0]:
+  Y.
+NET un1_ADC_cntr_4lt6;  ADC_cntr_RNIOUHA[6]:A, 
+  ADC_cntr_RNIHKJ4[5]:Y.
+NET un1_ADC_cntr_6lt6;  ADC_Conv_RNO_2:A, ADC_Conv_RNO_3:Y.
+NET un1_ADC_cntr_5lt6;  ADC_Conv_RNO_2:B, ADC_Conv_RNO_4:Y.
+NET ADC_state_RNO[1];  ADC_state[1]:D, ADC_state_RNO[1]:Y.
+NET ADC_buf_4[11];  ADC_buf_RNO_0[11]:A, ADC_buf_RNO_1[11]:Y.
+NET ADC_cntr_RNIILJ4_0[6];  ADC_buf_RNO_1[9]:C, 
+  ADC_cntr_RNIILJ4_0[6]:Y, ADC_buf_RNO_1[11]:C, ADC_buf_RNO_1[2]:
+  C.
+NET ADC_buf_4[2];  ADC_buf_RNO_0[2]:A, ADC_buf_RNO_1[2]:Y.
+NET ADC_buf_4[9];  ADC_buf_RNO_0[9]:A, ADC_buf_RNO_1[9]:Y.
+NET ADC_cntr_n6;  ADC_cntr[6]:D, ADC_cntr_RNO[6]:Y.
+NET ADC_cntr_25_0;  ADC_cntr_RNO[6]:A, ADC_cntr_RNO_0[6]:Y.
+NET ADC_cntr_n5;  ADC_cntr[5]:D, ADC_cntr_RNO[5]:Y.
+NET ADC_cntr_c4;  ADC_cntr_RNO[5]:A, ADC_cntr_RNIHUQ3[4]:Y, 
+  ADC_cntr_RNO_0[6]:B.
+NET ADC_cntr_n4;  ADC_cntr[4]:D, ADC_cntr_RNO[4]:Y.
+NET ADC_cntr_c3;  ADC_cntr_RNO[4]:A, ADC_cntr_RNIHUQ3[4]:A, 
+  ADC_cntr_RNII923[3]:Y.
+NET ADC_cntr_n3;  ADC_cntr[3]:D, ADC_cntr_RNO[3]:Y.
+NET ADC_cntr_c2;  ADC_cntr_RNO[3]:A, ADC_cntr_RNIKL92_1[2]:Y, 
+  ADC_cntr_RNII923[3]:A.
+NET ADC_cntr_n2;  ADC_cntr[2]:D, ADC_cntr_RNO[2]:Y.
+NET ADC_cntr_c1;  ADC_cntr_RNIKL92_1[2]:A, ADC_cntr_RNO[2]:B, 
+  ADC_cntr_RNIN2H1[0]:Y.
+NET ADC_buf_4[0];  ADC_buf_RNO_0[0]:A, ADC_buf_RNO_1[0]:Y.
+NET ADC_SDO_c;  ADC_SDO_c, ADC_buf_RNO_1[0]:B.
+NET ADC_buf_RNO[0];  ADC_buf[0]:D, ADC_buf_RNO[0]:Y.
+NET N_199;  ADC_buf_RNO[0]:A, ADC_buf_RNO_0[0]:Y.
+NET ADC_buf_RNO[1];  ADC_buf[1]:D, ADC_buf_RNO[1]:Y.
+NET N_200;  ADC_buf_RNO[1]:A, ADC_buf_RNO_0[1]:Y.
+NET ADC_buf_RNO[2];  ADC_buf[2]:D, ADC_buf_RNO[2]:Y.
+NET N_201;  ADC_buf_RNO[2]:A, ADC_buf_RNO_0[2]:Y.
+NET ADC_buf_RNO[3];  ADC_buf[3]:D, ADC_buf_RNO[3]:Y.
+NET N_202;  ADC_buf_RNO[3]:A, ADC_buf_RNO_0[3]:Y.
+NET ADC_buf_RNO[4];  ADC_buf[4]:D, ADC_buf_RNO[4]:Y.
+NET N_203;  ADC_buf_RNO[4]:A, ADC_buf_RNO_0[4]:Y.
+NET ADC_buf_RNO[5];  ADC_buf[5]:D, ADC_buf_RNO[5]:Y.
+NET N_204;  ADC_buf_RNO[5]:A, ADC_buf_RNO_0[5]:Y.
+NET ADC_buf_RNO[6];  ADC_buf[6]:D, ADC_buf_RNO[6]:Y.
+NET N_205;  ADC_buf_RNO[6]:A, ADC_buf_RNO_0[6]:Y.
+NET ADC_buf_RNO[7];  ADC_buf[7]:D, ADC_buf_RNO[7]:Y.
+NET N_206;  ADC_buf_RNO[7]:A, ADC_buf_RNO_0[7]:Y.
+NET ADC_buf_RNO[8];  ADC_buf[8]:D, ADC_buf_RNO[8]:Y.
+NET N_207;  ADC_buf_RNO[8]:A, ADC_buf_RNO_0[8]:Y.
+NET ADC_buf_RNO[9];  ADC_buf[9]:D, ADC_buf_RNO[9]:Y.
+NET N_208;  ADC_buf_RNO[9]:A, ADC_buf_RNO_0[9]:Y.
+NET ADC_buf_RNO[11];  ADC_buf[11]:D, ADC_buf_RNO[11]:Y.
+NET N_210;  ADC_buf_RNO[11]:A, ADC_buf_RNO_0[11]:Y.
+NET ADC_buf[0];  ADC_sreg_RNO_0[0]:A, ADC_buf_RNO_0[0]:B, 
+  ADC_buf_RNO_1[1]:B, ADC_sreg_RNO_0[12]:B, ADC_buf[0]:Q.
+NET ADC_buf_4[1];  ADC_buf_RNO_0[1]:A, ADC_buf_RNO_1[1]:Y.
+NET ADC_buf[2];  ADC_sreg_RNO_0[2]:A, ADC_sreg_RNO_0[14]:B, 
+  ADC_buf_RNO_1[3]:B, ADC_buf_RNO_0[2]:B, ADC_buf[2]:Q.
+NET ADC_buf_4[3];  ADC_buf_RNO_0[3]:A, ADC_buf_RNO_1[3]:Y.
+NET ADC_buf[3];  ADC_sreg_RNO_0[3]:A, ADC_buf_RNO_1[4]:B, 
+  ADC_buf[3]:Q, ADC_sreg_RNO_0[15]:B, ADC_buf_RNO_0[3]:B.
+NET ADC_buf_4[4];  ADC_buf_RNO_0[4]:A, ADC_buf_RNO_1[4]:Y.
+NET ADC_buf[4];  ADC_sreg_RNO_0[4]:A, ADC_buf_RNO_0[4]:B, 
+  ADC_sreg_RNO_0[16]:B, ADC_buf_RNO_1[5]:B, ADC_buf[4]:Q.
+NET ADC_buf_4[5];  ADC_buf_RNO_0[5]:A, ADC_buf_RNO_1[5]:Y.
+NET ADC_buf[5];  ADC_sreg_RNO_0[5]:A, ADC_buf_RNO_0[5]:B, 
+  ADC_buf_RNO_1[6]:B, ADC_sreg_RNO_0[17]:B, ADC_buf[5]:Q.
+NET ADC_buf_4[6];  ADC_buf_RNO_0[6]:A, ADC_buf_RNO_1[6]:Y.
+NET ADC_buf[6];  ADC_sreg_RNO_0[6]:A, ADC_buf_RNO_0[6]:B, 
+  ADC_sreg_RNO_0[18]:B, ADC_buf_RNO_1[7]:B, ADC_buf[6]:Q.
+NET ADC_buf_4[7];  ADC_buf_RNO_0[7]:A, ADC_buf_RNO_1[7]:Y.
+NET ADC_buf[7];  ADC_sreg_RNO_0[7]:A, ADC_buf_RNO_0[7]:B, 
+  ADC_sreg_RNO_0[19]:B, ADC_buf_RNO_1[8]:B, ADC_buf[7]:Q.
+NET ADC_buf_4[8];  ADC_buf_RNO_0[8]:A, ADC_buf_RNO_1[8]:Y.
+NET ADC_buf[9];  ADC_sreg_RNO_0[9]:A, ADC_buf_RNO_1[10]:B, 
+  ADC_buf_RNO_0[9]:B, ADC_buf[9]:Q, ADC_sreg_RNO_0[21]:B.
+NET ADC_buf[11];  ADC_sreg_RNO_0[11]:A, ADC_buf[11]:Q, 
+  ADC_buf_RNO_0[11]:B, ADC_sreg_RNO_0[23]:B.
+NET N_134;  ADC_sreg_RNO[4]:A, ADC_sreg_RNO_0[4]:Y.
+NET ADC_Interface_0_ADC_sreg[4];  ADC_Interface_0_ADC_sreg<4>, 
+  ADC_sreg_RNO_0[4]:B, ADC_sreg[4]:Q.
+NET N_135;  ADC_sreg_RNO[5]:A, ADC_sreg_RNO_0[5]:Y.
+NET ADC_Interface_0_ADC_sreg[5];  ADC_Interface_0_ADC_sreg<5>, 
+  ADC_sreg_RNO_0[5]:B, ADC_sreg[5]:Q.
+NET N_136;  ADC_sreg_RNO[6]:A, ADC_sreg_RNO_0[6]:Y.
+NET ADC_Interface_0_ADC_sreg[6];  ADC_Interface_0_ADC_sreg<6>, 
+  ADC_sreg[6]:Q, ADC_sreg_RNO_0[6]:B.
+NET N_138;  ADC_sreg_RNO[8]:A, ADC_sreg_RNO_0[8]:Y.
+NET ADC_Interface_0_ADC_sreg[8];  ADC_Interface_0_ADC_sreg<8>, 
+  ADC_sreg_RNO_0[8]:B, ADC_sreg[8]:Q.
+NET N_146;  ADC_sreg_RNO[16]:A, ADC_sreg_RNO_0[16]:Y.
+NET ADC_Interface_0_ADC_sreg[16];  ADC_Interface_0_ADC_sreg<16>, 
+  ADC_sreg[16]:Q, ADC_sreg_RNO_0[16]:A.
+NET ADC_sreg_6[4];  ADC_sreg[4]:D, ADC_sreg_RNO[4]:Y.
+NET ADC_sreg_6[5];  ADC_sreg[5]:D, ADC_sreg_RNO[5]:Y.
+NET ADC_sreg_6[6];  ADC_sreg[6]:D, ADC_sreg_RNO[6]:Y.
+NET ADC_sreg_6[8];  ADC_sreg[8]:D, ADC_sreg_RNO[8]:Y.
+NET ADC_state[0];  ADC_sreg_RNO[8]:B, ADC_sreg_RNO[19]:B, 
+  ADC_sreg_RNO[11]:B, ADC_sreg_RNO[13]:B, ADC_sreg_RNO[10]:B, 
+  ADC_sreg_RNO[15]:B, ADC_sreg_RNO[21]:B, ADC_sreg_RNO[23]:B, 
+  ADC_sreg_RNO[20]:B, ADC_sreg_RNO[9]:B, ADC_state[0]:Q, 
+  ADC_sreg_RNO[12]:B, ADC_state_RNIB7TU[1]:B, ADC_sreg_RNO[14]:B, 
+  ADC_sreg_RNO[22]:B, ADC_sreg_RNO[18]:B, ADC_sreg_RNO[17]:B, 
+  ADC_sreg_RNO[16]:B.
+NET ADC_sreg_6[16];  ADC_sreg[16]:D, ADC_sreg_RNO[16]:Y.
+NET N_130;  ADC_sreg_RNO[0]:A, ADC_sreg_RNO_0[0]:Y.
+NET ADC_Interface_0_ADC_sreg[0];  ADC_Interface_0_ADC_sreg<0>, 
+  ADC_sreg_RNO_0[0]:B, ADC_sreg[0]:Q.
+NET N_132;  ADC_sreg_RNO[2]:A, ADC_sreg_RNO_0[2]:Y.
+NET ADC_Interface_0_ADC_sreg[2];  ADC_Interface_0_ADC_sreg<2>, 
+  ADC_sreg_RNO_0[2]:B, ADC_sreg[2]:Q.
+NET N_139;  ADC_sreg_RNO[9]:A, ADC_sreg_RNO_0[9]:Y.
+NET ADC_Interface_0_ADC_sreg[9];  ADC_Interface_0_ADC_sreg<9>, 
+  ADC_sreg_RNO_0[9]:B, ADC_sreg[9]:Q.
+NET N_140;  ADC_sreg_RNO[10]:A, ADC_sreg_RNO_0[10]:Y.
+NET ADC_Interface_0_ADC_sreg[10];  ADC_Interface_0_ADC_sreg<10>, 
+  ADC_sreg[10]:Q, ADC_sreg_RNO_0[10]:B.
+NET N_141;  ADC_sreg_RNO[11]:A, ADC_sreg_RNO_0[11]:Y.
+NET ADC_Interface_0_ADC_sreg[11];  ADC_Interface_0_ADC_sreg<11>, 
+  ADC_sreg_RNO_0[11]:B, ADC_sreg[11]:Q.
+NET N_142;  ADC_sreg_RNO[12]:A, ADC_sreg_RNO_0[12]:Y.
+NET ADC_Interface_0_ADC_sreg[12];  ADC_Interface_0_ADC_sreg<12>, 
+  ADC_sreg_RNO_0[12]:A, ADC_sreg[12]:Q.
+NET N_144;  ADC_sreg_RNO[14]:A, ADC_sreg_RNO_0[14]:Y.
+NET ADC_Interface_0_ADC_sreg[14];  ADC_Interface_0_ADC_sreg<14>, 
+  ADC_sreg_RNO_0[14]:A, ADC_sreg[14]:Q.
+NET N_147;  ADC_sreg_RNO[17]:A, ADC_sreg_RNO_0[17]:Y.
+NET ADC_Interface_0_ADC_sreg[17];  ADC_Interface_0_ADC_sreg<17>, 
+  ADC_sreg_RNO_0[17]:A, ADC_sreg[17]:Q.
+NET N_148;  ADC_sreg_RNO[18]:A, ADC_sreg_RNO_0[18]:Y.
+NET ADC_Interface_0_ADC_sreg[18];  ADC_Interface_0_ADC_sreg<18>, 
+  ADC_sreg_RNO_0[18]:A, ADC_sreg[18]:Q.
+NET N_149;  ADC_sreg_RNO[19]:A, ADC_sreg_RNO_0[19]:Y.
+NET ADC_Interface_0_ADC_sreg[19];  ADC_Interface_0_ADC_sreg<19>, 
+  ADC_sreg_RNO_0[19]:A, ADC_sreg[19]:Q.
+NET N_150;  ADC_sreg_RNO[20]:A, ADC_sreg_RNO_0[20]:Y.
+NET ADC_Interface_0_ADC_sreg[20];  ADC_Interface_0_ADC_sreg<20>, 
+  ADC_sreg[20]:Q, ADC_sreg_RNO_0[20]:A.
+NET N_151;  ADC_sreg_RNO[21]:A, ADC_sreg_RNO_0[21]:Y.
+NET ADC_Interface_0_ADC_sreg[21];  ADC_Interface_0_ADC_sreg<21>, 
+  ADC_sreg_RNO_0[21]:A, ADC_sreg[21]:Q.
+NET N_152;  ADC_sreg_RNO[22]:A, ADC_sreg_RNO_0[22]:Y.
+NET ADC_Interface_0_ADC_sreg[22];  ADC_Interface_0_ADC_sreg<22>, 
+  ADC_sreg_RNO_0[22]:A, ADC_sreg[22]:Q.
+NET N_153;  ADC_sreg_RNO[23]:A, ADC_sreg_RNO_0[23]:Y.
+NET ADC_Interface_0_ADC_sreg[23];  ADC_Interface_0_ADC_sreg<23>, 
+  ADC_sreg[23]:Q, ADC_sreg_RNO_0[23]:A.
+NET ADC_sreg_6[0];  ADC_sreg[0]:D, ADC_sreg_RNO[0]:Y.
+NET ADC_sreg_6[2];  ADC_sreg[2]:D, ADC_sreg_RNO[2]:Y.
+NET ADC_sreg_6[9];  ADC_sreg[9]:D, ADC_sreg_RNO[9]:Y.
+NET ADC_sreg_6[10];  ADC_sreg[10]:D, ADC_sreg_RNO[10]:Y.
+NET ADC_sreg_6[11];  ADC_sreg[11]:D, ADC_sreg_RNO[11]:Y.
+NET ADC_sreg_6[12];  ADC_sreg[12]:D, ADC_sreg_RNO[12]:Y.
+NET ADC_sreg_6[14];  ADC_sreg[14]:D, ADC_sreg_RNO[14]:Y.
+NET ADC_sreg_6[17];  ADC_sreg[17]:D, ADC_sreg_RNO[17]:Y.
+NET ADC_sreg_6[18];  ADC_sreg[18]:D, ADC_sreg_RNO[18]:Y.
+NET ADC_sreg_6[19];  ADC_sreg[19]:D, ADC_sreg_RNO[19]:Y.
+NET ADC_sreg_6[20];  ADC_sreg[20]:D, ADC_sreg_RNO[20]:Y.
+NET ADC_sreg_6[21];  ADC_sreg[21]:D, ADC_sreg_RNO[21]:Y.
+NET ADC_sreg_6[22];  ADC_sreg[22]:D, ADC_sreg_RNO[22]:Y.
+NET ADC_sreg_6[23];  ADC_sreg[23]:D, ADC_sreg_RNO[23]:Y.
+NET ADC_cntr_RNO[0];  ADC_cntr[0]:D, ADC_cntr_RNO[0]:Y.
+NET ADC_cntr_n1;  ADC_cntr[1]:D, ADC_cntr_RNO[1]:Y.
+NET SPI_CS_c;  SPI_CS_c, ADC_state_RNIFADG[1]:A, 
+  ADC_state_RNO_3[1]:A.
+NET ADC_buf_4[10];  ADC_buf_RNO_0[10]:A, ADC_buf_RNO_1[10]:Y.
+NET ADC_sreg_6[13];  ADC_sreg[13]:D, ADC_sreg_RNO[13]:Y.
+NET N_143;  ADC_sreg_RNO[13]:A, ADC_sreg_RNO_0[13]:Y.
+NET ADC_sreg_6[1];  ADC_sreg[1]:D, ADC_sreg_RNO[1]:Y.
+NET N_131;  ADC_sreg_RNO[1]:A, ADC_sreg_RNO_0[1]:Y.
+NET ADC_Interface_0_ADC_sreg[13];  ADC_Interface_0_ADC_sreg<13>, 
+  ADC_sreg[13]:Q, ADC_sreg_RNO_0[13]:A.
+NET ADC_Interface_0_ADC_sreg[1];  ADC_Interface_0_ADC_sreg<1>, 
+  ADC_sreg_RNO_0[1]:B, ADC_sreg[1]:Q.
+NET ADC_sreg_6[7];  ADC_sreg[7]:D, ADC_sreg_RNO[7]:Y.
+NET N_137;  ADC_sreg_RNO[7]:A, ADC_sreg_RNO_0[7]:Y.
+NET ADC_Interface_0_ADC_sreg[7];  ADC_Interface_0_ADC_sreg<7>, 
+  ADC_sreg[7]:Q, ADC_sreg_RNO_0[7]:B.
+NET N_209;  ADC_buf_RNO[10]:A, ADC_buf_RNO_0[10]:Y.
+NET ADC_buf_RNO[10];  ADC_buf[10]:D, ADC_buf_RNO[10]:Y.
+NET ADC_SCLK_c;  ADC_SCLK_c, ADC_Sclk_en_RNII0PN:Y.
+NET ADC_Sclk_en;  ADC_Sclk_en_RNII0PN:B, ADC_Sclk_en:Q.
+NET adc_conv8;  ADC_Conv_RNO_1:C, ADC_Conv_RNO_2:Y.
+NET Hit_flag_1_sqmuxa;  ADC_state_RNIP5NU1[1]:A, ADC_MUX_RNI8ABG:
+  Y.
+NET un1_adc_conv23;  ADC_sreg[18]:E, ADC_sreg[6]:E, ADC_sreg[3]:E, 
+  ADC_state_RNI37OJ1[1]:Y, ADC_sreg[15]:E, ADC_sreg[0]:E, 
+  ADC_sreg[9]:E, ADC_sreg[1]:E, ADC_sreg[16]:E, ADC_sreg[23]:E, 
+  ADC_sreg[13]:E, ADC_sreg[19]:E, ADC_sreg[22]:E, ADC_sreg[4]:E, 
+  ADC_sreg[12]:E, ADC_sreg[20]:E, ADC_sreg[10]:E, ADC_sreg[7]:E, 
+  ADC_sreg[17]:E, ADC_sreg[8]:E, ADC_sreg[21]:E, ADC_sreg[11]:E, 
+  ADC_sreg[2]:E, ADC_sreg[5]:E, ADC_sreg[14]:E.
+NET un1_ADC_Conv_3_sqmuxa;  ADC_Sclk_en:D, ADC_Sclk_en_RNO:Y.
+NET N_133;  ADC_sreg_RNO[3]:A, ADC_sreg_RNO_0[3]:Y.
+NET ADC_Interface_0_ADC_sreg[3];  ADC_Interface_0_ADC_sreg<3>, 
+  ADC_sreg[3]:Q, ADC_sreg_RNO_0[3]:B.
+NET N_145;  ADC_sreg_RNO[15]:A, ADC_sreg_RNO_0[15]:Y.
+NET ADC_Interface_0_ADC_sreg[15];  ADC_Interface_0_ADC_sreg<15>, 
+  ADC_sreg_RNO_0[15]:A, ADC_sreg[15]:Q.
+NET ADC_sreg_6[3];  ADC_sreg[3]:D, ADC_sreg_RNO[3]:Y.
+NET ADC_sreg_6[15];  ADC_sreg[15]:D, ADC_sreg_RNO[15]:Y.
+NET ADC_MUX_0_sqmuxa;  ADC_MUX_RNO:B, ADC_state_RNIFADG[1]:Y, 
+  ADC_state_0_RNILJBM[0]:C.
+NET adc_conv3lt3;  ADC_cntr_RNIHUQ3[3]:B, ADC_cntr_RNIKL92[2]:Y.
+NET ADC_MUX_RNO;  ADC_MUX:D, ADC_MUX_RNO:Y.
+NET N_239;  ADC_MUX_RNO:A, ADC_MUX_RNO_0:Y.
+NET un1_adc_conv23_2;  Hit_flag_0_0_RNIGDQI2:S, 
+  ADC_state_RNIP5NU1[1]:Y.
+NET TP1_c;  TP1_c, Hit_flag_0_0_RNI7E6V3:A.
+NET N_238;  Hit_flag_0_0_RNI7E6V3:C, Hit_flag_0_0_RNIGDQI2:Y.
+NET TP7_c;  TP7_c, Hit_flag:Q.
+NET GND;  GND_i:Y.
+NET VCC;  VCC_i:Y.
+END.
+DEF DAQ_FSM; SPI_Interface_0_INT_PER_1_1<8>, 
+  SPI_Interface_0_INT_PER_1_1<7>, SPI_Interface_0_INT_PER_1_1<6>, 
+  SPI_Interface_0_INT_PER_1_1<5>, SPI_Interface_0_INT_PER_1_1<4>, 
+  SPI_Interface_0_INT_PER_1_1<3>, SPI_Interface_0_INT_PER_1_1<2>, 
+  SPI_Interface_0_INT_PER_1_1<1>, SPI_Interface_0_INT_PER_1_1<0>, 
+  SPI_Interface_0_INT_PER_2_1<8>, SPI_Interface_0_INT_PER_2_1<7>, 
+  SPI_Interface_0_INT_PER_2_1<6>, SPI_Interface_0_INT_PER_2_1<5>, 
+  SPI_Interface_0_INT_PER_2_1<4>, SPI_Interface_0_INT_PER_2_1<3>, 
+  SPI_Interface_0_INT_PER_2_1<2>, SPI_Interface_0_INT_PER_2_1<1>, 
+  SPI_Interface_0_INT_PER_2_1<0>, TP2_c, TP4_c, TP5_c_c, SPI_CS_c, 
+  Comparator_out_c, DAQ_En_c, Integrator_rst_c; BUSFORMAT:%s<%d>.
+PIN SPI_Interface_0_INT_PER_1_1<8>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:0/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<7>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:1/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<6>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:2/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<5>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:3/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<4>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:4/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<3>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:5/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<2>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:6/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<1>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:7/8/0/1.
+PIN SPI_Interface_0_INT_PER_1_1<0>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_1_1, BUSINFO:8/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<8>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:0/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<7>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:1/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<6>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:2/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<5>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:3/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<4>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:4/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<3>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:5/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<2>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:6/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<1>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:7/8/0/1.
+PIN SPI_Interface_0_INT_PER_2_1<0>; DIRECTION:INPUT, ORIGNAME:
+  SPI_Interface_0_INT_PER_2_1, BUSINFO:8/8/0/1.
+PIN TP2_c; DIRECTION:OUTPUT.
+PIN TP4_c; DIRECTION:OUTPUT.
+PIN TP5_c_c; DIRECTION:INPUT.
+PIN SPI_CS_c; DIRECTION:INPUT.
+PIN Comparator_out_c; DIRECTION:INPUT.
+PIN DAQ_En_c; DIRECTION:INPUT.
+PIN Integrator_rst_c; DIRECTION:OUTPUT.
+USE ADLIB:OR3; DAQ_cntr_RNIAD8E[4].
+USE ADLIB:AND3; un15_daq_cntr_a_4_I_24.
+USE ADLIB:DFN1E0; DAQ_rst.
+USE ADLIB:AX1C; DAQ_cntr_RNO_0[2].
+USE ADLIB:OA1; ADC_En_2_RNO_1.
+USE ADLIB:DFN1E0; DAQ_cntr[2].
+USE ADLIB:XOR2; un15_daq_cntr_a_4_I_12.
+USE ADLIB:DFN1E0; DAQ_cntr[5].
+USE ADLIB:DFN1E0; DAQ_cntr[3].
+USE ADLIB:XO1A; ADC_En_2_RNO_7.
+USE ADLIB:XOR2; un15_daq_cntr_a_4_I_5.
+USE ADLIB:NOR2; frame_rst_RNO_3.
+USE ADLIB:AND3; un15_daq_cntr_a_4_I_16.
+USE ADLIB:NOR2B; DAQ_cntr_RNO[2].
+USE ADLIB:DFN1; DAQ_state[0].
+USE ADLIB:MX2B; DAQ_state_6_0__m2.
+USE ADLIB:XA1; DAQ_cntr_RNO[3].
+USE ADLIB:XO1; DAQ_cntr_RNI2GM5[6].
+USE ADLIB:XOR2; un15_daq_cntr_a_4_I_17.
+USE ADLIB:INV; DAQ_rst_RNO.
+USE ADLIB:XOR2; un26_daq_cntr_a_4_I_23.
+USE ADLIB:AND2; un26_daq_cntr_a_4_I_15.
+USE ADLIB:XOR2; un15_daq_cntr_a_4_I_20.
+USE ADLIB:NOR3C; frame_rst_RNO_0.
+USE ADLIB:AND3; un26_daq_cntr_a_4_I_10.
+USE ADLIB:NOR2A; DAQ_state_6_0__m3.
+USE ADLIB:DFN1E0; DAQ_cntr[6].
+USE ADLIB:XA1; DAQ_cntr_RNO[1].
+USE ADLIB:OR3; ADC_En_1_RNO_2.
+USE ADLIB:XOR2; un26_daq_cntr_a_4_I_12.
+USE ADLIB:NOR2B; un26_daq_cntr_a_4_I_11.
+USE ADLIB:XOR2; un26_daq_cntr_a_4_I_17.
+USE ADLIB:GND; GND_i.
+USE ADLIB:AND3; un15_daq_cntr_a_4_I_18.
+USE ADLIB:XOR2; ADC_En_1_RNO_11.
+USE ADLIB:XOR2; ADC_En_2_RNO_10.
+USE ADLIB:XA1; DAQ_cntr_RNO[6].
+USE ADLIB:NOR2B; DAQ_cntr_RNO_0[8].
+USE ADLIB:NOR2A; ADC_En_1_RNO.
+USE ADLIB:XO1; ADC_En_1_RNO_6.
+USE ADLIB:NOR2B; DAQ_cntr_RNI9163[6].
+USE ADLIB:XO1; ADC_En_2_RNO_9.
+USE ADLIB:NOR2A; un2_daq_en.
+USE ADLIB:XO1; DAQ_cntr_RNIM3M5[3].
+USE ADLIB:NOR2B; DAQ_cntr_RNINBN2[5].
+USE ADLIB:XO1; DAQ_cntr_RNIERL5[1].
+USE ADLIB:AND3; un26_daq_cntr_a_4_I_19.
+USE ADLIB:XOR2; un26_daq_cntr_a_4_I_14.
+USE ADLIB:NOR2A; ADC_En_2_RNO.
+USE ADLIB:VCC; VCC_i.
+USE ADLIB:XA1; DAQ_cntr_RNO[7].
+USE ADLIB:AND3; un15_daq_cntr_a_4_I_22.
+USE ADLIB:AND2; un15_daq_cntr_a_4_I_15.
+USE ADLIB:XOR2; ADC_En_2_RNO_12.
+USE ADLIB:DFN1E0; DAQ_cntr[0].
+USE ADLIB:XOR2; DAQ_cntr_RNIMSQ2[0].
+USE ADLIB:XOR2; DAQ_cntr_RNIG79F[6].
+USE ADLIB:AND3; un15_daq_cntr_a_4_I_8.
+USE ADLIB:AND3; un15_daq_cntr_a_4_I_13.
+USE ADLIB:XOR2; DAQ_cntr_RNIF58F[1].
+USE ADLIB:AND3; un26_daq_cntr_a_4_I_8.
+USE ADLIB:XOR2; DAQ_cntr_RNI07R2[5].
+USE ADLIB:NOR3B; frame_rst_RNO_2.
+USE ADLIB:AOI1; ADC_En_2_RNO_0.
+USE ADLIB:NOR3C; DAQ_cntr_RNI7HB1[2].
+USE ADLIB:XOR2; ADC_En_2_RNO_5.
+USE ADLIB:NOR2B; DAQ_cntr_RNIM3Q1[3].
+USE ADLIB:XOR2; un15_daq_cntr_a_4_I_7.
+USE ADLIB:XO1; ADC_En_1_RNO_8.
+USE ADLIB:AND3; un26_daq_cntr_a_4_I_18.
+USE ADLIB:AND3; un26_daq_cntr_a_4_I_13.
+USE ADLIB:OR3; ADC_En_2_RNO_2.
+USE ADLIB:XOR2; un26_daq_cntr_a_4_I_9.
+USE ADLIB:XOR2; ADC_En_1_RNO_5.
+USE ADLIB:NOR2B; un15_daq_cntr_a_4_I_11.
+USE ADLIB:XO1; DAQ_cntr_RNI1FHU[8].
+USE ADLIB:OA1; ADC_En_1_RNO_1.
+USE ADLIB:XO1; DAQ_cntr_RNIAOM5[8].
+USE ADLIB:XO1; ADC_En_1_RNO_9.
+USE ADLIB:DFN1E0; DAQ_cntr[4].
+USE ADLIB:DFN1E0; DAQ_cntr[1].
+USE ADLIB:XO1A; ADC_En_1_RNO_7.
+USE ADLIB:NOR2A; DAQ_cntr_RNO[0].
+USE ADLIB:AX1C; DAQ_cntr_RNO[8].
+USE ADLIB:XOR2; un15_daq_cntr_a_4_I_14.
+USE ADLIB:AOI1; ADC_En_1_RNO_0.
+USE ADLIB:DFN1E1; frame_rst.
+USE ADLIB:XOR2; ADC_En_1_RNO_4.
+USE ADLIB:XOR2; ADC_En_2_RNO_11.
+USE ADLIB:NOR2B; DAQ_cntr_RNO_1[8].
+USE ADLIB:OA1C; frame_rst_RNO.
+USE ADLIB:DFN1E1; ADC_En_1.
+USE ADLIB:NOR2B; un26_daq_cntr_a_4_I_6.
+USE ADLIB:NOR2B; un15_daq_cntr_a_4_I_25.
+USE ADLIB:XO1; ADC_En_2_RNO_8.
+USE ADLIB:OR3; ADC_En_2_RNO_3.
+USE ADLIB:OR3; DAQ_cntr_RNIECKP[1].
+USE ADLIB:XOR2; un15_daq_cntr_a_4_I_23.
+USE ADLIB:NOR2B; DAQ_rst_RNI9U7H.
+USE ADLIB:XOR2; DAQ_cntr_RNIQ0R2[2].
+USE ADLIB:XOR2; un26_daq_cntr_a_4_I_7.
+USE ADLIB:NOR2B; DAQ_cntr_RNI6N82[4].
+USE ADLIB:XOR2; DAQ_cntr_RNIE59F[5].
+USE ADLIB:XOR2; ADC_En_2_RNO_4.
+USE ADLIB:XOR2; un26_daq_cntr_a_4_I_5.
+USE ADLIB:XA1; DAQ_cntr_RNO[5].
+USE ADLIB:XOR2; DAQ_cntr_RNII99F[7].
+USE ADLIB:NOR2B; un26_daq_cntr_a_4_I_25.
+USE ADLIB:AND3; un26_daq_cntr_a_4_I_16.
+USE ADLIB:DFN1E0; DAQ_cntr[8].
+USE ADLIB:XOR2; un26_daq_cntr_a_4_I_20.
+USE ADLIB:XO1; ADC_En_2_RNO_6.
+USE ADLIB:XO1; DAQ_cntr_RNI5JHU[3].
+USE ADLIB:AND3; un15_daq_cntr_a_4_I_19.
+USE ADLIB:XO1; DAQ_cntr_RNIQ8IU[4].
+USE ADLIB:NOR2B; DAQ_cntr_RNI7ET[8].
+USE ADLIB:AND3; un15_daq_cntr_a_4_I_10.
+USE ADLIB:OR3A; frame_rst_RNI0CHV.
+USE ADLIB:OR2; DAQ_cntr_RNIGVE94[1].
+USE ADLIB:XOR2; ADC_En_1_RNO_10.
+USE ADLIB:AND3; un26_daq_cntr_a_4_I_22.
+USE ADLIB:AND2; un26_daq_cntr_a_4_I_21.
+USE ADLIB:DFN1E1; ADC_En_2.
+USE ADLIB:XOR2; un15_daq_cntr_a_4_I_9.
+USE ADLIB:XOR2; DAQ_cntr_RNIH78F[2].
+USE ADLIB:NOR3B; DAQ_cntr_RNIJTB1[4].
+USE ADLIB:AND2; un15_daq_cntr_a_4_I_21.
+USE ADLIB:OR3; DAQ_cntr_RNI502T1[1].
+USE ADLIB:XOR2; DAQ_cntr_RNI4BR2[7].
+USE ADLIB:XOR2; DAQ_cntr_RNIU4R2[4].
+USE ADLIB:XOR2; DAQ_cntr_RNID38F[0].
+USE ADLIB:OR3; ADC_En_1_RNO_3.
+USE ADLIB:OR3; DAQ_cntr_RNIBVCC2[4].
+USE ADLIB:DFN1E0; DAQ_cntr[7].
+USE ADLIB:NOR2B; un15_daq_cntr_a_4_I_6.
+USE ADLIB:NOR3A; frame_rst_RNO_1.
+USE ADLIB:XOR2; ADC_En_1_RNO_12.
+USE ADLIB:AND3; un26_daq_cntr_a_4_I_24.
+USE ADLIB:NOR3C; DAQ_cntr_RNIGF34[4].
+USE ADLIB:XA1; DAQ_cntr_RNO[4].
+NET DAQ_cntr_n7;  DAQ_cntr[7]:D, DAQ_cntr_RNO[7]:Y.
+NET DAQ_cntr_c6;  DAQ_cntr_RNO[7]:A, DAQ_cntr_RNO[8]:A, 
+  DAQ_cntr_RNI9163[6]:Y.
+NET DAQ_cntr[7];  DAQ_cntr_RNO_0[8]:A, DAQ_cntr[7]:Q, 
+  DAQ_cntr_RNI4BR2[7]:B, DAQ_cntr_RNI7ET[8]:B, ADC_En_2_RNO_6:A, 
+  DAQ_cntr_RNII99F[7]:B, DAQ_cntr_RNO[7]:B, ADC_En_1_RNO_6:A.
+NET DAQ_state[0];  DAQ_cntr_RNO[2]:A, DAQ_cntr_RNO[4]:C, 
+  DAQ_cntr_RNO[5]:C, frame_rst_RNO:A, DAQ_cntr_RNO_1[8]:B, 
+  frame_rst:D, DAQ_cntr_RNO[0]:A, ADC_En_1_RNO_1:C, 
+  DAQ_cntr_RNO[7]:C, ADC_En_2_RNO:A, ADC_En_1_RNO:A, 
+  DAQ_cntr_RNO_0[8]:B, DAQ_cntr_RNO[6]:C, DAQ_cntr_RNO[1]:C, 
+  DAQ_rst_RNO:A, DAQ_cntr_RNO[3]:C, DAQ_state_6_0__m2:S, 
+  DAQ_state[0]:Q, ADC_En_2_RNO_1:C.
+NET DAQ_cntr_c4;  DAQ_cntr_RNINBN2[5]:A, DAQ_cntr_RNO[5]:A, 
+  DAQ_cntr_RNI6N82[4]:Y.
+NET DAQ_cntr_c3;  DAQ_cntr_RNI6N82[4]:A, DAQ_cntr_RNO[4]:A, 
+  DAQ_cntr_RNIGF34[4]:C, DAQ_cntr_RNIM3Q1[3]:Y.
+NET DAQ_cntr[4];  frame_rst_RNO_3:A, DAQ_cntr_RNO[4]:B, 
+  DAQ_cntr_RNIU4R2[4]:B, DAQ_cntr_RNIJTB1[4]:A, ADC_En_1_RNO_10:B, 
+  DAQ_cntr_RNIQ8IU[4]:A, DAQ_cntr_RNI6N82[4]:B, DAQ_cntr[4]:Q, 
+  ADC_En_2_RNO_10:B.
+NET DAQ_cntr_c5;  DAQ_cntr_RNO[6]:A, DAQ_cntr_RNINBN2[5]:Y, 
+  DAQ_cntr_RNI9163[6]:A.
+NET DAQ_cntr[5];  ADC_En_2_RNO_9:A, DAQ_cntr_RNIJTB1[4]:C, 
+  DAQ_cntr_RNO[5]:B, DAQ_cntr_RNIE59F[5]:B, ADC_En_1_RNO_9:A, 
+  DAQ_cntr_RNI07R2[5]:B, DAQ_cntr_RNINBN2[5]:B, frame_rst_RNO_3:B, 
+  DAQ_cntr[5]:Q.
+NET DAQ_cntr[6];  DAQ_cntr_RNI2GM5[6]:A, ADC_En_1_RNO_12:B, 
+  frame_rst_RNO_1:A, DAQ_cntr_RNIJTB1[4]:B, DAQ_cntr_RNIG79F[6]:B, 
+  ADC_En_2_RNO_12:B, DAQ_cntr_RNI9163[6]:B, DAQ_cntr_RNO[6]:B, 
+  DAQ_cntr[6]:Q.
+NET DAQ_cntr_n8;  DAQ_cntr[8]:D, DAQ_cntr_RNO[8]:Y.
+NET DAQ_cntr_24_0;  DAQ_cntr_RNO[8]:B, DAQ_cntr_RNO_0[8]:Y.
+NET N_166;  DAQ_cntr_RNO[8]:C, DAQ_cntr_RNO_1[8]:Y.
+NET DAQ_cntr_c2;  DAQ_cntr_RNO[3]:A, DAQ_cntr_RNIM3Q1[3]:A, 
+  DAQ_cntr_RNI7HB1[2]:Y.
+NET DAQ_cntr[3];  DAQ_cntr_RNIM3M5[3]:A, frame_rst_RNO_1:B, 
+  DAQ_cntr_RNI5JHU[3]:A, ADC_En_2_RNO_4:B, ADC_En_1_RNO_4:B, 
+  DAQ_cntr_RNIM3Q1[3]:B, DAQ_cntr_RNO[3]:B, DAQ_cntr[3]:Q.
+NET DAQ_cntr[1];  DAQ_cntr_RNO_0[2]:A, ADC_En_2_RNO_11:B, 
+  DAQ_cntr[1]:Q, DAQ_cntr_RNI7HB1[2]:A, frame_rst_RNO_2:A, 
+  DAQ_cntr_RNIF58F[1]:B, DAQ_cntr_RNIERL5[1]:A, ADC_En_1_RNO_11:B, 
+  DAQ_cntr_RNO[1]:A.
+NET DAQ_cntr[0];  ADC_En_2_RNO_7:A, frame_rst_RNO_1:C, 
+  DAQ_cntr_RNID38F[0]:B, DAQ_cntr_RNO[0]:B, ADC_En_1_RNO_7:A, 
+  DAQ_cntr_RNI7HB1[2]:B, DAQ_cntr_RNIMSQ2[0]:B, DAQ_cntr[0]:Q, 
+  DAQ_cntr_RNO[1]:B, DAQ_cntr_RNO_0[2]:B.
+NET DAQ_cntr[2];  ADC_En_2_RNO_5:B, DAQ_cntr_RNIH78F[2]:B, 
+  DAQ_cntr_RNIQ0R2[2]:B, ADC_En_1_RNO_5:B, DAQ_cntr_RNO_0[2]:C, 
+  DAQ_cntr_RNI7HB1[2]:C, frame_rst_RNO_2:C, DAQ_cntr[2]:Q.
+NET N_9;  un15_daq_cntr_a_4_I_7:A, un15_daq_cntr_a_4_I_6:Y.
+NET SPI_Interface_0_INT_PER_1_1[1];  
+  SPI_Interface_0_INT_PER_1_1<1>, un15_daq_cntr_a_4_I_6:A, 
+  un15_daq_cntr_a_4_I_10:B, DAQ_cntr_RNIF58F[1]:A, 
+  un15_daq_cntr_a_4_I_8:B, un15_daq_cntr_a_4_I_5:B.
+NET SPI_Interface_0_INT_PER_1_1[0];  
+  SPI_Interface_0_INT_PER_1_1<0>, un15_daq_cntr_a_4_I_6:B, 
+  DAQ_cntr_RNID38F[0]:A, un15_daq_cntr_a_4_I_10:A, ADC_En_1_RNO_7:
+  B, un15_daq_cntr_a_4_I_8:A, un15_daq_cntr_a_4_I_5:A.
+NET N_7;  un15_daq_cntr_a_4_I_12:A, un15_daq_cntr_a_4_I_11:Y.
+NET SPI_Interface_0_INT_PER_1_1[3];  
+  SPI_Interface_0_INT_PER_1_1<3>, un15_daq_cntr_a_4_I_9:B, 
+  DAQ_cntr_RNI5JHU[3]:B, un15_daq_cntr_a_4_I_11:A, 
+  un15_daq_cntr_a_4_I_13:B, un15_daq_cntr_a_4_I_15:A, 
+  un15_daq_cntr_a_4_I_18:A.
+NET DWACT_FINC_E[0];  un15_daq_cntr_a_4_I_24:A, 
+  un15_daq_cntr_a_4_I_10:Y, un15_daq_cntr_a_4_I_19:A, 
+  un15_daq_cntr_a_4_I_11:B, un15_daq_cntr_a_4_I_13:A, 
+  un15_daq_cntr_a_4_I_22:A, un15_daq_cntr_a_4_I_16:A.
+NET N_2;  ADC_En_1_RNO_8:C, un15_daq_cntr_a_4_I_25:Y.
+NET SPI_Interface_0_INT_PER_1_1[8];  
+  SPI_Interface_0_INT_PER_1_1<8>, un15_daq_cntr_a_4_I_23:B, 
+  un15_daq_cntr_a_4_I_25:A, DAQ_cntr_RNI1FHU[8]:B.
+NET DWACT_FINC_E[4];  un15_daq_cntr_a_4_I_25:B, 
+  un15_daq_cntr_a_4_I_24:Y.
+NET N_9_0;  un26_daq_cntr_a_4_I_7:A, un26_daq_cntr_a_4_I_6:Y.
+NET SPI_Interface_0_INT_PER_2_1[1];  
+  SPI_Interface_0_INT_PER_2_1<1>, un26_daq_cntr_a_4_I_5:B, 
+  un26_daq_cntr_a_4_I_6:A, un26_daq_cntr_a_4_I_8:B, 
+  DAQ_cntr_RNIERL5[1]:B, un26_daq_cntr_a_4_I_10:B.
+NET SPI_Interface_0_INT_PER_2_1[0];  
+  SPI_Interface_0_INT_PER_2_1<0>, un26_daq_cntr_a_4_I_5:A, 
+  un26_daq_cntr_a_4_I_6:B, un26_daq_cntr_a_4_I_8:A, 
+  DAQ_cntr_RNIMSQ2[0]:A, un26_daq_cntr_a_4_I_10:A, ADC_En_2_RNO_7:
+  B.
+NET N_7_0;  un26_daq_cntr_a_4_I_12:A, un26_daq_cntr_a_4_I_11:Y.
+NET SPI_Interface_0_INT_PER_2_1[3];  
+  SPI_Interface_0_INT_PER_2_1<3>, un26_daq_cntr_a_4_I_9:B, 
+  un26_daq_cntr_a_4_I_13:B, un26_daq_cntr_a_4_I_18:A, 
+  DAQ_cntr_RNIM3M5[3]:B, un26_daq_cntr_a_4_I_11:A, 
+  un26_daq_cntr_a_4_I_15:A.
+NET DWACT_FINC_E_0[0];  un26_daq_cntr_a_4_I_19:A, 
+  un26_daq_cntr_a_4_I_24:A, un26_daq_cntr_a_4_I_22:A, 
+  un26_daq_cntr_a_4_I_16:A, un26_daq_cntr_a_4_I_13:A, 
+  un26_daq_cntr_a_4_I_11:B, un26_daq_cntr_a_4_I_10:Y.
+NET N_2_0;  ADC_En_2_RNO_8:C, un26_daq_cntr_a_4_I_25:Y.
+NET SPI_Interface_0_INT_PER_2_1[8];  
+  SPI_Interface_0_INT_PER_2_1<8>, un26_daq_cntr_a_4_I_25:A, 
+  DAQ_cntr_RNIAOM5[8]:B, un26_daq_cntr_a_4_I_23:B.
+NET DWACT_FINC_E_0[4];  un26_daq_cntr_a_4_I_25:B, 
+  un26_daq_cntr_a_4_I_24:Y.
+NET DAQ_state_i[0];  DAQ_rst:D, DAQ_rst_RNO:Y.
+NET ADC_En_2_2_sqmuxa_0;  ADC_En_2_RNO_0:A, ADC_En_2_RNO_1:Y.
+NET un26_daq_cntr_NE_6;  ADC_En_2_RNO_1:A, ADC_En_2_RNO_2:Y.
+NET un26_daq_cntr_NE_7;  ADC_En_2_RNO_1:B, ADC_En_2_RNO_3:Y.
+NET ADC_En_1_2_sqmuxa_0;  ADC_En_1_RNO_0:A, ADC_En_1_RNO_1:Y.
+NET un15_daq_cntr_NE_6;  ADC_En_1_RNO_1:A, ADC_En_1_RNO_2:Y.
+NET un15_daq_cntr_NE_7;  ADC_En_1_RNO_1:B, ADC_En_1_RNO_3:Y.
+NET un35_daq_cntr_1;  DAQ_cntr_RNIGF34[4]:A, DAQ_cntr_RNIJTB1[4]:
+  Y.
+NET un26_daq_cntr_NE_1;  ADC_En_2_RNO_3:A, ADC_En_2_RNO_7:Y.
+NET un26_daq_cntr_NE_0;  ADC_En_2_RNO_3:B, ADC_En_2_RNO_8:Y.
+NET un26_daq_cntr_NE_4;  ADC_En_2_RNO_3:C, ADC_En_2_RNO_9:Y.
+NET un26_daq_cntr_3;  ADC_En_2_RNO_2:A, ADC_En_2_RNO_4:Y.
+NET un26_daq_cntr_2;  ADC_En_2_RNO_2:B, ADC_En_2_RNO_5:Y.
+NET un26_daq_cntr_NE_3;  ADC_En_2_RNO_2:C, ADC_En_2_RNO_6:Y.
+NET un26_daq_cntr_a_4[5];  ADC_En_2_RNO_9:B, 
+  un26_daq_cntr_a_4_I_14:Y.
+NET un26_daq_cntr_6;  ADC_En_2_RNO_9:C, ADC_En_2_RNO_12:Y.
+NET un26_daq_cntr_a_4[7];  ADC_En_2_RNO_6:B, 
+  un26_daq_cntr_a_4_I_20:Y.
+NET un26_daq_cntr_4;  ADC_En_2_RNO_6:C, ADC_En_2_RNO_10:Y.
+NET un26_daq_cntr_1;  ADC_En_2_RNO_7:C, ADC_En_2_RNO_11:Y.
+NET DAQ_cntr[8];  ADC_En_1_RNO_8:A, DAQ_cntr_RNI7ET[8]:A, 
+  DAQ_cntr[8]:Q, ADC_En_2_RNO_8:A, DAQ_cntr_RNO_1[8]:A, 
+  DAQ_cntr_RNIAOM5[8]:A, DAQ_cntr_RNI1FHU[8]:A.
+NET un26_daq_cntr_a_4[8];  ADC_En_2_RNO_8:B, 
+  un26_daq_cntr_a_4_I_23:Y.
+NET un15_daq_cntr_NE_1;  ADC_En_1_RNO_3:A, ADC_En_1_RNO_7:Y.
+NET un15_daq_cntr_NE_0;  ADC_En_1_RNO_3:B, ADC_En_1_RNO_8:Y.
+NET un15_daq_cntr_NE_4;  ADC_En_1_RNO_3:C, ADC_En_1_RNO_9:Y.
+NET un15_daq_cntr_3;  ADC_En_1_RNO_2:A, ADC_En_1_RNO_4:Y.
+NET un15_daq_cntr_2;  ADC_En_1_RNO_2:B, ADC_En_1_RNO_5:Y.
+NET un15_daq_cntr_NE_3;  ADC_En_1_RNO_2:C, ADC_En_1_RNO_6:Y.
+NET un15_daq_cntr_a_4[5];  ADC_En_1_RNO_9:B, 
+  un15_daq_cntr_a_4_I_14:Y.
+NET un15_daq_cntr_6;  ADC_En_1_RNO_9:C, ADC_En_1_RNO_12:Y.
+NET un15_daq_cntr_a_4[7];  ADC_En_1_RNO_6:B, 
+  un15_daq_cntr_a_4_I_20:Y.
+NET un15_daq_cntr_4;  ADC_En_1_RNO_6:C, ADC_En_1_RNO_10:Y.
+NET un15_daq_cntr_1;  ADC_En_1_RNO_7:C, ADC_En_1_RNO_11:Y.
+NET un15_daq_cntr_a_4[8];  ADC_En_1_RNO_8:B, 
+  un15_daq_cntr_a_4_I_23:Y.
+NET un10_daq_cntr_NE_6;  DAQ_cntr_RNIGVE94[1]:A, 
+  DAQ_cntr_RNIBVCC2[4]:Y.
+NET un10_daq_cntr_NE_0;  DAQ_cntr_RNIBVCC2[4]:A, 
+  DAQ_cntr_RNI1FHU[8]:Y.
+NET un10_daq_cntr_6;  DAQ_cntr_RNIBVCC2[4]:B, DAQ_cntr_RNIG79F[6]:
+  Y.
+NET un10_daq_cntr_NE_3;  DAQ_cntr_RNIBVCC2[4]:C, 
+  DAQ_cntr_RNIQ8IU[4]:Y.
+NET un10_daq_cntr_NE_5;  DAQ_cntr_RNIGVE94[1]:B, 
+  DAQ_cntr_RNI502T1[1]:Y.
+NET un10_daq_cntr_2;  DAQ_cntr_RNI502T1[1]:A, DAQ_cntr_RNIH78F[2]:
+  Y.
+NET un10_daq_cntr_1;  DAQ_cntr_RNI502T1[1]:B, DAQ_cntr_RNIF58F[1]:
+  Y.
+NET un10_daq_cntr_NE_2;  DAQ_cntr_RNI502T1[1]:C, 
+  DAQ_cntr_RNI5JHU[3]:Y.
+NET SPI_Interface_0_INT_PER_1_1[4];  
+  SPI_Interface_0_INT_PER_1_1<4>, DAQ_cntr_RNIQ8IU[4]:B, 
+  un15_daq_cntr_a_4_I_13:C, un15_daq_cntr_a_4_I_15:B, 
+  un15_daq_cntr_a_4_I_18:B, un15_daq_cntr_a_4_I_12:B.
+NET un10_daq_cntr_5;  DAQ_cntr_RNIQ8IU[4]:C, DAQ_cntr_RNIE59F[5]:
+  Y.
+NET un10_daq_cntr_7;  DAQ_cntr_RNI5JHU[3]:C, DAQ_cntr_RNII99F[7]:
+  Y.
+NET un10_daq_cntr_0;  DAQ_cntr_RNI1FHU[8]:C, DAQ_cntr_RNID38F[0]:
+  Y.
+NET un21_daq_cntr_NE_6;  DAQ_cntr_RNIECKP[1]:C, 
+  DAQ_cntr_RNIAD8E[4]:Y.
+NET un21_daq_cntr_NE_0;  DAQ_cntr_RNIAD8E[4]:A, 
+  DAQ_cntr_RNIAOM5[8]:Y.
+NET un21_daq_cntr_4;  DAQ_cntr_RNIAD8E[4]:B, DAQ_cntr_RNIU4R2[4]:
+  Y.
+NET un21_daq_cntr_NE_3;  DAQ_cntr_RNIAD8E[4]:C, 
+  DAQ_cntr_RNI2GM5[6]:Y.
+NET SPI_Interface_0_INT_PER_2_1[6];  
+  SPI_Interface_0_INT_PER_2_1<6>, un26_daq_cntr_a_4_I_21:A, 
+  un26_daq_cntr_a_4_I_19:C, un26_daq_cntr_a_4_I_17:B, 
+  DAQ_cntr_RNI2GM5[6]:B.
+NET un21_daq_cntr_5;  DAQ_cntr_RNI2GM5[6]:C, DAQ_cntr_RNI07R2[5]:
+  Y.
+NET un21_daq_cntr_NE_2;  DAQ_cntr_RNIECKP[1]:A, 
+  DAQ_cntr_RNIERL5[1]:Y.
+NET un21_daq_cntr_0;  DAQ_cntr_RNIERL5[1]:C, DAQ_cntr_RNIMSQ2[0]:
+  Y.
+NET un21_daq_cntr_NE_1;  DAQ_cntr_RNIECKP[1]:B, 
+  DAQ_cntr_RNIM3M5[3]:Y.
+NET un21_daq_cntr_2;  DAQ_cntr_RNIM3M5[3]:C, DAQ_cntr_RNIQ0R2[2]:
+  Y.
+NET un21_daq_cntr_7;  DAQ_cntr_RNIAOM5[8]:C, DAQ_cntr_RNI4BR2[7]:
+  Y.
+NET un32_daq_cntr_4;  frame_rst_RNO_0:C, frame_rst_RNO_2:Y.
+NET un32_daq_cntr_2_0;  frame_rst_RNO_2:B, frame_rst_RNO_3:Y.
+NET un32_daq_cntr_3;  frame_rst_RNO_0:A, frame_rst_RNO_1:Y.
+NET un35_daq_cntr;  DAQ_state_6_0__m2:B, DAQ_cntr_RNIGF34[4]:Y.
+NET un32_daq_cntr_2;  frame_rst_RNO_0:B, DAQ_cntr_RNIGF34[4]:B, 
+  DAQ_cntr_RNI7ET[8]:Y.
+NET un21_daq_cntr_i;  ADC_En_2_RNO:B, DAQ_cntr_RNIECKP[1]:Y, 
+  ADC_En_2_RNO_0:B.
+NET un10_daq_cntr_i;  ADC_En_1_RNO:B, DAQ_cntr_RNIGVE94[1]:Y, 
+  ADC_En_1_RNO_0:B.
+NET Integrator_rst_c;  Integrator_rst_c, frame_rst_RNI0CHV:Y.
+NET DAQ_En_c;  DAQ_En_c, frame_rst_RNI0CHV:A, un2_daq_en:A.
+NET frame_rst;  frame_rst_RNI0CHV:B, frame_rst:Q.
+NET un1_integrator_rst;  frame_rst_RNI0CHV:C, DAQ_rst_RNI9U7H:Y.
+NET un32_daq_cntr;  frame_rst_RNO:B, frame_rst_RNO_0:Y.
+NET DAQ_cntr_n4;  DAQ_cntr[4]:D, DAQ_cntr_RNO[4]:Y.
+NET DAQ_cntr_n5;  DAQ_cntr[5]:D, DAQ_cntr_RNO[5]:Y.
+NET DAQ_cntr_n3;  DAQ_cntr[3]:D, DAQ_cntr_RNO[3]:Y.
+NET DAQ_cntr_n6;  DAQ_cntr[6]:D, DAQ_cntr_RNO[6]:Y.
+NET DAQ_cntr_n2;  DAQ_cntr[2]:D, DAQ_cntr_RNO[2]:Y.
+NET DAQ_cntr_n2_tz;  DAQ_cntr_RNO[2]:B, DAQ_cntr_RNO_0[2]:Y.
+NET DAQ_rst;  DAQ_rst_RNI9U7H:A, DAQ_rst:Q.
+NET Comparator_out_c;  Comparator_out_c, DAQ_rst_RNI9U7H:B, 
+  un2_daq_en:B.
+NET N_190;  ADC_En_2:E, ADC_En_2_RNO_0:Y.
+NET SPI_CS_c;  SPI_CS_c, DAQ_cntr[7]:E, DAQ_cntr[8]:E, 
+  frame_rst_RNO:C, ADC_En_1_RNO_0:C, DAQ_cntr[1]:E, DAQ_cntr[4]:E, 
+  ADC_En_2_RNO_0:C, DAQ_cntr[0]:E, DAQ_cntr[6]:E, 
+  DAQ_state_6_0__m3:B, DAQ_cntr[3]:E, DAQ_cntr[5]:E, DAQ_cntr[2]:
+  E, DAQ_rst:E.
+NET ADC_En_2_0_sqmuxa;  ADC_En_2:D, ADC_En_2_RNO:Y.
+NET un26_daq_cntr_a_4[1];  ADC_En_2_RNO_11:A, 
+  un26_daq_cntr_a_4_I_5:Y.
+NET un26_daq_cntr_a_4[2];  ADC_En_2_RNO_5:A, 
+  un26_daq_cntr_a_4_I_7:Y.
+NET un26_daq_cntr_a_4[3];  ADC_En_2_RNO_4:A, 
+  un26_daq_cntr_a_4_I_9:Y.
+NET un26_daq_cntr_a_4[4];  ADC_En_2_RNO_10:A, 
+  un26_daq_cntr_a_4_I_12:Y.
+NET un26_daq_cntr_a_4[6];  ADC_En_2_RNO_12:A, 
+  un26_daq_cntr_a_4_I_17:Y.
+NET SPI_Interface_0_INT_PER_2_1[7];  
+  SPI_Interface_0_INT_PER_2_1<7>, DAQ_cntr_RNI4BR2[7]:A, 
+  un26_daq_cntr_a_4_I_21:B, un26_daq_cntr_a_4_I_20:B.
+NET SPI_Interface_0_INT_PER_2_1[5];  
+  SPI_Interface_0_INT_PER_2_1<5>, un26_daq_cntr_a_4_I_16:C, 
+  un26_daq_cntr_a_4_I_18:C, DAQ_cntr_RNI07R2[5]:A, 
+  un26_daq_cntr_a_4_I_14:B.
+NET SPI_Interface_0_INT_PER_2_1[4];  
+  SPI_Interface_0_INT_PER_2_1<4>, DAQ_cntr_RNIU4R2[4]:A, 
+  un26_daq_cntr_a_4_I_13:C, un26_daq_cntr_a_4_I_18:B, 
+  un26_daq_cntr_a_4_I_12:B, un26_daq_cntr_a_4_I_15:B.
+NET SPI_Interface_0_INT_PER_2_1[2];  
+  SPI_Interface_0_INT_PER_2_1<2>, un26_daq_cntr_a_4_I_7:B, 
+  DAQ_cntr_RNIQ0R2[2]:A, un26_daq_cntr_a_4_I_8:C, 
+  un26_daq_cntr_a_4_I_10:C.
+NET un2_daq_en;  DAQ_state_6_0__m2:A, un2_daq_en:Y.
+NET SPI_Interface_0_INT_PER_1_1[2];  
+  SPI_Interface_0_INT_PER_1_1<2>, DAQ_cntr_RNIH78F[2]:A, 
+  un15_daq_cntr_a_4_I_10:C, un15_daq_cntr_a_4_I_7:B, 
+  un15_daq_cntr_a_4_I_8:C.
+NET SPI_Interface_0_INT_PER_1_1[5];  
+  SPI_Interface_0_INT_PER_1_1<5>, DAQ_cntr_RNIE59F[5]:A, 
+  un15_daq_cntr_a_4_I_14:B, un15_daq_cntr_a_4_I_18:C, 
+  un15_daq_cntr_a_4_I_16:C.
+NET SPI_Interface_0_INT_PER_1_1[6];  
+  SPI_Interface_0_INT_PER_1_1<6>, un15_daq_cntr_a_4_I_21:A, 
+  un15_daq_cntr_a_4_I_19:C, DAQ_cntr_RNIG79F[6]:A, 
+  un15_daq_cntr_a_4_I_17:B.
+NET SPI_Interface_0_INT_PER_1_1[7];  
+  SPI_Interface_0_INT_PER_1_1<7>, un15_daq_cntr_a_4_I_21:B, 
+  DAQ_cntr_RNII99F[7]:A, un15_daq_cntr_a_4_I_20:B.
+NET DAQ_state_6[0];  DAQ_state[0]:D, DAQ_state_6_0__m3:Y.
+NET N_3;  DAQ_state_6_0__m3:A, DAQ_state_6_0__m2:Y.
+NET N_188;  frame_rst:E, frame_rst_RNO:Y.
+NET N_189;  ADC_En_1:E, ADC_En_1_RNO_0:Y.
+NET ADC_En_1_0_sqmuxa;  ADC_En_1:D, ADC_En_1_RNO:Y.
+NET un15_daq_cntr_a_4[1];  ADC_En_1_RNO_11:A, 
+  un15_daq_cntr_a_4_I_5:Y.
+NET un15_daq_cntr_a_4[2];  ADC_En_1_RNO_5:A, 
+  un15_daq_cntr_a_4_I_7:Y.
+NET un15_daq_cntr_a_4[3];  ADC_En_1_RNO_4:A, 
+  un15_daq_cntr_a_4_I_9:Y.
+NET un15_daq_cntr_a_4[4];  ADC_En_1_RNO_10:A, 
+  un15_daq_cntr_a_4_I_12:Y.
+NET un15_daq_cntr_a_4[6];  ADC_En_1_RNO_12:A, 
+  un15_daq_cntr_a_4_I_17:Y.
+NET DAQ_cntr_n1;  DAQ_cntr[1]:D, DAQ_cntr_RNO[1]:Y.
+NET N_187;  DAQ_cntr[0]:D, DAQ_cntr_RNO[0]:Y.
+NET TP5_c_c;  TP5_c_c, DAQ_cntr[7]:CLK, ADC_En_2:CLK, DAQ_cntr[8]:
+  CLK, ADC_En_1:CLK, frame_rst:CLK, DAQ_cntr[1]:CLK, DAQ_cntr[4]:
+  CLK, DAQ_cntr[0]:CLK, DAQ_cntr[6]:CLK, DAQ_state[0]:CLK, 
+  DAQ_cntr[3]:CLK, DAQ_cntr[5]:CLK, DAQ_cntr[2]:CLK, DAQ_rst:CLK.
+NET TP4_c;  TP4_c, ADC_En_2:Q.
+NET TP2_c;  TP2_c, ADC_En_1:Q.
+NET DWACT_FINC_E[2];  un26_daq_cntr_a_4_I_19:B, 
+  un26_daq_cntr_a_4_I_24:B, un26_daq_cntr_a_4_I_22:B, 
+  un26_daq_cntr_a_4_I_18:Y.
+NET DWACT_FINC_E[3];  un26_daq_cntr_a_4_I_22:C, 
+  un26_daq_cntr_a_4_I_24:C, un26_daq_cntr_a_4_I_21:Y.
+NET N_3_0;  un26_daq_cntr_a_4_I_23:A, un26_daq_cntr_a_4_I_22:Y.
+NET N_4;  un26_daq_cntr_a_4_I_20:A, un26_daq_cntr_a_4_I_19:Y.
+NET N_5;  un26_daq_cntr_a_4_I_17:A, un26_daq_cntr_a_4_I_16:Y.
+NET DWACT_FINC_E[1];  un26_daq_cntr_a_4_I_16:B, 
+  un26_daq_cntr_a_4_I_15:Y.
+NET N_6;  un26_daq_cntr_a_4_I_14:A, un26_daq_cntr_a_4_I_13:Y.
+NET N_8;  un26_daq_cntr_a_4_I_9:A, un26_daq_cntr_a_4_I_8:Y.
+NET DWACT_FINC_E_0[2];  un15_daq_cntr_a_4_I_24:B, 
+  un15_daq_cntr_a_4_I_19:B, un15_daq_cntr_a_4_I_22:B, 
+  un15_daq_cntr_a_4_I_18:Y.
+NET DWACT_FINC_E_0[3];  un15_daq_cntr_a_4_I_24:C, 
+  un15_daq_cntr_a_4_I_21:Y, un15_daq_cntr_a_4_I_22:C.
+NET N_3_1;  un15_daq_cntr_a_4_I_23:A, un15_daq_cntr_a_4_I_22:Y.
+NET N_4_0;  un15_daq_cntr_a_4_I_20:A, un15_daq_cntr_a_4_I_19:Y.
+NET N_5_0;  un15_daq_cntr_a_4_I_17:A, un15_daq_cntr_a_4_I_16:Y.
+NET DWACT_FINC_E_0[1];  un15_daq_cntr_a_4_I_16:B, 
+  un15_daq_cntr_a_4_I_15:Y.
+NET N_6_0;  un15_daq_cntr_a_4_I_14:A, un15_daq_cntr_a_4_I_13:Y.
+NET N_8_0;  un15_daq_cntr_a_4_I_9:A, un15_daq_cntr_a_4_I_8:Y.
+NET GND;  GND_i:Y.
+NET VCC;  VCC_i:Y.
+END.
+DEF MARS_MB_rev1_top; ADC_SDO, Clk_USB, Comparator_out, DAQ_En, 
+  SPI_CS, SPI_MOSI, SPI_SCLK, ADC_CS, ADC_Conv, ADC_SCLK, DAC_CS, 
+  DAC_DIN, DAC_SCLK, DATA_OUT<7>, DATA_OUT<6>, DATA_OUT<5>, 
+  DATA_OUT<4>, DATA_OUT<3>, DATA_OUT<2>, DATA_OUT<1>, DATA_OUT<0>, 
+  Integrator_rst, Sl_fifo_wr_en, TP1, TP2, TP4, TP5, TP6, TP7; 
+  BUSFORMAT:%s<%d>, NEW_TRANSLATE.
+PIN ADC_SDO; DIRECTION:INPUT.
+PIN Clk_USB; DIRECTION:INPUT.
+PIN Comparator_out; DIRECTION:INPUT.
+PIN DAQ_En; DIRECTION:INPUT.
+PIN SPI_CS; DIRECTION:INPUT.
+PIN SPI_MOSI; DIRECTION:INPUT.
+PIN SPI_SCLK; DIRECTION:INPUT.
+PIN ADC_CS; DIRECTION:OUTPUT.
+PIN ADC_Conv; DIRECTION:OUTPUT.
+PIN ADC_SCLK; DIRECTION:OUTPUT.
+PIN DAC_CS; DIRECTION:OUTPUT.
+PIN DAC_DIN; DIRECTION:OUTPUT.
+PIN DAC_SCLK; DIRECTION:OUTPUT.
+PIN DATA_OUT<7>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT, BUSINFO:
+  0/7/0/1.
+PIN DATA_OUT<6>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT, BUSINFO:
+  1/7/0/1.
+PIN DATA_OUT<5>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT, BUSINFO:
+  2/7/0/1.
+PIN DATA_OUT<4>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT, BUSINFO:
+  3/7/0/1.
+PIN DATA_OUT<3>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT, BUSINFO:
+  4/7/0/1.
+PIN DATA_OUT<2>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT, BUSINFO:
+  5/7/0/1.
+PIN DATA_OUT<1>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT, BUSINFO:
+  6/7/0/1.
+PIN DATA_OUT<0>; DIRECTION:OUTPUT, ORIGNAME:DATA_OUT, BUSINFO:
+  7/7/0/1.
+PIN Integrator_rst; DIRECTION:OUTPUT.
+PIN Sl_fifo_wr_en; DIRECTION:OUTPUT.
+PIN TP1; DIRECTION:OUTPUT.
+PIN TP2; DIRECTION:OUTPUT.
+PIN TP4; DIRECTION:OUTPUT.
+PIN TP5; DIRECTION:OUTPUT.
+PIN TP6; DIRECTION:OUTPUT.
+PIN TP7; DIRECTION:OUTPUT.
+USE ADLIB:OUTBUF; DATA_OUT_pad[0].
+USE ADLIB:INBUF; DAQ_En_pad.
+USE ADLIB:CLKBUF; Clk_USB_pad.
+USE ADLIB:OUTBUF; TP6_pad.
+USE ADLIB:OUTBUF; DATA_OUT_pad[5].
+USE ADLIB:OUTBUF; TP5_pad.
+USE ADLIB:OUTBUF; DATA_OUT_pad[3].
+USE ADLIB:OUTBUF; TP1_pad.
+USE SPI_Interface; SPI_Interface_0.
+USE ADLIB:VCC; VCC_i.
+USE ADLIB:INBUF; SPI_CS_pad.
+USE ADLIB:OUTBUF; ADC_SCLK_pad.
+USE ADLIB:OUTBUF; ADC_Conv_pad.
+USE ADLIB:INBUF; ADC_SDO_pad.
+USE ADLIB:OUTBUF; TP7_pad.
+USE ADLIB:INBUF; SPI_SCLK_pad.
+USE Clock_Divider; Clock_Divider_0.
+USE ADLIB:OUTBUF; ADC_CS_pad.
+USE ADLIB:INV; DAC_CS_pad_RNO.
+USE ADLIB:OUTBUF; Integrator_rst_pad.
+USE ADLIB:GND; GND_i.
+USE ADLIB:INBUF; Comparator_out_pad.
+USE ADLIB:OUTBUF; DATA_OUT_pad[4].
+USE ADLIB:OUTBUF; Sl_fifo_wr_en_pad.
+USE ADLIB:OUTBUF; DAC_CS_pad.
+USE ADLIB:OUTBUF; DATA_OUT_pad[6].
+USE ADLIB:INBUF; SPI_MOSI_pad.
+USE ADLIB:OUTBUF; DAC_SCLK_pad.
+USE ADLIB:OUTBUF; TP4_pad.
+USE ADLIB:OUTBUF; DATA_OUT_pad[2].
+USE TX_Interface; TX_Interface_0.
+USE ADC_Interface; ADC_Interface_0.
+USE DAQ_FSM; DAQ_FSM_0.
+USE ADLIB:OUTBUF; DAC_DIN_pad.
+USE ADLIB:OUTBUF; DATA_OUT_pad[1].
+USE ADLIB:OUTBUF; TP2_pad.
+USE ADLIB:OUTBUF; DATA_OUT_pad[7].
+NET ADC_Interface_0_ADC_sreg[0];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<0>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<0>.
+NET ADC_Interface_0_ADC_sreg[1];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<1>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<1>.
+NET ADC_Interface_0_ADC_sreg[2];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<2>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<2>.
+NET ADC_Interface_0_ADC_sreg[3];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<3>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<3>.
+NET ADC_Interface_0_ADC_sreg[4];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<4>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<4>.
+NET ADC_Interface_0_ADC_sreg[5];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<5>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<5>.
+NET ADC_Interface_0_ADC_sreg[6];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<6>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<6>.
+NET ADC_Interface_0_ADC_sreg[7];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<7>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<7>.
+NET ADC_Interface_0_ADC_sreg[8];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<8>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<8>.
+NET ADC_Interface_0_ADC_sreg[9];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<9>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<9>.
+NET ADC_Interface_0_ADC_sreg[10];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<10>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<10>.
+NET ADC_Interface_0_ADC_sreg[11];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<11>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<11>.
+NET ADC_Interface_0_ADC_sreg[12];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<12>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<12>.
+NET ADC_Interface_0_ADC_sreg[13];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<13>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<13>.
+NET ADC_Interface_0_ADC_sreg[14];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<14>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<14>.
+NET ADC_Interface_0_ADC_sreg[15];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<15>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<15>.
+NET ADC_Interface_0_ADC_sreg[16];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<16>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<16>.
+NET ADC_Interface_0_ADC_sreg[17];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<17>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<17>.
+NET ADC_Interface_0_ADC_sreg[18];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<18>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<18>.
+NET ADC_Interface_0_ADC_sreg[19];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<19>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<19>.
+NET ADC_Interface_0_ADC_sreg[20];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<20>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<20>.
+NET ADC_Interface_0_ADC_sreg[21];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<21>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<21>.
+NET ADC_Interface_0_ADC_sreg[22];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<22>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<22>.
+NET ADC_Interface_0_ADC_sreg[23];  TX_Interface_0:
+  ADC_Interface_0_ADC_sreg<23>, ADC_Interface_0:
+  ADC_Interface_0_ADC_sreg<23>.
+NET SPI_Interface_0_INT_PER_1_1[0];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_1_1<0>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_1_1<0>.
+NET SPI_Interface_0_INT_PER_1_1[1];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_1_1<1>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_1_1<1>.
+NET SPI_Interface_0_INT_PER_1_1[2];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_1_1<2>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_1_1<2>.
+NET SPI_Interface_0_INT_PER_1_1[3];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_1_1<3>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_1_1<3>.
+NET SPI_Interface_0_INT_PER_1_1[4];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_1_1<4>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_1_1<4>.
+NET SPI_Interface_0_INT_PER_1_1[5];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_1_1<5>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_1_1<5>.
+NET SPI_Interface_0_INT_PER_1_1[6];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_1_1<6>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_1_1<6>.
+NET SPI_Interface_0_INT_PER_1_1[7];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_1_1<7>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_1_1<7>.
+NET SPI_Interface_0_INT_PER_1_1[8];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_1_1<8>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_1_1<8>.
+NET SPI_Interface_0_INT_PER_2_1[0];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_2_1<0>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_2_1<0>.
+NET SPI_Interface_0_INT_PER_2_1[1];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_2_1<1>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_2_1<1>.
+NET SPI_Interface_0_INT_PER_2_1[2];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_2_1<2>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_2_1<2>.
+NET SPI_Interface_0_INT_PER_2_1[3];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_2_1<3>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_2_1<3>.
+NET SPI_Interface_0_INT_PER_2_1[4];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_2_1<4>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_2_1<4>.
+NET SPI_Interface_0_INT_PER_2_1[5];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_2_1<5>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_2_1<5>.
+NET SPI_Interface_0_INT_PER_2_1[6];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_2_1<6>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_2_1<6>.
+NET SPI_Interface_0_INT_PER_2_1[7];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_2_1<7>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_2_1<7>.
+NET SPI_Interface_0_INT_PER_2_1[8];  SPI_Interface_0:
+  SPI_Interface_0_INT_PER_2_1<8>, DAQ_FSM_0:
+  SPI_Interface_0_INT_PER_2_1<8>.
+NET GND;  GND_i:Y.
+NET VCC;  VCC_i:Y.
+NET ADC_SDO_c;  ADC_Interface_0:ADC_SDO_c, ADC_SDO_pad:Y.
+NET ADC_SDO;  ADC_SDO, ADC_SDO_pad:PAD.
+NET Clk_USB;  Clk_USB, Clk_USB_pad:PAD.
+NET Comparator_out_c;  DAQ_FSM_0:Comparator_out_c, 
+  Comparator_out_pad:Y.
+NET Comparator_out;  Comparator_out, Comparator_out_pad:PAD.
+NET DAQ_En_c;  Clock_Divider_0:DAQ_En_c, DAQ_FSM_0:DAQ_En_c, 
+  TX_Interface_0:DAQ_En_c, DAQ_En_pad:Y.
+NET DAQ_En;  DAQ_En, DAQ_En_pad:PAD.
+NET SPI_CS_c;  DAC_CS_pad_RNO:A, DAQ_FSM_0:SPI_CS_c, 
+  ADC_Interface_0:SPI_CS_c, SPI_Interface_0:SPI_CS_c, SPI_CS_pad:
+  Y.
+NET SPI_CS;  SPI_CS, SPI_CS_pad:PAD.
+NET SPI_MOSI;  SPI_MOSI, SPI_MOSI_pad:PAD.
+NET SPI_SCLK;  SPI_SCLK, SPI_SCLK_pad:PAD.
+NET ADC_CS_c;  ADC_Interface_0:ADC_CS_c, ADC_CS_pad:D.
+NET ADC_CS;  ADC_CS, ADC_CS_pad:PAD.
+NET ADC_Conv_c;  ADC_Interface_0:ADC_Conv_c, ADC_Conv_pad:D.
+NET ADC_Conv;  ADC_Conv, ADC_Conv_pad:PAD.
+NET ADC_SCLK_c;  ADC_Interface_0:ADC_SCLK_c, ADC_SCLK_pad:D.
+NET ADC_SCLK;  ADC_SCLK, ADC_SCLK_pad:PAD.
+NET DAC_CS;  DAC_CS, DAC_CS_pad:PAD.
+NET DAC_DIN_c_c;  DAC_DIN_pad:D, SPI_Interface_0:DAC_DIN_c_c, 
+  SPI_MOSI_pad:Y.
+NET DAC_DIN;  DAC_DIN, DAC_DIN_pad:PAD.
+NET DAC_SCLK_c_c;  DAC_SCLK_pad:D, SPI_Interface_0:DAC_SCLK_c_c, 
+  SPI_SCLK_pad:Y.
+NET DAC_SCLK;  DAC_SCLK, DAC_SCLK_pad:PAD.
+NET DATA_OUT_c[0];  DATA_OUT_pad[0]:D, TX_Interface_0:
+  DATA_OUT_c<0>.
+NET DATA_OUT[0];  DATA_OUT<0>, DATA_OUT_pad[0]:PAD.
+NET DATA_OUT_c[1];  DATA_OUT_pad[1]:D, TX_Interface_0:
+  DATA_OUT_c<1>.
+NET DATA_OUT[1];  DATA_OUT<1>, DATA_OUT_pad[1]:PAD.
+NET DATA_OUT_c[2];  DATA_OUT_pad[2]:D, TX_Interface_0:
+  DATA_OUT_c<2>.
+NET DATA_OUT[2];  DATA_OUT<2>, DATA_OUT_pad[2]:PAD.
+NET DATA_OUT_c[3];  DATA_OUT_pad[3]:D, TX_Interface_0:
+  DATA_OUT_c<3>.
+NET DATA_OUT[3];  DATA_OUT<3>, DATA_OUT_pad[3]:PAD.
+NET DATA_OUT_c[4];  DATA_OUT_pad[4]:D, TX_Interface_0:
+  DATA_OUT_c<4>.
+NET DATA_OUT[4];  DATA_OUT<4>, DATA_OUT_pad[4]:PAD.
+NET DATA_OUT_c[5];  DATA_OUT_pad[5]:D, TX_Interface_0:
+  DATA_OUT_c<5>.
+NET DATA_OUT[5];  DATA_OUT<5>, DATA_OUT_pad[5]:PAD.
+NET DATA_OUT_c[6];  DATA_OUT_pad[6]:D, TX_Interface_0:
+  DATA_OUT_c<6>.
+NET DATA_OUT[6];  DATA_OUT<6>, DATA_OUT_pad[6]:PAD.
+NET DATA_OUT_c[7];  DATA_OUT_pad[7]:D, TX_Interface_0:
+  DATA_OUT_c<7>.
+NET DATA_OUT[7];  DATA_OUT<7>, DATA_OUT_pad[7]:PAD.
+NET Integrator_rst_c;  Integrator_rst_pad:D, DAQ_FSM_0:
+  Integrator_rst_c.
+NET Integrator_rst;  Integrator_rst, Integrator_rst_pad:PAD.
+NET Sl_fifo_wr_en_c;  Sl_fifo_wr_en_pad:D, TX_Interface_0:
+  Sl_fifo_wr_en_c.
+NET Sl_fifo_wr_en;  Sl_fifo_wr_en, Sl_fifo_wr_en_pad:PAD.
+NET TP1_c;  TP1_pad:D, ADC_Interface_0:TP1_c, TX_Interface_0:
+  TP1_c.
+NET TP1;  TP1, TP1_pad:PAD.
+NET TP2_c;  TP2_pad:D, ADC_Interface_0:TP2_c, DAQ_FSM_0:TP2_c.
+NET TP2;  TP2, TP2_pad:PAD.
+NET TP4_c;  TP4_pad:D, DAQ_FSM_0:TP4_c, ADC_Interface_0:TP4_c.
+NET TP4;  TP4, TP4_pad:PAD.
+NET TP5_c_c;  TP5_pad:D, DAQ_FSM_0:TP5_c_c, ADC_Interface_0:
+  TP5_c_c, TX_Interface_0:TP5_c_c, Clock_Divider_0:TP5_c_c, 
+  Clk_USB_pad:Y.
+NET TP5;  TP5, TP5_pad:PAD.
+NET clk_100Khz;  Clock_Divider_0:clk_100Khz, TX_Interface_0:
+  clk_100Khz, TP6_pad:D.
+NET TP6;  TP6, TP6_pad:PAD.
+NET TP7_c;  TP7_pad:D, ADC_Interface_0:TP7_c, TX_Interface_0:
+  TP7_c.
+NET TP7;  TP7, TP7_pad:PAD.
+NET SPI_CS_c_i;  DAC_CS_pad:D, DAC_CS_pad_RNO:Y.
+NET TP7_c_0;  TX_Interface_0:TP7_c_0, ADC_Interface_0:TP7_c_0.
+END.

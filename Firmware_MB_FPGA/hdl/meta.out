@@ -1,0 +1,3 @@
+entity Clk_Div
+Divider integer
+end
