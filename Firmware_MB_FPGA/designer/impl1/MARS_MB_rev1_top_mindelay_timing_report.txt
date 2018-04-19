@@ -2,7 +2,7 @@ Timing Report Min Delay Analysis
 
 SmartTime Version Libero SoC v11.8 SP2
 Microsemi Corporation - Microsemi Libero Software Release Libero SoC v11.8 SP2 (Version 11.8.2.4)
-Date: Wed Dec 06 11:29:51 2017
+Date: Wed Apr 18 19:03:03 2018
 
 
 Design: MARS_MB_rev1_top
@@ -24,28 +24,28 @@ Scenario for Timing Analysis: Primary
 SUMMARY
 
 Clock Domain:               Clk_USB
-Period (ns):                12.896
-Frequency (MHz):            77.543
+Period (ns):                12.315
+Frequency (MHz):            81.202
 Required Period (ns):       20.833
 Required Frequency (MHz):   48.001
-External Setup (ns):        14.536
-External Hold (ns):         0.018
-Min Clock-To-Out (ns):      2.204
-Max Clock-To-Out (ns):      15.607
+External Setup (ns):        13.017
+External Hold (ns):         0.144
+Min Clock-To-Out (ns):      2.161
+Max Clock-To-Out (ns):      14.657
 
 Clock Domain:               Clock_Divider_0/clk_100Khz:Q
-Period (ns):                1.530
-Frequency (MHz):            653.595
+Period (ns):                1.588
+Frequency (MHz):            629.723
 Required Period (ns):       N/A
 Required Frequency (MHz):   N/A
-External Setup (ns):        3.775
-External Hold (ns):         -1.026
-Min Clock-To-Out (ns):      2.011
-Max Clock-To-Out (ns):      9.389
+External Setup (ns):        3.637
+External Hold (ns):         -1.077
+Min Clock-To-Out (ns):      2.707
+Max Clock-To-Out (ns):      11.647
 
                             Input to Output
-Min Delay (ns):             1.934
-Max Delay (ns):             7.918
+Min Delay (ns):             2.056
+Max Delay (ns):             7.482
 
 END SUMMARY
 -----------------------------------------------------
@@ -55,57 +55,57 @@ Clock Domain Clk_USB
 SET Register to Register
 
 Path 1
-  From:                        ADC_Interface_0/ADC_cntr[0]:CLK
-  To:                          ADC_Interface_0/ADC_cntr[0]:D
-  Delay (ns):                  0.641
-  Slack (ns):                  0.641
-  Arrival (ns):                1.478
-  Required (ns):               0.837
+  From:                        DAQ_FSM_0/DAQ_state[0]:CLK
+  To:                          DAQ_FSM_0/frame_rst:D
+  Delay (ns):                  0.435
+  Slack (ns):                  0.413
+  Arrival (ns):                1.276
+  Required (ns):               0.863
   Hold (ns):                   0.000
 
 Path 2
-  From:                        ADC_Interface_0/ADC_sreg[6]:CLK
-  To:                          ADC_Interface_0/ADC_sreg[7]:D
-  Delay (ns):                  0.699
-  Slack (ns):                  0.672
-  Arrival (ns):                1.571
-  Required (ns):               0.899
+  From:                        ADC_Interface_0/ADC_cntr[0]:CLK
+  To:                          ADC_Interface_0/ADC_cntr[0]:D
+  Delay (ns):                  0.635
+  Slack (ns):                  0.635
+  Arrival (ns):                1.467
+  Required (ns):               0.832
   Hold (ns):                   0.000
 
 Path 3
-  From:                        ADC_Interface_0/ADC_sreg[12]:CLK
-  To:                          ADC_Interface_0/ADC_sreg[13]:D
-  Delay (ns):                  0.699
-  Slack (ns):                  0.672
-  Arrival (ns):                1.571
-  Required (ns):               0.899
+  From:                        Clock_Divider_0/cntr_100KHz[0]:CLK
+  To:                          Clock_Divider_0/cntr_100KHz[0]:D
+  Delay (ns):                  0.641
+  Slack (ns):                  0.641
+  Arrival (ns):                1.521
+  Required (ns):               0.880
   Hold (ns):                   0.000
 
 Path 4
-  From:                        DAQ_FSM_0/DAQ_state[0]:CLK
-  To:                          DAQ_FSM_0/DAQ_rst:D
-  Delay (ns):                  0.695
-  Slack (ns):                  0.674
-  Arrival (ns):                1.532
-  Required (ns):               0.858
+  From:                        ADC_Interface_0/ADC_sreg[23]:CLK
+  To:                          ADC_Interface_0/ADC_buf[23]:D
+  Delay (ns):                  0.697
+  Slack (ns):                  0.671
+  Arrival (ns):                1.556
+  Required (ns):               0.885
   Hold (ns):                   0.000
 
 Path 5
-  From:                        ADC_Interface_0/ADC_sreg[23]:CLK
-  To:                          ADC_Interface_0/ADC_buf[23]:D
-  Delay (ns):                  0.699
-  Slack (ns):                  0.676
-  Arrival (ns):                1.548
-  Required (ns):               0.872
+  From:                        TX_Interface_0/TX_cntr[3]:CLK
+  To:                          TX_Interface_0/TX_cntr[3]:D
+  Delay (ns):                  0.677
+  Slack (ns):                  0.677
+  Arrival (ns):                1.392
+  Required (ns):               0.715
   Hold (ns):                   0.000
 
 
 Expanded Path 1
-  From: ADC_Interface_0/ADC_cntr[0]:CLK
-  To: ADC_Interface_0/ADC_cntr[0]:D
-  data arrival time                              1.478
-  data required time                         -   0.837
-  slack                                          0.641
+  From: DAQ_FSM_0/DAQ_state[0]:CLK
+  To: DAQ_FSM_0/frame_rst:D
+  data arrival time                              1.276
+  data required time                         -   0.863
+  slack                                          0.413
   ________________________________________________________
   Data arrival time calculation
   0.000                        Clk_USB
@@ -119,18 +119,14 @@ Expanded Path 1
   0.327                        Clk_USB_pad/U0/U1:A (r)
                +     0.252          cell: ADLIB:CLKIO
   0.579                        Clk_USB_pad/U0/U1:Y (r)
-               +     0.258          net: Clk_USB_c
-  0.837                        ADC_Interface_0/ADC_cntr[0]:CLK (r)
+               +     0.262          net: Clk_USB_c
+  0.841                        DAQ_FSM_0/DAQ_state[0]:CLK (r)
                +     0.232          cell: ADLIB:DFN1
-  1.069                        ADC_Interface_0/ADC_cntr[0]:Q (r)
-               +     0.095          net: ADC_Interface_0/ADC_cntr[0]
-  1.164                        ADC_Interface_0/ADC_cntr_RNO[0]:A (r)
-               +     0.212          cell: ADLIB:NOR2
-  1.376                        ADC_Interface_0/ADC_cntr_RNO[0]:Y (f)
-               +     0.102          net: ADC_Interface_0/ADC_cntr_RNO[0]
-  1.478                        ADC_Interface_0/ADC_cntr[0]:D (f)
+  1.073                        DAQ_FSM_0/DAQ_state[0]:Q (r)
+               +     0.203          net: DAQ_FSM_0/N_146_i_0
+  1.276                        DAQ_FSM_0/frame_rst:D (r)
                                     
-  1.478                        data arrival time
+  1.276                        data arrival time
   ________________________________________________________
   Data required time calculation
   0.000                        Clk_USB
@@ -144,12 +140,12 @@ Expanded Path 1
   0.327                        Clk_USB_pad/U0/U1:A (r)
                +     0.252          cell: ADLIB:CLKIO
   0.579                        Clk_USB_pad/U0/U1:Y (r)
-               +     0.258          net: Clk_USB_c
-  0.837                        ADC_Interface_0/ADC_cntr[0]:CLK (r)
-               +     0.000          Library hold time: ADLIB:DFN1
-  0.837                        ADC_Interface_0/ADC_cntr[0]:D
+               +     0.284          net: Clk_USB_c
+  0.863                        DAQ_FSM_0/frame_rst:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1E1
+  0.863                        DAQ_FSM_0/frame_rst:D
                                     
-  0.837                        data required time
+  0.863                        data required time
 
 
 END SET Register to Register
@@ -159,77 +155,81 @@ END SET Register to Register
 SET External Hold
 
 Path 1
-  From:                        SPI_CS
-  To:                          DAQ_FSM_0/DAQ_rst:E
-  Delay (ns):                  1.002
+  From:                        ADC_SDO
+  To:                          ADC_Interface_0/ADC_sreg[0]:D
+  Delay (ns):                  0.881
   Slack (ns):
-  Arrival (ns):                1.002
+  Arrival (ns):                0.881
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          0.018
+  External Hold (ns):          0.144
 
 Path 2
   From:                        SPI_CS
-  To:                          DAQ_FSM_0/DAQ_state[0]:D
-  Delay (ns):                  1.240
+  To:                          DAQ_FSM_0/DAQ_cntr[4]:E
+  Delay (ns):                  1.080
   Slack (ns):
-  Arrival (ns):                1.240
+  Arrival (ns):                1.080
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -0.220
+  External Hold (ns):          -0.091
 
 Path 3
   From:                        SPI_CS
-  To:                          DAQ_FSM_0/DAQ_cntr[8]:E
-  Delay (ns):                  1.350
+  To:                          DAQ_FSM_0/DAQ_rst:E
+  Delay (ns):                  1.228
   Slack (ns):
-  Arrival (ns):                1.350
+  Arrival (ns):                1.228
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -0.359
+  External Hold (ns):          -0.203
 
 Path 4
-  From:                        ADC_SDO
-  To:                          ADC_Interface_0/ADC_sreg[0]:D
-  Delay (ns):                  1.593
+  From:                        SPI_CS
+  To:                          DAQ_FSM_0/DAQ_cntr[3]:E
+  Delay (ns):                  1.662
   Slack (ns):
-  Arrival (ns):                1.593
+  Arrival (ns):                1.662
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -0.587
+  External Hold (ns):          -0.642
 
 Path 5
   From:                        SPI_CS
-  To:                          DAQ_FSM_0/frame_rst:E
-  Delay (ns):                  1.882
+  To:                          DAQ_FSM_0/DAQ_cntr[2]:E
+  Delay (ns):                  1.662
   Slack (ns):
-  Arrival (ns):                1.882
+  Arrival (ns):                1.662
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -0.862
+  External Hold (ns):          -0.642
 
 
 Expanded Path 1
-  From: SPI_CS
-  To: DAQ_FSM_0/DAQ_rst:E
-  data arrival time                              1.002
+  From: ADC_SDO
+  To: ADC_Interface_0/ADC_sreg[0]:D
+  data arrival time                              0.881
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
-  0.000                        SPI_CS (f)
-               +     0.000          net: SPI_CS
-  0.000                        SPI_CS_pad/U0/U0:PAD (f)
+  0.000                        ADC_SDO (f)
+               +     0.000          net: ADC_SDO
+  0.000                        ADC_SDO_pad/U0/U0:PAD (f)
                +     0.226          cell: ADLIB:IOPAD_IN
-  0.226                        SPI_CS_pad/U0/U0:Y (f)
-               +     0.000          net: SPI_CS_pad/U0/NET1
-  0.226                        SPI_CS_pad/U0/U1:YIN (f)
+  0.226                        ADC_SDO_pad/U0/U0:Y (f)
+               +     0.000          net: ADC_SDO_pad/U0/NET1
+  0.226                        ADC_SDO_pad/U0/U1:YIN (f)
                +     0.088          cell: ADLIB:IOIN_IB_ST
-  0.314                        SPI_CS_pad/U0/U1:Y (f)
-               +     0.688          net: SPI_CS_c
-  1.002                        DAQ_FSM_0/DAQ_rst:E (f)
+  0.314                        ADC_SDO_pad/U0/U1:Y (f)
+               +     0.119          net: ADC_SDO_c
+  0.433                        ADC_Interface_0/ADC_sreg_RNO[0]:A (f)
+               +     0.333          cell: ADLIB:NOR2A
+  0.766                        ADC_Interface_0/ADC_sreg_RNO[0]:Y (f)
+               +     0.115          net: ADC_Interface_0/ADC_sreg_4[0]
+  0.881                        ADC_Interface_0/ADC_sreg[0]:D (f)
                                     
-  1.002                        data arrival time
+  0.881                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          Clk_USB
@@ -243,10 +243,10 @@ Expanded Path 1
   N/C                          Clk_USB_pad/U0/U1:A (r)
                +     0.309          cell: ADLIB:CLKIO
   N/C                          Clk_USB_pad/U0/U1:Y (r)
-               +     0.310          net: Clk_USB_c
-  N/C                          DAQ_FSM_0/DAQ_rst:CLK (r)
+               +     0.315          net: Clk_USB_c
+  N/C                          ADC_Interface_0/ADC_sreg[0]:CLK (r)
                +     0.000          Library hold time: ADLIB:DFN1E0
-  N/C                          DAQ_FSM_0/DAQ_rst:E
+  N/C                          ADC_Interface_0/ADC_sreg[0]:D
 
 
 END SET External Hold
@@ -256,55 +256,55 @@ END SET External Hold
 SET Clock to Output
 
 Path 1
-  From:                        ADC_Interface_0/Hit_flag:CLK
-  To:                          TP7
-  Delay (ns):                  1.347
+  From:                        ADC_Interface_0/ADC_MUX:CLK
+  To:                          TP5
+  Delay (ns):                  1.320
   Slack (ns):
-  Arrival (ns):                2.204
+  Arrival (ns):                2.161
   Required (ns):
-  Clock to Out (ns):           2.204
+  Clock to Out (ns):           2.161
 
 Path 2
   From:                        ADC_Interface_0/ADC_Conv:CLK
   To:                          ADC_Conv
-  Delay (ns):                  1.538
+  Delay (ns):                  1.637
   Slack (ns):
-  Arrival (ns):                2.373
+  Arrival (ns):                2.469
   Required (ns):
-  Clock to Out (ns):           2.373
+  Clock to Out (ns):           2.469
 
 Path 3
-  From:                        ADC_Interface_0/ADC_Sclk_en:CLK
-  To:                          ADC_SCLK
-  Delay (ns):                  1.570
+  From:                        ADC_Interface_0/ADC_Cs:CLK
+  To:                          ADC_CS
+  Delay (ns):                  1.684
   Slack (ns):
-  Arrival (ns):                2.407
+  Arrival (ns):                2.525
   Required (ns):
-  Clock to Out (ns):           2.407
+  Clock to Out (ns):           2.525
 
 Path 4
-  From:                        DAQ_FSM_0/ADC_En_2:CLK
-  To:                          TP4
-  Delay (ns):                  1.573
+  From:                        DAQ_FSM_0/ADC_En_1:CLK
+  To:                          TP2
+  Delay (ns):                  1.776
   Slack (ns):
-  Arrival (ns):                2.408
+  Arrival (ns):                2.614
   Required (ns):
-  Clock to Out (ns):           2.408
+  Clock to Out (ns):           2.614
 
 Path 5
-  From:                        ADC_Interface_0/ADC_MUX:CLK
-  To:                          TP5
-  Delay (ns):                  1.617
+  From:                        Clock_Divider_0/clk_100Khz:CLK
+  To:                          TP6
+  Delay (ns):                  1.804
   Slack (ns):
-  Arrival (ns):                2.474
+  Arrival (ns):                2.646
   Required (ns):
-  Clock to Out (ns):           2.474
+  Clock to Out (ns):           2.646
 
 
 Expanded Path 1
-  From: ADC_Interface_0/Hit_flag:CLK
-  To: TP7
-  data arrival time                              2.204
+  From: ADC_Interface_0/ADC_MUX:CLK
+  To: TP5
+  data arrival time                              2.161
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -320,29 +320,29 @@ Expanded Path 1
   0.327                        Clk_USB_pad/U0/U1:A (r)
                +     0.252          cell: ADLIB:CLKIO
   0.579                        Clk_USB_pad/U0/U1:Y (r)
-               +     0.278          net: Clk_USB_c
-  0.857                        ADC_Interface_0/Hit_flag:CLK (r)
-               +     0.232          cell: ADLIB:DFN1
-  1.089                        ADC_Interface_0/Hit_flag:Q (r)
-               +     0.290          net: TP7_c
-  1.379                        TP7_pad/U0/U1:D (r)
+               +     0.262          net: Clk_USB_c
+  0.841                        ADC_Interface_0/ADC_MUX:CLK (r)
+               +     0.232          cell: ADLIB:DFN1E0
+  1.073                        ADC_Interface_0/ADC_MUX:Q (r)
+               +     0.263          net: TP5_c
+  1.336                        TP5_pad/U0/U1:D (r)
                +     0.273          cell: ADLIB:IOTRI_OB_EB_ST
-  1.652                        TP7_pad/U0/U1:DOUT (r)
-               +     0.000          net: TP7_pad/U0/NET1
-  1.652                        TP7_pad/U0/U0:D (r)
+  1.609                        TP5_pad/U0/U1:DOUT (r)
+               +     0.000          net: TP5_pad/U0/NET1
+  1.609                        TP5_pad/U0/U0:D (r)
                +     0.552          cell: ADLIB:IOPAD_TRI
-  2.204                        TP7_pad/U0/U0:PAD (r)
-               +     0.000          net: TP7
-  2.204                        TP7 (r)
+  2.161                        TP5_pad/U0/U0:PAD (r)
+               +     0.000          net: TP5
+  2.161                        TP5 (r)
                                     
-  2.204                        data arrival time
+  2.161                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          Clk_USB
                +     0.000          Clock source
   N/C                          Clk_USB (r)
                                     
-  N/C                          TP7 (r)
+  N/C                          TP5 (r)
 
 
 END SET Clock to Output
@@ -375,7 +375,7 @@ END SET Asynchronous to Register
 
 Clock Domain Clock_Divider_0/clk_100Khz:Q
 
-Info: The maximum frequency of this clock domain is limited by the minimum pulse widths of pin TX_Interface_0/TX_data[19]:CLK
+Info: The maximum frequency of this clock domain is limited by the minimum pulse widths of pin TX_Interface_0/TX_data[22]:CLK
 
 SET Register to Register
 
@@ -390,18 +390,18 @@ SET External Hold
 Path 1
   From:                        DAQ_En
   To:                          TX_Interface_0/TX_cntr_rst:D
-  Delay (ns):                  1.855
+  Delay (ns):                  1.275
   Slack (ns):
-  Arrival (ns):                1.855
+  Arrival (ns):                1.275
   Required (ns):
   Hold (ns):                   0.000
-  External Hold (ns):          -1.026
+  External Hold (ns):          -1.077
 
 
 Expanded Path 1
   From: DAQ_En
   To: TX_Interface_0/TX_cntr_rst:D
-  data arrival time                              1.855
+  data arrival time                              1.275
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -415,20 +415,20 @@ Expanded Path 1
   0.327                        DAQ_En_pad/U0/U1:YIN (r)
                +     0.094          cell: ADLIB:IOIN_IB_ST
   0.421                        DAQ_En_pad/U0/U1:Y (r)
-               +     0.728          net: DAQ_En_c
-  1.149                        TX_Interface_0/TX_cntr_rst_RNO:A (r)
-               +     0.256          cell: ADLIB:INV
-  1.405                        TX_Interface_0/TX_cntr_rst_RNO:Y (f)
-               +     0.450          net: TX_Interface_0/DAQ_En_c_i
-  1.855                        TX_Interface_0/TX_cntr_rst:D (f)
+               +     0.468          net: DAQ_En_c
+  0.889                        TX_Interface_0/TX_cntr_rst_RNO:A (r)
+               +     0.287          cell: ADLIB:INV
+  1.176                        TX_Interface_0/TX_cntr_rst_RNO:Y (f)
+               +     0.099          net: TX_Interface_0/DAQ_En_c_i
+  1.275                        TX_Interface_0/TX_cntr_rst:D (f)
                                     
-  1.855                        data arrival time
+  1.275                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          Clock_Divider_0/clk_100Khz:Q
                +     0.000          Clock source
   N/C                          Clock_Divider_0/clk_100Khz:Q (r)
-               +     0.829          net: clk_100Khz
+               +     0.198          net: clk_100Khz
   N/C                          TX_Interface_0/TX_cntr_rst:CLK (r)
                +     0.000          Library hold time: ADLIB:DFN1
   N/C                          TX_Interface_0/TX_cntr_rst:D
@@ -441,55 +441,55 @@ END SET External Hold
 SET Clock to Output
 
 Path 1
-  From:                        TX_Interface_0/TX_data[0]:CLK
-  To:                          DATA_OUT[0]
-  Delay (ns):                  1.465
-  Slack (ns):
-  Arrival (ns):                2.011
-  Required (ns):
-  Clock to Out (ns):           2.011
-
-Path 2
   From:                        TX_Interface_0/TX_data[5]:CLK
   To:                          DATA_OUT[5]
-  Delay (ns):                  1.466
+  Delay (ns):                  2.148
   Slack (ns):
-  Arrival (ns):                2.272
+  Arrival (ns):                2.707
   Required (ns):
-  Clock to Out (ns):           2.272
+  Clock to Out (ns):           2.707
+
+Path 2
+  From:                        TX_Interface_0/TX_data[18]:CLK
+  To:                          DATA_OUT[2]
+  Delay (ns):                  2.230
+  Slack (ns):
+  Arrival (ns):                2.794
+  Required (ns):
+  Clock to Out (ns):           2.794
 
 Path 3
-  From:                        TX_Interface_0/TX_data[1]:CLK
-  To:                          DATA_OUT[1]
-  Delay (ns):                  1.465
+  From:                        TX_Interface_0/TX_data[4]:CLK
+  To:                          DATA_OUT[4]
+  Delay (ns):                  2.226
   Slack (ns):
-  Arrival (ns):                2.292
+  Arrival (ns):                2.818
   Required (ns):
-  Clock to Out (ns):           2.292
+  Clock to Out (ns):           2.818
 
 Path 4
-  From:                        TX_Interface_0/TX_data[2]:CLK
-  To:                          DATA_OUT[2]
-  Delay (ns):                  1.466
+  From:                        TX_Interface_0/TX_data[0]:CLK
+  To:                          DATA_OUT[0]
+  Delay (ns):                  1.874
   Slack (ns):
-  Arrival (ns):                2.442
+  Arrival (ns):                2.870
   Required (ns):
-  Clock to Out (ns):           2.442
+  Clock to Out (ns):           2.870
 
 Path 5
-  From:                        TX_Interface_0/TX_data[7]:CLK
-  To:                          DATA_OUT[7]
-  Delay (ns):                  1.724
+  From:                        TX_Interface_0/TX_data[16]:CLK
+  To:                          DATA_OUT[0]
+  Delay (ns):                  1.930
   Slack (ns):
-  Arrival (ns):                2.458
+  Arrival (ns):                2.926
   Required (ns):
-  Clock to Out (ns):           2.458
+  Clock to Out (ns):           2.926
 
 
 Expanded Path 1
-  From: TX_Interface_0/TX_data[0]:CLK
-  To: DATA_OUT[0]
-  data arrival time                              2.011
+  From: TX_Interface_0/TX_data[5]:CLK
+  To: DATA_OUT[5]
+  data arrival time                              2.707
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -497,33 +497,37 @@ Expanded Path 1
   0.000                        Clock_Divider_0/clk_100Khz:Q
                +     0.000          Clock source
   0.000                        Clock_Divider_0/clk_100Khz:Q (f)
-               +     0.546          net: clk_100Khz
-  0.546                        TX_Interface_0/TX_data[0]:CLK (f)
+               +     0.559          net: clk_100Khz
+  0.559                        TX_Interface_0/TX_data[5]:CLK (f)
                +     0.263          cell: ADLIB:DFN0
-  0.809                        TX_Interface_0/TX_data[0]:Q (r)
-               +     0.095          net: TX_Interface_0/TX_data[0]
-  0.904                        TX_Interface_0/TX_data_RNIN7D93[0]:A (r)
-               +     0.221          cell: ADLIB:AO1
-  1.125                        TX_Interface_0/TX_data_RNIN7D93[0]:Y (r)
-               +     0.116          net: DATA_OUT_c[0]
-  1.241                        DATA_OUT_pad[0]/U0/U1:D (r)
+  0.822                        TX_Interface_0/TX_data[5]:Q (r)
+               +     0.093          net: TX_Interface_0/TX_data[5]
+  0.915                        TX_Interface_0/TX_data_RNIHTL4[5]:B (r)
+               +     0.248          cell: ADLIB:NOR2A
+  1.163                        TX_Interface_0/TX_data_RNIHTL4[5]:Y (f)
+               +     0.110          net: TX_Interface_0/N_121
+  1.273                        TX_Interface_0/TX_data_RNI04KB2[5]:A (f)
+               +     0.269          cell: ADLIB:NOR3
+  1.542                        TX_Interface_0/TX_data_RNI04KB2[5]:Y (r)
+               +     0.395          net: TX_Interface_0_N_15
+  1.937                        DATA_OUT_pad[5]/U0/U1:D (r)
                +     0.218          cell: ADLIB:IOTRI_OB_EB_ST
-  1.459                        DATA_OUT_pad[0]/U0/U1:DOUT (r)
-               +     0.000          net: DATA_OUT_pad[0]/U0/NET1
-  1.459                        DATA_OUT_pad[0]/U0/U0:D (r)
+  2.155                        DATA_OUT_pad[5]/U0/U1:DOUT (r)
+               +     0.000          net: DATA_OUT_pad[5]/U0/NET1
+  2.155                        DATA_OUT_pad[5]/U0/U0:D (r)
                +     0.552          cell: ADLIB:IOPAD_TRI
-  2.011                        DATA_OUT_pad[0]/U0/U0:PAD (r)
-               +     0.000          net: DATA_OUT[0]
-  2.011                        DATA_OUT[0] (r)
+  2.707                        DATA_OUT_pad[5]/U0/U0:PAD (r)
+               +     0.000          net: DATA_OUT[5]
+  2.707                        DATA_OUT[5] (r)
                                     
-  2.011                        data arrival time
+  2.707                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          Clock_Divider_0/clk_100Khz:Q
                +     0.000          Clock source
   N/C                          Clock_Divider_0/clk_100Khz:Q (r)
                                     
-  N/C                          DATA_OUT[0] (r)
+  N/C                          DATA_OUT[5] (r)
 
 
 END SET Clock to Output
@@ -561,48 +565,48 @@ SET Input to Output
 Path 1
   From:                        Clk_USB
   To:                          ADC_SCLK
-  Delay (ns):                  1.934
+  Delay (ns):                  2.056
   Slack (ns):
-  Arrival (ns):                1.934
+  Arrival (ns):                2.056
   Required (ns):
 
 Path 2
-  From:                        SPI_SCLK
-  To:                          DAC_SCLK
-  Delay (ns):                  1.995
+  From:                        SPI_MOSI
+  To:                          DAC_DIN
+  Delay (ns):                  2.125
   Slack (ns):
-  Arrival (ns):                1.995
+  Arrival (ns):                2.125
   Required (ns):
 
 Path 3
-  From:                        SPI_MOSI
-  To:                          DAC_DIN
-  Delay (ns):                  2.079
+  From:                        SPI_SCLK
+  To:                          DAC_SCLK
+  Delay (ns):                  2.465
   Slack (ns):
-  Arrival (ns):                2.079
+  Arrival (ns):                2.465
   Required (ns):
 
 Path 4
   From:                        DAQ_En
   To:                          Integrator_rst
-  Delay (ns):                  2.777
+  Delay (ns):                  2.630
   Slack (ns):
-  Arrival (ns):                2.777
+  Arrival (ns):                2.630
   Required (ns):
 
 Path 5
   From:                        Comparator_out
   To:                          Integrator_rst
-  Delay (ns):                  2.983
+  Delay (ns):                  2.813
   Slack (ns):
-  Arrival (ns):                2.983
+  Arrival (ns):                2.813
   Required (ns):
 
 
 Expanded Path 1
   From: Clk_USB
   To: ADC_SCLK
-  data arrival time                              1.934
+  data arrival time                              2.056
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -616,22 +620,22 @@ Expanded Path 1
   0.327                        Clk_USB_pad/U0/U1:A (r)
                +     0.252          cell: ADLIB:CLKIO
   0.579                        Clk_USB_pad/U0/U1:Y (r)
-               +     0.253          net: Clk_USB_c
-  0.832                        ADC_Interface_0/ADC_Sclk_en_RNII0PN:A (r)
+               +     0.256          net: Clk_USB_c
+  0.835                        ADC_Interface_0/ADC_Sclk_en_RNII0PN:A (r)
                +     0.178          cell: ADLIB:NOR2B
-  1.010                        ADC_Interface_0/ADC_Sclk_en_RNII0PN:Y (r)
-               +     0.099          net: ADC_SCLK_c
-  1.109                        ADC_SCLK_pad/U0/U1:D (r)
+  1.013                        ADC_Interface_0/ADC_Sclk_en_RNII0PN:Y (r)
+               +     0.218          net: ADC_SCLK_c
+  1.231                        ADC_SCLK_pad/U0/U1:D (r)
                +     0.273          cell: ADLIB:IOTRI_OB_EB_ST
-  1.382                        ADC_SCLK_pad/U0/U1:DOUT (r)
+  1.504                        ADC_SCLK_pad/U0/U1:DOUT (r)
                +     0.000          net: ADC_SCLK_pad/U0/NET1
-  1.382                        ADC_SCLK_pad/U0/U0:D (r)
+  1.504                        ADC_SCLK_pad/U0/U0:D (r)
                +     0.552          cell: ADLIB:IOPAD_TRI
-  1.934                        ADC_SCLK_pad/U0/U0:PAD (r)
+  2.056                        ADC_SCLK_pad/U0/U0:PAD (r)
                +     0.000          net: ADC_SCLK
-  1.934                        ADC_SCLK (r)
+  2.056                        ADC_SCLK (r)
                                     
-  1.934                        data arrival time
+  2.056                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          Clk_USB (r)

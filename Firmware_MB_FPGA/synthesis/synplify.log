@@ -2,7 +2,7 @@
 Starting:    C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin64\mbin\synbatch.exe
 Install:     C:\Microsemi\Libero_SoC_v11.8\SynplifyPro
 Hostname:    JOHN-HOME-PC
-Date:        Wed Dec 06 11:29:05 2017
+Date:        Wed Apr 18 19:02:09 2018
 Version:     L-2016.09M-2
 
 Arguments:   -product synplify_pro -licensetype synplifypro_actel -batch -log synplify.log MARS_MB_rev1_top_syn.tcl
@@ -18,7 +18,7 @@ Running in Vendor Mode
 
 auto_infer_blackbox is not supported in current product.
 
-log file: "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.srr"
+log file: "C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.srr"
 
 Running: synthesis in foreground
 
@@ -28,47 +28,47 @@ Running MARS_MB_rev1_top_syn|synthesis
 
 
 Running: compile (Compile) on MARS_MB_rev1_top_syn|synthesis
-# Wed Dec 06 11:29:05 2017
+# Wed Apr 18 19:02:09 2018
 
 
 Running: compile_flow (Compile Process) on MARS_MB_rev1_top_syn|synthesis
-# Wed Dec 06 11:29:05 2017
+# Wed Apr 18 19:02:09 2018
 
 
 Running: compiler (Compile Input) on MARS_MB_rev1_top_syn|synthesis
-# Wed Dec 06 11:29:05 2017
+# Wed Apr 18 19:02:09 2018
 
-Copied C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synwork\MARS_MB_rev1_top_comp.srs to C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.srs
+Copied C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\synwork\MARS_MB_rev1_top_comp.srs to C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.srs
 
 
 compiler completed
-# Wed Dec 06 11:29:07 2017
+# Wed Apr 18 19:02:11 2018
 
 Return Code: 0
 Run Time:00h:00m:02s
 
 
 Running: multi_srs_gen (Multi-srs Generator) on MARS_MB_rev1_top_syn|synthesis
-# Wed Dec 06 11:29:07 2017
+# Wed Apr 18 19:02:11 2018
 
 
 multi_srs_gen completed
-# Wed Dec 06 11:29:07 2017
+# Wed Apr 18 19:02:11 2018
 
 Return Code: 0
 Run Time:00h:00m:00s
 
-Copied C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synwork\MARS_MB_rev1_top_mult.srs to C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.srs
+Copied C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\synwork\MARS_MB_rev1_top_mult.srs to C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.srs
 
 Complete: Compile Process on MARS_MB_rev1_top_syn|synthesis
 
 
 Running: premap (Pre-mapping) on MARS_MB_rev1_top_syn|synthesis
-# Wed Dec 06 11:29:07 2017
+# Wed Apr 18 19:02:11 2018
 
 
 premap completed with warnings
-# Wed Dec 06 11:29:08 2017
+# Wed Apr 18 19:02:12 2018
 
 Return Code: 1
 Run Time:00h:00m:01s
@@ -77,22 +77,22 @@ Complete: Compile on MARS_MB_rev1_top_syn|synthesis
 
 
 Running: map (Map) on MARS_MB_rev1_top_syn|synthesis
-# Wed Dec 06 11:29:08 2017
+# Wed Apr 18 19:02:12 2018
 
 License granted for 4 parallel jobs
 
 
 Running: fpga_mapper (Map & Optimize) on MARS_MB_rev1_top_syn|synthesis
-# Wed Dec 06 11:29:08 2017
+# Wed Apr 18 19:02:12 2018
 
-Copied C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synwork\MARS_MB_rev1_top_m.srm to C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.srm
+Copied C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\synwork\MARS_MB_rev1_top_m.srm to C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.srm
 
 
 fpga_mapper completed with warnings
-# Wed Dec 06 11:29:10 2017
+# Wed Apr 18 19:02:15 2018
 
 Return Code: 1
-Run Time:00h:00m:02s
+Run Time:00h:00m:03s
 
 Complete: Map on MARS_MB_rev1_top_syn|synthesis
 

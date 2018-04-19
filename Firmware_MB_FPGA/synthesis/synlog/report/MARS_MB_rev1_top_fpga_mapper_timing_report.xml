@@ -5,7 +5,7 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 *******************************************************************************************-->
 <report_table display_priority="2" name="Timing Summary">
 <report_link name="Detailed report">
-<data>C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\MARS_MB_rev1_top_fpga_mapper.srr</data>
+<data>C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\MARS_MB_rev1_top_fpga_mapper.srr</data>
 <title>START OF TIMING REPORT</title>
 </report_link>
 <row>
@@ -23,8 +23,8 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <row>
 <data>MARS_MB_rev1_top|Clk_USB</data>
 <data>100.0 MHz</data>
-<data>54.2 MHz</data>
-<data>-5.047</data>
+<data>54.3 MHz</data>
+<data>-4.629</data>
 </row>
 <row>
 <data>SPI_Interface|SPI_SCLK_buf_inferred_clock</data>

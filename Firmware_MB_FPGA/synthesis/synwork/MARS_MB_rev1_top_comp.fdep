@@ -1,4 +1,4 @@
-#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\synthesis\\synwork\\MARS_MB_rev1_top_comp.srs|-top|work.MARS_MB_rev1_top|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\Project_ESA\\MARS_DAQ\\Firmware_MB_FPGA\\synthesis\\synwork\\MARS_MB_rev1_top_comp.srs|-top|work.MARS_MB_rev1_top|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\bin64\\c_vhdl.exe":1479971492
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd2008\\location.map":1478797188
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd2008\\std.vhd":1487934586
@@ -10,19 +10,19 @@
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd2008\\arith.vhd":1487934586
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd2008\\unsigned.vhd":1487934586
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\vhd\\hyperents.vhd":1487934454
-#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\ADC_Interface.vhd":1512551516
-#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\Clock_Divider.vhd":1512386712
-#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\DAQ_FSM.vhd":1512550163
-#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\SPI_Interface.vhd":1512330912
-#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\TX_Interface.vhd":1512552195
-#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\ESA\\Test\\MARS_DAQ\\Firmware_MB_FPGA\\component\\work\\MARS_MB_rev1_top\\MARS_MB_rev1_top.vhd":1512552538
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\Project_ESA\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\ADC_Interface.vhd":1512551516
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\Project_ESA\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\Clock_Divider.vhd":1512386712
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\Project_ESA\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\DAQ_FSM.vhd":1512550163
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\Project_ESA\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\SPI_Interface.vhd":1512330912
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\Project_ESA\\MARS_DAQ\\Firmware_MB_FPGA\\hdl\\TX_Interface.vhd":1524067243
+#CUR:"C:\\Users\\johnk\\OneDrive\\NCSR_Demokritos\\Project_ESA\\MARS_DAQ\\Firmware_MB_FPGA\\component\\work\\MARS_MB_rev1_top\\MARS_MB_rev1_top.vhd":1512552538
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.8\\SynplifyPro\\lib\\proasic\\igloo.vhd":1487934450
-0			"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\ADC_Interface.vhd" vhdl
-1			"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\Clock_Divider.vhd" vhdl
-2			"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\DAQ_FSM.vhd" vhdl
-3			"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\SPI_Interface.vhd" vhdl
-4			"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\hdl\TX_Interface.vhd" vhdl
-5			"C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.vhd" vhdl
+0			"C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\hdl\ADC_Interface.vhd" vhdl
+1			"C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\hdl\Clock_Divider.vhd" vhdl
+2			"C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\hdl\DAQ_FSM.vhd" vhdl
+3			"C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\hdl\SPI_Interface.vhd" vhdl
+4			"C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\hdl\TX_Interface.vhd" vhdl
+5			"C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.vhd" vhdl
 #Dependency Lists(Uses List)
 0 -1
 1 -1

@@ -20,12 +20,12 @@ KEY IDE_DES_BLOCK_PUBLISH "FALSE"
 KEY IDE_DES_BA_EXPORTED "FALSE"
 KEY IDE_DES_INTERACTIVE "FALSE"
 KEY IDE_DES_ERROR_FOUND "FALSE"
-KEY IDE_DES_ADB_PATH "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\MARS_MB_rev1_top.adb"
+KEY IDE_DES_ADB_PATH "C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\MARS_MB_rev1_top.adb"
 LIST SOURCE_FILES
-VALUE "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.edn;edn"
+VALUE "C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.edn;edn"
 ENDLIST
 LIST OPTIONAL_FILES
-VALUE "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top_sdc.sdc;Skipped"
+VALUE "C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top_sdc.sdc;Skipped"
 ENDLIST
 LIST VCD_FILES
 ENDLIST

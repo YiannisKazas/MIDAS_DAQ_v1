@@ -10,16 +10,16 @@ Opened an existing Libero design MARS_MB_rev1_top.adb.
 'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
 'IDE_DESIGNERVIEW_REVNUM0' set to '1'
 'IDE_DESIGNERVIEW_ROOTDIR' set to
-'C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\designer'
+'C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\designer'
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 
  Netlist Reading Time = 0.0 seconds
 Imported the file:
 
-C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_re\
-v1_top.edn
+C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB\
+_rev1_top.edn
 
-The Import command succeeded ( 00:00:00 )
+The Import command succeeded ( 00:00:01 )
 =====================================================================
 Parameters used to run compile:
 ===============================
@@ -28,8 +28,8 @@ Family      : IGLOO
 Device      : AGLN020V5
 Package     : 68 QFN
 Source      :
-C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_re\
-v1_top.edn
+C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB\
+_rev1_top.edn
 Format      : EDIF
 Topcell     : MARS_MB_rev1_top
 Speed grade : STD
@@ -65,9 +65,9 @@ Optimized macros:
   - Buffers:                0
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        5
+  - Logic combining:        3
 
-    Total macros optimized  5
+    Total macros optimized  3
 
 There were 0 error(s) and 0 warning(s) in this design.
 =====================================================================
@@ -81,7 +81,7 @@ There were 0 error(s) and 0 warning(s).
 Compile report:
 ===============
 
-    CORE                       Used:    467  Total:    520   (89.81%)
+    CORE                       Used:    483  Total:    520   (92.88%)
     IO (W/ clocks)             Used:     29  Total:     49   (59.18%)
     GLOBAL (Chip)              Used:      1  Total:      4   (25.00%)
     Low Static ICC             Used:      0  Total:      1   (0.00%)
@@ -102,7 +102,7 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 326          | 326
+    COMB    | 342          | 342
     SEQ     | 141          | 141
 
 I/O Function:
@@ -142,7 +142,7 @@ The following nets have been assigned to a chip global resource:
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    29      CLK_NET       Net   : clk_100Khz
+    28      CLK_NET       Net   : clk_100Khz
                           Driver: Clock_Divider_0/clk_100Khz
     25      CLK_NET       Net   : SPI_Interface_0/SPI_SCLK_buf
                           Driver: SPI_Interface_0/SPI_SCLK_buf_inferred_clock_RNO
@@ -152,21 +152,21 @@ High fanout nets in the post compile netlist:
                           Driver: ADC_Interface_0/ADC_cntr_RNI7TP23[3]
     23      INT_NET       Net   : ADC_Interface_0/N_4
                           Driver: ADC_Interface_0/ADC_state_RNIJH8F1[0]
-    20      INT_NET       Net   : SPI_CS_c
+    22      INT_NET       Net   : SPI_CS_c
                           Driver: SPI_CS_pad
-    18      INT_NET       Net   : DAQ_FSM_0/N_146_i_0
+    19      INT_NET       Net   : DAQ_FSM_0/N_146_i_0
                           Driver: DAQ_FSM_0/DAQ_state[0]
-    16      INT_NET       Net   : ADC_Interface_0/ADC_state_0[0]
-                          Driver: ADC_Interface_0/ADC_state_0[0]
-    15      INT_NET       Net   : ADC_Interface_0/ADC_state[0]
-                          Driver: ADC_Interface_0/ADC_state[0]
-    14      INT_NET       Net   : TX_Interface_0/TX_cntr[2]
+    17      INT_NET       Net   : TX_Interface_0/TX_cntr[1]
+                          Driver: TX_Interface_0/TX_cntr[1]
+    15      INT_NET       Net   : TX_Interface_0/TX_cntr[3]
+                          Driver: TX_Interface_0/TX_cntr[3]
+    15      INT_NET       Net   : TX_Interface_0/TX_cntr[2]
                           Driver: TX_Interface_0/TX_cntr[2]
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
-    29      CLK_NET       Net   : clk_100Khz
+    28      CLK_NET       Net   : clk_100Khz
                           Driver: Clock_Divider_0/clk_100Khz
     25      CLK_NET       Net   : SPI_Interface_0/SPI_SCLK_buf
                           Driver: SPI_Interface_0/SPI_SCLK_buf_inferred_clock_RNO
@@ -176,15 +176,15 @@ Nets that are candidates for clock assignment and the resulting fanout:
                           Driver: ADC_Interface_0/ADC_cntr_RNI7TP23[3]
     23      INT_NET       Net   : ADC_Interface_0/N_4
                           Driver: ADC_Interface_0/ADC_state_RNIJH8F1[0]
-    20      INT_NET       Net   : SPI_CS_c
+    22      INT_NET       Net   : SPI_CS_c
                           Driver: SPI_CS_pad
-    18      INT_NET       Net   : DAQ_FSM_0/N_146_i_0
+    19      INT_NET       Net   : DAQ_FSM_0/N_146_i_0
                           Driver: DAQ_FSM_0/DAQ_state[0]
-    16      INT_NET       Net   : ADC_Interface_0/ADC_state_0[0]
-                          Driver: ADC_Interface_0/ADC_state_0[0]
-    15      INT_NET       Net   : ADC_Interface_0/ADC_state[0]
-                          Driver: ADC_Interface_0/ADC_state[0]
-    14      INT_NET       Net   : TX_Interface_0/TX_cntr[2]
+    17      INT_NET       Net   : TX_Interface_0/TX_cntr[1]
+                          Driver: TX_Interface_0/TX_cntr[1]
+    15      INT_NET       Net   : TX_Interface_0/TX_cntr[3]
+                          Driver: TX_Interface_0/TX_cntr[3]
+    15      INT_NET       Net   : TX_Interface_0/TX_cntr[2]
                           Driver: TX_Interface_0/TX_cntr[2]
 ====================
 Flash*Freeze report:
@@ -194,20 +194,20 @@ The design does not use the Flash*Freeze feature.
 
 ====================
 
-The Compile command succeeded ( 00:00:00 )
+The Compile command succeeded ( 00:00:01 )
 Wrote status report to file: MARS_MB_rev1_top_compile_report.txt
 
 The Report command succeeded ( 00:00:00 )
 Wrote pin report to file: MARS_MB_rev1_top_report_pin_byname.txt
 
-The Report command succeeded ( 00:00:01 )
+The Report command succeeded ( 00:00:00 )
 Wrote pin report to file: MARS_MB_rev1_top_report_pin_bynumber.txt
 
 The Report command succeeded ( 00:00:01 )
 Design saved to file
-C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\MARS_\
-MB_rev1_top.adb.
+C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\MA\
+RS_MB_rev1_top.adb.
 
-The Execute Script command succeeded ( 00:00:04 )
+The Execute Script command succeeded ( 00:00:03 )
 Design closed.
 

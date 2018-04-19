@@ -3,7 +3,34 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\MARS_DAQ\Firmware-USB controller\FX2_to_extsyncFIFO.uvproj
+C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware-USB controller\FX2_to_extsyncFIFO.uvproj
 Project File Date:  11/30/2017
 
 <h2>Output:</h2>
+Build target 'Target 1'
+compiling fw.c...
+assembling dscr.a51...
+compiling FX2_to_extsyncFIFO.c...
+compiling gpif.c...
+linking...
+Program Size: data=54.6 xdata=4657 code=3356
+creating hex file from "FX2_to_extsyncFIFO"...
+User command #1: C:\Keil\Hex2bix.exe
+Intel Hex file to EZ-USB Binary file conversion utility
+Copyright (c) 1997-1999, Cypress Semiconductor Inc.
+HEX2BIX [-AIBRH?] [-S symbol] [-M memsize] [-C Config0Byte] [-F firstByte] [-O filename] Source
+    Source - Input filename
+    A      - Output file in the A51 file format
+    B      - Output file in the BIX file format (Default)
+    BI     - Input file in the BIX file format (hex is default)
+    C      - Config0 BYTE for AN2200 and FX2 (Default = 0x04)
+    F      - First byte (0xB0, 0xB2, 0xB6, 0xC0, 0xC2) (Default = 0xB2)
+    H|?    - Display this help screen
+    I      - Output file in the IIC file format
+    M      - Maximum memory size, also used as BIX out file size. (Default = 8k)
+    O      - Output filename
+    P      - Product ID (Default = 2131)
+    R      - Append bootload block to release reset
+    S      - Public symbol name for linking
+    V      - Vendor ID (Default = 0x0547) 
+"FX2_to_extsyncFIFO" - 0 Error(s), 0 Warning(s).

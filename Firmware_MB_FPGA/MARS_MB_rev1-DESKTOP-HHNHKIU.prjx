@@ -30,7 +30,7 @@ KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
 KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
 KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
 KEY VendorTechnology_VOLTR "COM"
-KEY ProjectLocation "C:\Users\user\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA"
+KEY ProjectLocation "C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA"
 KEY ProjectDescription ""
 KEY Pa4PeripheralNewSeq "GOOD"
 KEY SimulationType "VHDL"
@@ -83,6 +83,11 @@ STATE="utd"
 TIME="1512552598"
 SIZE="1195"
 ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top.pdb,pdb"
+STATE="utd"
+TIME="1524067393"
+SIZE="18844"
+ENDFILE
 VALUE "<project>\designer\impl1\MARS_MB_rev1_top.stp,stp"
 STATE="ood"
 TIME="1511958716"
@@ -92,6 +97,21 @@ VALUE "<project>\designer\impl1\MARS_MB_rev1_top_compile_log.rpt,log"
 STATE="utd"
 TIME="1512552557"
 SIZE="8336"
+ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top_placeroute_log.rpt,log"
+STATE="utd"
+TIME="1524067380"
+SIZE="2762"
+ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top_prgdata_log.rpt,log"
+STATE="utd"
+TIME="1524067393"
+SIZE="948"
+ENDFILE
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top_verifytiming_log.rpt,log"
+STATE="utd"
+TIME="1524067384"
+SIZE="1312"
 ENDFILE
 VALUE "<project>\hdl\ADC_Interface.vhd,hdl"
 STATE="utd"
@@ -134,8 +154,8 @@ TIME="1512552550"
 SIZE="276"
 ENDFILE
 VALUE "<project>\synthesis\MARS_MB_rev1_top_sdc.sdc,syn_sdc"
-STATE="ood"
-TIME="1524067256"
+STATE="utd"
+TIME="1512552550"
 SIZE="413"
 ENDFILE
 VALUE "<project>\synthesis\MARS_MB_rev1_top_syn-John-PC.prj,prj"
@@ -145,8 +165,8 @@ SIZE="2105"
 ENDFILE
 VALUE "<project>\synthesis\MARS_MB_rev1_top_syn.prj,prj"
 STATE="utd"
-TIME="1524067247"
-SIZE="2111"
+TIME="1512552550"
+SIZE="2452"
 ENDFILE
 VALUE "<project>\synthesis\synwork\layer0.so,so"
 STATE="utd"
@@ -161,8 +181,9 @@ LIST "MARS_MB_rev1_top::work"
 FILE "<project>\component\work\MARS_MB_rev1_top\MARS_MB_rev1_top.vhd,hdl"
 LIST ProjectState5.1
 LIST Impl1
-LiberoState=Post_Synthesis
-ideSYNTHESIS(C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.edn,syn_edn)=StateFailure
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\MARS_MB_rev1_top.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\MARS_MB_rev1_top.adb,adb)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -171,6 +192,10 @@ ENDLIST
 Used_File_List
 ENDUsed_File_List
 ENDLIST
+ENDLIST
+LIST PinReports
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top_report_pin_byname.txt,log"
+VALUE "<project>\designer\impl1\MARS_MB_rev1_top_report_pin_bynumber.txt,log"
 ENDLIST
 ENDLIST
 ENDLIST
@@ -244,8 +269,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v11.8\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -258,10 +283,10 @@ BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
-NAME="FPExpress"
+NAME="Custom"
 FUNCTION="Program"
 TOOL="FlashPro"
-LOCATION="C:\Microsemi\Libero_SoC_v11.8\Designer\bin\FPExpress.exe"
+LOCATION="C:\Microsemi\Libero_SoC_v11.8\Designer\bin\flashpro.exe"
 PARAM=""
 BATCH=0
 LICENSE=""
@@ -280,8 +305,9 @@ ENDLIST
 LIST ProjectState5.1
 LIST "MARS_MB_rev1_top::work"
 LIST Impl1
-LiberoState=Post_Synthesis
-ideSYNTHESIS(C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.edn,syn_edn)=StateFailure
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\MARS_MB_rev1_top.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\MARS_MB_rev1_top.adb,adb)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -305,14 +331,13 @@ ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 Reports;Reports;0
-ReportsCurrentItem;Compile:MARS_MB_rev1_top_compile_log.rpt
+ReportsCurrentItem;Generate Programming Data:MARS_MB_rev1_top_prgdata_log.rpt
 HDL;hdl\SPI_Interface.vhd;0
 HDL;hdl\DAQ_FSM.vhd;0
 HDL;hdl\ADC_Interface.vhd;0
 HDL;hdl\TX_Interface.vhd;0
 HDL;hdl\Clock_Divider.vhd;0
 SmartDesign;MARS_MB_rev1_top;0
-StartPage;StartPage;0
 ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList

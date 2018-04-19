@@ -1,6 +1,6 @@
 <project name="MARS_MB_rev1_flash" version="1.1">
     <ProjectDirectory>
-        C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\MARS_MB_rev1_flash
+        C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\MARS_MB_rev1_flash
     </ProjectDirectory>
     <View>
         SingleSTAPLView
@@ -9,7 +9,7 @@
         
     </LiberoTargetDevice>
     <LogFile>
-        C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\MARS_MB_rev1_flash\MARS_MB_rev1_flash.log
+        C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\MARS_MB_rev1_flash\MARS_MB_rev1_flash.log
     </LogFile>
     <SerializationOption>
         Skip
@@ -74,7 +74,7 @@
         </Hardware>
         <Algo type="PDB">
             <filename>
-                C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\MARS_MB_rev1_top.pdb
+                C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\MARS_MB_rev1_top.pdb
             </filename>
             <local>
                 projectData\MARS_MB_rev1_top.pdb

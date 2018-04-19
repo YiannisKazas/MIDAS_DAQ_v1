@@ -3,18 +3,27 @@ Version: 11.8.2.4
 Release: Libero SoC v11.8 SP2
 
 Software Version: 11.8.2.4
+Warning: Unable to find file:
+         'C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\designer\i\
+         mpl1\MARS_MB_rev1_top.pdb'.
+Warning: Using local backup copy:
+         'C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\MARS_MB\
+         _rev1_flash\projectData\MARS_MB_rev1_top.pdb'.
 PDB file
-'C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\MARS\
-_MB_rev1_top.pdb' has been loaded successfully.
+'C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\MARS_MB_rev1_fla\
+sh\projectData\MARS_MB_rev1_top.pdb' has been loaded successfully.
 DESIGN : MARS_MB_rev1_top;  CHECKSUM : 8AC2;  PDB_VERSION : 1.9
 programmer 'S201PUVKO' : FlashPro5
 Opened
-'C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\MARS_MB_rev1_flash\\
-MARS_MB_rev1_flash.pro'
-PDB file
-'C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\MARS\
-_MB_rev1_top.pdb' has been loaded successfully.
-DESIGN : MARS_MB_rev1_top;  CHECKSUM : 8AC2;  PDB_VERSION : 1.9
+'C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\MARS_MB_rev1_fla\
+sh\MARS_MB_rev1_flash.pro'
+programmer 'S201PUVKO' : Scan Chain...
+Warning: programmer 'S201PUVKO' : Vpump has been selected on programmer AND an externally
+         provided Vpump has also been detected. Using externally provided Vpump voltage source.
+programmer 'S201PUVKO' : Found 8 instruction register bits.
+programmer 'S201PUVKO' : Checking IDCODEs...
+programmer 'S201PUVKO' : Device 1: 1E9081CF Mfr: Microsemi Part: A3PN/AGLN(015/020)
+programmer 'S201PUVKO' : Scan Chain PASSED.
 programmer 'S201PUVKO' : Scan Chain...
 Warning: programmer 'S201PUVKO' : Vpump has been selected on programmer AND an externally
          provided Vpump has also been detected. Using externally provided Vpump voltage source.
@@ -27,7 +36,28 @@ programmer 'S201PUVKO' : EXPORT CHECKSUM[16] = 8ac2
 programmer 'S201PUVKO' : Programming FPGA Array
 programmer 'S201PUVKO' : Verifying FPGA Array
 programmer 'S201PUVKO' :         Verifying FPGA Array -- pass
-programmer 'S201PUVKO' : Finished: Wed Dec 06 11:38:51 2017 (Elapsed time 00:00:12)
+programmer 'S201PUVKO' : Finished: Wed Apr 18 16:55:27 2018 (Elapsed time 00:00:13)
+programmer 'S201PUVKO' : Executing action PROGRAM PASSED.
+
+                        o - o - o - o - o - o
+
+PDB file
+'C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\M\
+ARS_MB_rev1_top.pdb' has been loaded successfully.
+DESIGN : MARS_MB_rev1_top;  CHECKSUM : 9AE5;  PDB_VERSION : 1.9
+programmer 'S201PUVKO' : Scan Chain...
+Warning: programmer 'S201PUVKO' : Vpump has been selected on programmer AND an externally
+         provided Vpump has also been detected. Using externally provided Vpump voltage source.
+programmer 'S201PUVKO' : Scan Chain PASSED.
+programmer 'S201PUVKO' : Executing action PROGRAM
+programmer 'S201PUVKO' : EXPORT FSN[48] = 015e104ca600
+programmer 'S201PUVKO' : Erase ...
+programmer 'S201PUVKO' : Completed erase
+programmer 'S201PUVKO' : EXPORT CHECKSUM[16] = 9ae5
+programmer 'S201PUVKO' : Programming FPGA Array
+programmer 'S201PUVKO' : Verifying FPGA Array
+programmer 'S201PUVKO' :         Verifying FPGA Array -- pass
+programmer 'S201PUVKO' : Finished: Wed Apr 18 19:04:09 2018 (Elapsed time 00:00:12)
 programmer 'S201PUVKO' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o

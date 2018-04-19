@@ -2,7 +2,7 @@ Timing Violation Report Min Delay Analysis
 
 SmartTime Version Libero SoC v11.8 SP2
 Microsemi Corporation - Microsemi Libero Software Release Libero SoC v11.8 SP2 (Version 11.8.2.4)
-Date: Wed Dec 06 11:29:51 2017
+Date: Wed Apr 18 19:03:03 2018
 
 
 Design: MARS_MB_rev1_top

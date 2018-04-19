@@ -5,7 +5,7 @@ The file contains the job information from mapper to be displayed as part of the
 *******************************************************************************************-->
 <job_run_status name="Mapper">
 <report_link name="Detailed report">
-<data>C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\MARS_MB_rev1_top_fpga_mapper.srr</data>
+<data>C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\MARS_MB_rev1_top_fpga_mapper.srr</data>
 <title>Synopsys Microsemi Technology Mapper</title>
 </report_link>
 <job_status>
@@ -13,34 +13,34 @@ The file contains the job information from mapper to be displayed as part of the
 </job_status>
 <job_info>
 <info name="Notes">
-<data>12</data>
+<data>14</data>
 <report_link name="more">
-<data>C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\report\MARS_MB_rev1_top_fpga_mapper_notes.txt</data>
+<data>C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\report\MARS_MB_rev1_top_fpga_mapper_notes.txt</data>
 </report_link>
 </info>
 <info name="Warnings">
 <data>3</data>
 <report_link name="more">
-<data>C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\report\MARS_MB_rev1_top_fpga_mapper_warnings.txt</data>
+<data>C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\report\MARS_MB_rev1_top_fpga_mapper_warnings.txt</data>
 </report_link>
 </info>
 <info name="Errors">
 <data>0</data>
 <report_link name="more">
-<data>C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\report\MARS_MB_rev1_top_fpga_mapper_errors.txt</data>
+<data>C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\report\MARS_MB_rev1_top_fpga_mapper_errors.txt</data>
 </report_link>
 </info>
 <info name="CPU Time">
 <data>0h:00m:02s</data>
 </info>
 <info name="Real Time">
-<data>0h:00m:02s</data>
+<data>0h:00m:03s</data>
 </info>
 <info name="Peak Memory">
-<data>121MB</data>
+<data>124MB</data>
 </info>
 <info name="Date &amp; Time">
-<data type="timestamp">1512552550</data>
+<data type="timestamp">1524067335</data>
 </info>
 </job_info>
 </job_run_status>

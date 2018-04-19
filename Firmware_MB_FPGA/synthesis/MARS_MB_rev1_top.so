@@ -2,5 +2,5 @@
 <SynplifyOutput>
 	<result>Success</result>
 	<design>MARS_MB_rev1_top</design>
-	<target_edif>C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.edn</target_edif>
+	<target_edif>C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.edn</target_edif>
 </SynplifyOutput>

@@ -241,8 +241,8 @@
       <Focus>0</Focus>
       <ColumnNumber>22</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>86</TopLine>
-      <CurrentLine>86</CurrentLine>
+      <TopLine>110</TopLine>
+      <CurrentLine>133</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\FX2_to_extsyncFIFO.c</PathWithFileName>
       <FilenameWithoutPath>FX2_to_extsyncFIFO.c</FilenameWithoutPath>
@@ -272,7 +272,7 @@
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>13524675</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
@@ -1399,9 +1399,9 @@
       <Documents>
         <Doc>
           <Name>.\FX2_to_extsyncFIFO.c</Name>
-          <ColumnNumber>22</ColumnNumber>
-          <TopLine>86</TopLine>
-          <CurrentLine>86</CurrentLine>
+          <ColumnNumber>0</ColumnNumber>
+          <TopLine>228</TopLine>
+          <CurrentLine>250</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>
