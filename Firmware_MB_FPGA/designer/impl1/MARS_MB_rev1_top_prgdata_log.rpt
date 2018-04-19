@@ -3,24 +3,24 @@ Version: 11.8.2.4
 Release: Libero SoC v11.8 SP2
 
 Info: The design
-      C:/Users/johnk/OneDrive/NCSR_Demokritos/ESA/Test/MARS_DAQ/Firmware_MB_FPGA/designer/impl1\
-      /MARS_MB_rev1_top.adb was last modified by software version 11.8.2.4.
+      C:/Users/johnk/OneDrive/NCSR_Demokritos/Project_ESA/MARS_DAQ/Firmware_MB_FPGA/designer/im\
+      pl1/MARS_MB_rev1_top.adb was last modified by software version 11.8.2.4.
 Opened an existing Libero design
-C:/Users/johnk/OneDrive/NCSR_Demokritos/ESA/Test/MARS_DAQ/Firmware_MB_FPGA/designer/impl1/MARS_\
-MB_rev1_top.adb.
+C:/Users/johnk/OneDrive/NCSR_Demokritos/Project_ESA/MARS_DAQ/Firmware_MB_FPGA/designer/impl1/MA\
+RS_MB_rev1_top.adb.
 INFO: NO_TOP_AGGREGATION option enabled
 
-The Export-map command succeeded ( 00:00:03 )
+The Export-map command succeeded ( 00:00:05 )
 Wrote to the file:
-C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\MARS_\
-MB_rev1_top.pdb
-CHECKSUM: 8AC2
+C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\designer\impl1\MA\
+RS_MB_rev1_top.pdb
+CHECKSUM: 9AE5
 
-The Generate programming file command succeeded ( 00:00:04 )
+The Generate programming file command succeeded ( 00:00:06 )
 Design saved to file
-C:/Users/johnk/OneDrive/NCSR_Demokritos/ESA/Test/MARS_DAQ/Firmware_MB_FPGA/designer/impl1/MARS_\
-MB_rev1_top.adb.
+C:/Users/johnk/OneDrive/NCSR_Demokritos/Project_ESA/MARS_DAQ/Firmware_MB_FPGA/designer/impl1/MA\
+RS_MB_rev1_top.adb.
 
-The Execute Script command succeeded ( 00:00:05 )
+The Execute Script command succeeded ( 00:00:08 )
 Design closed.
 

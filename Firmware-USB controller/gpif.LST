@@ -1,4 +1,4 @@
-C51 COMPILER V8.12   GPIF                                                                  12/04/2017 15:36:10 PAGE 1   
+C51 COMPILER V8.12   GPIF                                                                  04/19/2018 12:49:52 PAGE 1   
 
 
 C51 COMPILER V8.12, COMPILATION OF MODULE GPIF
@@ -62,7 +62,7 @@ line level    source
   53          //   Term A                     EF#                                                        
   54          //   LFunc                      AND                                                        
   55          //   Term B                     EF#                                                        
-C51 COMPILER V8.12   GPIF                                                                  12/04/2017 15:36:10 PAGE 2   
+C51 COMPILER V8.12   GPIF                                                                  04/19/2018 12:49:52 PAGE 2   
 
   56          // Branch1                      ThenIdle                                                   
   57          // Branch0                      ElseIdle                                                   
@@ -126,7 +126,7 @@ line level    source
  115          // REN#         1         1         1         1         1         1         1         1    
  116          // OE#          0         0         0         0         0         0         0         0    
  117          // CTL3         0         0         0         0         0         0         0         0    
-C51 COMPILER V8.12   GPIF                                                                  12/04/2017 15:36:10 PAGE 3   
+C51 COMPILER V8.12   GPIF                                                                  04/19/2018 12:49:52 PAGE 3   
 
  118          // CTL4         0         0         0         0         0         0         0         0    
  119          // CTL5         0         0         0         0         0         0         0         0    
@@ -190,7 +190,7 @@ line level    source
  177          /* LenBr */ 0x01,     0x01,     0x01,     0x01,     0x01,     0x01,     0x01,     0x07,
  178          /* Opcode*/ 0x00,     0x00,     0x00,     0x00,     0x00,     0x00,     0x00,     0x00,
  179          /* Output*/ 0x03,     0x03,     0x03,     0x03,     0x03,     0x03,     0x03,     0x03,
-C51 COMPILER V8.12   GPIF                                                                  12/04/2017 15:36:10 PAGE 4   
+C51 COMPILER V8.12   GPIF                                                                  04/19/2018 12:49:52 PAGE 4   
 
  180          /* LFun  */ 0x00,     0x00,     0x00,     0x00,     0x00,     0x00,     0x00,     0x3F,
  181          };                     
@@ -254,7 +254,7 @@ line level    source
  239   1        GPIFCTLCFG = InitData[ 1 ];
  240   1        GPIFIDLECS = InitData[ 2 ];
  241   1        GPIFIDLECTL = InitData[ 3 ];
-C51 COMPILER V8.12   GPIF                                                                  12/04/2017 15:36:10 PAGE 5   
+C51 COMPILER V8.12   GPIF                                                                  04/19/2018 12:49:52 PAGE 5   
 
  242   1        GPIFWFSELECT = InitData[ 5 ];
  243   1        GPIFREADYSTAT = InitData[ 6 ];
@@ -319,7 +319,7 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.
 
-C51 COMPILER V8.12   GPIF                                                                  12/04/2017 15:36:10 PAGE 6   
+C51 COMPILER V8.12   GPIF                                                                  04/19/2018 12:49:52 PAGE 6   
 
 
 C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

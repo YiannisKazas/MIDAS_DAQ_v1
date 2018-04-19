@@ -1,4 +1,4 @@
-C51 COMPILER V8.12   FW                                                                    12/04/2017 15:36:10 PAGE 1   
+C51 COMPILER V8.12   FW                                                                    04/19/2018 12:49:51 PAGE 1   
 
 
 C51 COMPILER V8.12, COMPILATION OF MODULE FW
@@ -62,7 +62,7 @@ line level    source
   53          BOOL      Selfpwr;
   54          volatile BOOL   Sleep;                  // Sleep mode enable flag
   55          
-C51 COMPILER V8.12   FW                                                                    12/04/2017 15:36:10 PAGE 2   
+C51 COMPILER V8.12   FW                                                                    04/19/2018 12:49:51 PAGE 2   
 
   56          WORD   pDeviceDscr;   // Pointer to Device Descriptor; Descriptors may be moved
   57          WORD   pDeviceQualDscr;
@@ -126,7 +126,7 @@ line level    source
  115   1         // Initialize Global States
  116   1         Sleep = FALSE;               // Disable sleep mode
  117   1         Rwuen = FALSE;               // Disable remote wakeup
-C51 COMPILER V8.12   FW                                                                    12/04/2017 15:36:10 PAGE 3   
+C51 COMPILER V8.12   FW                                                                    04/19/2018 12:49:51 PAGE 3   
 
  118   1         Selfpwr = FALSE;            // Disable self powered
  119   1         GotSUD = FALSE;               // Clear "Got setup data" flag
@@ -190,7 +190,7 @@ line level    source
  177   1         // already be set if this firmware was loaded from an eeprom.
  178   1         if(!(USBCS & bmRENUM))
  179   1         {
-C51 COMPILER V8.12   FW                                                                    12/04/2017 15:36:10 PAGE 4   
+C51 COMPILER V8.12   FW                                                                    04/19/2018 12:49:51 PAGE 4   
 
  180   2             EZUSB_Discon(TRUE);   // renumerate
  181   2         }
@@ -254,7 +254,7 @@ line level    source
  238   2               if(DR_GetDescriptor())
  239   2                  switch(SETUPDAT[3])         
  240   2                  {
-C51 COMPILER V8.12   FW                                                                    12/04/2017 15:36:10 PAGE 5   
+C51 COMPILER V8.12   FW                                                                    04/19/2018 12:49:51 PAGE 5   
 
  241   3                     case GD_DEVICE:            // Device
  242   3                        SUDPTRH = MSB(pDeviceDscr);
@@ -318,7 +318,7 @@ line level    source
  300   3                        EP0BUF[1] = 0;
  301   3                        EP0BCH = 0;
  302   3                        EP0BCL = 2;
-C51 COMPILER V8.12   FW                                                                    12/04/2017 15:36:10 PAGE 6   
+C51 COMPILER V8.12   FW                                                                    04/19/2018 12:49:51 PAGE 6   
 
  303   3                        break;
  304   3                     default:            // Invalid Command
@@ -382,7 +382,7 @@ line level    source
  362          {
  363   1         EZUSB_CLEAR_RSMIRQ();
  364   1      }
-C51 COMPILER V8.12   FW                                                                    12/04/2017 15:36:10 PAGE 7   
+C51 COMPILER V8.12   FW                                                                    04/19/2018 12:49:51 PAGE 7   
 
  365          
  366          

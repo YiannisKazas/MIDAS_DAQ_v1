@@ -1,4 +1,4 @@
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
-@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\test\mars_daq\firmware_mb_fpga\hdl\daq_fsm.vhd":71:2:71:3|Removing sequential instance TP (in view: work.DAQ_FSM(architecture_daq_fsm)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
-@N: BN225 |Writing default property annotation file C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.sap.
+@N: BN362 :"c:\users\johnk\onedrive\ncsr_demokritos\project_esa\mars_daq\firmware_mb_fpga\hdl\daq_fsm.vhd":71:2:71:3|Removing sequential instance TP (in view: work.DAQ_FSM(architecture_daq_fsm)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN225 |Writing default property annotation file C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\MARS_MB_rev1_top.sap.

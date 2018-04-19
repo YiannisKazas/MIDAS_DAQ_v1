@@ -86,7 +86,7 @@ void TD_Init( void )
 
   EP2CFG = 0xA0;                //out 512 bytes, 4x, bulk
   SYNCDELAY;                    
-  EP6CFG = 0xE0;                // in 512 bytes, 4x, bulk
+  EP6CFG = 0xE0;                // E0=> in, 512 bytes, 4x, bulk
   SYNCDELAY;              
   EP4CFG = 0x02;                //clear valid bit
   SYNCDELAY;                     
@@ -128,9 +128,9 @@ void TD_Init( void )
 
 
   SYNCDELAY;
-  EP6AUTOINLENH = 0x01;		   //0x01
+  EP6AUTOINLENH = 0x02;		   //0x02
   SYNCDELAY;  
-  EP6AUTOINLENL = 0x2C;		// 	0x2C  Auto-in length = 300 Bytes (100 frames * 3 bytes each)
+  EP6AUTOINLENL = 0x00;		// 	0x00  Auto-in length = 300 Bytes (100 frames * 3 bytes each)
   SYNCDELAY;						
 
 //  EP2AUTOOUTLENH = 0x00;
@@ -234,6 +234,20 @@ BOOL DR_VendorCmnd(void)
 			IOC=0x00; //Port_C = "00000000" 
 			IOD=0x00; //Port_D = "00000000"
 			IOE=0x00; //Port_E = "xxxxxx00"
+
+			SYNCDELAY;
+			FIFORESET = 0x80;             // activate NAK-ALL to avoid race conditions
+			SYNCDELAY;                    // see TRM section 15.14
+			FIFORESET = 0x02;             // reset, FIFO 2
+			SYNCDELAY;                    // 
+			FIFORESET = 0x04;             // reset, FIFO 4
+			SYNCDELAY;                    // 
+			FIFORESET = 0x06;             // reset, FIFO 6
+			SYNCDELAY;                    // 
+			FIFORESET = 0x08;             // reset, FIFO 8
+			SYNCDELAY;                    // 
+			FIFORESET = 0x00;             // deactivate NAK-ALL
+
 			EP0BCL = 0;		 //EP0BUF LSB BYTE COUNT 
 			SYNCDELAY;	   	  		  
 			EP0BCH = 0;
@@ -268,7 +282,7 @@ BOOL DR_VendorCmnd(void)
 					}
 		  		}
 			}
-			IOD=0x00;// Port_D = "00000000" (Return to Idle)
+			IOD=0x00;// Port_D = "00000000" (Signal End of transfer)
 			SYNCDELAY;	   	  		  
 			EP0BCH = 0;
 			EP0BCL = 4;                   // Arm endpoint with 64# unsigned chars to transfer

@@ -2,7 +2,7 @@ Timing Report Max Delay Analysis
 
 SmartTime Version Libero SoC v11.8 SP2
 Microsemi Corporation - Microsemi Libero Software Release Libero SoC v11.8 SP2 (Version 11.8.2.4)
-Date: Wed Dec 06 11:29:51 2017
+Date: Wed Apr 18 19:03:03 2018
 
 
 Design: MARS_MB_rev1_top
@@ -24,28 +24,28 @@ Scenario for Timing Analysis: Primary
 SUMMARY
 
 Clock Domain:               Clk_USB
-Period (ns):                12.896
-Frequency (MHz):            77.543
+Period (ns):                12.315
+Frequency (MHz):            81.202
 Required Period (ns):       20.833
 Required Frequency (MHz):   48.001
-External Setup (ns):        14.536
-External Hold (ns):         0.018
-Min Clock-To-Out (ns):      2.204
-Max Clock-To-Out (ns):      15.607
+External Setup (ns):        13.017
+External Hold (ns):         0.144
+Min Clock-To-Out (ns):      2.161
+Max Clock-To-Out (ns):      14.657
 
 Clock Domain:               Clock_Divider_0/clk_100Khz:Q
-Period (ns):                1.530
-Frequency (MHz):            653.595
+Period (ns):                1.588
+Frequency (MHz):            629.723
 Required Period (ns):       N/A
 Required Frequency (MHz):   N/A
-External Setup (ns):        3.775
-External Hold (ns):         -1.026
-Min Clock-To-Out (ns):      2.011
-Max Clock-To-Out (ns):      9.389
+External Setup (ns):        3.637
+External Hold (ns):         -1.077
+Min Clock-To-Out (ns):      2.707
+Max Clock-To-Out (ns):      11.647
 
                             Input to Output
-Min Delay (ns):             1.934
-Max Delay (ns):             7.918
+Min Delay (ns):             2.056
+Max Delay (ns):             7.482
 
 END SUMMARY
 -----------------------------------------------------
@@ -56,61 +56,61 @@ SET Register to Register
 
 Path 1
   From:                        Clock_Divider_0/clk_100Khz:CLK
-  To:                          TX_Interface_0/TX_cntr[0]:D
-  Delay (ns):                  4.432
-  Slack (ns):                  4.882
-  Arrival (ns):                6.585
-  Required (ns):               11.467
-  Setup (ns):                  0.757
-  Minimum Period (ns):         11.069
+  To:                          TX_Interface_0/TX_cntr[3]:D
+  Delay (ns):                  4.375
+  Slack (ns):                  4.906
+  Arrival (ns):                6.460
+  Required (ns):               11.366
+  Setup (ns):                  0.808
+  Minimum Period (ns):         11.021
 
 Path 2
   From:                        Clock_Divider_0/clk_100Khz:CLK
-  To:                          TX_Interface_0/TX_cntr[3]:D
-  Delay (ns):                  3.913
-  Slack (ns):                  5.350
-  Arrival (ns):                6.066
-  Required (ns):               11.416
+  To:                          TX_Interface_0/TX_cntr[1]:D
+  Delay (ns):                  4.372
+  Slack (ns):                  4.932
+  Arrival (ns):                6.457
+  Required (ns):               11.389
   Setup (ns):                  0.808
-  Minimum Period (ns):         10.134
+  Minimum Period (ns):         10.969
 
 Path 3
   From:                        Clock_Divider_0/clk_100Khz:CLK
-  To:                          TX_Interface_0/TX_cntr[2]:D
-  Delay (ns):                  3.829
-  Slack (ns):                  5.434
-  Arrival (ns):                5.982
-  Required (ns):               11.416
+  To:                          TX_Interface_0/TX_cntr[0]:D
+  Delay (ns):                  4.345
+  Slack (ns):                  4.936
+  Arrival (ns):                6.430
+  Required (ns):               11.366
   Setup (ns):                  0.808
-  Minimum Period (ns):         9.966
+  Minimum Period (ns):         10.961
 
 Path 4
   From:                        Clock_Divider_0/clk_100Khz:CLK
-  To:                          TX_Interface_0/TX_cntr[1]:D
-  Delay (ns):                  3.314
-  Slack (ns):                  5.975
-  Arrival (ns):                5.467
-  Required (ns):               11.442
-  Setup (ns):                  0.808
-  Minimum Period (ns):         8.884
+  To:                          TX_Interface_0/TX_cntr[2]:D
+  Delay (ns):                  4.166
+  Slack (ns):                  5.166
+  Arrival (ns):                6.251
+  Required (ns):               11.417
+  Setup (ns):                  0.757
+  Minimum Period (ns):         10.501
 
 Path 5
-  From:                        TX_Interface_0/TX_cntr[2]:CLK
+  From:                        TX_Interface_0/TX_cntr[3]:CLK
   To:                          ADC_Interface_0/Hit_flag:D
-  Delay (ns):                  3.904
-  Slack (ns):                  6.040
-  Arrival (ns):                5.711
-  Required (ns):               11.751
+  Delay (ns):                  4.343
+  Slack (ns):                  5.588
+  Arrival (ns):                6.100
+  Required (ns):               11.688
   Setup (ns):                  0.784
-  Minimum Period (ns):         8.752
+  Minimum Period (ns):         9.656
 
 
 Expanded Path 1
   From: Clock_Divider_0/clk_100Khz:CLK
-  To: TX_Interface_0/TX_cntr[0]:D
-  data required time                             11.467
-  data arrival time                          -   6.585
-  slack                                          4.882
+  To: TX_Interface_0/TX_cntr[3]:D
+  data required time                             11.366
+  data arrival time                          -   6.460
+  slack                                          4.906
   ________________________________________________________
   Data arrival time calculation
   0.000                        Clk_USB
@@ -124,26 +124,22 @@ Expanded Path 1
   0.862                        Clk_USB_pad/U0/U1:A (r)
                +     0.636          cell: ADLIB:CLKIO
   1.498                        Clk_USB_pad/U0/U1:Y (r)
-               +     0.655          net: Clk_USB_c
-  2.153                        Clock_Divider_0/clk_100Khz:CLK (r)
+               +     0.587          net: Clk_USB_c
+  2.085                        Clock_Divider_0/clk_100Khz:CLK (r)
                +     0.797          cell: ADLIB:DFN1
-  2.950                        Clock_Divider_0/clk_100Khz:Q (f)
-               +     0.295          net: clk_100Khz
-  3.245                        TX_Interface_0/TX_cntr_rst_RNIIVTN:B (f)
-               +     0.882          cell: ADLIB:NOR2
-  4.127                        TX_Interface_0/TX_cntr_rst_RNIIVTN:Y (r)
-               +     0.340          net: TX_Interface_0/un1_tx_cntr20
-  4.467                        TX_Interface_0/TX_cntr_RNO_1[0]:C (r)
-               +     0.952          cell: ADLIB:OR3C
-  5.419                        TX_Interface_0/TX_cntr_RNO_1[0]:Y (f)
-               +     0.252          net: TX_Interface_0/TX_cntre
-  5.671                        TX_Interface_0/TX_cntr_RNO[0]:S (f)
-               +     0.657          cell: ADLIB:MX2C
-  6.328                        TX_Interface_0/TX_cntr_RNO[0]:Y (f)
-               +     0.257          net: TX_Interface_0/TX_cntr_RNO[0]
-  6.585                        TX_Interface_0/TX_cntr[0]:D (f)
+  2.882                        Clock_Divider_0/clk_100Khz:Q (f)
+               +     0.430          net: clk_100Khz
+  3.312                        TX_Interface_0/TX_cntr_rst_RNIIVTN:B (f)
+               +     0.916          cell: ADLIB:NOR2
+  4.228                        TX_Interface_0/TX_cntr_rst_RNIIVTN:Y (r)
+               +     1.004          net: TX_Interface_0/un1_tx_cntr20
+  5.232                        TX_Interface_0/TX_cntr_RNO[3]:C (r)
+               +     1.000          cell: ADLIB:XA1A
+  6.232                        TX_Interface_0/TX_cntr_RNO[3]:Y (r)
+               +     0.228          net: TX_Interface_0/N_21
+  6.460                        TX_Interface_0/TX_cntr[3]:D (r)
                                     
-  6.585                        data arrival time
+  6.460                        data arrival time
   ________________________________________________________
   Data required time calculation
   10.417                       Clk_USB
@@ -157,12 +153,12 @@ Expanded Path 1
   10.995                       Clk_USB_pad/U0/U1:A (f)
                +     0.655          cell: ADLIB:CLKIO
   11.650                       Clk_USB_pad/U0/U1:Y (f)
-               +     0.574          net: Clk_USB_c
-  12.224                       TX_Interface_0/TX_cntr[0]:CLK (f)
-               -     0.757          Library setup time: ADLIB:DFN0
-  11.467                       TX_Interface_0/TX_cntr[0]:D
+               +     0.524          net: Clk_USB_c
+  12.174                       TX_Interface_0/TX_cntr[3]:CLK (f)
+               -     0.808          Library setup time: ADLIB:DFN0
+  11.366                       TX_Interface_0/TX_cntr[3]:D
                                     
-  11.467                       data required time
+  11.366                       data required time
 
 
 END SET Register to Register
@@ -174,59 +170,59 @@ SET External Setup
 Path 1
   From:                        SPI_CS
   To:                          DAQ_FSM_0/ADC_En_2:E
-  Delay (ns):                  15.957
+  Delay (ns):                  14.431
   Slack (ns):
-  Arrival (ns):                15.957
+  Arrival (ns):                14.431
   Required (ns):
   Setup (ns):                  0.649
-  External Setup (ns):         14.536
+  External Setup (ns):         13.017
 
 Path 2
   From:                        SPI_CS
   To:                          ADC_Interface_0/ADC_state[1]:D
-  Delay (ns):                  7.656
+  Delay (ns):                  8.457
   Slack (ns):
-  Arrival (ns):                7.656
+  Arrival (ns):                8.457
   Required (ns):
   Setup (ns):                  0.784
-  External Setup (ns):         6.365
+  External Setup (ns):         7.157
 
 Path 3
   From:                        SPI_CS
   To:                          ADC_Interface_0/ADC_state_0[0]:D
-  Delay (ns):                  7.221
+  Delay (ns):                  8.191
   Slack (ns):
-  Arrival (ns):                7.221
+  Arrival (ns):                8.191
   Required (ns):
   Setup (ns):                  0.836
-  External Setup (ns):         5.931
+  External Setup (ns):         6.855
 
 Path 4
   From:                        SPI_CS
-  To:                          ADC_Interface_0/ADC_state[0]:D
-  Delay (ns):                  6.969
+  To:                          DAQ_FSM_0/ADC_En_1:E
+  Delay (ns):                  8.160
   Slack (ns):
-  Arrival (ns):                6.969
+  Arrival (ns):                8.160
   Required (ns):
-  Setup (ns):                  0.836
-  External Setup (ns):         5.686
+  Setup (ns):                  0.649
+  External Setup (ns):         6.733
 
 Path 5
   From:                        DAQ_En
   To:                          DAQ_FSM_0/DAQ_state[0]:D
-  Delay (ns):                  6.590
+  Delay (ns):                  7.665
   Slack (ns):
-  Arrival (ns):                6.590
+  Arrival (ns):                7.665
   Required (ns):
   Setup (ns):                  0.836
-  External Setup (ns):         5.351
+  External Setup (ns):         6.417
 
 
 Expanded Path 1
   From: SPI_CS
   To: DAQ_FSM_0/ADC_En_2:E
   data required time                             N/C
-  data arrival time                          -   15.957
+  data arrival time                          -   14.431
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -239,42 +235,34 @@ Expanded Path 1
   0.578                        SPI_CS_pad/U0/U1:YIN (f)
                +     0.236          cell: ADLIB:IOIN_IB_ST
   0.814                        SPI_CS_pad/U0/U1:Y (f)
-               +     4.021          net: SPI_CS_c
-  4.835                        DAQ_FSM_0/un27_daq_cntr_a_4_m22:A (f)
-               +     0.590          cell: ADLIB:AO18
-  5.425                        DAQ_FSM_0/un27_daq_cntr_a_4_m22:Y (r)
-               +     1.667          net: DAQ_FSM_0/i14_mux
-  7.092                        DAQ_FSM_0/un27_daq_cntr_a_4_m24:C (r)
-               +     2.082          cell: ADLIB:XOR3
-  9.174                        DAQ_FSM_0/un27_daq_cntr_a_4_m24:Y (r)
-               +     0.263          net: DAQ_FSM_0/un27_daq_cntr_a_4_i_2_i[8]
-  9.437                        DAQ_FSM_0/ADC_En_2_RNO_6:A (r)
-               +     0.676          cell: ADLIB:OR3B
-  10.113                       DAQ_FSM_0/ADC_En_2_RNO_6:Y (f)
-               +     0.257          net: DAQ_FSM_0/un27_daq_cntr_NE_3
-  10.370                       DAQ_FSM_0/ADC_En_2_RNO_5:C (f)
-               +     0.940          cell: ADLIB:OR3B
-  11.310                       DAQ_FSM_0/ADC_En_2_RNO_5:Y (f)
-               +     0.244          net: DAQ_FSM_0/un27_daq_cntr_NE_5
-  11.554                       DAQ_FSM_0/ADC_En_2_RNO_4:C (f)
-               +     0.677          cell: ADLIB:XO1A
-  12.231                       DAQ_FSM_0/ADC_En_2_RNO_4:Y (f)
-               +     0.262          net: DAQ_FSM_0/un27_daq_cntr_NE_6
-  12.493                       DAQ_FSM_0/ADC_En_2_RNO_3:C (f)
-               +     0.682          cell: ADLIB:XO1A
-  13.175                       DAQ_FSM_0/ADC_En_2_RNO_3:Y (f)
-               +     0.262          net: DAQ_FSM_0/un27_daq_cntr_NE_7
-  13.437                       DAQ_FSM_0/ADC_En_2_RNO_2:C (f)
-               +     0.682          cell: ADLIB:XO1A
-  14.119                       DAQ_FSM_0/ADC_En_2_RNO_2:Y (f)
-               +     0.260          net: DAQ_FSM_0/un27_daq_cntr_i
-  14.379                       DAQ_FSM_0/ADC_En_2_RNO_0:B (f)
-               +     1.334          cell: ADLIB:AOI1
-  15.713                       DAQ_FSM_0/ADC_En_2_RNO_0:Y (r)
+               +     3.690          net: SPI_CS_c
+  4.504                        DAQ_FSM_0/un27_daq_cntr_a_4_m22:A (f)
+               +     1.104          cell: ADLIB:AO18
+  5.608                        DAQ_FSM_0/un27_daq_cntr_a_4_m22:Y (r)
+               +     1.427          net: DAQ_FSM_0/i14_mux
+  7.035                        DAQ_FSM_0/un27_daq_cntr_a_4_m24:C (r)
+               +     1.942          cell: ADLIB:XOR3
+  8.977                        DAQ_FSM_0/un27_daq_cntr_a_4_m24:Y (r)
+               +     0.244          net: DAQ_FSM_0/un27_daq_cntr_a_4_i_2_i[8]
+  9.221                        DAQ_FSM_0/ADC_En_2_RNO_5:A (r)
+               +     0.671          cell: ADLIB:OR3B
+  9.892                        DAQ_FSM_0/ADC_En_2_RNO_5:Y (f)
+               +     1.009          net: DAQ_FSM_0/un27_daq_cntr_NE_6_2
+  10.901                       DAQ_FSM_0/ADC_En_2_RNO_4:C (f)
+               +     0.951          cell: ADLIB:OR3B
+  11.852                       DAQ_FSM_0/ADC_En_2_RNO_4:Y (f)
+               +     0.275          net: DAQ_FSM_0/un27_daq_cntr_NE_6_4
+  12.127                       DAQ_FSM_0/ADC_En_2_RNO_2:C (f)
+               +     0.944          cell: ADLIB:OR3B
+  13.071                       DAQ_FSM_0/ADC_En_2_RNO_2:Y (f)
+               +     0.257          net: DAQ_FSM_0/un27_daq_cntr_NE_6
+  13.328                       DAQ_FSM_0/ADC_En_2_RNO_0:B (f)
+               +     0.859          cell: ADLIB:MX2B
+  14.187                       DAQ_FSM_0/ADC_En_2_RNO_0:Y (r)
                +     0.244          net: DAQ_FSM_0/N_228
-  15.957                       DAQ_FSM_0/ADC_En_2:E (r)
+  14.431                       DAQ_FSM_0/ADC_En_2:E (r)
                                     
-  15.957                       data arrival time
+  14.431                       data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          Clk_USB
@@ -288,7 +276,7 @@ Expanded Path 1
   N/C                          Clk_USB_pad/U0/U1:A (r)
                +     0.636          cell: ADLIB:CLKIO
   N/C                          Clk_USB_pad/U0/U1:Y (r)
-               +     0.572          net: Clk_USB_c
+               +     0.565          net: Clk_USB_c
   N/C                          DAQ_FSM_0/ADC_En_2:CLK (r)
                -     0.649          Library setup time: ADLIB:DFN1E1
   N/C                          DAQ_FSM_0/ADC_En_2:E
@@ -301,56 +289,56 @@ END SET External Setup
 SET Clock to Output
 
 Path 1
-  From:                        TX_Interface_0/TX_cntr[0]:CLK
-  To:                          DATA_OUT[3]
-  Delay (ns):                  13.800
+  From:                        TX_Interface_0/TX_cntr[1]:CLK
+  To:                          DATA_OUT[6]
+  Delay (ns):                  12.877
   Slack (ns):
-  Arrival (ns):                15.607
+  Arrival (ns):                14.657
   Required (ns):
-  Clock to Out (ns):           15.607
+  Clock to Out (ns):           14.657
 
 Path 2
-  From:                        TX_Interface_0/TX_cntr[1]:CLK
-  To:                          DATA_OUT[3]
-  Delay (ns):                  13.746
+  From:                        TX_Interface_0/TX_cntr[2]:CLK
+  To:                          DATA_OUT[6]
+  Delay (ns):                  12.189
   Slack (ns):
-  Arrival (ns):                15.579
+  Arrival (ns):                13.946
   Required (ns):
-  Clock to Out (ns):           15.579
+  Clock to Out (ns):           13.946
 
 Path 3
-  From:                        TX_Interface_0/TX_cntr[2]:CLK
-  To:                          DATA_OUT[3]
-  Delay (ns):                  13.219
+  From:                        TX_Interface_0/TX_cntr[1]:CLK
+  To:                          DATA_OUT[2]
+  Delay (ns):                  11.803
   Slack (ns):
-  Arrival (ns):                15.026
+  Arrival (ns):                13.583
   Required (ns):
-  Clock to Out (ns):           15.026
+  Clock to Out (ns):           13.583
 
 Path 4
-  From:                        TX_Interface_0/TX_cntr[3]:CLK
-  To:                          DATA_OUT[3]
-  Delay (ns):                  12.991
+  From:                        TX_Interface_0/TX_cntr[1]:CLK
+  To:                          DATA_OUT[0]
+  Delay (ns):                  11.643
   Slack (ns):
-  Arrival (ns):                14.798
+  Arrival (ns):                13.423
   Required (ns):
-  Clock to Out (ns):           14.798
+  Clock to Out (ns):           13.423
 
 Path 5
   From:                        TX_Interface_0/TX_cntr[1]:CLK
   To:                          DATA_OUT[1]
-  Delay (ns):                  12.872
+  Delay (ns):                  11.517
   Slack (ns):
-  Arrival (ns):                14.705
+  Arrival (ns):                13.297
   Required (ns):
-  Clock to Out (ns):           14.705
+  Clock to Out (ns):           13.297
 
 
 Expanded Path 1
-  From: TX_Interface_0/TX_cntr[0]:CLK
-  To: DATA_OUT[3]
+  From: TX_Interface_0/TX_cntr[1]:CLK
+  To: DATA_OUT[6]
   data required time                             N/C
-  data arrival time                          -   15.607
+  data arrival time                          -   14.657
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -365,49 +353,45 @@ Expanded Path 1
   0.578                        Clk_USB_pad/U0/U1:A (f)
                +     0.655          cell: ADLIB:CLKIO
   1.233                        Clk_USB_pad/U0/U1:Y (f)
-               +     0.574          net: Clk_USB_c
-  1.807                        TX_Interface_0/TX_cntr[0]:CLK (f)
+               +     0.547          net: Clk_USB_c
+  1.780                        TX_Interface_0/TX_cntr[1]:CLK (f)
                +     0.886          cell: ADLIB:DFN0
-  2.693                        TX_Interface_0/TX_cntr[0]:Q (f)
-               +     1.863          net: TX_Interface_0/TX_cntr[0]
-  4.556                        TX_Interface_0/TX_cntr_RNI86V8[0]:B (f)
-               +     1.080          cell: ADLIB:NOR2
-  5.636                        TX_Interface_0/TX_cntr_RNI86V8[0]:Y (r)
-               +     0.268          net: TX_Interface_0/sl_fifo_wr_en4_0
-  5.904                        TX_Interface_0/TX_cntr_RNIIEUH[1]:B (r)
-               +     0.833          cell: ADLIB:NOR3B
-  6.737                        TX_Interface_0/TX_cntr_RNIIEUH[1]:Y (r)
-               +     0.244          net: TX_Interface_0/sl_fifo_wr_en4
-  6.981                        TX_Interface_0/TX_cntr_RNIMBRL1[0]:A (r)
-               +     0.445          cell: ADLIB:OR3
-  7.426                        TX_Interface_0/TX_cntr_RNIMBRL1[0]:Y (r)
-               +     2.350          net: TX_Interface_0/un1_sl_fifo_wr_en3
-  9.776                        TX_Interface_0/TX_data_RNITHSF2[19]:B (r)
-               +     1.454          cell: ADLIB:AO1
-  11.230                       TX_Interface_0/TX_data_RNITHSF2[19]:Y (r)
-               +     1.132          net: TX_Interface_0/DATA_OUT_iv_0[3]
-  12.362                       TX_Interface_0/TX_data_RNI73GF3[3]:C (r)
-               +     0.980          cell: ADLIB:AO1
-  13.342                       TX_Interface_0/TX_data_RNI73GF3[3]:Y (r)
-               +     0.264          net: DATA_OUT_c[3]
-  13.606                       DATA_OUT_pad[3]/U0/U1:D (r)
-               +     0.550          cell: ADLIB:IOTRI_OB_EB_ST
-  14.156                       DATA_OUT_pad[3]/U0/U1:DOUT (r)
-               +     0.000          net: DATA_OUT_pad[3]/U0/NET1
-  14.156                       DATA_OUT_pad[3]/U0/U0:D (r)
-               +     1.451          cell: ADLIB:IOPAD_TRI
-  15.607                       DATA_OUT_pad[3]/U0/U0:PAD (r)
-               +     0.000          net: DATA_OUT[3]
-  15.607                       DATA_OUT[3] (r)
+  2.666                        TX_Interface_0/TX_cntr[1]:Q (f)
+               +     2.202          net: TX_Interface_0/TX_cntr[1]
+  4.868                        TX_Interface_0/TX_cntr_RNI97V8[2]:B (f)
+               +     0.852          cell: ADLIB:OR2
+  5.720                        TX_Interface_0/TX_cntr_RNI97V8[2]:Y (f)
+               +     0.346          net: TX_Interface_0/N_34
+  6.066                        TX_Interface_0/TX_cntr_RNIIEUH_0[0]:C (f)
+               +     0.959          cell: ADLIB:NOR3
+  7.025                        TX_Interface_0/TX_cntr_RNIIEUH_0[0]:Y (r)
+               +     0.257          net: TX_Interface_0/N_136
+  7.282                        TX_Interface_0/TX_cntr_RNIAIC81[0]:C (r)
+               +     0.788          cell: ADLIB:OR3
+  8.070                        TX_Interface_0/TX_cntr_RNIAIC81[0]:Y (r)
+               +     1.694          net: TX_Interface_0/N_32
+  9.764                        TX_Interface_0/TX_data_RNI37KB2[6]:B (r)
+               +     1.175          cell: ADLIB:NOR3
+  10.939                       TX_Interface_0/TX_data_RNI37KB2[6]:Y (f)
+               +     1.386          net: TX_Interface_0_N_17
+  12.325                       DATA_OUT_pad[6]/U0/U1:D (f)
+               +     0.538          cell: ADLIB:IOTRI_OB_EB_ST
+  12.863                       DATA_OUT_pad[6]/U0/U1:DOUT (f)
+               +     0.000          net: DATA_OUT_pad[6]/U0/NET1
+  12.863                       DATA_OUT_pad[6]/U0/U0:D (f)
+               +     1.794          cell: ADLIB:IOPAD_TRI
+  14.657                       DATA_OUT_pad[6]/U0/U0:PAD (f)
+               +     0.000          net: DATA_OUT[6]
+  14.657                       DATA_OUT[6] (f)
                                     
-  15.607                       data arrival time
+  14.657                       data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          Clk_USB
                +     0.000          Clock source
   N/C                          Clk_USB (r)
                                     
-  N/C                          DATA_OUT[3] (r)
+  N/C                          DATA_OUT[6] (f)
 
 
 END SET Clock to Output
@@ -440,7 +424,7 @@ END SET Asynchronous to Register
 
 Clock Domain Clock_Divider_0/clk_100Khz:Q
 
-Info: The maximum frequency of this clock domain is limited by the minimum pulse widths of pin TX_Interface_0/TX_data[19]:CLK
+Info: The maximum frequency of this clock domain is limited by the minimum pulse widths of pin TX_Interface_0/TX_data[22]:CLK
 
 SET Register to Register
 
@@ -455,19 +439,19 @@ SET External Setup
 Path 1
   From:                        DAQ_En
   To:                          TX_Interface_0/TX_cntr_rst:D
-  Delay (ns):                  4.502
+  Delay (ns):                  3.175
   Slack (ns):
-  Arrival (ns):                4.502
+  Arrival (ns):                3.175
   Required (ns):
   Setup (ns):                  0.836
-  External Setup (ns):         3.775
+  External Setup (ns):         3.637
 
 
 Expanded Path 1
   From: DAQ_En
   To: TX_Interface_0/TX_cntr_rst:D
   data required time                             N/C
-  data arrival time                          -   4.502
+  data arrival time                          -   3.175
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -480,20 +464,20 @@ Expanded Path 1
   0.862                        DAQ_En_pad/U0/U1:YIN (r)
                +     0.238          cell: ADLIB:IOIN_IB_ST
   1.100                        DAQ_En_pad/U0/U1:Y (r)
-               +     1.682          net: DAQ_En_c
-  2.782                        TX_Interface_0/TX_cntr_rst_RNO:A (r)
-               +     0.681          cell: ADLIB:INV
-  3.463                        TX_Interface_0/TX_cntr_rst_RNO:Y (f)
-               +     1.039          net: TX_Interface_0/DAQ_En_c_i
-  4.502                        TX_Interface_0/TX_cntr_rst:D (f)
+               +     1.081          net: DAQ_En_c
+  2.181                        TX_Interface_0/TX_cntr_rst_RNO:A (r)
+               +     0.766          cell: ADLIB:INV
+  2.947                        TX_Interface_0/TX_cntr_rst_RNO:Y (f)
+               +     0.228          net: TX_Interface_0/DAQ_En_c_i
+  3.175                        TX_Interface_0/TX_cntr_rst:D (f)
                                     
-  4.502                        data arrival time
+  3.175                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          Clock_Divider_0/clk_100Khz:Q
                +     0.000          Clock source
   N/C                          Clock_Divider_0/clk_100Khz:Q (r)
-               +     1.563          net: clk_100Khz
+               +     0.374          net: clk_100Khz
   N/C                          TX_Interface_0/TX_cntr_rst:CLK (r)
                -     0.836          Library setup time: ADLIB:DFN1
   N/C                          TX_Interface_0/TX_cntr_rst:D
@@ -506,93 +490,97 @@ END SET External Setup
 SET Clock to Output
 
 Path 1
-  From:                        TX_Interface_0/TX_data[19]:CLK
-  To:                          DATA_OUT[3]
-  Delay (ns):                  7.005
+  From:                        TX_Interface_0/TX_data[15]:CLK
+  To:                          DATA_OUT[7]
+  Delay (ns):                  10.166
   Slack (ns):
-  Arrival (ns):                9.389
+  Arrival (ns):                11.647
   Required (ns):
-  Clock to Out (ns):           9.389
+  Clock to Out (ns):           11.647
 
 Path 2
   From:                        TX_Interface_0/TX_data[14]:CLK
   To:                          DATA_OUT[6]
-  Delay (ns):                  7.451
+  Delay (ns):                  9.045
   Slack (ns):
-  Arrival (ns):                9.254
+  Arrival (ns):                11.173
   Required (ns):
-  Clock to Out (ns):           9.254
+  Clock to Out (ns):           11.173
 
 Path 3
   From:                        TX_Interface_0/TX_data[11]:CLK
   To:                          DATA_OUT[3]
-  Delay (ns):                  7.455
+  Delay (ns):                  8.833
   Slack (ns):
-  Arrival (ns):                9.149
+  Arrival (ns):                11.055
   Required (ns):
-  Clock to Out (ns):           9.149
+  Clock to Out (ns):           11.055
 
 Path 4
-  From:                        TX_Interface_0/TX_data[15]:CLK
-  To:                          DATA_OUT[7]
-  Delay (ns):                  7.124
+  From:                        TX_Interface_0/TX_data[22]:CLK
+  To:                          DATA_OUT[6]
+  Delay (ns):                  7.898
   Slack (ns):
-  Arrival (ns):                8.665
+  Arrival (ns):                11.052
   Required (ns):
-  Clock to Out (ns):           8.665
+  Clock to Out (ns):           11.052
 
 Path 5
-  From:                        TX_Interface_0/TX_data[13]:CLK
-  To:                          DATA_OUT[5]
-  Delay (ns):                  7.381
+  From:                        TX_Interface_0/TX_data[12]:CLK
+  To:                          DATA_OUT[4]
+  Delay (ns):                  8.006
   Slack (ns):
-  Arrival (ns):                8.655
+  Arrival (ns):                10.235
   Required (ns):
-  Clock to Out (ns):           8.655
+  Clock to Out (ns):           10.235
 
 
 Expanded Path 1
-  From: TX_Interface_0/TX_data[19]:CLK
-  To: DATA_OUT[3]
+  From: TX_Interface_0/TX_data[15]:CLK
+  To: DATA_OUT[7]
   data required time                             N/C
-  data arrival time                          -   9.389
+  data arrival time                          -   11.647
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
   0.000                        Clock_Divider_0/clk_100Khz:Q
                +     0.000          Clock source
   0.000                        Clock_Divider_0/clk_100Khz:Q (f)
-               +     2.384          net: clk_100Khz
-  2.384                        TX_Interface_0/TX_data[19]:CLK (f)
+               +     1.481          net: clk_100Khz
+  1.481                        TX_Interface_0/TX_data[15]:CLK (f)
                +     0.886          cell: ADLIB:DFN0
-  3.270                        TX_Interface_0/TX_data[19]:Q (f)
-               +     1.167          net: TX_Interface_0/TX_data[19]
-  4.437                        TX_Interface_0/TX_data_RNITHSF2[19]:A (f)
-               +     0.499          cell: ADLIB:AO1
-  4.936                        TX_Interface_0/TX_data_RNITHSF2[19]:Y (f)
-               +     1.031          net: TX_Interface_0/DATA_OUT_iv_0[3]
-  5.967                        TX_Interface_0/TX_data_RNI73GF3[3]:C (f)
-               +     0.859          cell: ADLIB:AO1
-  6.826                        TX_Interface_0/TX_data_RNI73GF3[3]:Y (f)
-               +     0.231          net: DATA_OUT_c[3]
-  7.057                        DATA_OUT_pad[3]/U0/U1:D (f)
+  2.367                        TX_Interface_0/TX_data[15]:Q (f)
+               +     1.115          net: TX_Interface_0/TX_data[15]
+  3.482                        TX_Interface_0/TX_data_RNI5C8F[15]:C (f)
+               +     0.742          cell: ADLIB:NOR3B
+  4.224                        TX_Interface_0/TX_data_RNI5C8F[15]:Y (r)
+               +     1.468          net: TX_Interface_0/N_128
+  5.692                        TX_Interface_0/TX_data_RNI9OHU[23]:C (r)
+               +     1.042          cell: ADLIB:AO1A
+  6.734                        TX_Interface_0/TX_data_RNI9OHU[23]:Y (r)
+               +     1.479          net: TX_Interface_0/DATA_OUT_iv_i_0[7]
+  8.213                        TX_Interface_0/TX_data_RNI6AKB2[7]:C (r)
+               +     0.869          cell: ADLIB:NOR3
+  9.082                        TX_Interface_0/TX_data_RNI6AKB2[7]:Y (f)
+               +     0.233          net: TX_Interface_0_N_19
+  9.315                        DATA_OUT_pad[7]/U0/U1:D (f)
                +     0.538          cell: ADLIB:IOTRI_OB_EB_ST
-  7.595                        DATA_OUT_pad[3]/U0/U1:DOUT (f)
-               +     0.000          net: DATA_OUT_pad[3]/U0/NET1
-  7.595                        DATA_OUT_pad[3]/U0/U0:D (f)
+  9.853                        DATA_OUT_pad[7]/U0/U1:DOUT (f)
+               +     0.000          net: DATA_OUT_pad[7]/U0/NET1
+  9.853                        DATA_OUT_pad[7]/U0/U0:D (f)
                +     1.794          cell: ADLIB:IOPAD_TRI
-  9.389                        DATA_OUT_pad[3]/U0/U0:PAD (f)
-               +     0.000          net: DATA_OUT[3]
-  9.389                        DATA_OUT[3] (f)
+  11.647                       DATA_OUT_pad[7]/U0/U0:PAD (f)
+               +     0.000          net: DATA_OUT[7]
+  11.647                       DATA_OUT[7] (f)
                                     
-  9.389                        data arrival time
+  11.647                       data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          Clock_Divider_0/clk_100Khz:Q
                +     0.000          Clock source
   N/C                          Clock_Divider_0/clk_100Khz:Q (r)
                                     
-  N/C                          DATA_OUT[3] (f)
+  N/C                          DATA_OUT[7] (f)
 
 
 END SET Clock to Output
@@ -630,41 +618,41 @@ SET Input to Output
 Path 1
   From:                        Comparator_out
   To:                          Integrator_rst
-  Delay (ns):                  7.918
+  Delay (ns):                  7.482
   Slack (ns):
-  Arrival (ns):                7.918
+  Arrival (ns):                7.482
   Required (ns):
 
 Path 2
   From:                        DAQ_En
   To:                          Integrator_rst
-  Delay (ns):                  7.510
+  Delay (ns):                  7.134
   Slack (ns):
-  Arrival (ns):                7.510
+  Arrival (ns):                7.134
   Required (ns):
 
 Path 3
-  From:                        SPI_MOSI
-  To:                          DAC_DIN
-  Delay (ns):                  5.383
+  From:                        SPI_SCLK
+  To:                          DAC_SCLK
+  Delay (ns):                  6.294
   Slack (ns):
-  Arrival (ns):                5.383
+  Arrival (ns):                6.294
   Required (ns):
 
 Path 4
-  From:                        SPI_SCLK
-  To:                          DAC_SCLK
-  Delay (ns):                  5.160
+  From:                        SPI_MOSI
+  To:                          DAC_DIN
+  Delay (ns):                  5.513
   Slack (ns):
-  Arrival (ns):                5.160
+  Arrival (ns):                5.513
   Required (ns):
 
 Path 5
   From:                        Clk_USB
   To:                          ADC_SCLK
-  Delay (ns):                  5.036
+  Delay (ns):                  5.351
   Slack (ns):
-  Arrival (ns):                5.036
+  Arrival (ns):                5.351
   Required (ns):
 
 
@@ -672,7 +660,7 @@ Expanded Path 1
   From: Comparator_out
   To: Integrator_rst
   data required time                             N/C
-  data arrival time                          -   7.918
+  data arrival time                          -   7.482
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -685,26 +673,26 @@ Expanded Path 1
   0.578                        Comparator_out_pad/U0/U1:YIN (f)
                +     0.236          cell: ADLIB:IOIN_IB_ST
   0.814                        Comparator_out_pad/U0/U1:Y (f)
-               +     1.589          net: Comparator_out_c
-  2.403                        DAQ_FSM_0/DAQ_rst_RNI9U7H:A (f)
-               +     0.619          cell: ADLIB:NOR2B
-  3.022                        DAQ_FSM_0/DAQ_rst_RNI9U7H:Y (f)
-               +     0.257          net: DAQ_FSM_0/un1_integrator_rst
-  3.279                        DAQ_FSM_0/frame_rst_RNI0CHV:C (f)
-               +     0.939          cell: ADLIB:OR3A
-  4.218                        DAQ_FSM_0/frame_rst_RNI0CHV:Y (f)
-               +     1.188          net: Integrator_rst_c
-  5.406                        Integrator_rst_pad/U0/U1:D (f)
+               +     1.326          net: Comparator_out_c
+  2.140                        DAQ_FSM_0/DAQ_rst_RNI9U7H:A (f)
+               +     0.573          cell: ADLIB:NOR2B
+  2.713                        DAQ_FSM_0/DAQ_rst_RNI9U7H:Y (f)
+               +     0.265          net: DAQ_FSM_0/un1_integrator_rst
+  2.978                        DAQ_FSM_0/frame_rst_RNI0CHV:C (f)
+               +     0.941          cell: ADLIB:OR3A
+  3.919                        DAQ_FSM_0/frame_rst_RNI0CHV:Y (f)
+               +     1.051          net: Integrator_rst_c
+  4.970                        Integrator_rst_pad/U0/U1:D (f)
                +     0.718          cell: ADLIB:IOTRI_OB_EB_ST
-  6.124                        Integrator_rst_pad/U0/U1:DOUT (f)
+  5.688                        Integrator_rst_pad/U0/U1:DOUT (f)
                +     0.000          net: Integrator_rst_pad/U0/NET1
-  6.124                        Integrator_rst_pad/U0/U0:D (f)
+  5.688                        Integrator_rst_pad/U0/U0:D (f)
                +     1.794          cell: ADLIB:IOPAD_TRI
-  7.918                        Integrator_rst_pad/U0/U0:PAD (f)
+  7.482                        Integrator_rst_pad/U0/U0:PAD (f)
                +     0.000          net: Integrator_rst
-  7.918                        Integrator_rst (f)
+  7.482                        Integrator_rst (f)
                                     
-  7.918                        data arrival time
+  7.482                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          Comparator_out (f)

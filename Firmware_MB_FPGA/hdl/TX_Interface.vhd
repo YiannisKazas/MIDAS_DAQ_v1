@@ -37,7 +37,7 @@ end TX_Interface;
 
 
 architecture architecture_TX_Interface of TX_Interface is
-signal TX_cntr     : integer range 0 to 10 := 0 ; -- Counter controlling transfer sequence
+signal TX_cntr     : integer range 0 to 12 := 0 ; -- Counter controlling transfer sequence
 signal TX_cntr_rst : std_logic:= '1';
 signal TX_data     : std_logic_vector(23 downto 0):=(others=>'0');
 
@@ -80,12 +80,12 @@ end process;
 process (CLK_USB)
 begin
   if falling_edge(CLK_USB) then
-    if (TX_cntr_rst = '1') then       --if data acquisition active
+    if (TX_cntr_rst = '1') then   -- DAQ not active, reset counter
       TX_cntr <= 0;
     else
       if (TX_RDY='1') then       --if TX_RDY='1', reset counter   
         TX_cntr <= 0;
-      elsif (TX_cntr= 8) then --if TX_counter = 7, do nothing
+      elsif (TX_cntr= 10) then   --if TX_counter = 7, do nothing
         TX_cntr <= TX_cntr;
       else
         TX_cntr <= TX_cntr + 1;  --increment counter @ low cycle of clk_100KHz
@@ -106,57 +106,51 @@ begin
     when 0 =>
       Sl_fifo_wr_en <= '1'; --active low
       Clr_Hit_flag  <= '0';
-      --if (Hit_flag = '1') then
-        --TX_data <= Data_buffer;
-      --else
-        --TX_data <= (others=>'0');
-      --end if;
       Data_out      <= (others=>'0');--TX_data(23 downto 16);--(others=>'0');
     when 1 =>
       Sl_fifo_wr_en <= '1'; --active low
       Clr_Hit_flag  <= '0';
-      Data_out      <= TX_data(23 downto 16);
-      --TX_data       <= TX_data;
-    when 2 => --Place 1st byte to data bus
+      Data_out      <= "11111111";--TX_data(23 downto 16);
+    when 2 => --Place 1st byte to data bus (Header)
       Clr_Hit_flag  <= '0';
       Sl_fifo_wr_en <= '1'; --active low
-      Data_out      <= TX_data(23 downto 16);
-      --TX_data       <= TX_data;
+      Data_out      <= "11111111";--TX_data(23 downto 16);
     when 3 => --Send 1st byte
       Clr_Hit_flag  <= '0';
       Sl_fifo_wr_en <= '0'; 
-      Data_out      <= TX_data(23 downto 16);--Data_out;
-      --TX_data       <= TX_data;
+      Data_out      <= "11111111";--TX_data(23 downto 16);--Data_out;
     when 4 => --Place 2nd byte to data bus
       Clr_Hit_flag  <= '0';
       Sl_fifo_wr_en <= '1'; 
-      Data_out      <= TX_data(15 downto 8);
-      --TX_data       <= TX_data;
+      Data_out      <= TX_data(23 downto 16);
     when 5 => --Send 2nd byte
       Clr_Hit_flag  <= '0';
       Sl_fifo_wr_en <= '0'; 
-      Data_out      <= TX_data(15 downto 8);--Data_out;
-      --TX_data       <= TX_data;
+      Data_out      <= TX_data(23 downto 16);--Data_out;
     when 6 => --Place 3rd byte to data bus
       Clr_Hit_flag  <= '1';
       Sl_fifo_wr_en <= '1'; 
-      Data_out      <= TX_data(7 downto 0);
-      --TX_data       <= TX_data;
+      Data_out      <= TX_data(15 downto 8);
     when 7 => --Send 3rd byte
       Clr_Hit_flag  <= '1';
       Sl_fifo_wr_en <= '0'; 
+      Data_out      <= TX_data(15 downto 8);--Data_out;
+    when 8 => --Place 4th byte to data bus
+      Clr_Hit_flag  <= '1';
+      Sl_fifo_wr_en <= '1'; 
+      Data_out      <= TX_data(7 downto 0);
+    when 9 => --Send 4th byte
+      Clr_Hit_flag  <= '1';
+      Sl_fifo_wr_en <= '0'; 
       Data_out      <= TX_data(7 downto 0);--Data_out;
-      --TX_data       <= TX_data;
-    when 8 => --End of transfer
+    when 10 => --End of transfer
       Clr_Hit_flag  <= '0';
       Sl_fifo_wr_en <= '1'; 
       Data_out      <= TX_data(7 downto 0);--Data_out;
-      --TX_data       <= TX_data;
     when others =>
       Clr_Hit_flag  <= '0';
       Sl_fifo_wr_en <= '1';
       Data_out      <= (others=>'0');--TX_data(7 downto 0);--Data_out;
-      --TX_data       <= TX_data;
   end case;
 end process;
 --===================================================================

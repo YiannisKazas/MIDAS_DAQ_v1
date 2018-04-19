@@ -1,4 +1,4 @@
-# Wed Dec 06 11:29:08 2017
+# Wed Apr 18 19:02:12 2018
 
 Synopsys Microsemi Technology Mapper, Version mapact, Build 1920R, Built Nov 17 2016 09:40:34
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -25,14 +25,16 @@ Available hyper_sources - for debug and ip models
 
 Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
 
-@N: MO231 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\test\mars_daq\firmware_mb_fpga\hdl\adc_interface.vhd":60:2:60:3|Found counter in view:work.ADC_Interface(architecture_adc_interface) instance ADC_cntr[6:0] 
-@N: MF238 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\test\mars_daq\firmware_mb_fpga\hdl\clock_divider.vhd":56:23:56:37|Found 8-bit incrementor, 'un4_cntr_100khz[25:32]'
-@N: MO231 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\test\mars_daq\firmware_mb_fpga\hdl\daq_fsm.vhd":71:2:71:3|Found counter in view:work.DAQ_FSM(architecture_daq_fsm) instance DAQ_cntr[8:0] 
+@N: MO231 :"c:\users\johnk\onedrive\ncsr_demokritos\project_esa\mars_daq\firmware_mb_fpga\hdl\adc_interface.vhd":60:2:60:3|Found counter in view:work.ADC_Interface(architecture_adc_interface) instance ADC_cntr[6:0] 
+@N: MF238 :"c:\users\johnk\onedrive\ncsr_demokritos\project_esa\mars_daq\firmware_mb_fpga\hdl\clock_divider.vhd":56:23:56:37|Found 8-bit incrementor, 'un4_cntr_100khz[25:32]'
+@N: MO231 :"c:\users\johnk\onedrive\ncsr_demokritos\project_esa\mars_daq\firmware_mb_fpga\hdl\daq_fsm.vhd":71:2:71:3|Found counter in view:work.DAQ_FSM(architecture_daq_fsm) instance DAQ_cntr[8:0] 
 @N: MF176 |Default generator successful 
 @N: MF176 |Default generator successful 
-@N: MO231 :"c:\users\johnk\onedrive\ncsr_demokritos\esa\test\mars_daq\firmware_mb_fpga\hdl\tx_interface.vhd":82:2:82:3|Found counter in view:work.TX_Interface(architecture_tx_interface) instance TX_cntr[3:0] 
+@N: MO231 :"c:\users\johnk\onedrive\ncsr_demokritos\project_esa\mars_daq\firmware_mb_fpga\hdl\tx_interface.vhd":82:2:82:3|Found counter in view:work.TX_Interface(architecture_tx_interface) instance TX_cntr[3:0] 
+@N: MO106 :"c:\users\johnk\onedrive\ncsr_demokritos\project_esa\mars_daq\firmware_mb_fpga\hdl\tx_interface.vhd":105:2:105:5|Found ROM .delname. (in view: work.TX_Interface(architecture_tx_interface)) with 11 words by 1 bit.
+@N: MO106 :"c:\users\johnk\onedrive\ncsr_demokritos\project_esa\mars_daq\firmware_mb_fpga\hdl\tx_interface.vhd":105:2:105:5|Found ROM .delname. (in view: work.TX_Interface(architecture_tx_interface)) with 11 words by 1 bit.
 
-Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
 
 
 Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
@@ -41,22 +43,22 @@ Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; M
 Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 117MB peak: 117MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 115MB peak: 116MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 117MB peak: 118MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 115MB peak: 116MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 117MB peak: 118MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 121MB peak: 122MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 116MB peak: 118MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 121MB peak: 122MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 116MB peak: 118MB)
+Finished preparing to map (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 121MB peak: 122MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 117MB peak: 119MB)
+Finished technology mapping (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 122MB peak: 124MB)
 
 
 High Fanout Net Report
@@ -64,25 +66,25 @@ High Fanout Net Report
 
 Driver Instance / Pin Name                 Fanout, notes
 --------------------------------------------------------
-ADC_Interface_0.ADC_state[0] / Q           30           
+ADC_Interface_0.ADC_state[0] / Q           29           
 ADC_Interface_0.Hit_flag / Q               26           
-ADC_Interface_0.ADC_sreg_4_i_1[14] / Y     47           
+ADC_Interface_0.ADC_sreg_4_i_1[16] / Y     47           
 ========================================================
 
 @N: FP130 |Promoting Net Clk_USB_c on CLKBUF  Clk_USB_pad 
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 120MB peak: 121MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 124MB)
 
-Replicating Combinational Instance ADC_Interface_0.ADC_sreg_4_i_1[14], fanout 47 segments 2
+Replicating Combinational Instance ADC_Interface_0.ADC_sreg_4_i_1[16], fanout 47 segments 2
 Replicating Sequential Instance ADC_Interface_0.Hit_flag, fanout 26 segments 2
-Replicating Sequential Instance ADC_Interface_0.ADC_state[0], fanout 31 segments 2
+Replicating Sequential Instance ADC_Interface_0.ADC_state[0], fanout 30 segments 2
 
 Added 0 Buffers
 Added 3 Cells via replication
 	Added 2 Sequential Cells via replication
 	Added 1 Combinational Cells via replication
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 120MB peak: 121MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 124MB)
 
 
 
@@ -112,19 +114,19 @@ Clock Tree ID     Driving Element                                     Drive Elem
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 119MB peak: 121MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 124MB)
 
-Writing Analyst data base C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synwork\MARS_MB_rev1_top_m.srm
+Writing Analyst data base C:\Users\johnk\OneDrive\NCSR_Demokritos\Project_ESA\MARS_DAQ\Firmware_MB_FPGA\synthesis\synwork\MARS_MB_rev1_top_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 119MB peak: 121MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 124MB)
 
 Writing EDIF Netlist and constraint files
 L-2016.09M-2
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 119MB peak: 121MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 124MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 119MB peak: 121MB)
+Start final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 124MB)
 
 @W: MT420 |Found inferred clock MARS_MB_rev1_top|Clk_USB with period 10.00ns. Please declare a user-defined clock on object "p:Clk_USB"
 @W: MT420 |Found inferred clock SPI_Interface|SPI_SCLK_buf_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:SPI_Interface_0.SPI_SCLK_buf"
@@ -132,7 +134,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Wed Dec 06 11:29:10 2017
+# Timing Report written on Wed Apr 18 19:02:15 2018
 #
 
 
@@ -154,13 +156,13 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -5.047
+Worst slack in design: -4.629
 
                                               Requested     Estimated     Requested     Estimated                Clock        Clock              
 Starting Clock                                Frequency     Frequency     Period        Period        Slack      Type         Group              
 -------------------------------------------------------------------------------------------------------------------------------------------------
 Clock_Divider|clk_100Khz_inferred_clock       100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_0
-MARS_MB_rev1_top|Clk_USB                      100.0 MHz     54.2 MHz      10.000        18.442        -5.047     inferred     Inferred_clkgroup_1
+MARS_MB_rev1_top|Clk_USB                      100.0 MHz     54.3 MHz      10.000        18.421        -4.629     inferred     Inferred_clkgroup_1
 SPI_Interface|SPI_SCLK_buf_inferred_clock     100.0 MHz     304.5 MHz     10.000        3.285         6.715      inferred     Inferred_clkgroup_2
 =================================================================================================================================================
 @N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
@@ -178,7 +180,7 @@ Starting                                   Ending                               
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Clock_Divider|clk_100Khz_inferred_clock    MARS_MB_rev1_top|Clk_USB                   |  No paths    -       |  No paths    -      |  Diff grp    -       |  No paths    -     
 MARS_MB_rev1_top|Clk_USB                   Clock_Divider|clk_100Khz_inferred_clock    |  No paths    -       |  No paths    -      |  Diff grp    -       |  No paths    -     
-MARS_MB_rev1_top|Clk_USB                   MARS_MB_rev1_top|Clk_USB                   |  10.000      -5.047  |  10.000      1.679  |  5.000       -4.221  |  5.000       -2.258
+MARS_MB_rev1_top|Clk_USB                   MARS_MB_rev1_top|Clk_USB                   |  10.000      -4.629  |  10.000      2.389  |  5.000       -4.211  |  5.000       -2.331
 SPI_Interface|SPI_SCLK_buf_inferred_clock  MARS_MB_rev1_top|Clk_USB                   |  Diff grp    -       |  No paths    -      |  No paths    -       |  No paths    -     
 SPI_Interface|SPI_SCLK_buf_inferred_clock  SPI_Interface|SPI_SCLK_buf_inferred_clock  |  10.000      6.716   |  No paths    -      |  No paths    -       |  No paths    -     
 ===============================================================================================================================================================================
@@ -207,16 +209,16 @@ Starting Points with Worst Slack
 Instance                         Reference                    Type       Pin     Net              Time        Slack 
                                  Clock                                                                              
 --------------------------------------------------------------------------------------------------------------------
-DAQ_FSM_0.DAQ_cntr[2]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[2]      0.885       -5.047
-DAQ_FSM_0.DAQ_cntr[3]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[3]      0.885       -4.995
-DAQ_FSM_0.DAQ_cntr[4]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[4]      0.885       -4.972
-DAQ_FSM_0.DAQ_cntr[0]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[0]      0.885       -4.815
-DAQ_FSM_0.DAQ_cntr[1]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[1]      0.885       -4.381
-DAQ_FSM_0.DAQ_cntr[5]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[5]      0.885       -4.301
-Clock_Divider_0.clk_100Khz       MARS_MB_rev1_top|Clk_USB     DFN1C1     Q       clk_100Khz_i     0.885       -4.221
+DAQ_FSM_0.DAQ_cntr[0]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[0]      0.885       -4.629
+DAQ_FSM_0.DAQ_cntr[3]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[3]      0.885       -4.540
+Clock_Divider_0.clk_100Khz       MARS_MB_rev1_top|Clk_USB     DFN1C1     Q       clk_100Khz_i     0.885       -4.211
+DAQ_FSM_0.DAQ_cntr[1]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[1]      0.885       -3.974
+DAQ_FSM_0.DAQ_cntr[2]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[2]      0.885       -3.909
 ADC_Interface_0.ADC_state[1]     MARS_MB_rev1_top|Clk_USB     DFN1       Q       ADC_state[1]     0.885       -3.395
-DAQ_FSM_0.DAQ_cntr[6]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[6]      0.885       -3.059
+DAQ_FSM_0.DAQ_cntr[4]            MARS_MB_rev1_top|Clk_USB     DFN1E0     Q       DAQ_cntr[4]      0.885       -3.109
 ADC_Interface_0.ADC_cntr[3]      MARS_MB_rev1_top|Clk_USB     DFN1       Q       ADC_cntr[3]      0.885       -2.998
+TX_Interface_0.TX_cntr[1]        MARS_MB_rev1_top|Clk_USB     DFN0       Q       TX_cntr[1]       0.785       -2.331
+TX_Interface_0.TX_cntr[2]        MARS_MB_rev1_top|Clk_USB     DFN0       Q       TX_cntr[2]       0.785       -2.281
 ====================================================================================================================
 
 
@@ -227,8 +229,8 @@ Ending Points with Worst Slack
 Instance                        Reference                    Type       Pin     Net               Time         Slack 
                                 Clock                                                                                
 ---------------------------------------------------------------------------------------------------------------------
-DAQ_FSM_0.ADC_En_1              MARS_MB_rev1_top|Clk_USB     DFN1E1     E       N_227             9.478        -5.047
-DAQ_FSM_0.ADC_En_2              MARS_MB_rev1_top|Clk_USB     DFN1E1     E       N_228             9.478        -4.995
+DAQ_FSM_0.ADC_En_2              MARS_MB_rev1_top|Clk_USB     DFN1E1     E       N_228             9.478        -4.629
+DAQ_FSM_0.ADC_En_1              MARS_MB_rev1_top|Clk_USB     DFN1E1     E       N_227             9.478        -4.370
 ADC_Interface_0.ADC_sreg[0]     MARS_MB_rev1_top|Clk_USB     DFN1E0     D       ADC_sreg_4[0]     9.353        -3.395
 ADC_Interface_0.ADC_sreg[1]     MARS_MB_rev1_top|Clk_USB     DFN1E0     D       N_136             9.353        -3.395
 ADC_Interface_0.ADC_sreg[2]     MARS_MB_rev1_top|Clk_USB     DFN1E0     D       N_138             9.353        -3.395
@@ -251,48 +253,48 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.478
 
-    - Propagation time:                      14.525
+    - Propagation time:                      14.107
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -5.047
+    = Slack (critical) :                     -4.629
 
     Number of logic level(s):                8
-    Starting point:                          DAQ_FSM_0.DAQ_cntr[2] / Q
-    Ending point:                            DAQ_FSM_0.ADC_En_1 / E
+    Starting point:                          DAQ_FSM_0.DAQ_cntr[0] / Q
+    Ending point:                            DAQ_FSM_0.ADC_En_2 / E
     The start point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
     The end   point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
 
-Instance / Net                                   Pin      Pin               Arrival     No. of    
-Name                                  Type       Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------------
-DAQ_FSM_0.DAQ_cntr[2]                 DFN1E0     Q        Out     0.885     0.885       -         
-DAQ_cntr[2]                           Net        -        -       2.053     -           10        
-DAQ_FSM_0.DAQ_cntr_RNIH78F[2]         XOR2       B        In      -         2.938       -         
-DAQ_FSM_0.DAQ_cntr_RNIH78F[2]         XOR2       Y        Out     1.125     4.064       -         
-un10_daq_cntr_2                       Net        -        -       0.969     -           3         
-DAQ_FSM_0.un16_daq_cntr_a_4.m10_s     NOR2       B        In      -         5.032       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m10_s     NOR2       Y        Out     0.618     5.651       -         
-N_346                                 Net        -        -       0.464     -           2         
-DAQ_FSM_0.un16_daq_cntr_a_4.m10       MX2        S        In      -         6.114       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m10       MX2        Y        Out     0.576     6.690       -         
-i6_mux_0                              Net        -        -       1.422     -           4         
-DAQ_FSM_0.un16_daq_cntr_a_4.m19       MX2        B        In      -         8.112       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m19       MX2        Y        Out     0.704     8.816       -         
-i12_mux_0                             Net        -        -       0.386     -           1         
-DAQ_FSM_0.un16_daq_cntr_a_4.m26       XOR2       B        In      -         9.202       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m26       XOR2       Y        Out     1.125     10.328      -         
-un16_daq_cntr_a_4_i_2_i[7]            Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_4              XAI1       C        In      -         10.714      -         
-DAQ_FSM_0.ADC_En_1_RNO_4              XAI1       Y        Out     0.631     11.345      -         
-un16_daq_cntr_NE_6                    Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_2              OR3A       C        In      -         11.731      -         
-DAQ_FSM_0.ADC_En_1_RNO_2              OR3A       Y        Out     0.902     12.633      -         
-un16_daq_cntr_i                       Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_0              AOI1       B        In      -         13.019      -         
-DAQ_FSM_0.ADC_En_1_RNO_0              AOI1       Y        Out     1.119     14.139      -         
-N_227                                 Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1                    DFN1E1     E        In      -         14.525      -         
-==================================================================================================
-Total path delay (propagation time + setup) of 15.047 is 8.208(54.6%) logic and 6.839(45.4%) route.
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                                Type       Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+DAQ_FSM_0.DAQ_cntr[0]               DFN1E0     Q        Out     0.885     0.885       -         
+DAQ_cntr[0]                         Net        -        -       2.053     -           10        
+DAQ_FSM_0.un27_daq_cntr_a_4.m1      NOR2A      B        In      -         2.938       -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m1      NOR2A      Y        Out     0.489     3.427       -         
+N_2_i                               Net        -        -       0.464     -           2         
+DAQ_FSM_0.un27_daq_cntr_a_4.m4      AO18       A        In      -         3.890       -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m4      AO18       Y        Out     0.476     4.366       -         
+i2_mux                              Net        -        -       1.422     -           4         
+DAQ_FSM_0.un27_daq_cntr_a_4.m10     MX2        B        In      -         5.788       -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m10     MX2        Y        Out     0.687     6.475       -         
+i6_mux                              Net        -        -       0.464     -           2         
+DAQ_FSM_0.un27_daq_cntr_a_4.m13     AO13       A        In      -         6.939       -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m13     AO13       Y        Out     1.276     8.215       -         
+i8_mux                              Net        -        -       0.464     -           2         
+DAQ_FSM_0.un27_daq_cntr_a_4.m16     AO13       A        In      -         8.678       -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m16     AO13       Y        Out     1.276     9.954       -         
+i10_mux                             Net        -        -       0.386     -           1         
+DAQ_FSM_0.un27_daq_cntr_a_4.m28     XOR2       B        In      -         10.340      -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m28     XOR2       Y        Out     1.125     11.466      -         
+un27_daq_cntr_a_4_i_2_i[6]          Net        -        -       0.386     -           1         
+DAQ_FSM_0.ADC_En_2_RNO_2            OR3B       B        In      -         11.852      -         
+DAQ_FSM_0.ADC_En_2_RNO_2            OR3B       Y        Out     0.750     12.602      -         
+un27_daq_cntr_NE_6                  Net        -        -       0.386     -           1         
+DAQ_FSM_0.ADC_En_2_RNO_0            MX2B       B        In      -         12.988      -         
+DAQ_FSM_0.ADC_En_2_RNO_0            MX2B       Y        Out     0.733     13.721      -         
+N_228                               Net        -        -       0.386     -           1         
+DAQ_FSM_0.ADC_En_2                  DFN1E1     E        In      -         14.107      -         
+================================================================================================
+Total path delay (propagation time + setup) of 14.629 is 8.219(56.2%) logic and 6.411(43.8%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -302,9 +304,9 @@ Path information for path number 2:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.478
 
-    - Propagation time:                      14.473
+    - Propagation time:                      14.018
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -4.995
+    = Slack (non-critical) :                 -4.540
 
     Number of logic level(s):                8
     Starting point:                          DAQ_FSM_0.DAQ_cntr[3] / Q
@@ -316,34 +318,34 @@ Instance / Net                                   Pin      Pin               Arri
 Name                                  Type       Name     Dir     Delay     Time        Fan Out(s)
 --------------------------------------------------------------------------------------------------
 DAQ_FSM_0.DAQ_cntr[3]                 DFN1E0     Q        Out     0.885     0.885       -         
-DAQ_cntr[3]                           Net        -        -       1.969     -           8         
-DAQ_FSM_0.DAQ_cntr_RNIS2R2[3]         XOR2       B        In      -         2.854       -         
-DAQ_FSM_0.DAQ_cntr_RNIS2R2[3]         XOR2       Y        Out     1.125     3.980       -         
+DAQ_cntr[3]                           Net        -        -       2.053     -           10        
+DAQ_FSM_0.DAQ_cntr_RNIS2R2[3]         XOR2       B        In      -         2.938       -         
+DAQ_FSM_0.DAQ_cntr_RNIS2R2[3]         XOR2       Y        Out     1.125     4.064       -         
 un22_daq_cntr_3                       Net        -        -       0.969     -           3         
-DAQ_FSM_0.un27_daq_cntr_a_4.m10_s     XA1C       C        In      -         4.949       -         
-DAQ_FSM_0.un27_daq_cntr_a_4.m10_s     XA1C       Y        Out     0.413     5.362       -         
-N_350                                 Net        -        -       0.386     -           1         
-DAQ_FSM_0.un27_daq_cntr_a_4.m10       MX2        S        In      -         5.749       -         
-DAQ_FSM_0.un27_daq_cntr_a_4.m10       MX2        Y        Out     0.476     6.225       -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m10_s     XA1C       C        In      -         5.032       -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m10_s     XA1C       Y        Out     0.413     5.446       -         
+N_376                                 Net        -        -       0.464     -           2         
+DAQ_FSM_0.un27_daq_cntr_a_4.m10       MX2        S        In      -         5.909       -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m10       MX2        Y        Out     0.476     6.386       -         
 i6_mux                                Net        -        -       0.464     -           2         
-DAQ_FSM_0.un27_daq_cntr_a_4.m13       AO13       A        In      -         6.688       -         
-DAQ_FSM_0.un27_daq_cntr_a_4.m13       AO13       Y        Out     1.276     7.964       -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m13       AO13       A        In      -         6.849       -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m13       AO13       Y        Out     1.276     8.125       -         
 i8_mux                                Net        -        -       0.464     -           2         
-DAQ_FSM_0.un27_daq_cntr_a_4.m16       AO13       A        In      -         8.428       -         
-DAQ_FSM_0.un27_daq_cntr_a_4.m16       AO13       Y        Out     1.276     9.704       -         
-i10_mux                               Net        -        -       0.464     -           2         
-DAQ_FSM_0.un27_daq_cntr_a_4.m19       AO13       A        In      -         10.167      -         
-DAQ_FSM_0.un27_daq_cntr_a_4.m19       AO13       Y        Out     1.276     11.443      -         
-i12_mux                               Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_2_RNO_2              XO1A       A        In      -         11.829      -         
-DAQ_FSM_0.ADC_En_2_RNO_2              XO1A       Y        Out     0.752     12.581      -         
-un27_daq_cntr_i                       Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_2_RNO_0              AOI1       B        In      -         12.967      -         
-DAQ_FSM_0.ADC_En_2_RNO_0              AOI1       Y        Out     1.119     14.086      -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m16       AO13       A        In      -         8.588       -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m16       AO13       Y        Out     1.276     9.864       -         
+i10_mux                               Net        -        -       0.386     -           1         
+DAQ_FSM_0.un27_daq_cntr_a_4.m28       XOR2       B        In      -         10.251      -         
+DAQ_FSM_0.un27_daq_cntr_a_4.m28       XOR2       Y        Out     1.125     11.376      -         
+un27_daq_cntr_a_4_i_2_i[6]            Net        -        -       0.386     -           1         
+DAQ_FSM_0.ADC_En_2_RNO_2              OR3B       B        In      -         11.762      -         
+DAQ_FSM_0.ADC_En_2_RNO_2              OR3B       Y        Out     0.750     12.512      -         
+un27_daq_cntr_NE_6                    Net        -        -       0.386     -           1         
+DAQ_FSM_0.ADC_En_2_RNO_0              MX2B       B        In      -         12.898      -         
+DAQ_FSM_0.ADC_En_2_RNO_0              MX2B       Y        Out     0.733     13.631      -         
 N_228                                 Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_2                    DFN1E1     E        In      -         14.473      -         
+DAQ_FSM_0.ADC_En_2                    DFN1E1     E        In      -         14.018      -         
 ==================================================================================================
-Total path delay (propagation time + setup) of 14.995 is 9.121(60.8%) logic and 5.874(39.2%) route.
+Total path delay (propagation time + setup) of 14.540 is 8.582(59.0%) logic and 5.958(41.0%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -353,60 +355,9 @@ Path information for path number 3:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.478
 
-    - Propagation time:                      14.450
+    - Propagation time:                      13.848
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -4.972
-
-    Number of logic level(s):                8
-    Starting point:                          DAQ_FSM_0.DAQ_cntr[4] / Q
-    Ending point:                            DAQ_FSM_0.ADC_En_1 / E
-    The start point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
-    The end   point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
-
-Instance / Net                                   Pin      Pin               Arrival     No. of    
-Name                                  Type       Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------------
-DAQ_FSM_0.DAQ_cntr[4]                 DFN1E0     Q        Out     0.885     0.885       -         
-DAQ_cntr[4]                           Net        -        -       2.005     -           9         
-DAQ_FSM_0.DAQ_cntr_RNIC39F[4]         XOR2       B        In      -         2.890       -         
-DAQ_FSM_0.DAQ_cntr_RNIC39F[4]         XOR2       Y        Out     1.125     4.016       -         
-un10_daq_cntr_4                       Net        -        -       1.422     -           4         
-DAQ_FSM_0.un16_daq_cntr_a_4.m16_s     NOR2       B        In      -         5.438       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m16_s     NOR2       Y        Out     0.618     6.056       -         
-N_348                                 Net        -        -       0.969     -           3         
-DAQ_FSM_0.un16_daq_cntr_a_4.m19_s     NOR2A      A        In      -         7.024       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m19_s     NOR2A      Y        Out     0.754     7.778       -         
-N_354                                 Net        -        -       0.386     -           1         
-DAQ_FSM_0.un16_daq_cntr_a_4.m19       MX2        S        In      -         8.165       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m19       MX2        Y        Out     0.576     8.741       -         
-i12_mux_0                             Net        -        -       0.386     -           1         
-DAQ_FSM_0.un16_daq_cntr_a_4.m26       XOR2       B        In      -         9.127       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m26       XOR2       Y        Out     1.125     10.253      -         
-un16_daq_cntr_a_4_i_2_i[7]            Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_4              XAI1       C        In      -         10.639      -         
-DAQ_FSM_0.ADC_En_1_RNO_4              XAI1       Y        Out     0.631     11.270      -         
-un16_daq_cntr_NE_6                    Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_2              OR3A       C        In      -         11.656      -         
-DAQ_FSM_0.ADC_En_1_RNO_2              OR3A       Y        Out     0.902     12.558      -         
-un16_daq_cntr_i                       Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_0              AOI1       B        In      -         12.944      -         
-DAQ_FSM_0.ADC_En_1_RNO_0              AOI1       Y        Out     1.119     14.063      -         
-N_227                                 Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1                    DFN1E1     E        In      -         14.450      -         
-==================================================================================================
-Total path delay (propagation time + setup) of 14.972 is 8.258(55.2%) logic and 6.713(44.8%) route.
-Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
-
-
-Path information for path number 4: 
-      Requested Period:                      10.000
-    - Setup time:                            0.522
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         9.478
-
-    - Propagation time:                      14.293
-    - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -4.815
+    = Slack (non-critical) :                 -4.370
 
     Number of logic level(s):                8
     Starting point:                          DAQ_FSM_0.DAQ_cntr[0] / Q
@@ -414,89 +365,110 @@ Path information for path number 4:
     The start point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
     The end   point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
 
-Instance / Net                                 Pin      Pin               Arrival     No. of    
-Name                                Type       Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------
-DAQ_FSM_0.DAQ_cntr[0]               DFN1E0     Q        Out     0.885     0.885       -         
-DAQ_cntr[0]                         Net        -        -       2.053     -           10        
-DAQ_FSM_0.un16_daq_cntr_a_4.m1      NOR2A      B        In      -         2.938       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m1      NOR2A      Y        Out     0.489     3.427       -         
-N_2_i_0                             Net        -        -       0.464     -           2         
-DAQ_FSM_0.un16_daq_cntr_a_4.m4      AO18       A        In      -         3.890       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m4      AO18       Y        Out     0.476     4.366       -         
-i2_mux_0                            Net        -        -       1.422     -           4         
-DAQ_FSM_0.un16_daq_cntr_a_4.m10     MX2        B        In      -         5.788       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m10     MX2        Y        Out     0.687     6.475       -         
-i6_mux_0                            Net        -        -       1.422     -           4         
-DAQ_FSM_0.un16_daq_cntr_a_4.m19     MX2        B        In      -         7.897       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m19     MX2        Y        Out     0.687     8.584       -         
-i12_mux_0                           Net        -        -       0.386     -           1         
-DAQ_FSM_0.un16_daq_cntr_a_4.m26     XOR2       B        In      -         8.971       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m26     XOR2       Y        Out     1.125     10.096      -         
-un16_daq_cntr_a_4_i_2_i[7]          Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_4            XAI1       C        In      -         10.482      -         
-DAQ_FSM_0.ADC_En_1_RNO_4            XAI1       Y        Out     0.631     11.113      -         
-un16_daq_cntr_NE_6                  Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_2            OR3A       C        In      -         11.499      -         
-DAQ_FSM_0.ADC_En_1_RNO_2            OR3A       Y        Out     0.902     12.401      -         
-un16_daq_cntr_i                     Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_0            AOI1       B        In      -         12.788      -         
-DAQ_FSM_0.ADC_En_1_RNO_0            AOI1       Y        Out     1.119     13.907      -         
-N_227                               Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1                  DFN1E1     E        In      -         14.293      -         
-================================================================================================
-Total path delay (propagation time + setup) of 14.815 is 7.523(50.8%) logic and 7.292(49.2%) route.
+Instance / Net                                    Pin      Pin               Arrival     No. of    
+Name                                   Type       Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------
+DAQ_FSM_0.DAQ_cntr[0]                  DFN1E0     Q        Out     0.885     0.885       -         
+DAQ_cntr[0]                            Net        -        -       2.053     -           10        
+DAQ_FSM_0.un16_daq_cntr_a_4.G_6        OR2A       B        In      -         2.938       -         
+DAQ_FSM_0.un16_daq_cntr_a_4.G_6        OR2A       Y        Out     0.777     3.715       -         
+N_1_3                                  Net        -        -       0.386     -           1         
+DAQ_FSM_0.un16_daq_cntr_a_4.G_10       AO13       A        In      -         4.101       -         
+DAQ_FSM_0.un16_daq_cntr_a_4.G_10       AO13       Y        Out     1.276     5.377       -         
+i2_mux_0                               Net        -        -       1.537     -           5         
+DAQ_FSM_0.un16_daq_cntr_a_4.G_23       MX2        A        In      -         6.914       -         
+DAQ_FSM_0.un16_daq_cntr_a_4.G_23       MX2        Y        Out     0.695     7.609       -         
+i6_mux_0                               Net        -        -       0.386     -           1         
+DAQ_FSM_0.un16_daq_cntr_a_4.G_17_i     XOR2       A        In      -         7.995       -         
+DAQ_FSM_0.un16_daq_cntr_a_4.G_17_i     XOR2       Y        Out     0.587     8.582       -         
+un16_daq_cntr_a_4_i_2_i[4]             Net        -        -       0.464     -           2         
+DAQ_FSM_0.un16_daq_cntr_a_4.G_38       AO18       A        In      -         9.046       -         
+DAQ_FSM_0.un16_daq_cntr_a_4.G_38       AO18       Y        Out     0.476     9.522       -         
+m22_i4_mux                             Net        -        -       0.386     -           1         
+DAQ_FSM_0.un16_daq_cntr_a_4.G_41       XOR3       C        In      -         9.908       -         
+DAQ_FSM_0.un16_daq_cntr_a_4.G_41       XOR3       Y        Out     1.184     11.092      -         
+N_2_7                                  Net        -        -       0.386     -           1         
+DAQ_FSM_0.ADC_En_1_RNO_1               OR3A       C        In      -         11.478      -         
+DAQ_FSM_0.ADC_En_1_RNO_1               OR3A       Y        Out     0.902     12.380      -         
+un16_daq_cntr_NE_7                     Net        -        -       0.386     -           1         
+DAQ_FSM_0.ADC_En_1_RNO_0               MX2C       A        In      -         12.767      -         
+DAQ_FSM_0.ADC_En_1_RNO_0               MX2C       Y        Out     0.695     13.462      -         
+N_227                                  Net        -        -       0.386     -           1         
+DAQ_FSM_0.ADC_En_1                     DFN1E1     E        In      -         13.848      -         
+===================================================================================================
+Total path delay (propagation time + setup) of 14.370 is 7.999(55.7%) logic and 6.371(44.3%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.856
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.144
+
+    - Propagation time:                      8.355
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -4.211
+
+    Number of logic level(s):                3
+    Starting point:                          Clock_Divider_0.clk_100Khz / Q
+    Ending point:                            TX_Interface_0.TX_cntr[0] / D
+    The start point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
+    The end   point is clocked by            MARS_MB_rev1_top|Clk_USB [falling] on pin CLK
+
+Instance / Net                                    Pin      Pin               Arrival     No. of    
+Name                                   Type       Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------
+Clock_Divider_0.clk_100Khz             DFN1C1     Q        Out     0.885     0.885       -         
+clk_100Khz_i                           Net        -        -       3.099     -           28        
+TX_Interface_0.TX_cntr_rst_RNIIVTN     NOR2       B        In      -         3.984       -         
+TX_Interface_0.TX_cntr_rst_RNIIVTN     NOR2       Y        Out     0.777     4.761       -         
+un1_tx_cntr20                          Net        -        -       1.537     -           5         
+TX_Interface_0.TX_cntr_RNO_0[0]        NOR2A      A        In      -         6.298       -         
+TX_Interface_0.TX_cntr_RNO_0[0]        NOR2A      Y        Out     0.620     6.918       -         
+N_133                                  Net        -        -       0.386     -           1         
+TX_Interface_0.TX_cntr_RNO[0]          MX2A       B        In      -         7.304       -         
+TX_Interface_0.TX_cntr_RNO[0]          MX2A       Y        Out     0.664     7.968       -         
+TX_cntr_RNO[0]                         Net        -        -       0.386     -           1         
+TX_Interface_0.TX_cntr[0]              DFN0       D        In      -         8.355       -         
+===================================================================================================
+Total path delay (propagation time + setup) of 9.211 is 3.802(41.3%) logic and 5.408(58.7%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 5: 
-      Requested Period:                      10.000
-    - Setup time:                            0.522
+      Requested Period:                      5.000
+    - Setup time:                            0.856
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         9.478
+    = Required time:                         4.144
 
-    - Propagation time:                      14.260
+    - Propagation time:                      8.277
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -4.782
+    = Slack (non-critical) :                 -4.133
 
-    Number of logic level(s):                8
-    Starting point:                          DAQ_FSM_0.DAQ_cntr[3] / Q
-    Ending point:                            DAQ_FSM_0.ADC_En_1 / E
+    Number of logic level(s):                3
+    Starting point:                          Clock_Divider_0.clk_100Khz / Q
+    Ending point:                            TX_Interface_0.TX_cntr[0] / D
     The start point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
-    The end   point is clocked by            MARS_MB_rev1_top|Clk_USB [rising] on pin CLK
+    The end   point is clocked by            MARS_MB_rev1_top|Clk_USB [falling] on pin CLK
 
-Instance / Net                                   Pin      Pin               Arrival     No. of    
-Name                                  Type       Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------------
-DAQ_FSM_0.DAQ_cntr[3]                 DFN1E0     Q        Out     0.885     0.885       -         
-DAQ_cntr[3]                           Net        -        -       1.969     -           8         
-DAQ_FSM_0.DAQ_cntr_RNIJ98F[3]         XOR2       B        In      -         2.854       -         
-DAQ_FSM_0.DAQ_cntr_RNIJ98F[3]         XOR2       Y        Out     1.125     3.980       -         
-un10_daq_cntr_3                       Net        -        -       0.969     -           3         
-DAQ_FSM_0.un16_daq_cntr_a_4.m10_s     NOR2       A        In      -         4.949       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m10_s     NOR2       Y        Out     0.436     5.385       -         
-N_346                                 Net        -        -       0.464     -           2         
-DAQ_FSM_0.un16_daq_cntr_a_4.m10       MX2        S        In      -         5.849       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m10       MX2        Y        Out     0.576     6.425       -         
-i6_mux_0                              Net        -        -       1.422     -           4         
-DAQ_FSM_0.un16_daq_cntr_a_4.m19       MX2        B        In      -         7.847       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m19       MX2        Y        Out     0.704     8.551       -         
-i12_mux_0                             Net        -        -       0.386     -           1         
-DAQ_FSM_0.un16_daq_cntr_a_4.m26       XOR2       B        In      -         8.937       -         
-DAQ_FSM_0.un16_daq_cntr_a_4.m26       XOR2       Y        Out     1.125     10.063      -         
-un16_daq_cntr_a_4_i_2_i[7]            Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_4              XAI1       C        In      -         10.449      -         
-DAQ_FSM_0.ADC_En_1_RNO_4              XAI1       Y        Out     0.631     11.080      -         
-un16_daq_cntr_NE_6                    Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_2              OR3A       C        In      -         11.466      -         
-DAQ_FSM_0.ADC_En_1_RNO_2              OR3A       Y        Out     0.902     12.368      -         
-un16_daq_cntr_i                       Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1_RNO_0              AOI1       B        In      -         12.754      -         
-DAQ_FSM_0.ADC_En_1_RNO_0              AOI1       Y        Out     1.119     13.873      -         
-N_227                                 Net        -        -       0.386     -           1         
-DAQ_FSM_0.ADC_En_1                    DFN1E1     E        In      -         14.260      -         
-==================================================================================================
-Total path delay (propagation time + setup) of 14.782 is 8.027(54.3%) logic and 6.755(45.7%) route.
+Instance / Net                                    Pin      Pin               Arrival     No. of    
+Name                                   Type       Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------
+Clock_Divider_0.clk_100Khz             DFN1C1     Q        Out     0.885     0.885       -         
+clk_100Khz_i                           Net        -        -       3.099     -           28        
+TX_Interface_0.TX_cntr_rst_RNIIVTN     NOR2       B        In      -         3.984       -         
+TX_Interface_0.TX_cntr_rst_RNIIVTN     NOR2       Y        Out     0.777     4.761       -         
+un1_tx_cntr20                          Net        -        -       1.537     -           5         
+TX_Interface_0.TX_cntr_RNO_1[0]        OR3A       A        In      -         6.298       -         
+TX_Interface_0.TX_cntr_RNO_1[0]        OR3A       Y        Out     0.631     6.928       -         
+TX_cntre                               Net        -        -       0.386     -           1         
+TX_Interface_0.TX_cntr_RNO[0]          MX2A       S        In      -         7.315       -         
+TX_Interface_0.TX_cntr_RNO[0]          MX2A       Y        Out     0.576     7.891       -         
+TX_cntr_RNO[0]                         Net        -        -       0.386     -           1         
+TX_Interface_0.TX_cntr[0]              DFN0       D        In      -         8.277       -         
+===================================================================================================
+Total path delay (propagation time + setup) of 9.133 is 3.725(40.8%) logic and 5.408(59.2%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -516,15 +488,15 @@ Instance                        Reference                                     Ty
                                 Clock                                                                                                              
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 SPI_Interface_0.SPI_REG[2]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_2_1[2]     0.885       6.715
-SPI_Interface_0.SPI_REG[0]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_2_1[0]     0.885       7.004
-SPI_Interface_0.SPI_REG[4]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_2_1[4]     0.885       7.004
+SPI_Interface_0.SPI_REG[21]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_1_1[5]     0.885       6.715
+SPI_Interface_0.SPI_REG[18]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_1_1[2]     0.885       6.889
+SPI_Interface_0.SPI_REG[5]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_2_1[5]     0.885       7.004
+SPI_Interface_0.SPI_REG[7]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_2_1[7]     0.885       7.004
 SPI_Interface_0.SPI_REG[8]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_2_1[8]     0.885       7.004
-SPI_Interface_0.SPI_REG[17]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_1_1[1]     0.885       7.004
-SPI_Interface_0.SPI_REG[18]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_1_1[2]     0.885       7.004
-SPI_Interface_0.SPI_REG[20]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_1_1[4]     0.885       7.004
+SPI_Interface_0.SPI_REG[16]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_1_1[0]     0.885       7.004
+SPI_Interface_0.SPI_REG[19]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_1_1[3]     0.885       7.004
 SPI_Interface_0.SPI_REG[22]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_1_1[6]     0.885       7.004
-SPI_Interface_0.SPI_REG[1]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_2_1[1]     0.885       7.457
-SPI_Interface_0.SPI_REG[3]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_2_1[3]     0.885       7.457
+SPI_Interface_0.SPI_REG[23]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     Q       SPI_Interface_0_INT_PER_1_1[7]     0.885       7.004
 ===================================================================================================================================================
 
 
@@ -536,15 +508,15 @@ Instance                        Reference                                     Ty
                                 Clock                                                                                                               
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 SPI_Interface_0.SPI_REG[3]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_2_1[2]     9.311        6.715
-SPI_Interface_0.SPI_REG[1]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_2_1[0]     9.311        7.004
-SPI_Interface_0.SPI_REG[5]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_2_1[4]     9.311        7.004
+SPI_Interface_0.SPI_REG[22]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_1_1[5]     9.311        6.715
+SPI_Interface_0.SPI_REG[19]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_1_1[2]     9.311        6.889
+SPI_Interface_0.SPI_REG[6]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_2_1[5]     9.311        7.004
+SPI_Interface_0.SPI_REG[8]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_2_1[7]     9.311        7.004
 SPI_Interface_0.SPI_REG[9]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_2_1[8]     9.311        7.004
-SPI_Interface_0.SPI_REG[18]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_1_1[1]     9.311        7.004
-SPI_Interface_0.SPI_REG[19]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_1_1[2]     9.311        7.004
-SPI_Interface_0.SPI_REG[21]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_1_1[4]     9.311        7.004
+SPI_Interface_0.SPI_REG[17]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_1_1[0]     9.311        7.004
+SPI_Interface_0.SPI_REG[20]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_1_1[3]     9.311        7.004
 SPI_Interface_0.SPI_REG[23]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_1_1[6]     9.311        7.004
-SPI_Interface_0.SPI_REG[2]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_2_1[1]     9.311        7.457
-SPI_Interface_0.SPI_REG[4]      SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_2_1[3]     9.311        7.457
+SPI_Interface_0.SPI_REG[24]     SPI_Interface|SPI_SCLK_buf_inferred_clock     DFN1     D       SPI_Interface_0_INT_PER_1_1[7]     9.311        7.004
 ====================================================================================================================================================
 
 
@@ -586,13 +558,11 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 Timing exceptions that could not be applied
 None
 
-Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 119MB peak: 121MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 124MB)
 
-Problem in opening file "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\report\MARS_MB_rev1_top_fpga_mapper_runstatus.xml" for writing. To create this file, try by reducing the length of file name
 
-Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 119MB peak: 121MB)
+Finished timing report (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 117MB peak: 124MB)
 
-Problem in opening file "C:\Users\johnk\OneDrive\NCSR_Demokritos\ESA\Test\MARS_DAQ\Firmware_MB_FPGA\synthesis\synlog\report\MARS_MB_rev1_top_fpga_mapper_runstatus.xml" for writing. To create this file, try by reducing the length of file name
 --------------------------------------------------------------------------------
 Target Part: AGLN020V5_QFN68_STD
 Report for cell MARS_MB_rev1_top.rtl
@@ -600,49 +570,49 @@ Report for cell MARS_MB_rev1_top.rtl
               cell count     area count*area
               AND2     1      1.0        1.0
               AND3     6      1.0        6.0
-               AO1    21      1.0       21.0
-              AO13     7      1.0        7.0
-              AO18     8      1.0        8.0
-              AO1A     2      1.0        2.0
+               AO1     5      1.0        5.0
+              AO13     9      1.0        9.0
+              AO16     2      1.0        2.0
+              AO18     7      1.0        7.0
+              AO1A    10      1.0       10.0
               AO1C     1      1.0        1.0
-              AOI1     5      1.0        5.0
+              AOI1     4      1.0        4.0
              AOI1B     4      1.0        4.0
-              AOI5     1      1.0        1.0
               AX1A     1      1.0        1.0
-              AX1C     2      1.0        2.0
+              AX1C     5      1.0        5.0
                GND     6      0.0        0.0
                INV     4      1.0        4.0
-               MX2     9      1.0        9.0
-              MX2A     1      1.0        1.0
-              MX2B     1      1.0        1.0
-              MX2C     1      1.0        1.0
-              NOR2    14      1.0       14.0
-             NOR2A    64      1.0       64.0
-             NOR2B    46      1.0       46.0
-              NOR3     1      1.0        1.0
-             NOR3A    11      1.0       11.0
-             NOR3B    11      1.0       11.0
-             NOR3C    12      1.0       12.0
-               OA1     5      1.0        5.0
-              OA1A     1      1.0        1.0
+               MX2     6      1.0        6.0
+              MX2A     2      1.0        2.0
+              MX2B     3      1.0        3.0
+              MX2C     3      1.0        3.0
+              NOR2    10      1.0       10.0
+             NOR2A    70      1.0       70.0
+             NOR2B    41      1.0       41.0
+              NOR3    11      1.0       11.0
+             NOR3A     7      1.0        7.0
+             NOR3B    18      1.0       18.0
+             NOR3C     9      1.0        9.0
+               OA1     4      1.0        4.0
+              OA1A     2      1.0        2.0
               OA1C     3      1.0        3.0
-               OR2     8      1.0        8.0
-              OR2A     3      1.0        3.0
-              OR2B     2      1.0        2.0
-               OR3     9      1.0        9.0
-              OR3A     6      1.0        6.0
-              OR3B     4      1.0        4.0
+               OR2    10      1.0       10.0
+              OR2A     5      1.0        5.0
+              OR2B     1      1.0        1.0
+               OR3    11      1.0       11.0
+              OR3A     7      1.0        7.0
+              OR3B     6      1.0        6.0
               OR3C     2      1.0        2.0
                VCC     6      0.0        0.0
-               XA1    10      1.0       10.0
+               XA1     5      1.0        5.0
+              XA1A     2      1.0        2.0
               XA1B     1      1.0        1.0
-              XA1C     3      1.0        3.0
-              XAI1     1      1.0        1.0
-             XNOR3     1      1.0        1.0
-               XO1     5      1.0        5.0
-              XO1A     4      1.0        4.0
-              XOR2    26      1.0       26.0
-              XOR3     3      1.0        3.0
+              XA1C     4      1.0        4.0
+              XAI1     3      1.0        3.0
+               XO1     4      1.0        4.0
+              XO1A     1      1.0        1.0
+              XOR2    29      1.0       29.0
+              XOR3     6      1.0        6.0
 
 
               DFN0    28      1.0       28.0
@@ -652,7 +622,7 @@ Report for cell MARS_MB_rev1_top.rtl
             DFN1E1    27      1.0       27.0
             DFN1P1     1      1.0        1.0
                    -----          ----------
-             TOTAL   484               472.0
+             TOTAL   498               486.0
 
 
   IO Cell usage:
@@ -664,13 +634,13 @@ Report for cell MARS_MB_rev1_top.rtl
              TOTAL    29
 
 
-Core Cells         : 472 of 520 (91%)
+Core Cells         : 486 of 520 (93%)
 IO Cells           : 29
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 26MB peak: 121MB)
+At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 27MB peak: 124MB)
 
-Process took 0h:00m:02s realtime, 0h:00m:02s cputime
-# Wed Dec 06 11:29:10 2017
+Process took 0h:00m:03s realtime, 0h:00m:02s cputime
+# Wed Apr 18 19:02:15 2018
 
 ###########################################################]
